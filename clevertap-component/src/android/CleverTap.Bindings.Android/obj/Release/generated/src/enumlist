@@ -1,0 +1,7 @@
+com.clevertap.android.sdk.CleverTapAPI$LogLevel:Com.Clevertap.Android.Sdk:CleverTapAPI.LogLevel
+com.clevertap.android.sdk.java_websocket.enums.CloseHandshakeType:Com.Clevertap.Android.Sdk.Java_websocket.Enums:CloseHandshakeType
+com.clevertap.android.sdk.java_websocket.enums.HandshakeState:Com.Clevertap.Android.Sdk.Java_websocket.Enums:HandshakeState
+com.clevertap.android.sdk.java_websocket.enums.Opcode:Com.Clevertap.Android.Sdk.Java_websocket.Enums:Opcode
+com.clevertap.android.sdk.java_websocket.enums.ReadyState:Com.Clevertap.Android.Sdk.Java_websocket.Enums:ReadyState
+com.clevertap.android.sdk.java_websocket.enums.Role:Com.Clevertap.Android.Sdk.Java_websocket.Enums:Role
+com.clevertap.android.sdk.PushType:Com.Clevertap.Android.Sdk:PushType

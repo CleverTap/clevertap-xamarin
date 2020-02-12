@@ -1,0 +1,56 @@
+{
+  "version": 3,
+  "targets": {
+    "MonoAndroid,Version=v9.0": {},
+    "MonoAndroid,Version=v9.0/win": {},
+    "MonoAndroid,Version=v9.0/win-x64": {},
+    "MonoAndroid,Version=v9.0/win-x86": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "MonoAndroid,Version=v9.0": []
+  },
+  "packageFolders": {
+    "/Users/aditiagrawal/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/CleverTap.Bindings.Android.csproj",
+      "projectName": "CleverTap.Bindings.Android",
+      "projectPath": "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/CleverTap.Bindings.Android.csproj",
+      "packagesPath": "/Users/aditiagrawal/.nuget/packages/",
+      "outputPath": "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/obj/",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "/Users/aditiagrawal/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "monoandroid90"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "monoandroid90": {}
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

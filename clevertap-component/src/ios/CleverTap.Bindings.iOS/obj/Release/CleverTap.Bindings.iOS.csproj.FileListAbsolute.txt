@@ -1,0 +1,4 @@
+/Users/aditiagrawal/Downloads/TestCT/CleverTap.Bindings.iOS/bin/Release/CleverTap.Bindings.iOS.dll
+/Users/aditiagrawal/Downloads/TestCT/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.dll
+/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Release/CleverTap.Bindings.iOS.dll
+/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.dll
