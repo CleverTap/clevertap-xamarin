@@ -84,7 +84,7 @@ Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin
 
 1. Install the SDK 
 
-Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/lib/ios) and add it to the Reference
+     Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/lib/ios) and add it to the Reference
 
 2. Integrating the CleverTap SDK
 
@@ -94,7 +94,7 @@ Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/cleverta
 ```c#
 using CleverTapSDK;
 
- public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 {
     // Override point for customization after application launch.
     // If not required for your application you can safely delete this method
@@ -106,20 +106,20 @@ using CleverTapSDK;
 
 3. Record an Event
 ```c#
-  CleverTap.SharedInstance()?.RecordEvent("Product Viewed Via Xamarin");
+CleverTap.SharedInstance()?.RecordEvent("Product Viewed Via Xamarin");
 ```
 
 4. Pushing User Profile
 ```c#
-    var profileData = new NSDictionary(
-        new NSString("Name"), new NSString("Jack Montana"),
-        new NSString("Identity"), new NSString("61026032"),
-        new NSString("Email"), new NSString("Jack Montana"),
-        new NSString("Phone"), new NSString("14155551234"),
-        new NSString("Gender"), new NSString("F"),
-        new NSString("DOB"), new NSDate()
-    );
-    CleverTap.SharedInstance()?.ProfilePush(profileData);
+var profileData = new NSDictionary(
+    new NSString("Name"), new NSString("Jack Montana"),
+    new NSString("Identity"), new NSString("61026032"),
+    new NSString("Email"), new NSString("Jack Montana"),
+    new NSString("Phone"), new NSString("14155551234"),
+    new NSString("Gender"), new NSString("F"),
+    new NSString("DOB"), new NSDate()
+);
+CleverTap.SharedInstance()?.ProfilePush(profileData);
 ```
 
 Follow the [Starter Project](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/sample/ios/Starter) for examples
