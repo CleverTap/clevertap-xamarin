@@ -84,7 +84,7 @@ Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin
 
 1. Install the SDK 
 
-      Use the DLL and add it to the Reference
+Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/lib/ios) and add it to the Reference
 
 2. Integrating the CleverTap SDK
 
@@ -104,12 +104,12 @@ using CleverTapSDK;
 }
 ```
 
-4. Record an Event
+3. Record an Event
 ```c#
   CleverTap.SharedInstance()?.RecordEvent("Product Viewed Via Xamarin");
 ```
 
-5. Pushing User Profile
+4. Pushing User Profile
 ```c#
     var profileData = new NSDictionary(
         new NSString("Name"), new NSString("Jack Montana"),
@@ -122,5 +122,5 @@ using CleverTapSDK;
     CleverTap.SharedInstance()?.ProfilePush(profileData);
 ```
 
-
+Follow the [Starter Project](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/sample/ios/Starter) for examples
 
