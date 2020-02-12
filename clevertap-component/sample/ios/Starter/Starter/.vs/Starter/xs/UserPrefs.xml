@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{BDDDC230-B91C-4375-AEF0-5686B06EC6D0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppDelegate.cs">
+    <Files>
+      <File FileName="ViewController.cs" Line="50" Column="10" />
+      <File FileName="ViewController.designer.cs" />
+      <File FileName="AppDelegate.cs" Line="60" Column="1" />
+      <File FileName="Info.plist" />
+      <File FileName="Entitlements.plist" />
+      <File FileName="Main.cs" />
+      <File FileName="SceneDelegate.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Starter" expanded="True">
+            <Node name="Starter" expanded="True">
+              <Node name="AppDelegate.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Starter automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C6F0999D-6437-42A1-922B-D6C03DD5B6A2" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

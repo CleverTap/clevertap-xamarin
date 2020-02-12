@@ -1,0 +1,15 @@
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/bin/iPhoneSimulator/Debug/Starter.exe
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/bin/iPhoneSimulator/Debug/Starter.pdb
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/bin/iPhoneSimulator/Debug/CleverTap.Bindings.iOS.dll
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/Starter.csprojAssemblyReference.cache
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/Starter.csproj.CopyComplete
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/Starter.exe
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/Starter.pdb
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/ibtool/_BundleResourceWithLogicalName.items
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/actool/_PartialAppManifest.items
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/actool/_BundleResourceWithLogicalName.items
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/coremlc/_PartialAppManifest.items
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/coremlc/_BundleResourceWithLogicalName.items
+/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/optimized/
