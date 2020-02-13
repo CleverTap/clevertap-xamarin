@@ -6,7 +6,7 @@ CleverTap brings together real-time user insights, an advanced segmentation engi
 
 For more information check out our [website](https://clevertap.com "CleverTap") and [documentation](https://developer.clevertap.com/docs/ "CleverTap Technical Documentation").
 
-## Getting Started
+## Getting Started #
 
 ### Steps for Android
 
@@ -123,4 +123,16 @@ CleverTap.SharedInstance()?.ProfilePush(profileData);
 ```
 
 Please checkout the [Starter Project](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/sample/ios/Starter) directory for the sample app.
+
+## Changelog #
+
+Check out the CleverTap Xamarin SDK [Change Log](https://github.com/CleverTap/clevertap-xamarin/blob/master/CHANGELOG.md) here.
+
+## Questions? #
+
+ If you have questions or concerns, you can reach out to the CleverTap support team at [support@clevertap.com](mailto:support@clevertap.com).
+ 
+ ## License #
+
+Check out the CleverTap Xamarin SDK [License](https://github.com/CleverTap/clevertap-xamarin/blob/master/LICENSE) here.
 
