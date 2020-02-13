@@ -12,7 +12,7 @@ For more information check out our [website](https://clevertap.com "CleverTap") 
 
 1. Install the SDK
 
-Use the [DLL file](https://github.com/CleverTap/clevertap-xamarin-android/tree/master/CleverTapBindings/bin/Release) and add it to the References.
+Use the [DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/CleverTapBindings/bin/Release) and add it to the References.
 
 2. Add Your CleverTap Credentials in AndroidManifest.xml
 
@@ -77,18 +77,18 @@ cleverTapAPI.PushProfile(profileData);
 cleverTapAPI.PushEvent("Product View Via Xamarin");
 ```
 
-Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin-android/blob/master/XamarinDemo/XamarinDemo/MainActivity.cs) for examples
+Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin/blob/master/XamarinDemo/XamarinDemo/MainActivity.cs) for examples
 
 
 ### Steps for iOS
 
 1. Install the SDK 
 
-     Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/lib/ios) and add it to the Reference
+     Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/ios) and add it to the Reference
 
 2. Integrating the CleverTap SDK
 
-      * Follow the integration instruction starting with Step 2 here. https://developer.clevertap.com/docs/ios-quickstart-guide#section-step-2-add-clever-tap-credentials
+      * Follow the integration instruction [starting with Step 2 here](https://developer.clevertap.com/docs/ios-quickstart-guide#section-step-2-add-clever-tap-credentials).
       * Add CleverTap to your AppDelegate.cs in your FinishedLaunching method.
 
 ```c#
@@ -104,12 +104,12 @@ public bool FinishedLaunching(UIApplication application, NSDictionary launchOpti
 }
 ```
 
-3. Record an Event
+3. Track Custom Events
 ```c#
 CleverTap.SharedInstance()?.RecordEvent("Product Viewed Via Xamarin");
 ```
 
-4. Pushing User Profile
+4. Add Information to a User Profile
 ```c#
 var profileData = new NSDictionary(
     new NSString("Name"), new NSString("Jack Montana"),
@@ -122,5 +122,5 @@ var profileData = new NSDictionary(
 CleverTap.SharedInstance()?.ProfilePush(profileData);
 ```
 
-Follow the [Starter Project](https://github.com/CleverTap/clevertap-xamarin/tree/1.0.0/clevertap-component/sample/ios/Starter) for examples
+Please checkout the [Starter Project](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/sample/ios/Starter) directory for the sample app.
 
