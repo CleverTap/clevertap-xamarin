@@ -17,6 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CleverTapInstanceConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTBackgroundJobService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTCarouselViewPager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTCarouselViewPagerAdapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInAppBaseFragment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInAppBaseFullFragment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInAppBaseFullHtmlFragment.cs" />
@@ -39,9 +41,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInAppNativeInterstitialImageFragment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInAppNotification.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInAppNotificationMedia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInboxActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInboxListViewFragment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInboxMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInboxMessageContent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInboxStyleConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTInboxTabAdapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTPushNotificationReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.CTWebInterface.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.EventDetail.cs" />
@@ -52,6 +57,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.IInAppNotificationListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.IInboxMessageButtonListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.ImageCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.InAppNotificationActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.InstallReferrerBroadcastReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.ISyncListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Com.Clevertap.Android.Sdk.Java_websocket.AbstractWebSocket.cs" />

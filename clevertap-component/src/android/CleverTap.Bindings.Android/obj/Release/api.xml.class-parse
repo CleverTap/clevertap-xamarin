@@ -9901,7 +9901,7 @@
       jni-signature="Lcom/clevertap/android/sdk/CTInboxActivity$InboxActivityListener;"
       source-file-name="CTInboxActivity.java"
       static="true"
-      visibility="">
+      visibility="public">
       <method
         abstract="true"
         deprecated="not deprecated"
@@ -10390,7 +10390,7 @@
       jni-signature="Lcom/clevertap/android/sdk/CTInboxListViewFragment$InboxListener;"
       source-file-name="CTInboxListViewFragment.java"
       static="true"
-      visibility="">
+      visibility="public">
       <method
         abstract="true"
         deprecated="not deprecated"
@@ -14753,7 +14753,7 @@
       jni-signature="Lcom/clevertap/android/sdk/InAppNotificationActivity$InAppActivityListener;"
       source-file-name="InAppNotificationActivity.java"
       static="true"
-      visibility="">
+      visibility="public">
       <method
         abstract="true"
         deprecated="not deprecated"

@@ -54,6 +54,11 @@
   <ItemGroup>
     <LibraryProjectZip Include="Jars\clevertap-android-sdk-release.aar" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

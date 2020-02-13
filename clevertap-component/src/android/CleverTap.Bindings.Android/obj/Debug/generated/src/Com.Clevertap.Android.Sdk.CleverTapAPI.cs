@@ -7,7 +7,7 @@ namespace Com.Clevertap.Android.Sdk {
 
 	// Metadata.xml XPath class reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']"
 	[global::Android.Runtime.Register ("com/clevertap/android/sdk/CleverTapAPI", DoNotGenerateAcw=true)]
-	public partial class CleverTapAPI : global::Java.Lang.Object, global::Com.Clevertap.Android.Sdk.CTInAppBaseFragment.IInAppListener, global::Com.Clevertap.Android.Sdk.CTInAppNotification.ICTInAppNotificationListener, global::Com.Clevertap.Android.Sdk.Ab_testing.ICTABTestListener {
+	public partial class CleverTapAPI : global::Java.Lang.Object, global::Com.Clevertap.Android.Sdk.CTInAppBaseFragment.IInAppListener, global::Com.Clevertap.Android.Sdk.CTInAppNotification.ICTInAppNotificationListener, global::Com.Clevertap.Android.Sdk.CTInboxActivity.IInboxActivityListener, global::Com.Clevertap.Android.Sdk.InAppNotificationActivity.IInAppActivityListener, global::Com.Clevertap.Android.Sdk.Ab_testing.ICTABTestListener {
 
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/field[@name='NOTIFICATION_TAG']"
@@ -2449,6 +2449,78 @@ namespace Com.Clevertap.Android.Sdk {
 			try {
 				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
 				__args [0] = new JniArgumentValue ((message == null) ? IntPtr.Zero : ((global::Java.Lang.Object) message).Handle);
+				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_messageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_;
+#pragma warning disable 0169
+		static Delegate GetMessageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_Handler ()
+		{
+			if (cb_messageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_ == null)
+				cb_messageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_MessageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_);
+			return cb_messageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_;
+		}
+
+		static void n_MessageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_ (IntPtr jnienv, IntPtr native__this, IntPtr native_ctInboxActivity, IntPtr native_inboxMessage, IntPtr native_data, IntPtr native_keyValue)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Clevertap.Android.Sdk.CTInboxActivity ctInboxActivity = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInboxActivity> (native_ctInboxActivity, JniHandleOwnership.DoNotTransfer);
+			global::Com.Clevertap.Android.Sdk.CTInboxMessage inboxMessage = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInboxMessage> (native_inboxMessage, JniHandleOwnership.DoNotTransfer);
+			global::Android.OS.Bundle data = global::Java.Lang.Object.GetObject<global::Android.OS.Bundle> (native_data, JniHandleOwnership.DoNotTransfer);
+			var keyValue = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_keyValue, JniHandleOwnership.DoNotTransfer);
+			__this.MessageDidClick (ctInboxActivity, inboxMessage, data, keyValue);
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='messageDidClick' and count(parameter)=4 and parameter[1][@type='com.clevertap.android.sdk.CTInboxActivity'] and parameter[2][@type='com.clevertap.android.sdk.CTInboxMessage'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='java.util.HashMap&lt;java.lang.String, java.lang.String&gt;']]"
+		[Register ("messageDidClick", "(Lcom/clevertap/android/sdk/CTInboxActivity;Lcom/clevertap/android/sdk/CTInboxMessage;Landroid/os/Bundle;Ljava/util/HashMap;)V", "GetMessageDidClick_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_Handler")]
+		public virtual unsafe void MessageDidClick (global::Com.Clevertap.Android.Sdk.CTInboxActivity ctInboxActivity, global::Com.Clevertap.Android.Sdk.CTInboxMessage inboxMessage, global::Android.OS.Bundle data, global::System.Collections.Generic.IDictionary<string, string> keyValue)
+		{
+			const string __id = "messageDidClick.(Lcom/clevertap/android/sdk/CTInboxActivity;Lcom/clevertap/android/sdk/CTInboxMessage;Landroid/os/Bundle;Ljava/util/HashMap;)V";
+			IntPtr native_keyValue = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (keyValue);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [4];
+				__args [0] = new JniArgumentValue ((ctInboxActivity == null) ? IntPtr.Zero : ((global::Java.Lang.Object) ctInboxActivity).Handle);
+				__args [1] = new JniArgumentValue ((inboxMessage == null) ? IntPtr.Zero : ((global::Java.Lang.Object) inboxMessage).Handle);
+				__args [2] = new JniArgumentValue ((data == null) ? IntPtr.Zero : ((global::Java.Lang.Object) data).Handle);
+				__args [3] = new JniArgumentValue (native_keyValue);
+				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_keyValue);
+			}
+		}
+
+		static Delegate cb_messageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_;
+#pragma warning disable 0169
+		static Delegate GetMessageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Handler ()
+		{
+			if (cb_messageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_ == null)
+				cb_messageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_MessageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_);
+			return cb_messageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_;
+		}
+
+		static void n_MessageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_ctInboxActivity, IntPtr native_inboxMessage, IntPtr native_data)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Clevertap.Android.Sdk.CTInboxActivity ctInboxActivity = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInboxActivity> (native_ctInboxActivity, JniHandleOwnership.DoNotTransfer);
+			global::Com.Clevertap.Android.Sdk.CTInboxMessage inboxMessage = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInboxMessage> (native_inboxMessage, JniHandleOwnership.DoNotTransfer);
+			global::Android.OS.Bundle data = global::Java.Lang.Object.GetObject<global::Android.OS.Bundle> (native_data, JniHandleOwnership.DoNotTransfer);
+			__this.MessageDidShow (ctInboxActivity, inboxMessage, data);
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='messageDidShow' and count(parameter)=3 and parameter[1][@type='com.clevertap.android.sdk.CTInboxActivity'] and parameter[2][@type='com.clevertap.android.sdk.CTInboxMessage'] and parameter[3][@type='android.os.Bundle']]"
+		[Register ("messageDidShow", "(Lcom/clevertap/android/sdk/CTInboxActivity;Lcom/clevertap/android/sdk/CTInboxMessage;Landroid/os/Bundle;)V", "GetMessageDidShow_Lcom_clevertap_android_sdk_CTInboxActivity_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Handler")]
+		public virtual unsafe void MessageDidShow (global::Com.Clevertap.Android.Sdk.CTInboxActivity ctInboxActivity, global::Com.Clevertap.Android.Sdk.CTInboxMessage inboxMessage, global::Android.OS.Bundle data)
+		{
+			const string __id = "messageDidShow.(Lcom/clevertap/android/sdk/CTInboxActivity;Lcom/clevertap/android/sdk/CTInboxMessage;Landroid/os/Bundle;)V";
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [3];
+				__args [0] = new JniArgumentValue ((ctInboxActivity == null) ? IntPtr.Zero : ((global::Java.Lang.Object) ctInboxActivity).Handle);
+				__args [1] = new JniArgumentValue ((inboxMessage == null) ? IntPtr.Zero : ((global::Java.Lang.Object) inboxMessage).Handle);
+				__args [2] = new JniArgumentValue ((data == null) ? IntPtr.Zero : ((global::Java.Lang.Object) data).Handle);
 				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
 			} finally {
 			}

@@ -9,12 +9,14 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CleverTap.Bindings.Android" expanded="True" selected="True">
+          <Node name="CleverTap.Bindings.Android" expanded="True">
             <Node name="CleverTap.Bindings.Android" expanded="True">
               <Node name="References" expanded="True" />
               <Node name="Additions" expanded="True" />
               <Node name="Jars" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="AssemblyInfo.cs" selected="True" />
+              </Node>
               <Node name="Transforms" expanded="True" />
             </Node>
           </Node>
@@ -23,7 +25,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
