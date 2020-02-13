@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1tm-jN-5um">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ddd-OB-LBl">
+            <objects>
+                <navigationController id="1tm-jN-5um" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZST-Or-xjp">
+                        <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TbU-dE-2gY" kind="relationship" relationship="rootViewController" id="v0S-vt-z0p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81p-Wg-Pdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1477" y="-332"/>
+        </scene>
+        <!--Xamarin Starter-->
+        <scene sceneID="Ahw-sl-oq0">
+            <objects>
+                <viewController id="TbU-dE-2gY" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FXP-f4-UvT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Atq-Lc-D56"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ab-kg-V9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="63w-3d-JZT">
+                                <rect key="frame" x="64" y="70" width="286" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="63w-3d-JZT" secondAttribute="height" multiplier="143:64" id="vwu-GC-ugx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NL-bb-8Nn" misplaced="YES">
+                                <rect key="frame" x="64" y="384" width="286" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2NL-bb-8Nn" secondAttribute="height" multiplier="143:15" id="LFT-AN-82f"/>
+                                </constraints>
+                                <state key="normal" title="Record Event"/>
+                                <connections>
+                                    <action selector="UIButton1713_TouchUpInside:" destination="TbU-dE-2gY" eventType="touchUpInside" id="fcN-aG-mC8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sn-rK-5mT" misplaced="YES">
+                                <rect key="frame" x="64" y="434" width="286" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Sn-rK-5mT" secondAttribute="height" multiplier="143:15" id="sMs-Wi-Y59"/>
+                                </constraints>
+                                <state key="normal" title="Push Profile"/>
+                                <connections>
+                                    <action selector="UIButton1714_TouchUpInside:" destination="TbU-dE-2gY" eventType="touchUpInside" id="8h9-Me-5Vw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8F-ap-0ZN" misplaced="YES">
+                                <rect key="frame" x="64" y="484" width="286" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iYW-UG-jS9"/>
+                                </constraints>
+                                <state key="normal" title="Record Charged Event"/>
+                                <connections>
+                                    <action selector="UIButton1715_TouchUpInside:" destination="TbU-dE-2gY" eventType="touchUpInside" id="4r6-WB-IBJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wae-q3-skk" misplaced="YES">
+                                <rect key="frame" x="64" y="534" width="286" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dEW-HU-KzC"/>
+                                </constraints>
+                                <state key="normal" title="Show Inbox"/>
+                                <connections>
+                                    <action selector="UIButton1716_TouchUpInside:" destination="TbU-dE-2gY" eventType="touchUpInside" id="iI8-WW-sfh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="E8F-ap-0ZN" secondAttribute="trailing" constant="44" id="0cw-Rh-YPB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Sn-rK-5mT" secondAttribute="trailing" constant="44" id="3R8-EJ-7W3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wae-q3-skk" secondAttribute="trailing" constant="44" id="7tb-U7-3qq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2NL-bb-8Nn" secondAttribute="trailing" constant="44" id="AoW-GU-oSE"/>
+                            <constraint firstItem="wae-q3-skk" firstAttribute="leading" secondItem="8ab-kg-V9Z" secondAttribute="leadingMargin" constant="44" id="FjS-k9-ihE"/>
+                            <constraint firstItem="2NL-bb-8Nn" firstAttribute="top" secondItem="63w-3d-JZT" secondAttribute="bottom" constant="44" id="G8h-vO-BJ6"/>
+                            <constraint firstItem="63w-3d-JZT" firstAttribute="leading" secondItem="8ab-kg-V9Z" secondAttribute="leadingMargin" constant="44" id="J8D-nR-Tfx"/>
+                            <constraint firstItem="0Sn-rK-5mT" firstAttribute="top" secondItem="2NL-bb-8Nn" secondAttribute="bottom" constant="20" id="bCp-56-Hn1"/>
+                            <constraint firstItem="wae-q3-skk" firstAttribute="top" secondItem="E8F-ap-0ZN" secondAttribute="bottom" constant="20" id="bze-Tw-BLE"/>
+                            <constraint firstItem="E8F-ap-0ZN" firstAttribute="leading" secondItem="8ab-kg-V9Z" secondAttribute="leadingMargin" constant="44" id="gH0-d7-Tdj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="63w-3d-JZT" secondAttribute="trailing" constant="44" id="lNk-KT-nie"/>
+                            <constraint firstItem="2NL-bb-8Nn" firstAttribute="leading" secondItem="8ab-kg-V9Z" secondAttribute="leadingMargin" constant="44" id="nTR-sh-PeT"/>
+                            <constraint firstItem="0Sn-rK-5mT" firstAttribute="leading" secondItem="8ab-kg-V9Z" secondAttribute="leadingMargin" constant="44" id="pYl-Mq-fR8"/>
+                            <constraint firstItem="E8F-ap-0ZN" firstAttribute="top" secondItem="0Sn-rK-5mT" secondAttribute="bottom" constant="20" id="rgR-ia-C0t"/>
+                            <constraint id="300" firstItem="63w-3d-JZT" firstAttribute="top" secondItem="FXP-f4-UvT" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Xamarin Starter" id="LgN-zb-c4F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQX-9D-wJ0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="-332"/>
+        </scene>
+    </scenes>
+</document>
