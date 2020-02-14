@@ -39,6 +39,7 @@
 /Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/bin/Debug/Xamarin.Android.Support.v4.dll
 /Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/bin/Debug/Xamarin.Android.Support.VersionedParcelable.dll
 /Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/bin/Debug/Xamarin.Android.Support.ViewPager.dll
+/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/bin/Debug/Xamarin.Android.Support.WebKit.dll
 /Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/obj/Debug/MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 /Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/obj/Debug/CleverTap.Bindings.Android.csprojAssemblyReference.cache
 /Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/src/android/CleverTap.Bindings.Android/obj/Debug/_VerifyXamarinAndroidSupportVersions.stamp

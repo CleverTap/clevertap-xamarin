@@ -32,5 +32,7 @@
 
     <attr path="/api/package[@name='com.clevertap.android.sdk.java_websocket.handshake']/interface[@name='ServerHandshake']/method[@name='getHttpStatus' and count(parameter)=0]" name="propertyName"></attr>
     <attr path="/api/package[@name='com.clevertap.android.sdk.java_websocket.handshake']/interface[@name='ServerHandshake']/method[@name='getHttpStatusMessage' and count(parameter)=0]" name="propertyName"></attr>
+    
+    <attr path="/api/package[@name='com.clevertap.android.sdk']/class['CTInAppWebView']" name="visibility">public</attr>
 
 </metadata>

@@ -1,3 +1,4 @@
+CleverTap.Bindings.Android
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -46,4 +47,3 @@ Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Stats
 Xamarin.GooglePlayServices.Tasks
-CleverTap.Bindings.Android

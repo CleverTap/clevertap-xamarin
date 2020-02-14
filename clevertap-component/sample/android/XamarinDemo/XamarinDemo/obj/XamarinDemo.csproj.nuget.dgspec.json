@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj": {}
+    "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj": {}
   },
   "projects": {
-    "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj": {
+    "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj",
+        "projectUniqueName": "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj",
         "projectName": "XamarinDemo",
-        "projectPath": "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj",
-        "packagesPath": "/Users/aditiagrawal/.nuget/packages/",
-        "outputPath": "/Users/aditiagrawal/repo/BitBucket/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/obj/",
+        "projectPath": "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj",
+        "packagesPath": "/Users/systemadmin/.nuget/packages/",
+        "outputPath": "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "/Users/aditiagrawal/.config/NuGet/NuGet.Config"
+          "/Users/systemadmin/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"

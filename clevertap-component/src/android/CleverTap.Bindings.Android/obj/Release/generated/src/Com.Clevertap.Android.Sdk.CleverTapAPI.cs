@@ -159,6 +159,85 @@ namespace Com.Clevertap.Android.Sdk {
 		}
 
 
+		// Metadata.xml XPath class reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.EventGroup']"
+		[global::Android.Runtime.Register ("com/clevertap/android/sdk/CleverTapAPI$EventGroup", DoNotGenerateAcw=true)]
+		public sealed partial class EventGroup : global::Java.Lang.Enum {
+
+
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.EventGroup']/field[@name='PUSH_NOTIFICATION_VIEWED']"
+			[Register ("PUSH_NOTIFICATION_VIEWED")]
+			public static global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup PushNotificationViewed {
+				get {
+					const string __id = "PUSH_NOTIFICATION_VIEWED.Lcom/clevertap/android/sdk/CleverTapAPI$EventGroup;";
+
+					var __v = _members.StaticFields.GetObjectValue (__id);
+					return global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup> (__v.Handle, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.EventGroup']/field[@name='REGULAR']"
+			[Register ("REGULAR")]
+			public static global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup Regular {
+				get {
+					const string __id = "REGULAR.Lcom/clevertap/android/sdk/CleverTapAPI$EventGroup;";
+
+					var __v = _members.StaticFields.GetObjectValue (__id);
+					return global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup> (__v.Handle, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+			internal static new readonly JniPeerMembers _members = new XAPeerMembers ("com/clevertap/android/sdk/CleverTapAPI$EventGroup", typeof (EventGroup));
+			internal static new IntPtr class_ref {
+				get {
+					return _members.JniPeerType.PeerReference.Handle;
+				}
+			}
+
+			public override global::Java.Interop.JniPeerMembers JniPeerMembers {
+				get { return _members; }
+			}
+
+			protected override IntPtr ThresholdClass {
+				get { return _members.JniPeerType.PeerReference.Handle; }
+			}
+
+			protected override global::System.Type ThresholdType {
+				get { return _members.ManagedPeerType; }
+			}
+
+			internal EventGroup (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.EventGroup']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("valueOf", "(Ljava/lang/String;)Ljava/lang/Enum;", "")]
+			public static unsafe global::Java.Lang.Enum ValueOf (string name)
+			{
+				const string __id = "valueOf.(Ljava/lang/String;)Ljava/lang/Enum;";
+				IntPtr native_name = JNIEnv.NewString (name);
+				try {
+					JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+					__args [0] = new JniArgumentValue (native_name);
+					var __rm = _members.StaticMethods.InvokeObjectMethod (__id, __args);
+					return global::Java.Lang.Object.GetObject<global::Java.Lang.Enum> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_name);
+				}
+			}
+
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.EventGroup']/method[@name='values' and count(parameter)=0]"
+			[Register ("values", "()[Lcom/clevertap/android/sdk/CleverTapAPI$EventGroup;", "")]
+			public static unsafe global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup[] Values ()
+			{
+				const string __id = "values.()[Lcom/clevertap/android/sdk/CleverTapAPI$EventGroup;";
+				try {
+					var __rm = _members.StaticMethods.InvokeObjectMethod (__id, null);
+					return (global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup[]) JNIEnv.GetArray (__rm.Handle, JniHandleOwnership.TransferLocalRef, typeof (global::Com.Clevertap.Android.Sdk.CleverTapAPI.EventGroup));
+				} finally {
+				}
+			}
+
+		}
+
 		// Metadata.xml XPath class reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.LogLevel']"
 		[global::Android.Runtime.Register ("com/clevertap/android/sdk/CleverTapAPI$LogLevel", DoNotGenerateAcw=true)]
 		public sealed partial class LogLevel : global::Java.Lang.Enum {
@@ -262,6 +341,44 @@ namespace Com.Clevertap.Android.Sdk {
 
 		}
 
+		// Metadata.xml XPath class reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.NotificationPrepareRunnable']"
+		[global::Android.Runtime.Register ("com/clevertap/android/sdk/CleverTapAPI$NotificationPrepareRunnable", DoNotGenerateAcw=true)]
+		public sealed partial class NotificationPrepareRunnable : global::Java.Lang.Object, global::Java.Lang.IRunnable {
+
+			internal static new readonly JniPeerMembers _members = new XAPeerMembers ("com/clevertap/android/sdk/CleverTapAPI$NotificationPrepareRunnable", typeof (NotificationPrepareRunnable));
+			internal static new IntPtr class_ref {
+				get {
+					return _members.JniPeerType.PeerReference.Handle;
+				}
+			}
+
+			public override global::Java.Interop.JniPeerMembers JniPeerMembers {
+				get { return _members; }
+			}
+
+			protected override IntPtr ThresholdClass {
+				get { return _members.JniPeerType.PeerReference.Handle; }
+			}
+
+			protected override global::System.Type ThresholdType {
+				get { return _members.ManagedPeerType; }
+			}
+
+			internal NotificationPrepareRunnable (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI.NotificationPrepareRunnable']/method[@name='run' and count(parameter)=0]"
+			[Register ("run", "()V", "")]
+			public unsafe void Run ()
+			{
+				const string __id = "run.()V";
+				try {
+					_members.InstanceMethods.InvokeAbstractVoidMethod (__id, this, null);
+				} finally {
+				}
+			}
+
+		}
+
 		internal static new readonly JniPeerMembers _members = new XAPeerMembers ("com/clevertap/android/sdk/CleverTapAPI", typeof (CleverTapAPI));
 		internal static new IntPtr class_ref {
 			get {
@@ -282,6 +399,35 @@ namespace Com.Clevertap.Android.Sdk {
 		}
 
 		protected CleverTapAPI (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+		static Delegate cb_getAllDisplayUnits;
+#pragma warning disable 0169
+		static Delegate GetGetAllDisplayUnitsHandler ()
+		{
+			if (cb_getAllDisplayUnits == null)
+				cb_getAllDisplayUnits = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetAllDisplayUnits);
+			return cb_getAllDisplayUnits;
+		}
+
+		static IntPtr n_GetAllDisplayUnits (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return global::Android.Runtime.JavaList<global::Com.Clevertap.Android.Sdk.Displayunits.Model.CleverTapDisplayUnit>.ToLocalJniHandle (__this.AllDisplayUnits);
+		}
+#pragma warning restore 0169
+
+		public virtual unsafe global::System.Collections.Generic.IList<global::Com.Clevertap.Android.Sdk.Displayunits.Model.CleverTapDisplayUnit> AllDisplayUnits {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='getAllDisplayUnits' and count(parameter)=0]"
+			[Register ("getAllDisplayUnits", "()Ljava/util/ArrayList;", "GetGetAllDisplayUnitsHandler")]
+			get {
+				const string __id = "getAllDisplayUnits.()Ljava/util/ArrayList;";
+				try {
+					var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, null);
+					return global::Android.Runtime.JavaList<global::Com.Clevertap.Android.Sdk.Displayunits.Model.CleverTapDisplayUnit>.FromJniHandle (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
 
 		static Delegate cb_getAllInboxMessages;
 #pragma warning disable 0169
@@ -1694,6 +1840,40 @@ namespace Com.Clevertap.Android.Sdk {
 			}
 		}
 
+		static Delegate cb_getDisplayUnitForId_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetGetDisplayUnitForId_Ljava_lang_String_Handler ()
+		{
+			if (cb_getDisplayUnitForId_Ljava_lang_String_ == null)
+				cb_getDisplayUnitForId_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr>) n_GetDisplayUnitForId_Ljava_lang_String_);
+			return cb_getDisplayUnitForId_Ljava_lang_String_;
+		}
+
+		static IntPtr n_GetDisplayUnitForId_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_unitID)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string unitID = JNIEnv.GetString (native_unitID, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.GetDisplayUnitForId (unitID));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='getDisplayUnitForId' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("getDisplayUnitForId", "(Ljava/lang/String;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;", "GetGetDisplayUnitForId_Ljava_lang_String_Handler")]
+		public virtual unsafe global::Com.Clevertap.Android.Sdk.Displayunits.Model.CleverTapDisplayUnit GetDisplayUnitForId (string unitID)
+		{
+			const string __id = "getDisplayUnitForId.(Ljava/lang/String;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;";
+			IntPtr native_unitID = JNIEnv.NewString (unitID);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue (native_unitID);
+				var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, __args);
+				return global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.Displayunits.Model.CleverTapDisplayUnit> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_unitID);
+			}
+		}
+
 		static Delegate cb_getDoubleVariable_Ljava_lang_String_Ljava_lang_Double_;
 #pragma warning disable 0169
 		static Delegate GetGetDoubleVariable_Ljava_lang_String_Ljava_lang_Double_Handler ()
@@ -2258,38 +2438,36 @@ namespace Com.Clevertap.Android.Sdk {
 			}
 		}
 
-		static Delegate cb_inAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_;
+		static Delegate cb_inAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_;
 #pragma warning disable 0169
-		static Delegate GetInAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_Handler ()
+		static Delegate GetInAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_Handler ()
 		{
-			if (cb_inAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_ == null)
-				cb_inAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_InAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_);
-			return cb_inAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_;
+			if (cb_inAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_ == null)
+				cb_inAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_InAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_);
+			return cb_inAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_;
 		}
 
-		static void n_InAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_ (IntPtr jnienv, IntPtr native__this, IntPtr native_context, IntPtr native_inAppNotification, IntPtr native_formData, IntPtr native_keyValueMap)
+		static void n_InAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_ (IntPtr jnienv, IntPtr native__this, IntPtr native_inAppNotification, IntPtr native_formData, IntPtr native_keyValueMap)
 		{
 			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			global::Android.Content.Context context = global::Java.Lang.Object.GetObject<global::Android.Content.Context> (native_context, JniHandleOwnership.DoNotTransfer);
 			global::Com.Clevertap.Android.Sdk.CTInAppNotification inAppNotification = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInAppNotification> (native_inAppNotification, JniHandleOwnership.DoNotTransfer);
 			global::Android.OS.Bundle formData = global::Java.Lang.Object.GetObject<global::Android.OS.Bundle> (native_formData, JniHandleOwnership.DoNotTransfer);
 			var keyValueMap = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_keyValueMap, JniHandleOwnership.DoNotTransfer);
-			__this.InAppNotificationDidClick (context, inAppNotification, formData, keyValueMap);
+			__this.InAppNotificationDidClick (inAppNotification, formData, keyValueMap);
 		}
 #pragma warning restore 0169
 
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='inAppNotificationDidClick' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.clevertap.android.sdk.CTInAppNotification'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='java.util.HashMap&lt;java.lang.String, java.lang.String&gt;']]"
-		[Register ("inAppNotificationDidClick", "(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V", "GetInAppNotificationDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_Handler")]
-		public virtual unsafe void InAppNotificationDidClick (global::Android.Content.Context context, global::Com.Clevertap.Android.Sdk.CTInAppNotification inAppNotification, global::Android.OS.Bundle formData, global::System.Collections.Generic.IDictionary<string, string> keyValueMap)
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='inAppNotificationDidClick' and count(parameter)=3 and parameter[1][@type='com.clevertap.android.sdk.CTInAppNotification'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='java.util.HashMap&lt;java.lang.String, java.lang.String&gt;']]"
+		[Register ("inAppNotificationDidClick", "(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V", "GetInAppNotificationDidClick_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Ljava_util_HashMap_Handler")]
+		public virtual unsafe void InAppNotificationDidClick (global::Com.Clevertap.Android.Sdk.CTInAppNotification inAppNotification, global::Android.OS.Bundle formData, global::System.Collections.Generic.IDictionary<string, string> keyValueMap)
 		{
-			const string __id = "inAppNotificationDidClick.(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V";
+			const string __id = "inAppNotificationDidClick.(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V";
 			IntPtr native_keyValueMap = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (keyValueMap);
 			try {
-				JniArgumentValue* __args = stackalloc JniArgumentValue [4];
-				__args [0] = new JniArgumentValue ((context == null) ? IntPtr.Zero : ((global::Java.Lang.Object) context).Handle);
-				__args [1] = new JniArgumentValue ((inAppNotification == null) ? IntPtr.Zero : ((global::Java.Lang.Object) inAppNotification).Handle);
-				__args [2] = new JniArgumentValue ((formData == null) ? IntPtr.Zero : ((global::Java.Lang.Object) formData).Handle);
-				__args [3] = new JniArgumentValue (native_keyValueMap);
+				JniArgumentValue* __args = stackalloc JniArgumentValue [3];
+				__args [0] = new JniArgumentValue ((inAppNotification == null) ? IntPtr.Zero : ((global::Java.Lang.Object) inAppNotification).Handle);
+				__args [1] = new JniArgumentValue ((formData == null) ? IntPtr.Zero : ((global::Java.Lang.Object) formData).Handle);
+				__args [2] = new JniArgumentValue (native_keyValueMap);
 				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_keyValueMap);
@@ -2330,35 +2508,33 @@ namespace Com.Clevertap.Android.Sdk {
 			}
 		}
 
-		static Delegate cb_inAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_;
+		static Delegate cb_inAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_;
 #pragma warning disable 0169
-		static Delegate GetInAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Handler ()
+		static Delegate GetInAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Handler ()
 		{
-			if (cb_inAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_ == null)
-				cb_inAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_InAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_);
-			return cb_inAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_;
+			if (cb_inAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_ == null)
+				cb_inAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_InAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_);
+			return cb_inAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_;
 		}
 
-		static void n_InAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_context, IntPtr native_inAppNotification, IntPtr native_formData)
+		static void n_InAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_inAppNotification, IntPtr native_formData)
 		{
 			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			global::Android.Content.Context context = global::Java.Lang.Object.GetObject<global::Android.Content.Context> (native_context, JniHandleOwnership.DoNotTransfer);
 			global::Com.Clevertap.Android.Sdk.CTInAppNotification inAppNotification = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInAppNotification> (native_inAppNotification, JniHandleOwnership.DoNotTransfer);
 			global::Android.OS.Bundle formData = global::Java.Lang.Object.GetObject<global::Android.OS.Bundle> (native_formData, JniHandleOwnership.DoNotTransfer);
-			__this.InAppNotificationDidShow (context, inAppNotification, formData);
+			__this.InAppNotificationDidShow (inAppNotification, formData);
 		}
 #pragma warning restore 0169
 
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='inAppNotificationDidShow' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.clevertap.android.sdk.CTInAppNotification'] and parameter[3][@type='android.os.Bundle']]"
-		[Register ("inAppNotificationDidShow", "(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V", "GetInAppNotificationDidShow_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Handler")]
-		public virtual unsafe void InAppNotificationDidShow (global::Android.Content.Context context, global::Com.Clevertap.Android.Sdk.CTInAppNotification inAppNotification, global::Android.OS.Bundle formData)
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='inAppNotificationDidShow' and count(parameter)=2 and parameter[1][@type='com.clevertap.android.sdk.CTInAppNotification'] and parameter[2][@type='android.os.Bundle']]"
+		[Register ("inAppNotificationDidShow", "(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V", "GetInAppNotificationDidShow_Lcom_clevertap_android_sdk_CTInAppNotification_Landroid_os_Bundle_Handler")]
+		public virtual unsafe void InAppNotificationDidShow (global::Com.Clevertap.Android.Sdk.CTInAppNotification inAppNotification, global::Android.OS.Bundle formData)
 		{
-			const string __id = "inAppNotificationDidShow.(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V";
+			const string __id = "inAppNotificationDidShow.(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V";
 			try {
-				JniArgumentValue* __args = stackalloc JniArgumentValue [3];
-				__args [0] = new JniArgumentValue ((context == null) ? IntPtr.Zero : ((global::Java.Lang.Object) context).Handle);
-				__args [1] = new JniArgumentValue ((inAppNotification == null) ? IntPtr.Zero : ((global::Java.Lang.Object) inAppNotification).Handle);
-				__args [2] = new JniArgumentValue ((formData == null) ? IntPtr.Zero : ((global::Java.Lang.Object) formData).Handle);
+				JniArgumentValue* __args = stackalloc JniArgumentValue [2];
+				__args [0] = new JniArgumentValue ((inAppNotification == null) ? IntPtr.Zero : ((global::Java.Lang.Object) inAppNotification).Handle);
+				__args [1] = new JniArgumentValue ((formData == null) ? IntPtr.Zero : ((global::Java.Lang.Object) formData).Handle);
 				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
 			} finally {
 			}
@@ -2727,6 +2903,70 @@ namespace Com.Clevertap.Android.Sdk {
 				__args [0] = new JniArgumentValue ((uri == null) ? IntPtr.Zero : ((global::Java.Lang.Object) uri).Handle);
 				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
 			} finally {
+			}
+		}
+
+		static Delegate cb_pushDisplayUnitClickedEventForID_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetPushDisplayUnitClickedEventForID_Ljava_lang_String_Handler ()
+		{
+			if (cb_pushDisplayUnitClickedEventForID_Ljava_lang_String_ == null)
+				cb_pushDisplayUnitClickedEventForID_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_PushDisplayUnitClickedEventForID_Ljava_lang_String_);
+			return cb_pushDisplayUnitClickedEventForID_Ljava_lang_String_;
+		}
+
+		static void n_PushDisplayUnitClickedEventForID_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_unitID)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string unitID = JNIEnv.GetString (native_unitID, JniHandleOwnership.DoNotTransfer);
+			__this.PushDisplayUnitClickedEventForID (unitID);
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='pushDisplayUnitClickedEventForID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("pushDisplayUnitClickedEventForID", "(Ljava/lang/String;)V", "GetPushDisplayUnitClickedEventForID_Ljava_lang_String_Handler")]
+		public virtual unsafe void PushDisplayUnitClickedEventForID (string unitID)
+		{
+			const string __id = "pushDisplayUnitClickedEventForID.(Ljava/lang/String;)V";
+			IntPtr native_unitID = JNIEnv.NewString (unitID);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue (native_unitID);
+				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_unitID);
+			}
+		}
+
+		static Delegate cb_pushDisplayUnitViewedEventForID_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetPushDisplayUnitViewedEventForID_Ljava_lang_String_Handler ()
+		{
+			if (cb_pushDisplayUnitViewedEventForID_Ljava_lang_String_ == null)
+				cb_pushDisplayUnitViewedEventForID_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_PushDisplayUnitViewedEventForID_Ljava_lang_String_);
+			return cb_pushDisplayUnitViewedEventForID_Ljava_lang_String_;
+		}
+
+		static void n_PushDisplayUnitViewedEventForID_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_unitID)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string unitID = JNIEnv.GetString (native_unitID, JniHandleOwnership.DoNotTransfer);
+			__this.PushDisplayUnitViewedEventForID (unitID);
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='pushDisplayUnitViewedEventForID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("pushDisplayUnitViewedEventForID", "(Ljava/lang/String;)V", "GetPushDisplayUnitViewedEventForID_Ljava_lang_String_Handler")]
+		public virtual unsafe void PushDisplayUnitViewedEventForID (string unitID)
+		{
+			const string __id = "pushDisplayUnitViewedEventForID.(Ljava/lang/String;)V";
+			IntPtr native_unitID = JNIEnv.NewString (unitID);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue (native_unitID);
+				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_unitID);
 			}
 		}
 
@@ -3602,6 +3842,36 @@ namespace Com.Clevertap.Android.Sdk {
 			}
 		}
 
+		static Delegate cb_setDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_;
+#pragma warning disable 0169
+		static Delegate GetSetDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_Handler ()
+		{
+			if (cb_setDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_ == null)
+				cb_setDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_);
+			return cb_setDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_;
+		}
+
+		static void n_SetDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_ (IntPtr jnienv, IntPtr native__this, IntPtr native_listener)
+		{
+			global::Com.Clevertap.Android.Sdk.CleverTapAPI __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CleverTapAPI> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener listener = (global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener)global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener> (native_listener, JniHandleOwnership.DoNotTransfer);
+			__this.SetDisplayUnitListener (listener);
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CleverTapAPI']/method[@name='setDisplayUnitListener' and count(parameter)=1 and parameter[1][@type='com.clevertap.android.sdk.displayunits.DisplayUnitListener']]"
+		[Register ("setDisplayUnitListener", "(Lcom/clevertap/android/sdk/displayunits/DisplayUnitListener;)V", "GetSetDisplayUnitListener_Lcom_clevertap_android_sdk_displayunits_DisplayUnitListener_Handler")]
+		public virtual unsafe void SetDisplayUnitListener (global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener listener)
+		{
+			const string __id = "setDisplayUnitListener.(Lcom/clevertap/android/sdk/displayunits/DisplayUnitListener;)V";
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue ((listener == null) ? IntPtr.Zero : ((global::Java.Lang.Object) listener).Handle);
+				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
+			} finally {
+			}
+		}
+
 		static Delegate cb_setInAppNotificationButtonListener_Lcom_clevertap_android_sdk_InAppNotificationButtonListener_;
 #pragma warning disable 0169
 		static Delegate GetSetInAppNotificationButtonListener_Lcom_clevertap_android_sdk_InAppNotificationButtonListener_Handler ()
@@ -3858,6 +4128,31 @@ namespace Com.Clevertap.Android.Sdk {
 			}
 		}
 
+#region "Event implementation for Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener"
+		public event EventHandler<global::Com.Clevertap.Android.Sdk.Displayunits.DisplayUnitEventArgs> DisplayUnit {
+			add {
+				global::Java.Interop.EventHelper.AddEventHandler<global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener, global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListenerImplementor>(
+						ref weak_implementor_SetDisplayUnitListener,
+						__CreateIDisplayUnitListenerImplementor,
+						SetDisplayUnitListener,
+						__h => __h.Handler += value);
+			}
+			remove {
+				global::Java.Interop.EventHelper.RemoveEventHandler<global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener, global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListenerImplementor>(
+						ref weak_implementor_SetDisplayUnitListener,
+						global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListenerImplementor.__IsEmpty,
+						__v => SetDisplayUnitListener (null),
+						__h => __h.Handler -= value);
+			}
+		}
+
+		WeakReference weak_implementor_SetDisplayUnitListener;
+
+		global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListenerImplementor __CreateIDisplayUnitListenerImplementor ()
+		{
+			return new global::Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListenerImplementor (this);
+		}
+#endregion
 #region "Event implementation for Com.Clevertap.Android.Sdk.IInAppNotificationButtonListener"
 		public event EventHandler<global::Com.Clevertap.Android.Sdk.InAppNotificationButtonEventArgs> InAppNotificationButton {
 			add {

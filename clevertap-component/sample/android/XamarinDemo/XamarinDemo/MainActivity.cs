@@ -10,15 +10,20 @@ using Com.Clevertap.Android.Sdk;
 using Android.Gms.Common;
 using System.Collections.Generic;
 using Java.Util;
+using Com.Clevertap.Android.Sdk.Displayunits.Model;
+using Android.Util;
+using Firebase.Iid;
 
 namespace XamarinDemo
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : AppCompatActivity, ICTInboxListener, ICTExperimentsListener, Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener
     {
+        private CleverTapAPI cleverTapAPI;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            CleverTapAPI.SetDebugLevel(CleverTapAPI.LogLevel.Debug);
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
@@ -28,23 +33,29 @@ namespace XamarinDemo
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
-
             //Intialise CT SDK
-            CleverTapAPI cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Application.Context);
+            cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Application.Context);
+            String token = FirebaseInstanceId.Instance.Token;
 
-            CleverTapAPI.SetDebugLevel(CleverTapAPI.LogLevel.Debug);
 
+            cleverTapAPI.PushFcmRegistrationId(token, true);
+            Log.Debug("TOken", "token Sent" + token);
+            // Add custom implementation, as needed.
             //Push Event
             cleverTapAPI.PushEvent("Product View Via Xamarin");
-            
+            ICTInboxListener cTNotificationInboxListener = cleverTapAPI.CTNotificationInboxListener;
+            cleverTapAPI.SetDisplayUnitListener(this);
+            ICTExperimentsListener cTExperimentsListener = cleverTapAPI.CTExperimentsListener;
+            //Initialize the inbox and wait for callbacks on overridden methods
+            cleverTapAPI.InitializeInbox();
             //Push Profile
 
             IDictionary<string, Java.Lang.Object> profileData = new Dictionary<string, Java.Lang.Object>();
 
-            profileData.Add("Name", "Jack Montana");    // String
-            profileData.Add("Identity", 61026032);      // String or number
-            profileData.Add("Email", "jack@gmail.com"); // Email address of the user
-            profileData.Add("Phone", "+14155551234");   // Phone (with the country code, starting with +)
+            profileData.Add("Name", "Atul");    // String
+            profileData.Add("Identity", 97839492);      // String or number
+            profileData.Add("Email", "kumar@gmail.com"); // Email address of the user
+            profileData.Add("Phone", "7012801820919");   // Phone (with the country code, starting with +)
             profileData.Add("Gender", "M");             // Can be either M or F
             profileData.Add("DOB", new Date());         // Date of Birth. Set the Date object to the appropriate value first - requires java.util
 
@@ -56,11 +67,11 @@ namespace XamarinDemo
 
             IDictionary<string, Java.Lang.Object> profile = new Dictionary<string, Java.Lang.Object>();
 
-            profile.Add("Name", "Jack Montana");    // String
-            profile.Add("Identity", 61026032);      // String or number
-            profile.Add("Email", "jack@gmail.com"); // Email address of the user
-            profile.Add("Phone", "+14155551234");   // Phone (with the country code, starting with +)
-            profile.Add("Gender", "M");             // Can be either M or F
+            profile.Add("Name", "Atul");    // String
+            profile.Add("Identity", 97839492);      // String or number
+            profile.Add("Email", "kumar@gmail.com"); // Email address of the user
+            profile.Add("Phone", "7012801820919");   // Phone (with the country code, starting with +)
+            profile.Add("Gender", "M");               // Can be either M or F
             profile.Add("DOB", new Date());         // Date of Birth. Set the Date object to the appropriate value first - requires java.util
 
 
@@ -125,6 +136,7 @@ namespace XamarinDemo
             View view = (View)sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+            cleverTapAPI.ShowAppInbox();
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -132,25 +144,33 @@ namespace XamarinDemo
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-        public bool IsPlayServicesAvailable()
+
+        public void InboxDidInitialize()
         {
-            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
-            if (resultCode != ConnectionResult.Success)
-            {
-                if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
-                {
-                    //tester
-                }
-                else
-                {
-                    Finish();
-                }
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            Toast.MakeText(Android.App.Application.Context, "Inbox Initialized", ToastLength.Short).Show();
+            Log.Debug("CLEVERTAP", "Inbox Initialized");
+            //throw new NotImplementedException();
+        }
+
+        public void InboxMessagesDidUpdate()
+        {
+            Toast.MakeText(Android.App.Application.Context, "Inbox Updated", ToastLength.Short).Show();
+            Log.Debug("CLEVERTAP", "Inbox UPdated");
+            //throw new NotImplementedException();
+        }
+
+        public void CTExperimentsUpdated()
+        {
+            Toast.MakeText(Android.App.Application.Context, "Experiments Updated", ToastLength.Short).Show();
+            Log.Debug("CLEVERTAP", "Experiments Updated");
+            //throw new NotImplementedException();
+        }
+
+        public void OnDisplayUnitsLoaded(IList<CleverTapDisplayUnit> p0)
+        {
+            Toast.MakeText(Android.App.Application.Context, "Display Units Loaded", ToastLength.Short).Show();
+            Log.Debug("CLEVERTAP", "Display Units Loaded");
+            //throw new NotImplementedException();
         }
     }
 }

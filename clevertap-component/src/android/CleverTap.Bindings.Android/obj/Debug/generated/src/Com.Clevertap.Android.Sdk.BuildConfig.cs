@@ -28,15 +28,15 @@ namespace Com.Clevertap.Android.Sdk {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='BuildConfig']/field[@name='SDK_VERSION_STRING']"
 		[Register ("SDK_VERSION_STRING")]
-		public const string SdkVersionString = (string) "!SDK-VERSION-STRING!:com.clevertap.android:clevertap-android-sdk:3.6.0.0";
+		public const string SdkVersionString = (string) "!SDK-VERSION-STRING!:com.clevertap.android:clevertap-android-sdk:3.6.2.0";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='BuildConfig']/field[@name='VERSION_CODE']"
 		[Register ("VERSION_CODE")]
-		public const int VersionCode = (int) 30601;
+		public const int VersionCode = (int) 30602;
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='BuildConfig']/field[@name='VERSION_NAME']"
 		[Register ("VERSION_NAME")]
-		public const string VersionName = (string) "3.6.1";
+		public const string VersionName = (string) "3.6.2";
 		internal static new readonly JniPeerMembers _members = new XAPeerMembers ("com/clevertap/android/sdk/BuildConfig", typeof (BuildConfig));
 		internal static new IntPtr class_ref {
 			get {

@@ -347,7 +347,7 @@
         type="java.lang.String"
         type-generic-aware="java.lang.String"
         jni-signature="Ljava/lang/String;"
-        value="&quot;!SDK-VERSION-STRING!:com.clevertap.android:clevertap-android-sdk:3.6.0.0&quot;"
+        value="&quot;!SDK-VERSION-STRING!:com.clevertap.android:clevertap-android-sdk:3.6.2.0&quot;"
         visibility="public"
         volatile="false" />
       <field
@@ -360,7 +360,7 @@
         type="int"
         type-generic-aware="int"
         jni-signature="I"
-        value="30601"
+        value="30602"
         visibility="public"
         volatile="false" />
       <field
@@ -373,7 +373,7 @@
         type="java.lang.String"
         type-generic-aware="java.lang.String"
         jni-signature="Ljava/lang/String;"
-        value="&quot;3.6.1&quot;"
+        value="&quot;3.6.2&quot;"
         visibility="public"
         volatile="false" />
     </class>
@@ -898,6 +898,20 @@
         abstract="false"
         deprecated="not deprecated"
         final="false"
+        name="getAllDisplayUnits"
+        native="false"
+        return="java.util.ArrayList&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit&gt;"
+        jni-return="Ljava/util/ArrayList&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/ArrayList;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
         name="getAllInboxMessages"
         native="false"
         return="java.util.ArrayList&lt;com.clevertap.android.sdk.CTInboxMessage&gt;"
@@ -1128,6 +1142,25 @@
         bridge="false"
         synthetic="false"
         jni-signature="()Lcom/clevertap/android/sdk/CleverTapAPI$DevicePushTokenRefreshListener;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDisplayUnitForId"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;">
+        <parameter
+          name="unitID"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
       <method
         abstract="false"
         deprecated="not deprecated"
@@ -1657,11 +1690,7 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
-        <parameter
-          name="context"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
         <parameter
           name="inAppNotification"
           type="com.clevertap.android.sdk.CTInAppNotification"
@@ -1715,11 +1744,7 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
-        <parameter
-          name="context"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
         <parameter
           name="inAppNotification"
           type="com.clevertap.android.sdk.CTInAppNotification"
@@ -2028,6 +2053,44 @@
           name="uri"
           type="android.net.Uri"
           jni-type="Landroid/net/Uri;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="pushDisplayUnitClickedEventForID"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)V">
+        <parameter
+          name="unitID"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="pushDisplayUnitViewedEventForID"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)V">
+        <parameter
+          name="unitID"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
       </method>
       <method
         abstract="false"
@@ -2683,6 +2746,25 @@
           name="tokenRefreshListener"
           type="com.clevertap.android.sdk.CleverTapAPI.DevicePushTokenRefreshListener"
           jni-type="Lcom/clevertap/android/sdk/CleverTapAPI$DevicePushTokenRefreshListener;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setDisplayUnitListener"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/clevertap/android/sdk/displayunits/DisplayUnitListener;)V">
+        <parameter
+          name="listener"
+          type="com.clevertap.android.sdk.displayunits.DisplayUnitListener"
+          jni-type="Lcom/clevertap/android/sdk/displayunits/DisplayUnitListener;" />
       </method>
       <method
         abstract="false"
@@ -4459,6 +4541,8 @@
       abstract="false"
       deprecated="not deprecated"
       enclosing-method-jni-type="Lcom/clevertap/android/sdk/CleverTapAPI;"
+      enclosing-method-name="notifyDisplayUnitsLoaded"
+      enclosing-method-signature="(Ljava/util/ArrayList;)V"
       jni-extends="Ljava/lang/Object;"
       extends="java.lang.Object"
       extends-generic-aware="java.lang.Object"
@@ -4466,8 +4550,27 @@
       name="CleverTapAPI.49"
       jni-signature="Lcom/clevertap/android/sdk/CleverTapAPI$49;"
       source-file-name="CleverTapAPI.java"
-      static="true"
-      visibility="" />
+      static="false"
+      visibility="">
+      <implements
+        name="java.lang.Runnable"
+        name-generic-aware="java.lang.Runnable"
+        jni-type="Ljava/lang/Runnable;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="run"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+    </class>
     <class
       abstract="false"
       deprecated="not deprecated"
@@ -4502,6 +4605,19 @@
         synthetic="false"
         jni-signature="()V" />
     </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      enclosing-method-jni-type="Lcom/clevertap/android/sdk/CleverTapAPI;"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="CleverTapAPI.50"
+      jni-signature="Lcom/clevertap/android/sdk/CleverTapAPI$50;"
+      source-file-name="CleverTapAPI.java"
+      static="true"
+      visibility="" />
     <class
       abstract="false"
       deprecated="not deprecated"
@@ -5572,6 +5688,435 @@
         bridge="false"
         synthetic="false"
         jni-signature="()V" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="FEATURE_DISPLAY_UNIT"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;DisplayUnit : &quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_ACTION"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;action&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_ACTIONS"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;actions&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_ANDROID"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;android&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_BG"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;bg&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_BORDER"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;border&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_COLOR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;color&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_CONTENT"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;content&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_CONTENT_TYPE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;content_type&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_CUSTOM_KV"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;custom_kv&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_DATE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;date&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_HAS_LINKS"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;hasLinks&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_HAS_URL"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;hasUrl&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_ICON"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;icon&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_ID"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;id&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_IS_READ"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;isRead&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_LINKS"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;links&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_MEDIA"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;media&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_MESSAGE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;message&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_MSG"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;msg&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_ORIENTATION"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;orientation&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_POSTER_URL"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;poster&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_RADIUS"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;radius&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_TAGS"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;tags&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_TEXT"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;text&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_TITLE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;title&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_TYPE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;type&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_URL"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;url&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_WZRK_PARAMS"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;wzrkParams&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="KEY_WZRK_TTL"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;wzrk_ttl&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="NOTIFICATION_ID_TAG"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;wzrk_id&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="TEST_IDENTIFIER"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;0_0&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="WZRK_PREFIX"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;wzrk_&quot;"
+        visibility="public"
+        volatile="false" />
     </class>
     <class
       abstract="false"
@@ -6517,21 +7062,17 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
         <parameter
           name="p0"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
-        <parameter
-          name="p1"
           type="com.clevertap.android.sdk.CTInAppNotification"
           jni-type="Lcom/clevertap/android/sdk/CTInAppNotification;" />
         <parameter
-          name="p2"
+          name="p1"
           type="android.os.Bundle"
           jni-type="Landroid/os/Bundle;" />
         <parameter
-          name="p3"
+          name="p2"
           type="java.util.HashMap&lt;java.lang.String, java.lang.String&gt;"
           jni-type="Ljava/util/HashMap&lt;Ljava/lang/String;Ljava/lang/String;&gt;;" />
       </method>
@@ -6575,17 +7116,13 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
         <parameter
           name="p0"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
-        <parameter
-          name="p1"
           type="com.clevertap.android.sdk.CTInAppNotification"
           jni-type="Lcom/clevertap/android/sdk/CTInAppNotification;" />
         <parameter
-          name="p2"
+          name="p1"
           type="android.os.Bundle"
           jni-type="Landroid/os/Bundle;" />
       </method>
@@ -6633,6 +7170,20 @@
         bridge="false"
         synthetic="false"
         jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getLayoutParamsForCloseButton"
+        native="false"
+        return="android.widget.RelativeLayout.LayoutParams"
+        jni-return="Landroid/widget/RelativeLayout$LayoutParams;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Landroid/widget/RelativeLayout$LayoutParams;" />
       <method
         abstract="false"
         deprecated="not deprecated"
@@ -6740,6 +7291,18 @@
           type="android.os.Bundle"
           jni-type="Landroid/os/Bundle;" />
       </method>
+      <field
+        deprecated="not deprecated"
+        final="false"
+        name="webView"
+        static="false"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.CTInAppWebView"
+        type-generic-aware="com.clevertap.android.sdk.CTInAppWebView"
+        jni-signature="Lcom/clevertap/android/sdk/CTInAppWebView;"
+        visibility="protected"
+        volatile="false" />
     </class>
     <class
       abstract="false"
@@ -7445,6 +8008,20 @@
         bridge="false"
         synthetic="false"
         jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getLayoutParamsForCloseButton"
+        native="false"
+        return="android.widget.RelativeLayout.LayoutParams"
+        jni-return="Landroid/widget/RelativeLayout$LayoutParams;"
+        static="false"
+        synchronized="false"
+        visibility="protected"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Landroid/widget/RelativeLayout$LayoutParams;" />
     </class>
     <class
       abstract="false"
@@ -9685,6 +10262,20 @@
         bridge="false"
         synthetic="false"
         jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getListener"
+        native="false"
+        return="com.clevertap.android.sdk.CTInboxActivity.InboxActivityListener"
+        jni-return="Lcom/clevertap/android/sdk/CTInboxActivity$InboxActivityListener;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lcom/clevertap/android/sdk/CTInboxActivity$InboxActivityListener;" />
       <method
         abstract="false"
         deprecated="not deprecated"
@@ -14392,11 +14983,7 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
-        <parameter
-          name="context"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
         <parameter
           name="inAppNotification"
           type="com.clevertap.android.sdk.CTInAppNotification"
@@ -14450,11 +15037,7 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
-        <parameter
-          name="context"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
         <parameter
           name="inAppNotification"
           type="com.clevertap.android.sdk.CTInAppNotification"
@@ -14767,21 +15350,17 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;Ljava/util/HashMap;)V">
         <parameter
           name="p0"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
-        <parameter
-          name="p1"
           type="com.clevertap.android.sdk.CTInAppNotification"
           jni-type="Lcom/clevertap/android/sdk/CTInAppNotification;" />
         <parameter
-          name="p2"
+          name="p1"
           type="android.os.Bundle"
           jni-type="Landroid/os/Bundle;" />
         <parameter
-          name="p3"
+          name="p2"
           type="java.util.HashMap&lt;java.lang.String, java.lang.String&gt;"
           jni-type="Ljava/util/HashMap&lt;Ljava/lang/String;Ljava/lang/String;&gt;;" />
       </method>
@@ -14825,17 +15404,13 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
+        jni-signature="(Lcom/clevertap/android/sdk/CTInAppNotification;Landroid/os/Bundle;)V">
         <parameter
           name="p0"
-          type="android.content.Context"
-          jni-type="Landroid/content/Context;" />
-        <parameter
-          name="p1"
           type="com.clevertap.android.sdk.CTInAppNotification"
           jni-type="Lcom/clevertap/android/sdk/CTInAppNotification;" />
         <parameter
-          name="p2"
+          name="p1"
           type="android.os.Bundle"
           jni-type="Landroid/os/Bundle;" />
       </method>
@@ -19644,6 +20219,957 @@
         jni-signature="Ljava/lang/String;"
         visibility="public"
         volatile="false" />
+    </class>
+  </package>
+  <package
+    name="com.clevertap.android.sdk.displayunits"
+    jni-name="com/clevertap/android/sdk/displayunits">
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="CTDisplayUnitController"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitController;"
+      source-file-name="CTDisplayUnitController.java"
+      static="false"
+      visibility="public">
+      <constructor
+        deprecated="not deprecated"
+        final="false"
+        name="CTDisplayUnitController"
+        static="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getAllDisplayUnits"
+        native="false"
+        return="java.util.ArrayList&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit&gt;"
+        jni-return="Ljava/util/ArrayList&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/ArrayList;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getDisplayUnitForID"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;">
+        <parameter
+          name="unitId"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="reset"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="updateDisplayUnits"
+        native="false"
+        return="java.util.ArrayList&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit&gt;"
+        jni-return="Ljava/util/ArrayList&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/json/JSONArray;)Ljava/util/ArrayList;">
+        <parameter
+          name="messages"
+          type="org.json.JSONArray"
+          jni-type="Lorg/json/JSONArray;" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Enum;"
+      extends="java.lang.Enum"
+      extends-generic-aware="java.lang.Enum&lt;com.clevertap.android.sdk.displayunits.CTDisplayUnitType&gt;"
+      final="true"
+      name="CTDisplayUnitType"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+      source-file-name="CTDisplayUnitType.java"
+      static="false"
+      visibility="public">
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="toString"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="type"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;">
+        <parameter
+          name="type"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="valueOf"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;">
+        <parameter
+          name="name"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="values"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.CTDisplayUnitType[]"
+        jni-return="[Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()[Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="CAROUSEL"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        type-generic-aware="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="CAROUSEL_WITH_IMAGE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        type-generic-aware="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="CUSTOM_KEY_VALUE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        type-generic-aware="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="MESSAGE_WITH_ICON"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        type-generic-aware="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="SIMPLE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        type-generic-aware="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="SIMPLE_WITH_IMAGE"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        type-generic-aware="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-signature="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        visibility="public"
+        volatile="false" />
+    </class>
+    <interface
+      abstract="true"
+      deprecated="not deprecated"
+      final="false"
+      name="DisplayUnitListener"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/DisplayUnitListener;"
+      source-file-name="DisplayUnitListener.java"
+      static="false"
+      visibility="public">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onDisplayUnitsLoaded"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/util/ArrayList;)V">
+        <parameter
+          name="p0"
+          type="java.util.ArrayList&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit&gt;"
+          jni-type="Ljava/util/ArrayList&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;&gt;;" />
+      </method>
+    </interface>
+  </package>
+  <package
+    name="com.clevertap.android.sdk.displayunits.model"
+    jni-name="com/clevertap/android/sdk/displayunits/model">
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="CleverTapDisplayUnit"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+      source-file-name="CleverTapDisplayUnit.java"
+      static="false"
+      visibility="public">
+      <implements
+        name="android.os.Parcelable"
+        name-generic-aware="android.os.Parcelable"
+        jni-type="Landroid/os/Parcelable;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="describeContents"
+        native="false"
+        return="int"
+        jni-return="I"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()I" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getBgColor"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getContents"
+        native="false"
+        return="java.util.ArrayList&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnitContent&gt;"
+        jni-return="Ljava/util/ArrayList&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/ArrayList;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getCustomExtras"
+        native="false"
+        return="java.util.HashMap&lt;java.lang.String, java.lang.String&gt;"
+        jni-return="Ljava/util/HashMap&lt;Ljava/lang/String;Ljava/lang/String;&gt;;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/util/HashMap;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getError"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getJsonObject"
+        native="false"
+        return="org.json.JSONObject"
+        jni-return="Lorg/json/JSONObject;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/json/JSONObject;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getType"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.CTDisplayUnitType"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lcom/clevertap/android/sdk/displayunits/CTDisplayUnitType;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getUnitID"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getWZRKFields"
+        native="false"
+        return="org.json.JSONObject"
+        jni-return="Lorg/json/JSONObject;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lorg/json/JSONObject;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="toDisplayUnit"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lorg/json/JSONObject;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;">
+        <parameter
+          name="jsonObject"
+          type="org.json.JSONObject"
+          jni-type="Lorg/json/JSONObject;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="toString"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="writeToParcel"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/os/Parcel;I)V">
+        <parameter
+          name="parcel"
+          type="android.os.Parcel"
+          jni-type="Landroid/os/Parcel;" />
+        <parameter
+          name="i"
+          type="int"
+          jni-type="I" />
+      </method>
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="CREATOR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="android.os.Parcelable.Creator"
+        type-generic-aware="android.os.Parcelable.Creator&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit&gt;"
+        jni-signature="Landroid/os/Parcelable$Creator;"
+        visibility="public"
+        volatile="false" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      enclosing-method-jni-type="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="CleverTapDisplayUnit.1"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit$1;"
+      source-file-name="CleverTapDisplayUnit.java"
+      static="true"
+      visibility="">
+      <implements
+        name="android.os.Parcelable.Creator"
+        name-generic-aware="android.os.Parcelable.Creator&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit&gt;"
+        jni-type="Landroid/os/Parcelable$Creator&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="createFromParcel"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/os/Parcel;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;">
+        <parameter
+          name="in"
+          type="android.os.Parcel"
+          jni-type="Landroid/os/Parcel;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="createFromParcel"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Landroid/os/Parcel;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="android.os.Parcel"
+          jni-type="Landroid/os/Parcel;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newArray"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnit[]"
+        jni-return="[Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(I)[Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnit;">
+        <parameter
+          name="size"
+          type="int"
+          jni-type="I" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newArray"
+        native="false"
+        return="java.lang.Object[]"
+        jni-return="[Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(I)[Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="int"
+          jni-type="I" />
+      </method>
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="CleverTapDisplayUnitContent"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;"
+      source-file-name="CleverTapDisplayUnitContent.java"
+      static="false"
+      visibility="public">
+      <implements
+        name="android.os.Parcelable"
+        name-generic-aware="android.os.Parcelable"
+        jni-type="Landroid/os/Parcelable;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="describeContents"
+        native="false"
+        return="int"
+        jni-return="I"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()I" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getActionUrl"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getContentType"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getError"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getIcon"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getMedia"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getMessage"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getMessageColor"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getPosterUrl"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getTitle"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getTitleColor"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="mediaIsAudio"
+        native="false"
+        return="boolean"
+        jni-return="Z"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Z" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="mediaIsGIF"
+        native="false"
+        return="boolean"
+        jni-return="Z"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Z" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="mediaIsImage"
+        native="false"
+        return="boolean"
+        jni-return="Z"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Z" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="mediaIsVideo"
+        native="false"
+        return="boolean"
+        jni-return="Z"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Z" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="toString"
+        native="false"
+        return="java.lang.String"
+        jni-return="Ljava/lang/String;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Ljava/lang/String;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="writeToParcel"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/os/Parcel;I)V">
+        <parameter
+          name="dest"
+          type="android.os.Parcel"
+          jni-type="Landroid/os/Parcel;" />
+        <parameter
+          name="flags"
+          type="int"
+          jni-type="I" />
+      </method>
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="CREATOR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="android.os.Parcelable.Creator"
+        type-generic-aware="android.os.Parcelable.Creator&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnitContent&gt;"
+        jni-signature="Landroid/os/Parcelable$Creator;"
+        visibility="public"
+        volatile="false" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      enclosing-method-jni-type="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="CleverTapDisplayUnitContent.1"
+      jni-signature="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent$1;"
+      source-file-name="CleverTapDisplayUnitContent.java"
+      static="true"
+      visibility="">
+      <implements
+        name="android.os.Parcelable.Creator"
+        name-generic-aware="android.os.Parcelable.Creator&lt;com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnitContent&gt;"
+        jni-type="Landroid/os/Parcelable$Creator&lt;Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;&gt;;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="createFromParcel"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnitContent"
+        jni-return="Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/os/Parcel;)Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;">
+        <parameter
+          name="in"
+          type="android.os.Parcel"
+          jni-type="Landroid/os/Parcel;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="createFromParcel"
+        native="false"
+        return="java.lang.Object"
+        jni-return="Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(Landroid/os/Parcel;)Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="android.os.Parcel"
+          jni-type="Landroid/os/Parcel;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newArray"
+        native="false"
+        return="com.clevertap.android.sdk.displayunits.model.CleverTapDisplayUnitContent[]"
+        jni-return="[Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(I)[Lcom/clevertap/android/sdk/displayunits/model/CleverTapDisplayUnitContent;">
+        <parameter
+          name="size"
+          type="int"
+          jni-type="I" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="newArray"
+        native="false"
+        return="java.lang.Object[]"
+        jni-return="[Ljava/lang/Object;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="true"
+        synthetic="true"
+        jni-signature="(I)[Ljava/lang/Object;">
+        <parameter
+          name="p0"
+          type="int"
+          jni-type="I" />
+      </method>
     </class>
   </package>
   <package

@@ -573,6 +573,25 @@
         "build": {
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
         }
+      },
+      "Xamarin.Android.Support.WebKit/28.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[28.0.0.3]",
+          "Xamarin.Android.Support.Compat": "[28.0.0.3]"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "build": {
+          "build/monoandroid90/Xamarin.Android.Support.WebKit.targets": {}
+        }
       }
     },
     "MonoAndroid,Version=v9.0/win": {
@@ -1146,6 +1165,25 @@
         },
         "build": {
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
+        }
+      },
+      "Xamarin.Android.Support.WebKit/28.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[28.0.0.3]",
+          "Xamarin.Android.Support.Compat": "[28.0.0.3]"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "build": {
+          "build/monoandroid90/Xamarin.Android.Support.WebKit.targets": {}
         }
       }
     },
@@ -1721,6 +1759,25 @@
         "build": {
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
         }
+      },
+      "Xamarin.Android.Support.WebKit/28.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[28.0.0.3]",
+          "Xamarin.Android.Support.Compat": "[28.0.0.3]"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "build": {
+          "build/monoandroid90/Xamarin.Android.Support.WebKit.targets": {}
+        }
       }
     },
     "MonoAndroid,Version=v9.0/win-x86": {
@@ -2295,6 +2352,25 @@
         "build": {
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
         }
+      },
+      "Xamarin.Android.Support.WebKit/28.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[28.0.0.3]",
+          "Xamarin.Android.Support.Compat": "[28.0.0.3]"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll": {}
+        },
+        "build": {
+          "build/monoandroid90/Xamarin.Android.Support.WebKit.targets": {}
+        }
       }
     }
   },
@@ -2861,10 +2937,30 @@
         "xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
         "xamarin.android.support.viewpager.nuspec"
       ]
+    },
+    "Xamarin.Android.Support.WebKit/28.0.0.3": {
+      "sha512": "a9Wzz7a1FkoTwU6+OZTyKLq4NdZ+upA/KVnTjgF4q5x3J2aqQ28G08w9Xgz8tBY3RHvA1zuL9Q296MQf0XJzDQ==",
+      "type": "package",
+      "path": "xamarin.android.support.webkit/28.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid90/Xamarin.Android.Support.WebKit.targets",
+        "lib/monoandroid60/_._",
+        "lib/monoandroid70/_._",
+        "lib/monoandroid71/_._",
+        "lib/monoandroid80/_._",
+        "lib/monoandroid81/_._",
+        "lib/monoandroid90/Xamarin.Android.Support.WebKit.dll",
+        "proguard/monoandroid90/proguard.txt",
+        "xamarin.android.support.webkit.28.0.0.3.nupkg.sha512",
+        "xamarin.android.support.webkit.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
+      "Xamarin.Android.Support.WebKit >= 28.0.0.3",
       "Xamarin.Android.Support.v4 >= 28.0.0.3"
     ]
   },
@@ -2899,6 +2995,10 @@
     "frameworks": {
       "monoandroid90": {
         "dependencies": {
+          "Xamarin.Android.Support.WebKit": {
+            "target": "Package",
+            "version": "[28.0.0.3, )"
+          },
           "Xamarin.Android.Support.v4": {
             "target": "Package",
             "version": "[28.0.0.3, )"

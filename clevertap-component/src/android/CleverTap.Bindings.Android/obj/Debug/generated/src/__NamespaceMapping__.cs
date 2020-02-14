@@ -3,6 +3,8 @@
 [assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.ab_testing.gesture", Managed="Com.Clevertap.Android.Sdk.Ab_testing.Gesture")]
 [assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.ab_testing.models", Managed="Com.Clevertap.Android.Sdk.Ab_testing.Models")]
 [assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.ab_testing.uieditor", Managed="Com.Clevertap.Android.Sdk.Ab_testing.Uieditor")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.displayunits", Managed="Com.Clevertap.Android.Sdk.Displayunits")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.displayunits.model", Managed="Com.Clevertap.Android.Sdk.Displayunits.Model")]
 [assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.java_websocket", Managed="Com.Clevertap.Android.Sdk.Java_websocket")]
 [assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.java_websocket.client", Managed="Com.Clevertap.Android.Sdk.Java_websocket.Client")]
 [assembly:global::Android.Runtime.NamespaceMapping (Java = "com.clevertap.android.sdk.java_websocket.drafts", Managed="Com.Clevertap.Android.Sdk.Java_websocket.Drafts")]

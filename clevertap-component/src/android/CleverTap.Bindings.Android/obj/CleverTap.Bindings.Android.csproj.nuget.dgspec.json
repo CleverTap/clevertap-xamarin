@@ -32,6 +32,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Xamarin.Android.Support.WebKit": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
             "Xamarin.Android.Support.v4": {
               "target": "Package",
               "version": "[28.0.0.3, )"

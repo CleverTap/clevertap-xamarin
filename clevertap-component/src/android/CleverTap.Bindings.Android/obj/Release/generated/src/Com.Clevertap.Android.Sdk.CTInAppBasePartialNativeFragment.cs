@@ -9,6 +9,33 @@ namespace Com.Clevertap.Android.Sdk {
 	[global::Android.Runtime.Register ("com/clevertap/android/sdk/CTInAppBasePartialNativeFragment", DoNotGenerateAcw=true)]
 	public abstract partial class CTInAppBasePartialNativeFragment : global::Com.Clevertap.Android.Sdk.CTInAppBasePartialFragment, global::Android.Views.View.IOnLongClickListener, global::Android.Views.View.IOnTouchListener {
 
+		// Metadata.xml XPath class reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CTInAppBasePartialNativeFragment.GestureListener']"
+		[global::Android.Runtime.Register ("com/clevertap/android/sdk/CTInAppBasePartialNativeFragment$GestureListener", DoNotGenerateAcw=true)]
+		public partial class GestureListener : global::Android.Views.GestureDetector.SimpleOnGestureListener {
+
+			internal static new readonly JniPeerMembers _members = new XAPeerMembers ("com/clevertap/android/sdk/CTInAppBasePartialNativeFragment$GestureListener", typeof (GestureListener));
+			internal static new IntPtr class_ref {
+				get {
+					return _members.JniPeerType.PeerReference.Handle;
+				}
+			}
+
+			public override global::Java.Interop.JniPeerMembers JniPeerMembers {
+				get { return _members; }
+			}
+
+			protected override IntPtr ThresholdClass {
+				get { return _members.JniPeerType.PeerReference.Handle; }
+			}
+
+			protected override global::System.Type ThresholdType {
+				get { return _members.ManagedPeerType; }
+			}
+
+			protected GestureListener (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+		}
+
 		internal static new readonly JniPeerMembers _members = new XAPeerMembers ("com/clevertap/android/sdk/CTInAppBasePartialNativeFragment", typeof (CTInAppBasePartialNativeFragment));
 		internal static new IntPtr class_ref {
 			get {

@@ -281,6 +281,35 @@ namespace Com.Clevertap.Android.Sdk {
 			}
 		}
 
+		static Delegate cb_getListener;
+#pragma warning disable 0169
+		static Delegate GetGetListenerHandler ()
+		{
+			if (cb_getListener == null)
+				cb_getListener = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetListener);
+			return cb_getListener;
+		}
+
+		static IntPtr n_GetListener (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Clevertap.Android.Sdk.CTInboxActivity __this = global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInboxActivity> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.Listener);
+		}
+#pragma warning restore 0169
+
+		public virtual unsafe global::Com.Clevertap.Android.Sdk.CTInboxActivity.IInboxActivityListener Listener {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.clevertap.android.sdk']/class[@name='CTInboxActivity']/method[@name='getListener' and count(parameter)=0]"
+			[Register ("getListener", "()Lcom/clevertap/android/sdk/CTInboxActivity$InboxActivityListener;", "GetGetListenerHandler")]
+			get {
+				const string __id = "getListener.()Lcom/clevertap/android/sdk/CTInboxActivity$InboxActivityListener;";
+				try {
+					var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, null);
+					return global::Java.Lang.Object.GetObject<global::Com.Clevertap.Android.Sdk.CTInboxActivity.IInboxActivityListener> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_messageDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_;
 #pragma warning disable 0169
 		static Delegate GetMessageDidClick_Landroid_content_Context_Lcom_clevertap_android_sdk_CTInboxMessage_Landroid_os_Bundle_Ljava_util_HashMap_Handler ()

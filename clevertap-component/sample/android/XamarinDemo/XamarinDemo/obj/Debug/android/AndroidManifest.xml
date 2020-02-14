@@ -28,6 +28,21 @@
         <category android:name="mono.android.intent.category.SEPPUKU.com.clevertap.xamarindemo" />
       </intent-filter>
     </receiver>
+    <receiver android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER" />
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:configChanges="keyboardHidden" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:name="com.clevertap.android.sdk.CTInboxActivity" android:configChanges="keyboardHidden" android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+    <receiver android:name="com.clevertap.android.sdk.CTPushNotificationReceiver" android:enabled="true" android:exported="false"></receiver>
+    <service android:name="com.clevertap.android.sdk.CTBackgroundIntentService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE">
+      <intent-filter>
+        <action android:name="com.clevertap.BG_EVENT" />
+      </intent-filter>
+    </service>
+    <service android:name="com.clevertap.android.sdk.CTBackgroundJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"></service>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     <!--
              FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
@@ -37,9 +52,8 @@
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="com.clevertap.xamarindemo.firebaseinitprovider" android:exported="false" android:initOrder="100" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
       <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar" />
     </service>
@@ -57,20 +71,6 @@
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
       </intent-filter>
     </service>
-    <receiver android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver" android:exported="true">
-      <intent-filter>
-        <action android:name="com.android.vending.INSTALL_REFERRER" />
-      </intent-filter>
-    </receiver>
-    <activity android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:configChanges="keyboardHidden" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-    <activity android:name="com.clevertap.android.sdk.CTInboxActivity" android:configChanges="keyboardHidden" android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
-    <receiver android:name="com.clevertap.android.sdk.CTPushNotificationReceiver" android:enabled="true" android:exported="false"></receiver>
-    <service android:name="com.clevertap.android.sdk.CTBackgroundIntentService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE">
-      <intent-filter>
-        <action android:name="com.clevertap.BG_EVENT" />
-      </intent-filter>
-    </service>
-    <service android:name="com.clevertap.android.sdk.CTBackgroundJobService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"></service>
   </application>
   <uses-permission android:name="android.permission.WAKE_LOCK" />
   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
