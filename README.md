@@ -12,7 +12,7 @@ For more information check out our [website](https://clevertap.com "CleverTap") 
 
 1. Install the SDK
 
-Use the [DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/CleverTapBindings/bin/Release) and add it to the References.
+Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References.
 
 2. Add Your CleverTap Credentials in AndroidManifest.xml
 
@@ -77,7 +77,7 @@ cleverTapAPI.PushProfile(profileData);
 cleverTapAPI.PushEvent("Product View Via Xamarin");
 ```
 
-Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin/blob/master/XamarinDemo/XamarinDemo/MainActivity.cs) for examples
+Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-component/sample/android/XamarinDemo/XamarinDemo/MainActivity.cs) for examples
 
 
 ### Steps for iOS
@@ -130,7 +130,7 @@ Check out the CleverTap Xamarin SDK [Change Log](https://github.com/CleverTap/cl
 
 ## Questions? #
 
- If you have questions or concerns, you can reach out to the CleverTap support team at [support@clevertap.com](mailto:support@clevertap.com).
+ If you have questions or concerns, raise an issue in this repository or you can reach out to the CleverTap support team at [support@clevertap.com](mailto:support@clevertap.com).
  
  ## License #
 
