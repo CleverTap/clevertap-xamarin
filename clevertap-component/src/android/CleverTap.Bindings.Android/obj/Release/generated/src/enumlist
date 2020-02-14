@@ -1,0 +1,14 @@
+com.clevertap.android.sdk.CleverTapAPI$EventGroup:Com.Clevertap.Android.Sdk:CleverTapAPI.EventGroup
+com.clevertap.android.sdk.CleverTapAPI$LogLevel:Com.Clevertap.Android.Sdk:CleverTapAPI.LogLevel
+com.clevertap.android.sdk.CTInAppType:Com.Clevertap.Android.Sdk:CTInAppType
+com.clevertap.android.sdk.CTInboxMessageType:Com.Clevertap.Android.Sdk:CTInboxMessageType
+com.clevertap.android.sdk.DBAdapter$Table:Com.Clevertap.Android.Sdk:DBAdapter.Table
+com.clevertap.android.sdk.displayunits.CTDisplayUnitType:Com.Clevertap.Android.Sdk.Displayunits:CTDisplayUnitType
+com.clevertap.android.sdk.java_websocket.enums.CloseHandshakeType:Com.Clevertap.Android.Sdk.Java_websocket.Enums:CloseHandshakeType
+com.clevertap.android.sdk.java_websocket.enums.HandshakeState:Com.Clevertap.Android.Sdk.Java_websocket.Enums:HandshakeState
+com.clevertap.android.sdk.java_websocket.enums.Opcode:Com.Clevertap.Android.Sdk.Java_websocket.Enums:Opcode
+com.clevertap.android.sdk.java_websocket.enums.ReadyState:Com.Clevertap.Android.Sdk.Java_websocket.Enums:ReadyState
+com.clevertap.android.sdk.java_websocket.enums.Role:Com.Clevertap.Android.Sdk.Java_websocket.Enums:Role
+com.clevertap.android.sdk.PushType:Com.Clevertap.Android.Sdk:PushType
+com.clevertap.android.sdk.Validator$RestrictedMultiValueFields:Com.Clevertap.Android.Sdk:Validator.RestrictedMultiValueFields
+com.clevertap.android.sdk.Validator$ValidationContext:Com.Clevertap.Android.Sdk:Validator.ValidationContext

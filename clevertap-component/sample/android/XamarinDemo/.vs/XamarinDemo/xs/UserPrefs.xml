@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{AE56BBDD-3435-4559-B651-EBAC87DC0FC7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinDemo/MainActivity.cs">
+    <Files>
+      <File FileName="XamarinDemo/MainActivity.cs" Line="63" Column="38" />
+      <File FileName="XamarinDemo/Properties/AndroidManifest.xml" />
+      <File FileName="XamarinDemo/Properties/AssemblyInfo.cs" />
+      <File FileName="XamarinDemo/Resources/layout/activity_main.xml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamarinDemo" expanded="True">
+            <Node name="XamarinDemo" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.XamarinDemo AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

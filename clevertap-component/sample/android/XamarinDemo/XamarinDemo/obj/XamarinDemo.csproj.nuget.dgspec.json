@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj": {}
+  },
+  "projects": {
+    "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj",
+        "projectName": "XamarinDemo",
+        "projectPath": "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/XamarinDemo.csproj",
+        "packagesPath": "/Users/systemadmin/.nuget/packages/",
+        "outputPath": "/Users/systemadmin/AndroidStudioProjects/clevertap-xamarin/clevertap-component/sample/android/XamarinDemo/XamarinDemo/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/systemadmin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Xamarin.Firebase.Messaging": {
+              "target": "Package",
+              "version": "[71.1740.0, )"
+            },
+            "Xamarin.GooglePlayServices.Base": {
+              "target": "Package",
+              "version": "[71.1610.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

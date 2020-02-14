@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}|Default">
+  <MonoDevelop.Ide.ItemProperties.CleverTap.Bindings.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Transforms/Metadata.xml">
+    <Files>
+      <File FileName="Jars/AboutJars.txt" Line="17" Column="58" />
+      <File FileName="Additions/AboutAdditions.txt" />
+      <File FileName="Properties/AssemblyInfo.cs" />
+      <File FileName="Transforms/Metadata.xml" Line="28" Column="54" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CleverTap.Bindings.Android" expanded="True">
+            <Node name="CleverTap.Bindings.Android" expanded="True">
+              <Node name="References" expanded="True" selected="True" />
+              <Node name="Additions" expanded="True" />
+              <Node name="Jars" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Transforms" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
