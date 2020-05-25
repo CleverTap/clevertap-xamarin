@@ -44,84 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CleverTapUTMDetail", WrapperType = typeof (CleverTapUTMDetailWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Source", Selector = "source", PropertyType = typeof (string), GetterSelector = "source", SetterSelector = "setSource:", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Medium", Selector = "medium", PropertyType = typeof (string), GetterSelector = "medium", SetterSelector = "setMedium:", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Campaign", Selector = "campaign", PropertyType = typeof (string), GetterSelector = "campaign", SetterSelector = "setCampaign:", ArgumentSemantic = ArgumentSemantic.Retain)]
-	public interface ICleverTapUTMDetail : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CleverTapUTMDetail_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetSource (this ICleverTapUTMDetail This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("source")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetSource (this ICleverTapUTMDetail This, string value)
-		{
-			if (value == null)
-				throw new ArgumentNullException ("value");
-			var nsvalue = NSString.CreateNative (value);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setSource:"), nsvalue);
-			NSString.ReleaseNative (nsvalue);
-			
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetMedium (this ICleverTapUTMDetail This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("medium")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetMedium (this ICleverTapUTMDetail This, string value)
-		{
-			if (value == null)
-				throw new ArgumentNullException ("value");
-			var nsvalue = NSString.CreateNative (value);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setMedium:"), nsvalue);
-			NSString.ReleaseNative (nsvalue);
-			
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetCampaign (this ICleverTapUTMDetail This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("campaign")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetCampaign (this ICleverTapUTMDetail This, string value)
-		{
-			if (value == null)
-				throw new ArgumentNullException ("value");
-			var nsvalue = NSString.CreateNative (value);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setCampaign:"), nsvalue);
-			NSString.ReleaseNative (nsvalue);
-			
-		}
-		
-	}
-	
-	internal sealed class CleverTapUTMDetailWrapper : BaseWrapper, ICleverTapUTMDetail {
-		[Preserve (Conditional = true)]
-		public CleverTapUTMDetailWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CleverTapUTMDetail", true)]
-	public unsafe partial class CleverTapUTMDetail : NSObject, ICleverTapUTMDetail {
+	public unsafe partial class CleverTapUTMDetail : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapUTMDetail");

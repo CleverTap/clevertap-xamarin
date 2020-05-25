@@ -44,62 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTInAppDisplayViewController", WrapperType = typeof (CTInAppDisplayViewControllerWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "Show", Selector = "show:", ParameterType = new Type [] { typeof (bool) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "Hide", Selector = "hide:", ParameterType = new Type [] { typeof (bool) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "WeakDelegate", Selector = "delegate", PropertyType = typeof (NSObject), GetterSelector = "delegate", SetterSelector = "setDelegate:", ArgumentSemantic = ArgumentSemantic.Weak)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = true, Name = "Notification", Selector = "notification", PropertyType = typeof (CleverTapSDK.CTInAppNotification), GetterSelector = "notification", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "DeviceOrientationIsLandscape", Selector = "deviceOrientationIsLandscape", PropertyType = typeof (bool), GetterSelector = "deviceOrientationIsLandscape", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICTInAppDisplayViewController : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CTInAppDisplayViewController_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void Show (this ICTInAppDisplayViewController This, bool animated)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("show:"), animated);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void Hide (this ICTInAppDisplayViewController This, bool animated)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("hide:"), animated);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSObject GetWeakDelegate (this ICTInAppDisplayViewController This)
-		{
-			return Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("delegate")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetWeakDelegate (this ICTInAppDisplayViewController This, NSObject value)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setDelegate:"), value == null ? IntPtr.Zero : value.Handle);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetDeviceOrientationIsLandscape (this ICTInAppDisplayViewController This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("deviceOrientationIsLandscape"));
-		}
-		
-	}
-	
-	internal sealed class CTInAppDisplayViewControllerWrapper : BaseWrapper, ICTInAppDisplayViewController {
-		[Preserve (Conditional = true)]
-		public CTInAppDisplayViewControllerWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTInAppDisplayViewController", true)]
-	public unsafe partial class CTInAppDisplayViewController : global::UIKit.UIViewController, ICTInAppDisplayViewController {
+	public unsafe partial class CTInAppDisplayViewController : global::UIKit.UIViewController {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppDisplayViewController");
@@ -216,11 +162,15 @@ namespace CleverTapSDK {
 		}
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static CTInAppNotification Notification {
+		public virtual CTInAppNotification Notification {
 			[Export ("notification", ArgumentSemantic.Retain)]
 			get {
 				CTInAppNotification ret;
-				ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("notification")));
+				if (IsDirectBinding) {
+					ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("notification")));
+				} else {
+					ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("notification")));
+				}
 				return ret;
 			}
 			

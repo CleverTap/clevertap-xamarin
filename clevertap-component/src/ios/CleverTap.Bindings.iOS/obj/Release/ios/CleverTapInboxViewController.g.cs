@@ -44,24 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CleverTapInboxViewController", WrapperType = typeof (CleverTapInboxViewControllerWrapper))]
-	public interface ICleverTapInboxViewController : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CleverTapInboxViewControllerWrapper : BaseWrapper, ICleverTapInboxViewController {
-		[Preserve (Conditional = true)]
-		public CleverTapInboxViewControllerWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CleverTapInboxViewController", true)]
-	public unsafe partial class CleverTapInboxViewController : global::UIKit.UITableViewController, ICleverTapInboxViewController {
+	public unsafe partial class CleverTapInboxViewController : global::UIKit.UITableViewController {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapInboxViewController");

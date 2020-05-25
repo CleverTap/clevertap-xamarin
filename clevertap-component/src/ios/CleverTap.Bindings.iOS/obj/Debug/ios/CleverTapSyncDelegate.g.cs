@@ -102,7 +102,7 @@ namespace CleverTapSDK {
 }
 namespace CleverTapSDK {
 	[Protocol()]
-	[Register("CleverTapSyncDelegate", false)]
+	[Register("ApiDefinition__CleverTapSDK_CleverTapSyncDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapSyncDelegate : NSObject, ICleverTapSyncDelegate {
 		

@@ -1,2 +1,2 @@
-github "clevertap/clevertap-ios-sdk" == 3.7.2
+github "clevertap/clevertap-ios-sdk" == 3.8.0
 github "SDWebImage/SDWebImage" == 5.0.6

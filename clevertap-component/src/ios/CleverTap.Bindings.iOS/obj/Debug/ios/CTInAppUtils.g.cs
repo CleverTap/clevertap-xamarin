@@ -44,30 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTInAppUtils", WrapperType = typeof (CTInAppUtilsWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "InAppTypeFromString", Selector = "inAppTypeFromString:", ReturnType = typeof (CleverTapSDK.CTInAppType), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "XibNameForControllerName", Selector = "XibNameForControllerName:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "ImageForName", Selector = "imageForName:type:", ReturnType = typeof (UIImage), ParameterType = new Type [] { typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "Ct_colorWithHexString", Selector = "ct_colorWithHexString:", ReturnType = typeof (UIColor), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "Ct_colorWithHexString", Selector = "ct_colorWithHexString:withAlpha:", ReturnType = typeof (UIColor), ParameterType = new Type [] { typeof (string), typeof (nfloat) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = true, Name = "Bundle", Selector = "bundle", PropertyType = typeof (NSBundle), GetterSelector = "bundle", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICTInAppUtils : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTInAppUtilsWrapper : BaseWrapper, ICTInAppUtils {
-		[Preserve (Conditional = true)]
-		public CTInAppUtilsWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTInAppUtils", true)]
-	public unsafe partial class CTInAppUtils : NSObject, ICTInAppUtils {
+	public unsafe partial class CTInAppUtils : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppUtils");

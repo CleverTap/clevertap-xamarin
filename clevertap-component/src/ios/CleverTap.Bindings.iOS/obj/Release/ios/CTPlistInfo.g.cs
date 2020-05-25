@@ -44,96 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTPlistInfo", WrapperType = typeof (CTPlistInfoWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "SharedInstance", Selector = "sharedInstance", ReturnType = typeof (CleverTapSDK.CTPlistInfo))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "ChangeCredentialsWithAccountID", Selector = "changeCredentialsWithAccountID:token:region:", ParameterType = new Type [] { typeof (string), typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "AccountId", Selector = "accountId", PropertyType = typeof (string), GetterSelector = "accountId", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "AccountToken", Selector = "accountToken", PropertyType = typeof (string), GetterSelector = "accountToken", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "AccountRegion", Selector = "accountRegion", PropertyType = typeof (string), GetterSelector = "accountRegion", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "RegisteredUrlSchemes", Selector = "registeredUrlSchemes", PropertyType = typeof (String[]), GetterSelector = "registeredUrlSchemes", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "UseIDFA", Selector = "useIDFA", PropertyType = typeof (bool), GetterSelector = "useIDFA", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "DisableAppLaunchedEvent", Selector = "disableAppLaunchedEvent", PropertyType = typeof (bool), GetterSelector = "disableAppLaunchedEvent", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "UseCustomCleverTapId", Selector = "useCustomCleverTapId", PropertyType = typeof (bool), GetterSelector = "useCustomCleverTapId", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICTPlistInfo : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CTPlistInfo_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void ChangeCredentialsWithAccountID (this ICTPlistInfo This, string accountID, string token, string region)
-		{
-			if (accountID == null)
-				throw new ArgumentNullException ("accountID");
-			if (token == null)
-				throw new ArgumentNullException ("token");
-			var nsaccountID = NSString.CreateNative (accountID);
-			var nstoken = NSString.CreateNative (token);
-			var nsregion = NSString.CreateNative (region);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr (This.Handle, Selector.GetHandle ("changeCredentialsWithAccountID:token:region:"), nsaccountID, nstoken, nsregion);
-			NSString.ReleaseNative (nsaccountID);
-			NSString.ReleaseNative (nstoken);
-			NSString.ReleaseNative (nsregion);
-			
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetAccountId (this ICTPlistInfo This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("accountId")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetAccountToken (this ICTPlistInfo This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("accountToken")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetAccountRegion (this ICTPlistInfo This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("accountRegion")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string[] GetRegisteredUrlSchemes (this ICTPlistInfo This)
-		{
-			return NSArray.StringArrayFromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("registeredUrlSchemes")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetUseIDFA (this ICTPlistInfo This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("useIDFA"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetDisableAppLaunchedEvent (this ICTPlistInfo This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("disableAppLaunchedEvent"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetUseCustomCleverTapId (this ICTPlistInfo This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("useCustomCleverTapId"));
-		}
-		
-	}
-	
-	internal sealed class CTPlistInfoWrapper : BaseWrapper, ICTPlistInfo {
-		[Preserve (Conditional = true)]
-		public CTPlistInfoWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTPlistInfo", true)]
-	public unsafe partial class CTPlistInfo : NSObject, ICTPlistInfo {
+	public unsafe partial class CTPlistInfo : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTPlistInfo");
@@ -231,6 +143,19 @@ namespace CleverTapSDK {
 					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("accountToken")));
 				} else {
 					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("accountToken")));
+				}
+			}
+			
+		}
+		
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual bool Beta {
+			[Export ("beta")]
+			get {
+				if (IsDirectBinding) {
+					return global::ApiDefinition.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("beta"));
+				} else {
+					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("beta"));
 				}
 			}
 			

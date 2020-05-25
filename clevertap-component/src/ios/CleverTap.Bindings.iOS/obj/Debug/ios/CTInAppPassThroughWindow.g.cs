@@ -44,24 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTInAppPassThroughWindow", WrapperType = typeof (CTInAppPassThroughWindowWrapper))]
-	public interface ICTInAppPassThroughWindow : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTInAppPassThroughWindowWrapper : BaseWrapper, ICTInAppPassThroughWindow {
-		[Preserve (Conditional = true)]
-		public CTInAppPassThroughWindowWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTInAppPassThroughWindow", true)]
-	public unsafe partial class CTInAppPassThroughWindow : global::UIKit.UIWindow, ICTInAppPassThroughWindow {
+	public unsafe partial class CTInAppPassThroughWindow : global::UIKit.UIWindow {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppPassThroughWindow");

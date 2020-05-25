@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{4279435A-D323-44F1-87D8-98E436909EBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Info.plist">
     <Files>
       <File FileName="ViewController.cs" Line="74" Column="40" />
       <File FileName="Main.storyboard" />
-      <File FileName="AppDelegate.cs" Line="33" Column="1" />
+      <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
       <File FileName="Main.cs" />
       <File FileName="Entitlements.plist" />
@@ -13,13 +13,18 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node />
+          <Node name="Starter" expanded="True">
+            <Node name="Starter" expanded="True">
+              <Node name="References" expanded="True" selected="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Starter PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EAC7D84E-9D42-4178-97C8-FCCDE523554D" />
+  <MonoDevelop.Ide.ItemProperties.Starter PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.34603D5B-DAB9-47A9-A12B-1C284668835D" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

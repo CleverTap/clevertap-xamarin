@@ -45,15 +45,15 @@ using NetworkExtension;
 
 namespace CleverTapSDK {
 	[Protocol (Name = "CTInAppNotificationDisplayDelegate", WrapperType = typeof (CTInAppNotificationDisplayDelegateWrapper))]
-	[ProtocolMember (IsRequired = true, IsProperty = false, IsStatic = false, Name = "HandleNotificationCTA", Selector = "handleNotificationCTA:forNotification:fromViewController:withExtras:", ParameterType = new Type [] { typeof (NSUrl), typeof (CleverTapSDK.CTInAppNotification), typeof (CleverTapSDK.CTInAppDisplayViewController), typeof (NSDictionary) }, ParameterByRef = new bool [] { false, false, false, false })]
+	[ProtocolMember (IsRequired = true, IsProperty = false, IsStatic = false, Name = "HandleNotificationCTA", Selector = "handleNotificationCTA:buttonCustomExtras:forNotification:fromViewController:withExtras:", ParameterType = new Type [] { typeof (NSUrl), typeof (NSDictionary), typeof (CleverTapSDK.CTInAppNotification), typeof (CleverTapSDK.CTInAppDisplayViewController), typeof (NSDictionary) }, ParameterByRef = new bool [] { false, false, false, false, false })]
 	[ProtocolMember (IsRequired = true, IsProperty = false, IsStatic = false, Name = "NotificationDidDismiss", Selector = "notificationDidDismiss:fromViewController:", ParameterType = new Type [] { typeof (CleverTapSDK.CTInAppNotification), typeof (CleverTapSDK.CTInAppDisplayViewController) }, ParameterByRef = new bool [] { false, false })]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "NotificationDidShow", Selector = "notificationDidShow:fromViewController:", ParameterType = new Type [] { typeof (CleverTapSDK.CTInAppNotification), typeof (CleverTapSDK.CTInAppDisplayViewController) }, ParameterByRef = new bool [] { false, false })]
 	public interface ICTInAppNotificationDisplayDelegate : INativeObject, IDisposable
 	{
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		[Export ("handleNotificationCTA:forNotification:fromViewController:withExtras:")]
+		[Export ("handleNotificationCTA:buttonCustomExtras:forNotification:fromViewController:withExtras:")]
 		[Preserve (Conditional = true)]
-		void HandleNotificationCTA (NSUrl ctaURL, CTInAppNotification notification, CTInAppDisplayViewController controller, NSDictionary extras);
+		void HandleNotificationCTA (NSUrl ctaURL, NSDictionary buttonCustomExtras, CTInAppNotification notification, CTInAppDisplayViewController controller, NSDictionary extras);
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[Export ("notificationDidDismiss:fromViewController:")]
@@ -82,19 +82,21 @@ namespace CleverTapSDK {
 		{
 		}
 		
-		[Export ("handleNotificationCTA:forNotification:fromViewController:withExtras:")]
+		[Export ("handleNotificationCTA:buttonCustomExtras:forNotification:fromViewController:withExtras:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public void HandleNotificationCTA (NSUrl ctaURL, CTInAppNotification notification, CTInAppDisplayViewController controller, NSDictionary extras)
+		public void HandleNotificationCTA (NSUrl ctaURL, NSDictionary buttonCustomExtras, CTInAppNotification notification, CTInAppDisplayViewController controller, NSDictionary extras)
 		{
 			if (ctaURL == null)
 				throw new ArgumentNullException ("ctaURL");
+			if (buttonCustomExtras == null)
+				throw new ArgumentNullException ("buttonCustomExtras");
 			if (notification == null)
 				throw new ArgumentNullException ("notification");
 			if (controller == null)
 				throw new ArgumentNullException ("controller");
 			if (extras == null)
 				throw new ArgumentNullException ("extras");
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("handleNotificationCTA:forNotification:fromViewController:withExtras:"), ctaURL.Handle, notification.Handle, controller.Handle, extras.Handle);
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("handleNotificationCTA:buttonCustomExtras:forNotification:fromViewController:withExtras:"), ctaURL.Handle, buttonCustomExtras.Handle, notification.Handle, controller.Handle, extras.Handle);
 		}
 		
 		[Export ("notificationDidDismiss:fromViewController:")]
@@ -112,7 +114,7 @@ namespace CleverTapSDK {
 }
 namespace CleverTapSDK {
 	[Protocol()]
-	[Register("CTInAppNotificationDisplayDelegate", false)]
+	[Register("ApiDefinition__CleverTapSDK_CTInAppNotificationDisplayDelegate", false)]
 	[Model]
 	public unsafe abstract partial class CTInAppNotificationDisplayDelegate : NSObject, ICTInAppNotificationDisplayDelegate {
 		
@@ -139,9 +141,9 @@ namespace CleverTapSDK {
 			IsDirectBinding = false;
 		}
 
-		[Export ("handleNotificationCTA:forNotification:fromViewController:withExtras:")]
+		[Export ("handleNotificationCTA:buttonCustomExtras:forNotification:fromViewController:withExtras:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public abstract void HandleNotificationCTA (NSUrl ctaURL, CTInAppNotification notification, CTInAppDisplayViewController controller, NSDictionary extras);
+		public abstract void HandleNotificationCTA (NSUrl ctaURL, NSDictionary buttonCustomExtras, CTInAppNotification notification, CTInAppDisplayViewController controller, NSDictionary extras);
 		[Export ("notificationDidDismiss:fromViewController:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public abstract void NotificationDidDismiss (CTInAppNotification notification, CTInAppDisplayViewController controller);

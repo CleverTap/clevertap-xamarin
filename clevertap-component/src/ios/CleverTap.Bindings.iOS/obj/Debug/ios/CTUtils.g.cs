@@ -44,29 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTUtils", WrapperType = typeof (CTUtilsWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "DictionaryToJsonString", Selector = "dictionaryToJsonString:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (NSDictionary) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "UrlEncodeString", Selector = "urlEncodeString:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "DoesString", Selector = "doesString:startWith:", ReturnType = typeof (bool), ParameterType = new Type [] { typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "DeviceTokenStringFromData", Selector = "deviceTokenStringFromData:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (NSData) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "ToTwoPlaces", Selector = "toTwoPlaces:", ReturnType = typeof (double), ParameterType = new Type [] { typeof (double) }, ParameterByRef = new bool [] { false })]
-	public interface ICTUtils : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTUtilsWrapper : BaseWrapper, ICTUtils {
-		[Preserve (Conditional = true)]
-		public CTUtilsWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTUtils", true)]
-	public unsafe partial class CTUtils : NSObject, ICTUtils {
+	public unsafe partial class CTUtils : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTUtils");

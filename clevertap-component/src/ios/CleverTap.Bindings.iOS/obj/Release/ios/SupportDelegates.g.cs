@@ -44,6 +44,7 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
+	public delegate void CleverTapExperimentsUpdatedBlock ();
 	public delegate void CleverTapInboxSuccessBlock (bool arg0);
 	public delegate void CleverTapInboxUpdatedBlock ();
 }

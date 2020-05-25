@@ -49,6 +49,51 @@ namespace ObjCRuntime {
 	static partial class Trampolines {
 		
 		[UnmanagedFunctionPointerAttribute (CallingConvention.Cdecl)]
+		[UserDelegateType (typeof (global::CleverTapSDK.CleverTapExperimentsUpdatedBlock))]
+		internal delegate void DCleverTapExperimentsUpdatedBlock (IntPtr block);
+		
+		//
+		// This class bridges native block invocations that call into C#
+		//
+		static internal class SDCleverTapExperimentsUpdatedBlock {
+			static internal readonly DCleverTapExperimentsUpdatedBlock Handler = Invoke;
+			
+			[MonoPInvokeCallback (typeof (DCleverTapExperimentsUpdatedBlock))]
+			static unsafe void Invoke (IntPtr block) {
+				var descriptor = (BlockLiteral *) block;
+				var del = (global::CleverTapSDK.CleverTapExperimentsUpdatedBlock) (descriptor->Target);
+				if (del != null)
+					del ();
+			}
+		} /* class SDCleverTapExperimentsUpdatedBlock */
+		
+		internal sealed class NIDCleverTapExperimentsUpdatedBlock : TrampolineBlockBase {
+			DCleverTapExperimentsUpdatedBlock invoker;
+			
+			[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+			public unsafe NIDCleverTapExperimentsUpdatedBlock (BlockLiteral *block) : base (block)
+			{
+				invoker = block->GetDelegateForBlock<DCleverTapExperimentsUpdatedBlock> ();
+			}
+			
+			[Preserve (Conditional=true)]
+			[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+			public unsafe static global::CleverTapSDK.CleverTapExperimentsUpdatedBlock Create (IntPtr block)
+			{
+				if (block == IntPtr.Zero)
+					return null;
+				var del = (global::CleverTapSDK.CleverTapExperimentsUpdatedBlock) GetExistingManagedDelegate (block);
+				return del ?? new NIDCleverTapExperimentsUpdatedBlock ((BlockLiteral *) block).Invoke;
+			}
+			
+			[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+			unsafe void Invoke ()
+			{
+				invoker (BlockPointer);
+			}
+		} /* class NIDCleverTapExperimentsUpdatedBlock */
+		
+		[UnmanagedFunctionPointerAttribute (CallingConvention.Cdecl)]
 		[UserDelegateType (typeof (global::CleverTapSDK.CleverTapInboxSuccessBlock))]
 		internal delegate void DCleverTapInboxSuccessBlock (IntPtr block, bool arg0);
 		

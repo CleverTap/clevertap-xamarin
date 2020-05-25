@@ -44,56 +44,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CleverTapJSInterface", WrapperType = typeof (CleverTapJSInterfaceWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "UserContentController", Selector = "userContentController", PropertyType = typeof (WebKit.WKUserContentController), GetterSelector = "userContentController", SetterSelector = "setUserContentController:", ArgumentSemantic = ArgumentSemantic.Retain)]
-	public interface ICleverTapJSInterface : INativeObject, IDisposable, 
-		WebKit.IWKScriptMessageHandler
-		
-	{
-	}
-	
-	public static partial class CleverTapJSInterface_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static global::WebKit.WKUserContentController GetUserContentController (this ICleverTapJSInterface This)
-		{
-			return  Runtime.GetNSObject<global::WebKit.WKUserContentController> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("userContentController")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetUserContentController (this ICleverTapJSInterface This, global::WebKit.WKUserContentController value)
-		{
-			if (value == null)
-				throw new ArgumentNullException ("value");
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setUserContentController:"), value.Handle);
-		}
-		
-	}
-	
-	internal sealed class CleverTapJSInterfaceWrapper : BaseWrapper, ICleverTapJSInterface {
-		[Preserve (Conditional = true)]
-		public CleverTapJSInterfaceWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-		[Export ("userContentController:didReceiveScriptMessage:")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		[Preserve (Conditional = true)]
-		public void DidReceiveScriptMessage (global::WebKit.WKUserContentController userContentController, global::WebKit.WKScriptMessage message)
-		{
-			if (userContentController == null)
-				throw new ArgumentNullException ("userContentController");
-			if (message == null)
-				throw new ArgumentNullException ("message");
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("userContentController:didReceiveScriptMessage:"), userContentController.Handle, message.Handle);
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CleverTapJSInterface", true)]
-	public unsafe partial class CleverTapJSInterface : NSObject, ICleverTapJSInterface, global::WebKit.IWKScriptMessageHandler {
+	public unsafe partial class CleverTapJSInterface : NSObject, global::WebKit.IWKScriptMessageHandler {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapJSInterface");

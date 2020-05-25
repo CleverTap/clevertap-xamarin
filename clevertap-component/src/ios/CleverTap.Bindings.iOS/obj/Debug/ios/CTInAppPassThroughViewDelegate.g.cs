@@ -45,17 +45,13 @@ using NetworkExtension;
 
 namespace CleverTapSDK {
 	[Protocol (Name = "CTInAppPassThroughViewDelegate", WrapperType = typeof (CTInAppPassThroughViewDelegateWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "ViewWillPassThroughTouch", Selector = "viewWillPassThroughTouch")]
+	[ProtocolMember (IsRequired = true, IsProperty = false, IsStatic = false, Name = "ViewWillPassThroughTouch", Selector = "viewWillPassThroughTouch")]
 	public interface ICTInAppPassThroughViewDelegate : INativeObject, IDisposable
 	{
-	}
-	
-	public static partial class CTInAppPassThroughViewDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void ViewWillPassThroughTouch (this ICTInAppPassThroughViewDelegate This)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("viewWillPassThroughTouch"));
-		}
+		[Export ("viewWillPassThroughTouch")]
+		[Preserve (Conditional = true)]
+		void ViewWillPassThroughTouch ();
 		
 	}
 	
@@ -66,18 +62,25 @@ namespace CleverTapSDK {
 		{
 		}
 		
+		[Export ("viewWillPassThroughTouch")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public void ViewWillPassThroughTouch ()
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("viewWillPassThroughTouch"));
+		}
+		
 	}
 }
 namespace CleverTapSDK {
 	[Protocol()]
-	[Register("CTInAppPassThroughViewDelegate", false)]
+	[Register("ApiDefinition__CleverTapSDK_CTInAppPassThroughViewDelegate", false)]
 	[Model]
-	public unsafe partial class CTInAppPassThroughViewDelegate : NSObject, ICTInAppPassThroughViewDelegate {
+	public unsafe abstract partial class CTInAppPassThroughViewDelegate : NSObject, ICTInAppPassThroughViewDelegate {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
-		public CTInAppPassThroughViewDelegate () : base (NSObjectFlag.Empty)
+		protected CTInAppPassThroughViewDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
 			InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
@@ -99,10 +102,6 @@ namespace CleverTapSDK {
 
 		[Export ("viewWillPassThroughTouch")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual void ViewWillPassThroughTouch ()
-		{
-			throw new You_Should_Not_Call_base_In_This_Method ();
-		}
-		
+		public abstract void ViewWillPassThroughTouch ();
 	} /* class CTInAppPassThroughViewDelegate */
 }
