@@ -1,4 +1,4 @@
-# CleverTap Xamarin SDK
+# CleverTap Xamarin Bindings SDK
 
 The CleverTap Xamarin SDK for Mobile Customer Engagement and Analytics solutions 
 
