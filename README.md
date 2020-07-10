@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-logo.png" width="300"/>
+</p>
+
 # CleverTap Xamarin Bindings SDK
 
 The CleverTap Xamarin SDK for Mobile Customer Engagement and Analytics solutions 
