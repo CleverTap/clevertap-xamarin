@@ -134,7 +134,7 @@ Check out the CleverTap Xamarin SDK [Change Log](https://github.com/CleverTap/cl
 
 ## Questions? #
 
- If you have questions or concerns, raise an issue in this repository or you can reach out to the CleverTap support team at [support@clevertap.com](mailto:support@clevertap.com).
+If you have questions or concerns, you can reach out to the CleverTap support team from the CleverTap Dashboard.
  
  ## License #
 
