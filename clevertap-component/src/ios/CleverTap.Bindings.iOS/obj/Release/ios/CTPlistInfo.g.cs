@@ -201,18 +201,5 @@ namespace CleverTapSDK {
 			
 		}
 		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual bool UseIDFA {
-			[Export ("useIDFA")]
-			get {
-				if (IsDirectBinding) {
-					return global::ApiDefinition.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("useIDFA"));
-				} else {
-					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("useIDFA"));
-				}
-			}
-			
-		}
-		
 	} /* class CTPlistInfo */
 }
