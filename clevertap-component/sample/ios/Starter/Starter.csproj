@@ -72,7 +72,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="CleverTap.Bindings.iOS">
-      <HintPath>..\..\..\src\ios\CleverTap.Bindings.iOS\bin\Debug\CleverTap.Bindings.iOS.dll</HintPath>
+      <HintPath>..\..\..\lib\ios\CleverTap.Bindings.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
