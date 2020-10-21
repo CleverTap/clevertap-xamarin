@@ -1,2 +1,0 @@
-/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Release/CleverTap.Bindings.iOS.dll
-/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.dll

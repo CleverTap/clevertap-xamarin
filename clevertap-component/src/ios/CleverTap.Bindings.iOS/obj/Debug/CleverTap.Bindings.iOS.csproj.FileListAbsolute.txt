@@ -1,4 +1,0 @@
-/Users/aditiagrawal/Downloads/clevertap-xamarin-master/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Debug/CleverTap.Bindings.iOS.dll
-/Users/aditiagrawal/Downloads/clevertap-xamarin-master/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Debug/CleverTap.Bindings.iOS.pdb
-/Users/aditiagrawal/Downloads/clevertap-xamarin-master/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.dll
-/Users/aditiagrawal/Downloads/clevertap-xamarin-master/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.pdb
