@@ -4,15 +4,14 @@
 
 # CleverTap Xamarin Bindings SDK
 
-The CleverTap Xamarin SDK for Mobile Customer Engagement and Analytics solutions 
+## 👋 Introduction
+The CleverTap Xamarin Bindings SDK for Mobile Customer Engagement and Analytics solutions.
 
-CleverTap brings together real-time user insights, an advanced segmentation engine, and easy-to-use marketing tools in one mobile marketing platform — giving your team the power to create amazing experiences that deepen customer relationships. Our intelligent mobile marketing platform provides the insights you need to keep users engaged and drive long-term retention and growth.
+For more information check out our [website](https://clevertap.com/ "CleverTap")  and  [documentation](https://developer.clevertap.com/docs/ "CleverTap Technical Documentation").
 
-For more information check out our [website](https://clevertap.com "CleverTap") and [documentation](https://developer.clevertap.com/docs/ "CleverTap Technical Documentation").
+## 🚀 Installation and Quick Start
 
-## Getting Started #
-
-### Steps for Android
+### 👨‍💻 Android Guide
 
 1. Install the SDK
 
@@ -84,7 +83,7 @@ cleverTapAPI.PushEvent("Product View Via Xamarin");
 Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-component/sample/android/XamarinDemo/XamarinDemo/MainActivity.cs) for examples
 
 
-### Steps for iOS
+### 👩‍💻 iOS Guide
 
 1. Install the SDK 
 
@@ -128,15 +127,15 @@ CleverTap.SharedInstance()?.ProfilePush(profileData);
 
 Please checkout the [Starter Project](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/sample/ios/Starter) directory for the sample app.
 
-## Changelog #
+## 🆕 Changelog
 
-Check out the CleverTap Xamarin SDK [Change Log](https://github.com/CleverTap/clevertap-xamarin/blob/master/CHANGELOG.md) here.
+Refer to the CleverTap Xamarin SDK [Change Log](https://github.com/CleverTap/clevertap-xamarin/blob/master/CHANGELOG.md) here.
 
-## Questions? #
+## ❓ Questions
 
 If you have questions or concerns, you can reach out to the CleverTap support team from the CleverTap Dashboard.
  
- ## License #
+## 📄 License #
 
 Check out the CleverTap Xamarin SDK [License](https://github.com/CleverTap/clevertap-xamarin/blob/master/LICENSE) here.
 
