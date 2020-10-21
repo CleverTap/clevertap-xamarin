@@ -22,7 +22,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Starter PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8680BD49-B6F3-4AF4-B4EF-338E65F5F72F" />
+  <MonoDevelop.Ide.ItemProperties.Starter automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8680BD49-B6F3-4AF4-B4EF-338E65F5F72F" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
