@@ -13,7 +13,11 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Starter" expanded="True" />
+          <Node name="Starter" expanded="True">
+            <Node name="Starter" expanded="True">
+              <Node name="Info.plist" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
