@@ -6,183 +6,347 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		2ZRO/PYFgPvUoXJcsXMWxlVaA1c=
+		zASx4/JDqpqDERB4lE7qa37Ksr4=
 		</data>
-		<key>CTAVPlayerControlsViewController.nib</key>
+		<key>CTCarouselImageMessageCell~land.nib/objects-13.0+.nib</key>
 		<data>
-		A1rItVAgpINUmk2DzmgUjRGgXxc=
+		Q0IGbHKthB5zY9Ol4lhrAoNlPkc=
 		</data>
-		<key>CTCarouselImageMessageCell~land.nib</key>
+		<key>CTCarouselImageMessageCell~land.nib/runtime.nib</key>
 		<data>
-		zoly9z3BSD+2tffcHSk2dYaQq+M=
+		rq+0KU/T+tKdhPZ+EMcsQmgHgiU=
 		</data>
-		<key>CTCarouselImageMessageCell~port.nib</key>
+		<key>CTCarouselImageMessageCell~port.nib/objects-13.0+.nib</key>
 		<data>
-		ATdhkqZ10Q09Z1MLfd1o/XSxkr8=
+		kp45RAZUlgtFkyPXfG6wEfwQsiY=
 		</data>
-		<key>CTCarouselImageView.nib</key>
+		<key>CTCarouselImageMessageCell~port.nib/runtime.nib</key>
 		<data>
-		5M21LU57OUYH5JhET8bC7IstKOc=
+		H4dw5rtwxQEgH1odYKzlAOg7rVo=
 		</data>
-		<key>CTCarouselMessageCell~land.nib</key>
+		<key>CTCarouselImageView.nib/objects-13.0+.nib</key>
 		<data>
-		0ZebGwirczjkDvchV9PvysfdCUM=
+		LjgPTKtLiN/+soUn0cwPh1zFaG8=
 		</data>
-		<key>CTCarouselMessageCell~port.nib</key>
+		<key>CTCarouselImageView.nib/runtime.nib</key>
 		<data>
-		h2iWneEVauaYIJEt7rzPL7n4DxI=
+		+VKWYVNVsDUbqTy9ac/qWcSb0TY=
 		</data>
-		<key>CTCoverImageViewController~ipad.nib</key>
+		<key>CTCarouselMessageCell~land.nib/objects-13.0+.nib</key>
 		<data>
-		ffE5MHk8Zsz6SZEOBF8pih4bUpA=
+		RZvrT/8BjYtsyPgZcE+1BZ88+ek=
 		</data>
-		<key>CTCoverImageViewController~ipadland.nib</key>
+		<key>CTCarouselMessageCell~land.nib/runtime.nib</key>
 		<data>
-		1sfyWFYBl1RNsjMx9cmdnnIIrDI=
+		dF/cok/rjgW5+G/yUUEwWD5aVv0=
 		</data>
-		<key>CTCoverImageViewController~iphoneland.nib</key>
+		<key>CTCarouselMessageCell~port.nib/objects-13.0+.nib</key>
 		<data>
-		JhZ4ntvHFDw/OvDAzU1hjKa3Sug=
+		HxPEaGiNGO7AaBOvpGbwWbxSbvM=
 		</data>
-		<key>CTCoverImageViewController~iphoneport.nib</key>
+		<key>CTCarouselMessageCell~port.nib/runtime.nib</key>
 		<data>
-		3fPdxuGK3R2ANhI9jAdv2enM8RQ=
+		NrL5gJxyLX087Zsisy/EVGY2aCc=
 		</data>
-		<key>CTCoverViewController~ipad.nib</key>
+		<key>CTCoverImageViewController~ipad.nib/objects-13.0+.nib</key>
 		<data>
-		0uN1X55J1U/0M7pkMBmby99mFY4=
+		k2k+GsJqwmWDYpHgaWUt1zVTERg=
 		</data>
-		<key>CTCoverViewController~ipadland.nib</key>
+		<key>CTCoverImageViewController~ipad.nib/runtime.nib</key>
 		<data>
-		QKvDA981RRx5VFgisF2SDdS1nYY=
+		TcP71J+5w66GtKkYJQq7NJrCfAY=
 		</data>
-		<key>CTCoverViewController~iphoneland.nib</key>
+		<key>CTCoverImageViewController~ipadland.nib/objects-13.0+.nib</key>
 		<data>
-		3XYufE3Ve+4iPeHB9yUrxTxv4Mw=
+		OVzJ/H3fnOjpMqvKeyizTSx/5RU=
 		</data>
-		<key>CTCoverViewController~iphoneport.nib</key>
+		<key>CTCoverImageViewController~ipadland.nib/runtime.nib</key>
 		<data>
-		XFNnH2Shg5FLnk1WqOiZ+rEpj10=
+		t+kIpxXFxX+tGFIXCnwUp2JOX/c=
 		</data>
-		<key>CTFooterViewController~ipad.nib</key>
+		<key>CTCoverImageViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<data>
-		z2ESBpSsVLPzY2bvc/eUXSnS2l4=
+		ksbe7nlhWvxtOymXE9ebMU7bHyE=
 		</data>
-		<key>CTFooterViewController~ipadland.nib</key>
+		<key>CTCoverImageViewController~iphoneland.nib/runtime.nib</key>
 		<data>
-		DyxfwERGLX0nB5MAQrX/Sj4ZezQ=
+		6275dqb8ca6aP1wS9+gCrmWptAU=
 		</data>
-		<key>CTFooterViewController~iphoneland.nib</key>
+		<key>CTCoverImageViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<data>
-		7TTwZ8XrLIsJotZ1PUv2vbsRCDA=
+		H0aFfl7lizfvoesL12ORqBPKn/c=
 		</data>
-		<key>CTFooterViewController~iphoneport.nib</key>
+		<key>CTCoverImageViewController~iphoneport.nib/runtime.nib</key>
 		<data>
-		B5enQX91WzxX2UGZe3MLpMfU1eY=
+		tGv+D6DRY2SJvvNXz2CXnrQnlKE=
 		</data>
-		<key>CTHalfInterstitialImageViewController~ipad.nib</key>
+		<key>CTCoverViewController~ipad.nib/objects-13.0+.nib</key>
 		<data>
-		39SbC1KGGYp9pPBcvSvUfvbIX2A=
+		e5QHiu9cesqS1NdD3eTwqaB5FcI=
 		</data>
-		<key>CTHalfInterstitialImageViewController~ipadland.nib</key>
+		<key>CTCoverViewController~ipad.nib/runtime.nib</key>
 		<data>
-		IMhd+9YlWLFgvPpS0XgFo8Jq8xg=
+		G3nq6muFmM/+BskBrga2gqNzBis=
 		</data>
-		<key>CTHalfInterstitialImageViewController~iphoneland.nib</key>
+		<key>CTCoverViewController~ipadland.nib/objects-13.0+.nib</key>
 		<data>
-		xznXFl+GkVPSkKOnJ+urOBPJkKY=
+		tQAQVf82uWh1M+T57H0g0aLEX2g=
 		</data>
-		<key>CTHalfInterstitialImageViewController~iphoneport.nib</key>
+		<key>CTCoverViewController~ipadland.nib/runtime.nib</key>
 		<data>
-		xEhGe24p05qEQBUtwedsAMzCaxk=
+		F/iZcR/hMdzlSPpEom8yaMtL5Zo=
 		</data>
-		<key>CTHalfInterstitialViewController~ipad.nib</key>
+		<key>CTCoverViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<data>
-		Oac7AuG+rDzsFwPoR7kh7STH+4E=
+		XwXVuzgvnCY592zBYm24kSVS/Vg=
 		</data>
-		<key>CTHalfInterstitialViewController~ipadland.nib</key>
+		<key>CTCoverViewController~iphoneland.nib/runtime.nib</key>
 		<data>
-		nzgH5Ksk7SK4ggAR/RtWw9pndAU=
+		elrvLbpv35NSO8aGbYwJPkO+4AU=
 		</data>
-		<key>CTHalfInterstitialViewController~iphoneland.nib</key>
+		<key>CTCoverViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<data>
-		5Xkh9ChlzuCIvO/g5ivmA6wihnw=
+		3xvXun6YUq5i8YzVpQVnKdjadss=
 		</data>
-		<key>CTHalfInterstitialViewController~iphoneport.nib</key>
+		<key>CTCoverViewController~iphoneport.nib/runtime.nib</key>
 		<data>
-		0FBFE4sLogs/vs1HI/Cv58fbbiQ=
+		yhjE9oIg956YZzNNrsyql9LF9fE=
 		</data>
-		<key>CTHeaderViewController~ipad.nib</key>
+		<key>CTFooterViewController~ipad.nib/objects-13.0+.nib</key>
 		<data>
-		420cXWGMoODz+IoJCpLnTgwPmDQ=
+		qRLwImLkl8Z9cy2vh20N/qgKFyU=
 		</data>
-		<key>CTHeaderViewController~ipadland.nib</key>
+		<key>CTFooterViewController~ipad.nib/runtime.nib</key>
 		<data>
-		UKiHiPW8o4scSWs2ePOjT1Swkns=
+		MdKawA7dZIUvlkEZz2hVVyJk8jU=
 		</data>
-		<key>CTHeaderViewController~iphoneland.nib</key>
+		<key>CTFooterViewController~ipadland.nib/objects-13.0+.nib</key>
 		<data>
-		+9Hl4d/1A2ftykZGSLkB3vKI510=
+		oMpvvD9r/oA3HdftGMySTFWwCx8=
 		</data>
-		<key>CTHeaderViewController~iphoneport.nib</key>
+		<key>CTFooterViewController~ipadland.nib/runtime.nib</key>
 		<data>
-		wkGdAZEJcGck0QaNr4hyHyPx2Ec=
+		DKUMgGV88rF4b1Q/xLGHKmGQT9A=
 		</data>
-		<key>CTInboxIconMessageCell~land.nib</key>
+		<key>CTFooterViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<data>
-		LZsr9nGXyao3Bams5h9d1no+g9U=
+		zN6DUS0yXBY149sQgd37KlHWj1c=
 		</data>
-		<key>CTInboxIconMessageCell~port.nib</key>
+		<key>CTFooterViewController~iphoneland.nib/runtime.nib</key>
 		<data>
-		rNmfsQGvn5Q/O/XB1QLpz8N/ohs=
+		vZGwmt4WIcjVEqtMhHoo3GlcHm8=
 		</data>
-		<key>CTInboxSimpleMessageCell~land.nib</key>
+		<key>CTFooterViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<data>
-		rP19bdm5w0NfEKz+ViWBXY5nwn4=
+		669cEO8wTuGdWdarC3/39RDQ3Ko=
 		</data>
-		<key>CTInboxSimpleMessageCell~port.nib</key>
+		<key>CTFooterViewController~iphoneport.nib/runtime.nib</key>
 		<data>
-		6lA6jmuPcn1y6lQh6KEKSoDEjTE=
+		jxfXjem/DM9U0caMH9PEErpO7b4=
 		</data>
-		<key>CTInterstitialImageViewController~ipad.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipad.nib/objects-13.0+.nib</key>
 		<data>
-		Xti+0laZMv0Pgz8Dy8k4X2bmm5Y=
+		CytJSzAIiqJYpvZ5ofGDU0uELx0=
 		</data>
-		<key>CTInterstitialImageViewController~ipadland.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipad.nib/runtime.nib</key>
 		<data>
-		a8oHELXuzoZT1X0qG3/1vWx9Ak8=
+		yIY33ostX0gdtechvmpM6hfwl8Y=
 		</data>
-		<key>CTInterstitialImageViewController~iphoneland.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipadland.nib/objects-13.0+.nib</key>
 		<data>
-		rX/hsPcEx9jqXbQf9ymgtzHkORc=
+		c7QFxReKmPsg2Tjmerv2l0vn2Ig=
 		</data>
-		<key>CTInterstitialImageViewController~iphoneport.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipadland.nib/runtime.nib</key>
 		<data>
-		EFpyl1ePiMgrE0DdGW8mJ8AFYpk=
+		noOQH6RiN6nxJgehodurFMlKgfw=
 		</data>
-		<key>CTInterstitialViewController~ipad.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<data>
-		aHkdYN4rRrDNh5pr5sSX54gfmP8=
+		vgSfUqsaHlAuR8LBijFNgP5amHw=
 		</data>
-		<key>CTInterstitialViewController~ipadland.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneland.nib/runtime.nib</key>
 		<data>
-		cXYpYG4UKu/sY1IU/AlThIAER/0=
+		lf0oFvyU6KU9DZ0k1b5eLMiaYZ8=
 		</data>
-		<key>CTInterstitialViewController~iphoneland.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<data>
-		WzhlTUQwKB8btYO4rJHmaB2od4s=
+		IMP9q0X6MNKnRblvXKmISExHyFU=
 		</data>
-		<key>CTInterstitialViewController~iphoneport.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneport.nib/runtime.nib</key>
 		<data>
-		fxVeeEBRRwlgOA/7EoTVxVVM9s0=
+		xGFUf54sGaJhotrYTSltnS4+nBo=
+		</data>
+		<key>CTHalfInterstitialViewController~ipad.nib/objects-13.0+.nib</key>
+		<data>
+		D941bElZWNp704VYjnSWdQJ9wv0=
+		</data>
+		<key>CTHalfInterstitialViewController~ipad.nib/runtime.nib</key>
+		<data>
+		uB2EF9kq4kmNI7DQzGJnewVlhc0=
+		</data>
+		<key>CTHalfInterstitialViewController~ipadland.nib/objects-13.0+.nib</key>
+		<data>
+		zjfm+L6qxSJDKFk+5/JKHr27fp0=
+		</data>
+		<key>CTHalfInterstitialViewController~ipadland.nib/runtime.nib</key>
+		<data>
+		8UiZzBLYX7oNrdwNlbi2I++8RwY=
+		</data>
+		<key>CTHalfInterstitialViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<data>
+		uNlh/rEfyg+/g7w+h7cwpZgbeWE=
+		</data>
+		<key>CTHalfInterstitialViewController~iphoneland.nib/runtime.nib</key>
+		<data>
+		6pTUGJxcuxcS0ZIOglVzeXCrIsM=
+		</data>
+		<key>CTHalfInterstitialViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<data>
+		CWIfSoZ8KLRtoAkTY1lpl75C0vQ=
+		</data>
+		<key>CTHalfInterstitialViewController~iphoneport.nib/runtime.nib</key>
+		<data>
+		ROsRpCESJrxdug9e0SGqu5T1e6E=
+		</data>
+		<key>CTHeaderViewController~ipad.nib/objects-13.0+.nib</key>
+		<data>
+		HMTRokoEN/L6NxHvvIw3YS+cqwg=
+		</data>
+		<key>CTHeaderViewController~ipad.nib/runtime.nib</key>
+		<data>
+		NpozRJJgugUAbDcT7ZET2fM0mN0=
+		</data>
+		<key>CTHeaderViewController~ipadland.nib/objects-13.0+.nib</key>
+		<data>
+		saur0ZMkh7gOLGbYcNW4w9QCo04=
+		</data>
+		<key>CTHeaderViewController~ipadland.nib/runtime.nib</key>
+		<data>
+		4C/0dYT6lEsT1O8BsvO1/6JosY8=
+		</data>
+		<key>CTHeaderViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<data>
+		rp+fnnmyJ8c0Z16TSDKOxxka4YA=
+		</data>
+		<key>CTHeaderViewController~iphoneland.nib/runtime.nib</key>
+		<data>
+		HqQdJKmgCZ4APiLTb01H0AYf7JI=
+		</data>
+		<key>CTHeaderViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<data>
+		jBAZvV/IUh+hfLca9K/BJxjxAwY=
+		</data>
+		<key>CTHeaderViewController~iphoneport.nib/runtime.nib</key>
+		<data>
+		4Ta9IZJ5XLQfR5GGgY3fCGvIJZw=
+		</data>
+		<key>CTInboxIconMessageCell~land.nib/objects-13.0+.nib</key>
+		<data>
+		ZqDBwMHzGa1zOtJWpkTW9Vo3uRE=
+		</data>
+		<key>CTInboxIconMessageCell~land.nib/runtime.nib</key>
+		<data>
+		M/+pvCLID+CuLPJNk7wGhaFgZRo=
+		</data>
+		<key>CTInboxIconMessageCell~port.nib/objects-13.0+.nib</key>
+		<data>
+		SDpC4JLsq2EUCSQqNHVwqwf6V2o=
+		</data>
+		<key>CTInboxIconMessageCell~port.nib/runtime.nib</key>
+		<data>
+		E6tcUNGsoetrNogjxQ3di9BlH9U=
+		</data>
+		<key>CTInboxSimpleMessageCell~land.nib/objects-13.0+.nib</key>
+		<data>
+		JLxPvBUgejFMwoIiLR7LtE04sPU=
+		</data>
+		<key>CTInboxSimpleMessageCell~land.nib/runtime.nib</key>
+		<data>
+		LEWYv9vU5FpbECMeA/pwjznVchA=
+		</data>
+		<key>CTInboxSimpleMessageCell~port.nib/objects-13.0+.nib</key>
+		<data>
+		x+cnt5pQqb/kwauOY4XDbZVi6wQ=
+		</data>
+		<key>CTInboxSimpleMessageCell~port.nib/runtime.nib</key>
+		<data>
+		VQYyEN1tIRHc0MUqL0kkmKVvY7Q=
+		</data>
+		<key>CTInterstitialImageViewController~ipad.nib/objects-13.0+.nib</key>
+		<data>
+		5KIUCaod0ymnblqtxIrw9Dp28NI=
+		</data>
+		<key>CTInterstitialImageViewController~ipad.nib/runtime.nib</key>
+		<data>
+		rKcaIKhGmkZ7GCZWZuZIQPMqq6I=
+		</data>
+		<key>CTInterstitialImageViewController~ipadland.nib/objects-13.0+.nib</key>
+		<data>
+		8IaYQfrowyNZdeEIgF9CiGUxIZE=
+		</data>
+		<key>CTInterstitialImageViewController~ipadland.nib/runtime.nib</key>
+		<data>
+		e4SUj7IC936dIwpZKjUt2olDzxU=
+		</data>
+		<key>CTInterstitialImageViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<data>
+		Ggi7+CML3peRJwwkfLFipwfLaE8=
+		</data>
+		<key>CTInterstitialImageViewController~iphoneland.nib/runtime.nib</key>
+		<data>
+		8SVAdqzCxYkRYf7Yg3te4HDC8iw=
+		</data>
+		<key>CTInterstitialImageViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<data>
+		yQTZCzIJb+EnMxkO+pDNpts/RH0=
+		</data>
+		<key>CTInterstitialImageViewController~iphoneport.nib/runtime.nib</key>
+		<data>
+		s7uImSiloKtI0xUKl+91pxbVAAE=
+		</data>
+		<key>CTInterstitialViewController~ipad.nib/objects-13.0+.nib</key>
+		<data>
+		FRTKJBUSjgv+eciiTTFu+x3i3aE=
+		</data>
+		<key>CTInterstitialViewController~ipad.nib/runtime.nib</key>
+		<data>
+		ac3EcpJm/4flovc3Sc6/vION6Wo=
+		</data>
+		<key>CTInterstitialViewController~ipadland.nib/objects-13.0+.nib</key>
+		<data>
+		wUcJEFcyVaT9HYg6BclR7fDRPaE=
+		</data>
+		<key>CTInterstitialViewController~ipadland.nib/runtime.nib</key>
+		<data>
+		0mjr342XGM0vhBj5E1ank6Xn9xs=
+		</data>
+		<key>CTInterstitialViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<data>
+		0txzcfRMJHm/AK7r0Fq6zGG4vpo=
+		</data>
+		<key>CTInterstitialViewController~iphoneland.nib/runtime.nib</key>
+		<data>
+		xU6fq3Fh+vhDqeBUv282PPeBVUg=
+		</data>
+		<key>CTInterstitialViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<data>
+		QgmI9XxZnF6MsRZYAXy8XZamfPY=
+		</data>
+		<key>CTInterstitialViewController~iphoneport.nib/runtime.nib</key>
+		<data>
+		TNoa0gswKmkDaieho7mM9m4q3UM=
 		</data>
 		<key>CleverTapInboxViewController.nib/objects-11.0+.nib</key>
 		<data>
-		k8OC2ddabwUNQGV/iY0m/y4OriM=
+		G6AR8i2KCPMrFfzjwaG9kyLMp5U=
+		</data>
+		<key>CleverTapInboxViewController.nib/objects-13.0+.nib</key>
+		<data>
+		2mFLTbZOyyylN1DISezu2hfSfFw=
 		</data>
 		<key>CleverTapInboxViewController.nib/runtime.nib</key>
 		<data>
-		jRXpedECsfg87d4yO3rI3bXYTxE=
+		qN1osgWVE9/vByhQ7esGFupzAhQ=
 		</data>
 		<key>DigiCertGlobalRootCA.crt</key>
 		<data>
@@ -198,7 +362,7 @@
 		</data>
 		<key>Headers/CleverTap+DisplayUnit.h</key>
 		<data>
-		xF3pG9jq0oq/ZvUujgqRKfpnJlQ=
+		+vPaZrOfjdz7vF/WRVFq+6Z1Lc0=
 		</data>
 		<key>Headers/CleverTap+FeatureFlags.h</key>
 		<data>
@@ -206,11 +370,11 @@
 		</data>
 		<key>Headers/CleverTap+Inbox.h</key>
 		<data>
-		/fA3o/AqLV9a7BLi1pvd2m5FfaA=
+		5Q1pIHud5j7rEVBYIsLujaDnPg8=
 		</data>
 		<key>Headers/CleverTap+ProductConfig.h</key>
 		<data>
-		ADqNwCuPyhH5C97Tk/tEWuc3jcQ=
+		CwppeaeO9QHBNz67Sw79h+XqUT0=
 		</data>
 		<key>Headers/CleverTap+SSLPinning.h</key>
 		<data>
@@ -218,11 +382,11 @@
 		</data>
 		<key>Headers/CleverTap.h</key>
 		<data>
-		3IlLYBJr4x4LzaLXQtH2KnG/Gh0=
+		f6Xric0u4hM3O4yPpHVQcxvNf64=
 		</data>
 		<key>Headers/CleverTapBuildInfo.h</key>
 		<data>
-		rChYcmXPNvdwC+Q6V/c7NCMLNaU=
+		gf/hham+mqWDqH3OzDBlskfFxhI=
 		</data>
 		<key>Headers/CleverTapEventDetail.h</key>
 		<data>
@@ -230,23 +394,27 @@
 		</data>
 		<key>Headers/CleverTapInAppNotificationDelegate.h</key>
 		<data>
-		GtIEjA6Jqc2G+BI6NRLl5/CPeL0=
+		bEO6DvTXSDTz0J4XpTRKgzGa2Cs=
 		</data>
 		<key>Headers/CleverTapInstanceConfig.h</key>
 		<data>
-		dAraZ1+nshnlHP2wibKQqRQ+kXg=
+		OGhkeSKKfqhCqOuPzjt3m6/keYk=
 		</data>
 		<key>Headers/CleverTapJSInterface.h</key>
 		<data>
 		vtyUwZFxszX0ChKGAD+pJYd7Ejc=
 		</data>
+		<key>Headers/CleverTapPushNotificationDelegate.h</key>
+		<data>
+		JjWpQ8tQPBdrzgc5p6rSXH8A134=
+		</data>
 		<key>Headers/CleverTapSyncDelegate.h</key>
 		<data>
-		ulqipgPrSExSgtyg0kJIbSeW2Lw=
+		cn46wue5ptHsy7CnVBGwrsaarnE=
 		</data>
 		<key>Headers/CleverTapTrackedViewController.h</key>
 		<data>
-		1fOZMZNgSyV2/KVfhvBQFkhW//Q=
+		UOrTBIZqEpV+lE6joVzqU5FHf9U=
 		</data>
 		<key>Headers/CleverTapUTMDetail.h</key>
 		<data>
@@ -262,19 +430,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FV40QXRxYmpz6jv9z2Fb3Ir1WU0=
+		2loHsyve896/gvkC1nsfysV6CrE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		HZA6ICJg6X2Idpn1DZ10jEutqPI=
-		</data>
-		<key>PrivateHeaders/CTAVPlayerControlsViewController.h</key>
-		<data>
-		Ac/DYlsIOEoofCyCLH0x0Vd9A7Q=
+		XYKEd95euBgFBpU56Cw1FBgeAjg=
 		</data>
 		<key>PrivateHeaders/CTAVPlayerViewController.h</key>
 		<data>
-		ASL4MgdDpyDwKh6ozcCDxB+KiLw=
+		htRCpGXWS4omSFDqcNQHbWKm3Fg=
 		</data>
 		<key>PrivateHeaders/CTAlertViewController.h</key>
 		<data>
@@ -282,11 +446,11 @@
 		</data>
 		<key>PrivateHeaders/CTBaseHeaderFooterViewController.h</key>
 		<data>
-		Rum+YfG+GUIiYIfVivxELxzHwoE=
+		fWbkqwfSNTlTgKueM7lv6IpiOGc=
 		</data>
 		<key>PrivateHeaders/CTBaseHeaderFooterViewControllerPrivate.h</key>
 		<data>
-		3r8LndMDOa6YVJ3eT5DkQ+otgRw=
+		+iTwV4g11B4YWH72ezJwFNpbaZg=
 		</data>
 		<key>PrivateHeaders/CTCarouselImageMessageCell.h</key>
 		<data>
@@ -294,7 +458,7 @@
 		</data>
 		<key>PrivateHeaders/CTCarouselImageView.h</key>
 		<data>
-		FfOL97TECWN9akgriUbFR1VIHU0=
+		aJ/ysapq2lcAojDs4G9PtCAbWns=
 		</data>
 		<key>PrivateHeaders/CTCarouselMessageCell.h</key>
 		<data>
@@ -306,11 +470,11 @@
 		</data>
 		<key>PrivateHeaders/CTConstants.h</key>
 		<data>
-		Mtgp3NtyaqeTr8Ftg/csT7fa1QQ=
+		kwRtbnf8F+yTuTT1dzMwRtUDqkw=
 		</data>
 		<key>PrivateHeaders/CTCoverImageViewController.h</key>
 		<data>
-		uZc79ivK3fZ0bgt/dsNwgvadIY0=
+		rm4zcT14KxG5mzx153Ewbpn401M=
 		</data>
 		<key>PrivateHeaders/CTCoverViewController.h</key>
 		<data>
@@ -318,15 +482,15 @@
 		</data>
 		<key>PrivateHeaders/CTDeviceInfo.h</key>
 		<data>
-		ZTTTf260zm/oFBIayKlcNJmhqsM=
+		G35DKfrkDWKzJT7N8k27+zTqC5E=
 		</data>
 		<key>PrivateHeaders/CTDismissButton.h</key>
 		<data>
-		EpDKEeNGUBbRrBy5SSD3M3GRbCQ=
+		VmvD5NbER9eyb4qtstYIQENWJOQ=
 		</data>
 		<key>PrivateHeaders/CTEventBuilder.h</key>
 		<data>
-		kR0eQ2TwcA3sxfAoKZhVoAWctCM=
+		EcJgtqhBO094+7n60F+UaviTKOc=
 		</data>
 		<key>PrivateHeaders/CTFeatureFlagsController.h</key>
 		<data>
@@ -334,11 +498,11 @@
 		</data>
 		<key>PrivateHeaders/CTFooterViewController.h</key>
 		<data>
-		xE81KzkeDSGVID7HZm0fuqG0ddg=
+		k9nqZgE2bjTrFSrihxvSF9QTH9c=
 		</data>
 		<key>PrivateHeaders/CTHalfInterstitialImageViewController.h</key>
 		<data>
-		VH71TvRo5i8jTb8uSuon7MSgXWE=
+		dblCbmqo7wgOC7UzBNeDUe6loKI=
 		</data>
 		<key>PrivateHeaders/CTHalfInterstitialViewController.h</key>
 		<data>
@@ -354,11 +518,11 @@
 		</data>
 		<key>PrivateHeaders/CTInAppDisplayViewControllerPrivate.h</key>
 		<data>
-		Z3/Z0xqXWbzN34NxpeDpKMAZBl8=
+		Ujl2MOMLWs4Q49K6Pdo8naX4ta0=
 		</data>
 		<key>PrivateHeaders/CTInAppFCManager.h</key>
 		<data>
-		mFJrXEiYd37B/777VgNKAHdgr4s=
+		5kkLCD9xfDZUG6AN2xP8twmghnk=
 		</data>
 		<key>PrivateHeaders/CTInAppHTMLViewController.h</key>
 		<data>
@@ -366,15 +530,15 @@
 		</data>
 		<key>PrivateHeaders/CTInAppNotification.h</key>
 		<data>
-		QnbGkXjQNDreVWOPdf98Px22oPE=
+		n4NbYqE9dXm8QpRs+o5s77kGEtY=
 		</data>
 		<key>PrivateHeaders/CTInAppResources.h</key>
 		<data>
-		TFL7eKtY4njSwebM7giZ6aC9dRk=
+		oVSXpUFe0UO/G8+xPdjqn2adhDI=
 		</data>
 		<key>PrivateHeaders/CTInAppUtils.h</key>
 		<data>
-		gIQjRj8sUfiKGs4LLWSduXihpSY=
+		DFPhVyPih/20TXRPmba9zxyX2Oc=
 		</data>
 		<key>PrivateHeaders/CTInboxBaseMessageCell.h</key>
 		<data>
@@ -382,7 +546,7 @@
 		</data>
 		<key>PrivateHeaders/CTInboxController.h</key>
 		<data>
-		JzEbOxlDneJir0KbXHmp17bBqCE=
+		5aYkVJtifRy8TV89eaaUzx2ZXNc=
 		</data>
 		<key>PrivateHeaders/CTInboxIconMessageCell.h</key>
 		<data>
@@ -394,7 +558,7 @@
 		</data>
 		<key>PrivateHeaders/CTInboxSimpleMessageCell.h</key>
 		<data>
-		E5FND/ETY92eGxhac1I2QWzNEbQ=
+		848XiWug6bWpf7RR+mn9rTtcxoo=
 		</data>
 		<key>PrivateHeaders/CTInboxUtils.h</key>
 		<data>
@@ -402,11 +566,11 @@
 		</data>
 		<key>PrivateHeaders/CTInterstitialImageViewController.h</key>
 		<data>
-		PFxT923QwxCyxsqUyEEZ6AlH9nQ=
+		huBFsCmzLxUHJfBKYTXsJfRbdzI=
 		</data>
 		<key>PrivateHeaders/CTInterstitialViewController.h</key>
 		<data>
-		vdzx2XbkTQ/+h0JyhpgwMJxeKxY=
+		4jBqOQsappx7B4Yjmz3AFJsUBN0=
 		</data>
 		<key>PrivateHeaders/CTKnownProfileFields.h</key>
 		<data>
@@ -418,15 +582,15 @@
 		</data>
 		<key>PrivateHeaders/CTLocationManager.h</key>
 		<data>
-		M5vxZZtAJv+xtQABmqFgdJR4ExU=
+		H+oI/cPLXqC2zNSa22goc4MpshA=
 		</data>
 		<key>PrivateHeaders/CTLogger.h</key>
 		<data>
-		Bvs+A6+bBC33Qf8diMAtn3KWha4=
+		DoKfcJ+4/QOwqd/Q09eG9nikU0w=
 		</data>
 		<key>PrivateHeaders/CTNotificationButton.h</key>
 		<data>
-		bk9B3GSXk9C8WH+R6HQp/PvFMFs=
+		7FW5mVXTOQGrJUc1v3L/QMKNopg=
 		</data>
 		<key>PrivateHeaders/CTPinnedNSURLSessionDelegate.h</key>
 		<data>
@@ -434,7 +598,7 @@
 		</data>
 		<key>PrivateHeaders/CTPlistInfo.h</key>
 		<data>
-		ukIVaAQ3LGfOEoKgFy862nti+lk=
+		KIgl4jBBG/QqaUxAmelCPMQc0jU=
 		</data>
 		<key>PrivateHeaders/CTPreferences.h</key>
 		<data>
@@ -448,10 +612,6 @@
 		<data>
 		s/4PfH8IZj+ajr8NgvivfWanRy0=
 		</data>
-		<key>PrivateHeaders/CTSlider.h</key>
-		<data>
-		LnMM0VYWIUQmij963KwMThnLUZ0=
-		</data>
 		<key>PrivateHeaders/CTSwipeView.h</key>
 		<data>
 		d52SWkZ7Zj1P8WepHCcEIDZyFos=
@@ -462,15 +622,15 @@
 		</data>
 		<key>PrivateHeaders/CTUriHelper.h</key>
 		<data>
-		XtMjELp84qKJNIM4GWhxW1xBhgk=
+		3IWmQhqpbFgIrO97xF6U4LWDuwE=
 		</data>
 		<key>PrivateHeaders/CTUserMO+CoreDataProperties.h</key>
 		<data>
-		xKymdUO5xdmzFcZyemHTAflmc/M=
+		51zTFlUMSa7sqIYHCdkBIoxJFHU=
 		</data>
 		<key>PrivateHeaders/CTUserMO.h</key>
 		<data>
-		dSRM4jNyqyMiGCIB902lK97p27c=
+		/wK74z/80IomeqG/o+DC95A5slQ=
 		</data>
 		<key>PrivateHeaders/CTUtils.h</key>
 		<data>
@@ -478,15 +638,15 @@
 		</data>
 		<key>PrivateHeaders/CTValidationResult.h</key>
 		<data>
-		HcHFMHaExyNT4ix31eLkYzEEkGE=
+		0gp6IPpmH2tu45igtzECvH3Cgzo=
 		</data>
 		<key>PrivateHeaders/CTValidator.h</key>
 		<data>
-		Kpzhiu6FjZklEPWv9fROYShNqr4=
+		mhZ4pe/WVnCA/fVYaGAt4r5E2zk=
 		</data>
 		<key>PrivateHeaders/CTVideoThumbnailGenerator.h</key>
 		<data>
-		i6O1fxRdTM18+fHd8YyU/jPwpBU=
+		i4Qjo5Q8DkBP7D/i/aBaUniWd0U=
 		</data>
 		<key>PrivateHeaders/CleverTapFeatureFlagsPrivate.h</key>
 		<data>
@@ -494,7 +654,7 @@
 		</data>
 		<key>PrivateHeaders/CleverTapInboxViewControllerPrivate.h</key>
 		<data>
-		/kOcLUGi/dTtc53s7hYgTxyENY4=
+		iB8Lt/z6uDxJ79GQt/I0IV9KGN0=
 		</data>
 		<key>PrivateHeaders/CleverTapInstanceConfigPrivate.h</key>
 		<data>
@@ -506,7 +666,7 @@
 		</data>
 		<key>PrivateHeaders/UIView+CTToast.h</key>
 		<data>
-		02iK7hkQpCrjKOITF19IMfeu2w0=
+		JL7lqg/vEKQ36Chz+aIiVy1QN2c=
 		</data>
 		<key>ct_default_landscape_image.png</key>
 		<data>
@@ -591,488 +751,939 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>CTAVPlayerControlsViewController.nib</key>
+		<key>CTCarouselImageMessageCell~land.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A1rItVAgpINUmk2DzmgUjRGgXxc=
+			Q0IGbHKthB5zY9Ol4lhrAoNlPkc=
 			</data>
 			<key>hash2</key>
 			<data>
-			zx6nToABE9ZB2K1dmIw7gGMQBYCHgKXeNSXSTe7ly5k=
+			qT5m30t7FIOHBHsf2MeUZ8MK5puU2yOe/bJdTK0waIM=
 			</data>
 		</dict>
-		<key>CTCarouselImageMessageCell~land.nib</key>
+		<key>CTCarouselImageMessageCell~land.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zoly9z3BSD+2tffcHSk2dYaQq+M=
+			rq+0KU/T+tKdhPZ+EMcsQmgHgiU=
 			</data>
 			<key>hash2</key>
 			<data>
-			1gS+7GB109FO2nGoS4pawknbrvxriooUCXfE9pRwCIo=
+			5pmcRfe5xM66Ncgub4r5bFPpFr0k2HxLetpCU7+4hyM=
 			</data>
 		</dict>
-		<key>CTCarouselImageMessageCell~port.nib</key>
+		<key>CTCarouselImageMessageCell~port.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ATdhkqZ10Q09Z1MLfd1o/XSxkr8=
+			kp45RAZUlgtFkyPXfG6wEfwQsiY=
 			</data>
 			<key>hash2</key>
 			<data>
-			LdlIu/L/4nutUyKK7FQaUjNRjofKSLkaePsEVUfgkiQ=
+			+Q1SHySEoEjVaoOm6VgJH52N6JwklXvwI4OAdIxqd/4=
 			</data>
 		</dict>
-		<key>CTCarouselImageView.nib</key>
+		<key>CTCarouselImageMessageCell~port.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5M21LU57OUYH5JhET8bC7IstKOc=
+			H4dw5rtwxQEgH1odYKzlAOg7rVo=
 			</data>
 			<key>hash2</key>
 			<data>
-			K8KcREpx/aaoXeCaHQgVatow6auWSSG6p0MiYb1hsbY=
+			hsXvFvmQ5UMBcOfBmnkLEbSddBI2Soy4pulpxaNrUnk=
 			</data>
 		</dict>
-		<key>CTCarouselMessageCell~land.nib</key>
+		<key>CTCarouselImageView.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0ZebGwirczjkDvchV9PvysfdCUM=
+			LjgPTKtLiN/+soUn0cwPh1zFaG8=
 			</data>
 			<key>hash2</key>
 			<data>
-			g4w22GslkVgQ3c7Hq1R8UhndzgdTqhUT5qrVArTHiOI=
+			shGleKnjAmK+5tlffOUJ5PSdMxSNl1RRybzXJg0V8eQ=
 			</data>
 		</dict>
-		<key>CTCarouselMessageCell~port.nib</key>
+		<key>CTCarouselImageView.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h2iWneEVauaYIJEt7rzPL7n4DxI=
+			+VKWYVNVsDUbqTy9ac/qWcSb0TY=
 			</data>
 			<key>hash2</key>
 			<data>
-			gmbmAscpnSYa3k+bv4LqFyej12IOGydtStkpnZscrh0=
+			uaZBGO5oGS0pdQmA29oO9PvW0Pk2gWwk/URpTkbhh/w=
 			</data>
 		</dict>
-		<key>CTCoverImageViewController~ipad.nib</key>
+		<key>CTCarouselMessageCell~land.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ffE5MHk8Zsz6SZEOBF8pih4bUpA=
+			RZvrT/8BjYtsyPgZcE+1BZ88+ek=
 			</data>
 			<key>hash2</key>
 			<data>
-			XS5hkx+kquij41bMC6693TpvAFq0BQcmYo7TyG6AY6M=
+			YRSDXz38VYU7NqT02oIbBM2mryWUaWegz6gQX7OYB+w=
 			</data>
 		</dict>
-		<key>CTCoverImageViewController~ipadland.nib</key>
+		<key>CTCarouselMessageCell~land.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1sfyWFYBl1RNsjMx9cmdnnIIrDI=
+			dF/cok/rjgW5+G/yUUEwWD5aVv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			iSYvJW+Z813YZXRX2qusYwjIC/KN6fuK82Tuv1VgIpo=
+			HEMCJQ8VI/i4+oQ6iz+wItflvojcQ6kwbtZWj59jdM8=
 			</data>
 		</dict>
-		<key>CTCoverImageViewController~iphoneland.nib</key>
+		<key>CTCarouselMessageCell~port.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JhZ4ntvHFDw/OvDAzU1hjKa3Sug=
+			HxPEaGiNGO7AaBOvpGbwWbxSbvM=
 			</data>
 			<key>hash2</key>
 			<data>
-			BUQEn6CnpcgLtx90zz3cIpEAktAuGhFrYfs7jOBJTQo=
+			8gkqGU0o2Rnwl7ES5qasicNW15GoIr9a2HTw0W9IKfs=
 			</data>
 		</dict>
-		<key>CTCoverImageViewController~iphoneport.nib</key>
+		<key>CTCarouselMessageCell~port.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3fPdxuGK3R2ANhI9jAdv2enM8RQ=
+			NrL5gJxyLX087Zsisy/EVGY2aCc=
 			</data>
 			<key>hash2</key>
 			<data>
-			+jMv4iiu7w/4uLx6oAYZFPG6WL5RteyF6GPujRu5KGA=
+			d8R/ElZTWOq6Bj9oEEHmYNkg1jdrjYB4OI8lAPu9WYU=
 			</data>
 		</dict>
-		<key>CTCoverViewController~ipad.nib</key>
+		<key>CTCoverImageViewController~ipad.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0uN1X55J1U/0M7pkMBmby99mFY4=
+			k2k+GsJqwmWDYpHgaWUt1zVTERg=
 			</data>
 			<key>hash2</key>
 			<data>
-			jw/1xMCwYlqLbwnYHMkAZhqpuOLesYlnFUAlDuKYqXk=
+			7p89r4xFJcg4AHA5izqhMK0YbzXRHtnJp/lZpWcTT3g=
 			</data>
 		</dict>
-		<key>CTCoverViewController~ipadland.nib</key>
+		<key>CTCoverImageViewController~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QKvDA981RRx5VFgisF2SDdS1nYY=
+			TcP71J+5w66GtKkYJQq7NJrCfAY=
 			</data>
 			<key>hash2</key>
 			<data>
-			7Z9i8aRwiaHw7CQbMGQYdhUs8lWoLnTKknR1T3YznKY=
+			cV/wfX+HIOvds4b6WivQlrJgwgenjy4ZYUUh2FEmEzE=
 			</data>
 		</dict>
-		<key>CTCoverViewController~iphoneland.nib</key>
+		<key>CTCoverImageViewController~ipadland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3XYufE3Ve+4iPeHB9yUrxTxv4Mw=
+			OVzJ/H3fnOjpMqvKeyizTSx/5RU=
 			</data>
 			<key>hash2</key>
 			<data>
-			HY7k8fMw74+XLLfmV3/rXeUcCCvRLogI9nfzmrwSi8I=
+			jc4ycuEqSFCcvE89nfJGtAWWo73qvWm57ajY7r7BthA=
 			</data>
 		</dict>
-		<key>CTCoverViewController~iphoneport.nib</key>
+		<key>CTCoverImageViewController~ipadland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XFNnH2Shg5FLnk1WqOiZ+rEpj10=
+			t+kIpxXFxX+tGFIXCnwUp2JOX/c=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Szxd1MXMkREeHP0UNt3z2komOZB/SlM7/eRnEHaNwA=
+			M0K4OMBxPEK7R+Q2F5O33/a+KJwQsmWhgtlLXW34Sew=
 			</data>
 		</dict>
-		<key>CTFooterViewController~ipad.nib</key>
+		<key>CTCoverImageViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z2ESBpSsVLPzY2bvc/eUXSnS2l4=
+			ksbe7nlhWvxtOymXE9ebMU7bHyE=
 			</data>
 			<key>hash2</key>
 			<data>
-			wOCz1Yw8L0iz7p3eE/PqRoYZxHZdGHoEnl0HTJyI2lw=
+			qUlmPV4Qq2W/FwhpnBCLzDlDxEqv0lqyXBqbHgXuJsE=
 			</data>
 		</dict>
-		<key>CTFooterViewController~ipadland.nib</key>
+		<key>CTCoverImageViewController~iphoneland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DyxfwERGLX0nB5MAQrX/Sj4ZezQ=
+			6275dqb8ca6aP1wS9+gCrmWptAU=
 			</data>
 			<key>hash2</key>
 			<data>
-			7SlIoJuWw8iQiK+nvQ0kqRjQuWJmmOSaLXn366Z4P4s=
+			7Bo5VasUpL+DUg5ywVKAqVBd/k8apMQFd4MdtcIhFAc=
 			</data>
 		</dict>
-		<key>CTFooterViewController~iphoneland.nib</key>
+		<key>CTCoverImageViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7TTwZ8XrLIsJotZ1PUv2vbsRCDA=
+			H0aFfl7lizfvoesL12ORqBPKn/c=
 			</data>
 			<key>hash2</key>
 			<data>
-			cKa2YDNu4KVnT/D3eTNKwqTXbIsrSVoQqflUmmCi/78=
+			h2M5+36nsHQhgettIwOd9cpCw5uU0Qr8balMf8ZZSCk=
 			</data>
 		</dict>
-		<key>CTFooterViewController~iphoneport.nib</key>
+		<key>CTCoverImageViewController~iphoneport.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			B5enQX91WzxX2UGZe3MLpMfU1eY=
+			tGv+D6DRY2SJvvNXz2CXnrQnlKE=
 			</data>
 			<key>hash2</key>
 			<data>
-			e1A+5dXg9lYsC5pkUXbEXIVkmZYGxHJv/QO4jxFjpUs=
+			MWPXJKPI6HHqrf9Qn4O2z4lvGnuE8Qq9SlTijcfjM3c=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialImageViewController~ipad.nib</key>
+		<key>CTCoverViewController~ipad.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			39SbC1KGGYp9pPBcvSvUfvbIX2A=
+			e5QHiu9cesqS1NdD3eTwqaB5FcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			P6EprY6MaWFY4aXiA4lydWi6FsvOEOCi7hCVTH6t9mI=
+			S1MLPa+TjDBzceuKhsF09bLtVd4+u9dQWWRN5Z/mWcQ=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialImageViewController~ipadland.nib</key>
+		<key>CTCoverViewController~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IMhd+9YlWLFgvPpS0XgFo8Jq8xg=
+			G3nq6muFmM/+BskBrga2gqNzBis=
 			</data>
 			<key>hash2</key>
 			<data>
-			OqcNYHlgmKXdUAMTMrAtIX4VT5PHtR8tfrkhne+T5X8=
+			ca0vu1ZONVi1YKfHgXlv2XYS9AQLOeCgAtQSQvrQy60=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialImageViewController~iphoneland.nib</key>
+		<key>CTCoverViewController~ipadland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xznXFl+GkVPSkKOnJ+urOBPJkKY=
+			tQAQVf82uWh1M+T57H0g0aLEX2g=
 			</data>
 			<key>hash2</key>
 			<data>
-			NXcG3xdN+DEjK5DT4jeazXfu9F0VAmhMW1XUk1LIjY8=
+			ngnkFWM6bY4dR0fiDZlk5JqUXMrLpEBnZDxUqTch+jg=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialImageViewController~iphoneport.nib</key>
+		<key>CTCoverViewController~ipadland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xEhGe24p05qEQBUtwedsAMzCaxk=
+			F/iZcR/hMdzlSPpEom8yaMtL5Zo=
 			</data>
 			<key>hash2</key>
 			<data>
-			mfC/FSAIEQsQ9wLoehxonvnPKdzJzPhnxYqFRIdurNk=
+			Fvp+5603lJZ2leFVqAL8SiSEKlibl8T+bPq3GPS/8E8=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialViewController~ipad.nib</key>
+		<key>CTCoverViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Oac7AuG+rDzsFwPoR7kh7STH+4E=
+			XwXVuzgvnCY592zBYm24kSVS/Vg=
 			</data>
 			<key>hash2</key>
 			<data>
-			IqO/hX8hfdgg1VxWnulIaB8VojmEBDY625rQk6BhnDA=
+			+X2fDqlCzHw1jv963HhEJzNlNYh8GzHKFOSp1BmjtNo=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialViewController~ipadland.nib</key>
+		<key>CTCoverViewController~iphoneland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nzgH5Ksk7SK4ggAR/RtWw9pndAU=
+			elrvLbpv35NSO8aGbYwJPkO+4AU=
 			</data>
 			<key>hash2</key>
 			<data>
-			I3in/KkmQnpX1coHRs6o/aK+W2Wa30pI8ymoel+MMwk=
+			Q4PHkHB8EXAztrrmqKU3sxbNWz2BmzCsOjetJjW3rn8=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialViewController~iphoneland.nib</key>
+		<key>CTCoverViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5Xkh9ChlzuCIvO/g5ivmA6wihnw=
+			3xvXun6YUq5i8YzVpQVnKdjadss=
 			</data>
 			<key>hash2</key>
 			<data>
-			nyVvd+2XviD0QRLAtQq6pyElAT9OjMnpF5GMVVqCCgg=
+			VEhAa3WDC3GTXxVFjyCAozTN9s97B2cnOp/+vq4AISU=
 			</data>
 		</dict>
-		<key>CTHalfInterstitialViewController~iphoneport.nib</key>
+		<key>CTCoverViewController~iphoneport.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0FBFE4sLogs/vs1HI/Cv58fbbiQ=
+			yhjE9oIg956YZzNNrsyql9LF9fE=
 			</data>
 			<key>hash2</key>
 			<data>
-			8/43NFxy65741o0sifp0nZMUm+BEZ0kgYSjWMfoEFxo=
+			M6Q+ksiRlwguk1s3Y5TzcFViuUTt9TsglJF+kY3arC8=
 			</data>
 		</dict>
-		<key>CTHeaderViewController~ipad.nib</key>
+		<key>CTFooterViewController~ipad.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			420cXWGMoODz+IoJCpLnTgwPmDQ=
+			qRLwImLkl8Z9cy2vh20N/qgKFyU=
 			</data>
 			<key>hash2</key>
 			<data>
-			EdSIfGOjbgfC/OT0OGyqNKGhZ3l9oD2qF0fOftQ1wvY=
+			wDjofBkqCdpe8UtZMC8Xmem/QdBp+uI8v1H01AlfTrw=
 			</data>
 		</dict>
-		<key>CTHeaderViewController~ipadland.nib</key>
+		<key>CTFooterViewController~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UKiHiPW8o4scSWs2ePOjT1Swkns=
+			MdKawA7dZIUvlkEZz2hVVyJk8jU=
 			</data>
 			<key>hash2</key>
 			<data>
-			2tIu6yyky4szP2Mv6hPgeB4Ty/cdgTek0/+psuEiqig=
+			0wZTYnzKjJayfYuO7Ultw0TEGpjDB54o5LY8cPy61Yw=
 			</data>
 		</dict>
-		<key>CTHeaderViewController~iphoneland.nib</key>
+		<key>CTFooterViewController~ipadland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+9Hl4d/1A2ftykZGSLkB3vKI510=
+			oMpvvD9r/oA3HdftGMySTFWwCx8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fq7MzEu3LdFMZVB4oO6VxcVtCaRicp4jmXZziYWxd5s=
+			vOoqNuKmIXFl1T8aIyIkarW8TqKsX0dZPtk5Eh+PQ70=
 			</data>
 		</dict>
-		<key>CTHeaderViewController~iphoneport.nib</key>
+		<key>CTFooterViewController~ipadland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wkGdAZEJcGck0QaNr4hyHyPx2Ec=
+			DKUMgGV88rF4b1Q/xLGHKmGQT9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			s88FpVkZvb5qYyrN1lOWeVlAoIqKvS+0IojuY5gzD0k=
+			aah5EOryOZS3QoQJB2JgCW9/dh1BzmFmFuzaKDy9y/g=
 			</data>
 		</dict>
-		<key>CTInboxIconMessageCell~land.nib</key>
+		<key>CTFooterViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LZsr9nGXyao3Bams5h9d1no+g9U=
+			zN6DUS0yXBY149sQgd37KlHWj1c=
 			</data>
 			<key>hash2</key>
 			<data>
-			FE9m44G7EarQiFXvua6hN8p9NQNMwIbd2V/S5q3t3po=
+			jYxpqL/RQnqtcNLRZne+P9HpJzrKIW8VJM0SPiyqoY0=
 			</data>
 		</dict>
-		<key>CTInboxIconMessageCell~port.nib</key>
+		<key>CTFooterViewController~iphoneland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rNmfsQGvn5Q/O/XB1QLpz8N/ohs=
+			vZGwmt4WIcjVEqtMhHoo3GlcHm8=
 			</data>
 			<key>hash2</key>
 			<data>
-			EnrqWL3hDl0Xk7Cncv2zC6AZj4XcyoKEMznVIc7Gfr8=
+			1Y4G96eXUyTEMEv0jqXFNaalXvKaZLU5fOgSCKhV1cI=
 			</data>
 		</dict>
-		<key>CTInboxSimpleMessageCell~land.nib</key>
+		<key>CTFooterViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rP19bdm5w0NfEKz+ViWBXY5nwn4=
+			669cEO8wTuGdWdarC3/39RDQ3Ko=
 			</data>
 			<key>hash2</key>
 			<data>
-			sDXr7PpygmYSqGBFKcmUPW5OEkbbbgQQYtMPqa9RcI8=
+			R7SfrMcUhGh3qMFu5/zn9Tork4JNaZCk+ifwCXZslIY=
 			</data>
 		</dict>
-		<key>CTInboxSimpleMessageCell~port.nib</key>
+		<key>CTFooterViewController~iphoneport.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6lA6jmuPcn1y6lQh6KEKSoDEjTE=
+			jxfXjem/DM9U0caMH9PEErpO7b4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y0oR1fPkHsNMojp0bAqWTUUHWrzIt5wuoAhBr6dAxAs=
+			dbzRGaj4jd3W7KWlR2Z+hSxgKpLh0HDLwH/oyEruzco=
 			</data>
 		</dict>
-		<key>CTInterstitialImageViewController~ipad.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipad.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Xti+0laZMv0Pgz8Dy8k4X2bmm5Y=
+			CytJSzAIiqJYpvZ5ofGDU0uELx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			b9Xye6Bjsv4eYRiC7QQqMM0jnpgqvFz+iAkBSrfszA4=
+			hZaTnI7rWFQ6EHZ1HzKAF2XsoTwxcxEf3KjTSxgsUlM=
 			</data>
 		</dict>
-		<key>CTInterstitialImageViewController~ipadland.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a8oHELXuzoZT1X0qG3/1vWx9Ak8=
+			yIY33ostX0gdtechvmpM6hfwl8Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			vAVvyLcOucJDlEDQmet7BLB2nVpP4qZoms1m1xUltZs=
+			QOjS5y0pWfuACNecm8a5v0ZS+8wMzzsHxq+k8JXJIIg=
 			</data>
 		</dict>
-		<key>CTInterstitialImageViewController~iphoneland.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipadland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rX/hsPcEx9jqXbQf9ymgtzHkORc=
+			c7QFxReKmPsg2Tjmerv2l0vn2Ig=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zyl8C5VNtgOirUbwAYHxBI5vDuTkGsP4POW1zBldm2o=
+			BuoQtf9CmjBQ44BfnoFB2plHSN7e3wlX0bN2AT7gqZk=
 			</data>
 		</dict>
-		<key>CTInterstitialImageViewController~iphoneport.nib</key>
+		<key>CTHalfInterstitialImageViewController~ipadland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EFpyl1ePiMgrE0DdGW8mJ8AFYpk=
+			noOQH6RiN6nxJgehodurFMlKgfw=
 			</data>
 			<key>hash2</key>
 			<data>
-			5OU+eRt41WXz4I9CU50m3C2E5kb0m/AA+QcaC7n5H78=
+			/d+VapX+GnI8TifGvg6gg1YZb3y7Dhlr4fcGp/GzijM=
 			</data>
 		</dict>
-		<key>CTInterstitialViewController~ipad.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneland.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aHkdYN4rRrDNh5pr5sSX54gfmP8=
+			vgSfUqsaHlAuR8LBijFNgP5amHw=
 			</data>
 			<key>hash2</key>
 			<data>
-			m+Pvvet2XPerZ5Po2FwQI0Ss6BBVWikTooViCi/2f8k=
+			0kdWY3PPjHCvtpiaF+0HnivAMXj4T7z/EkJSromfHBc=
 			</data>
 		</dict>
-		<key>CTInterstitialViewController~ipadland.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneland.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cXYpYG4UKu/sY1IU/AlThIAER/0=
+			lf0oFvyU6KU9DZ0k1b5eLMiaYZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			dTOTOCGET0oglXA9/ZUy4aXKYMjvRXv0bJdFg+S/caY=
+			XyHyBu74ZvJIOaMmdW6nyv9I9hmNSoGX5pDY30jQJxs=
 			</data>
 		</dict>
-		<key>CTInterstitialViewController~iphoneland.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneport.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WzhlTUQwKB8btYO4rJHmaB2od4s=
+			IMP9q0X6MNKnRblvXKmISExHyFU=
 			</data>
 			<key>hash2</key>
 			<data>
-			JY0by9R4hKNyc46lOaQ1pkznt8PGkg/7BF7TZi2Pln4=
+			Be4kpgdx/V7dUs+vnYDcr9y3tEt0zjdxsoR2c/kLj3Y=
 			</data>
 		</dict>
-		<key>CTInterstitialViewController~iphoneport.nib</key>
+		<key>CTHalfInterstitialImageViewController~iphoneport.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fxVeeEBRRwlgOA/7EoTVxVVM9s0=
+			xGFUf54sGaJhotrYTSltnS4+nBo=
 			</data>
 			<key>hash2</key>
 			<data>
-			LiZ0F9iQU88DZEa7z0rkNgpibzvHsnK/1oEKx8hPx9A=
+			Jt4qokK1k7BhjrBW0pEuFYBmfz2fYnHeMjW+sGyKQMw=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~ipad.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D941bElZWNp704VYjnSWdQJ9wv0=
+			</data>
+			<key>hash2</key>
+			<data>
+			NnvSaXgLfyLBKXlov+m9aAF/9YLU57+dtoazPNrXjNY=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~ipad.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uB2EF9kq4kmNI7DQzGJnewVlhc0=
+			</data>
+			<key>hash2</key>
+			<data>
+			fOUXbcZOGCJTXIYVI6xtxXJmmWbtu0rn/SYH22u1jUw=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~ipadland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zjfm+L6qxSJDKFk+5/JKHr27fp0=
+			</data>
+			<key>hash2</key>
+			<data>
+			xT3rYwWtqU2v4wtdBoSDNccNd1Jwn2rBA3ilssOIRcc=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~ipadland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8UiZzBLYX7oNrdwNlbi2I++8RwY=
+			</data>
+			<key>hash2</key>
+			<data>
+			wCww+ys7+s+EVp4vGJm6ZZVXR4ynE6jQYusBxbvg8+E=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uNlh/rEfyg+/g7w+h7cwpZgbeWE=
+			</data>
+			<key>hash2</key>
+			<data>
+			TK6iltj0xzp7v4HbVhS/xuO90fPdOO2ZEAVUzGp83xE=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~iphoneland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6pTUGJxcuxcS0ZIOglVzeXCrIsM=
+			</data>
+			<key>hash2</key>
+			<data>
+			N5IzZRh1bygBnBeIHpixDFPeOWO+1ztg3+qiPK7k+OE=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CWIfSoZ8KLRtoAkTY1lpl75C0vQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			PHgOzxqeKndP+/cF4fg51u8zsl7OQ3F2Nn5JYA9CmN0=
+			</data>
+		</dict>
+		<key>CTHalfInterstitialViewController~iphoneport.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ROsRpCESJrxdug9e0SGqu5T1e6E=
+			</data>
+			<key>hash2</key>
+			<data>
+			jwQsN5JeF2fcEXj0hHBZxNpvl7Bs83eetTSHe+xf5Bo=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~ipad.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HMTRokoEN/L6NxHvvIw3YS+cqwg=
+			</data>
+			<key>hash2</key>
+			<data>
+			uYcXqBxkseB8gSVFFBCVXpWd2wqUkhkZw/LyMCASHhw=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~ipad.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NpozRJJgugUAbDcT7ZET2fM0mN0=
+			</data>
+			<key>hash2</key>
+			<data>
+			2mSGWiUXPRfyBQSTTBj92NRv73aOPFjS5UUnRYtT4Gg=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~ipadland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			saur0ZMkh7gOLGbYcNW4w9QCo04=
+			</data>
+			<key>hash2</key>
+			<data>
+			j6AGiMQ9RU1gVhGT05kni3iv402hQJjzMFNAAVRynwg=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~ipadland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4C/0dYT6lEsT1O8BsvO1/6JosY8=
+			</data>
+			<key>hash2</key>
+			<data>
+			RQbDDZHeIhuFWb5+pOAkG0P4NcybsAnO3WW0B9J1YNU=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rp+fnnmyJ8c0Z16TSDKOxxka4YA=
+			</data>
+			<key>hash2</key>
+			<data>
+			WBGW3yHrF1FLzfSaONXq0LI4U6F+LqBFZIeQ+/r1zGg=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~iphoneland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HqQdJKmgCZ4APiLTb01H0AYf7JI=
+			</data>
+			<key>hash2</key>
+			<data>
+			n5pdymIjkTBDuTfIuaKSCW3jmzhkx5wKZ+gvOhMM8zs=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jBAZvV/IUh+hfLca9K/BJxjxAwY=
+			</data>
+			<key>hash2</key>
+			<data>
+			j9kUDyuwoga0OsuprSRPQjfF6GI0qHOo4CVHDW/Zl9c=
+			</data>
+		</dict>
+		<key>CTHeaderViewController~iphoneport.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4Ta9IZJ5XLQfR5GGgY3fCGvIJZw=
+			</data>
+			<key>hash2</key>
+			<data>
+			StE9FdUeFbmIfTQ7ZqGDhQKhbWol+LQqI1WdfPbSxKM=
+			</data>
+		</dict>
+		<key>CTInboxIconMessageCell~land.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZqDBwMHzGa1zOtJWpkTW9Vo3uRE=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ap25EE85aJNXJIg0BX4Ob1g5XaxgxiWbf/YnrqxiWxI=
+			</data>
+		</dict>
+		<key>CTInboxIconMessageCell~land.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			M/+pvCLID+CuLPJNk7wGhaFgZRo=
+			</data>
+			<key>hash2</key>
+			<data>
+			TRy44oS/k0Yf5nPW9gFcGaOsIqfmJhqVgRITDhiEMRI=
+			</data>
+		</dict>
+		<key>CTInboxIconMessageCell~port.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SDpC4JLsq2EUCSQqNHVwqwf6V2o=
+			</data>
+			<key>hash2</key>
+			<data>
+			xCpsg61iiOJ5KQE5DKGdhWYUcWJBE7U0kkJXP4lVYng=
+			</data>
+		</dict>
+		<key>CTInboxIconMessageCell~port.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E6tcUNGsoetrNogjxQ3di9BlH9U=
+			</data>
+			<key>hash2</key>
+			<data>
+			YxyDNcIAn8acQGkLztCcvmSyEllSvp75eBDu/2vEyHM=
+			</data>
+		</dict>
+		<key>CTInboxSimpleMessageCell~land.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JLxPvBUgejFMwoIiLR7LtE04sPU=
+			</data>
+			<key>hash2</key>
+			<data>
+			uNYTMYlL5KlVHpTGUpoQx3vsnWWvRLKaegrDERFd1Y0=
+			</data>
+		</dict>
+		<key>CTInboxSimpleMessageCell~land.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LEWYv9vU5FpbECMeA/pwjznVchA=
+			</data>
+			<key>hash2</key>
+			<data>
+			0fndcnzPvXuXIlEDnC7OvDabyfwUVUJZwxWIAIGZrKw=
+			</data>
+		</dict>
+		<key>CTInboxSimpleMessageCell~port.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x+cnt5pQqb/kwauOY4XDbZVi6wQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			TbGLv7YCbzBXxA5kGmMuc9pOqjNWoXNZYe1K2BQJIBk=
+			</data>
+		</dict>
+		<key>CTInboxSimpleMessageCell~port.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VQYyEN1tIRHc0MUqL0kkmKVvY7Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			gnMuFAfgG5xpO+0HbKHsUZMnVoMG9dwMnd6KUOYw1Yw=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~ipad.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5KIUCaod0ymnblqtxIrw9Dp28NI=
+			</data>
+			<key>hash2</key>
+			<data>
+			sDsInFCMj4IivECo5JJ++rhJSOgeERPjBfa5Qxt+ZPY=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~ipad.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rKcaIKhGmkZ7GCZWZuZIQPMqq6I=
+			</data>
+			<key>hash2</key>
+			<data>
+			8UWfsLZYucbalguFiCNkNtcu/LnRaQf9Ou/m/Tdrzqc=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~ipadland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8IaYQfrowyNZdeEIgF9CiGUxIZE=
+			</data>
+			<key>hash2</key>
+			<data>
+			plj/9ujKrOF5uo8/Cyag1e8m52rfY/xqiYQdmRSaXAU=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~ipadland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e4SUj7IC936dIwpZKjUt2olDzxU=
+			</data>
+			<key>hash2</key>
+			<data>
+			wozhItmgr7pSvFqN1IV3FNunQzXHrw9kk7mYRuP+EbI=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ggi7+CML3peRJwwkfLFipwfLaE8=
+			</data>
+			<key>hash2</key>
+			<data>
+			lTLY8swtXk5Ju8O+b+qLHW/VknszCNxwnIU3OjQgRxU=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~iphoneland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8SVAdqzCxYkRYf7Yg3te4HDC8iw=
+			</data>
+			<key>hash2</key>
+			<data>
+			epN3LXyqywmx770690BDHDrDbiAC4rU3RcUBAXkXoUE=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yQTZCzIJb+EnMxkO+pDNpts/RH0=
+			</data>
+			<key>hash2</key>
+			<data>
+			s9Z4kx0PrndmR2dTNSbGJb2YS5aGg+7IyGS0jckiO0c=
+			</data>
+		</dict>
+		<key>CTInterstitialImageViewController~iphoneport.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s7uImSiloKtI0xUKl+91pxbVAAE=
+			</data>
+			<key>hash2</key>
+			<data>
+			DQwIT3FerQaGl/61JhgnaZpSgvZDRL2FeICjhIOewRo=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~ipad.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FRTKJBUSjgv+eciiTTFu+x3i3aE=
+			</data>
+			<key>hash2</key>
+			<data>
+			NVmtt8CpPI7CZXCT/I87v15SjzIcl+eVkrOB1GOLf50=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~ipad.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ac3EcpJm/4flovc3Sc6/vION6Wo=
+			</data>
+			<key>hash2</key>
+			<data>
+			6VxgZz0PvdxNoMxjitK2f3w+yu93XZCoeCub5H8CXl4=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~ipadland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wUcJEFcyVaT9HYg6BclR7fDRPaE=
+			</data>
+			<key>hash2</key>
+			<data>
+			iX32CeQyj3qw+vdCThubzgfpDTd5WWE0UP7GXDBq9Wg=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~ipadland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0mjr342XGM0vhBj5E1ank6Xn9xs=
+			</data>
+			<key>hash2</key>
+			<data>
+			h5pC/hH7tqZPKeVUt08keQ0JLn2VrcCngs51d3nocXo=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~iphoneland.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0txzcfRMJHm/AK7r0Fq6zGG4vpo=
+			</data>
+			<key>hash2</key>
+			<data>
+			5Mwa0fZEiImA1syHP0/dCbwbtksiOJsLZvR9FN24GKo=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~iphoneland.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xU6fq3Fh+vhDqeBUv282PPeBVUg=
+			</data>
+			<key>hash2</key>
+			<data>
+			BkgxXPflKpwDI7pB646HwuKL5wTWl5OJajRMggbpHow=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~iphoneport.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QgmI9XxZnF6MsRZYAXy8XZamfPY=
+			</data>
+			<key>hash2</key>
+			<data>
+			TJ3J/y3faAYiG/8UgQGBXewHsGyPP818C6KHQ9J6MHY=
+			</data>
+		</dict>
+		<key>CTInterstitialViewController~iphoneport.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TNoa0gswKmkDaieho7mM9m4q3UM=
+			</data>
+			<key>hash2</key>
+			<data>
+			KZFoeevkBjFhuGLDNb9XrOFj7bLtcgcHZ/wZIZ+2Sds=
 			</data>
 		</dict>
 		<key>CleverTapInboxViewController.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k8OC2ddabwUNQGV/iY0m/y4OriM=
+			G6AR8i2KCPMrFfzjwaG9kyLMp5U=
 			</data>
 			<key>hash2</key>
 			<data>
-			sBI/uNlbU8SK9nHkFXqnpjNVGDJJyfuAu4UGpXjW7Hs=
+			PFV7pJ2zRb/NImN6Sy9/oxSptveZjgzhZwKoGt7GvY0=
+			</data>
+		</dict>
+		<key>CleverTapInboxViewController.nib/objects-13.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2mFLTbZOyyylN1DISezu2hfSfFw=
+			</data>
+			<key>hash2</key>
+			<data>
+			rqglqpTt+gy74xoWCoopv5onn3iw9xKPS7KgxetLxLU=
 			</data>
 		</dict>
 		<key>CleverTapInboxViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jRXpedECsfg87d4yO3rI3bXYTxE=
+			qN1osgWVE9/vByhQ7esGFupzAhQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			gM1TaFnDAB11sXgsTXX+1tIRFaiqJGBPeOYxd1b7h/8=
+			/kxJ7qg8LNcSNdelaZCB9xwPMTjQqTJbelOteUxzEDI=
 			</data>
 		</dict>
 		<key>DigiCertGlobalRootCA.crt</key>
@@ -1112,11 +1723,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xF3pG9jq0oq/ZvUujgqRKfpnJlQ=
+			+vPaZrOfjdz7vF/WRVFq+6Z1Lc0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ji3+jVXGyluvCupHxH0LkxGY3NYcj+UjQ9MLHEJqvfY=
+			cfOP4+n6n8aT7I4Dydfw8tx7ZXdZ5T5CSzzRHSTUgoU=
 			</data>
 		</dict>
 		<key>Headers/CleverTap+FeatureFlags.h</key>
@@ -1134,22 +1745,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/fA3o/AqLV9a7BLi1pvd2m5FfaA=
+			5Q1pIHud5j7rEVBYIsLujaDnPg8=
 			</data>
 			<key>hash2</key>
 			<data>
-			LXESq8SthGsKBE6EgaeGDNBUF5E6Y3L6kMV08UoHOU4=
+			cIJ+vT1LSvFK9R5OPn4so5P9RAuUFhOOI1PYvWImLjM=
 			</data>
 		</dict>
 		<key>Headers/CleverTap+ProductConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ADqNwCuPyhH5C97Tk/tEWuc3jcQ=
+			CwppeaeO9QHBNz67Sw79h+XqUT0=
 			</data>
 			<key>hash2</key>
 			<data>
-			T6O75Y4p9gtLI2SSFejEuo8sUjQsesvJcPzApKLiTbo=
+			Q39igSV9qzj8evIYqgHAzKg1MTq+9rbtkq2t8e4A8TI=
 			</data>
 		</dict>
 		<key>Headers/CleverTap+SSLPinning.h</key>
@@ -1167,22 +1778,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3IlLYBJr4x4LzaLXQtH2KnG/Gh0=
+			f6Xric0u4hM3O4yPpHVQcxvNf64=
 			</data>
 			<key>hash2</key>
 			<data>
-			tQ3pNPK91Cl0npYK4MpGVLQJUhhOzaPWtzBPVZsiuUs=
+			FPW+xQN70O6zc02mPM/g25XM0NL8UOWi5MUl24CLW3E=
 			</data>
 		</dict>
 		<key>Headers/CleverTapBuildInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rChYcmXPNvdwC+Q6V/c7NCMLNaU=
+			gf/hham+mqWDqH3OzDBlskfFxhI=
 			</data>
 			<key>hash2</key>
 			<data>
-			En6yeGx0MHfnNqv/H1z+IakJmVz17KSU69m62zT6hzY=
+			ApVnUJfSNgaBV1mIkg+B7I47sS/UAkBv+0dTqR9Rbxk=
 			</data>
 		</dict>
 		<key>Headers/CleverTapEventDetail.h</key>
@@ -1200,22 +1811,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GtIEjA6Jqc2G+BI6NRLl5/CPeL0=
+			bEO6DvTXSDTz0J4XpTRKgzGa2Cs=
 			</data>
 			<key>hash2</key>
 			<data>
-			ceYRgjwdc+zl2yMV7S4faboQberAe0zUEMH3lG5M8jY=
+			79f8rTg2iHlj58dCQRLcnR3gAN+u8YEiggIVOwVQHnc=
 			</data>
 		</dict>
 		<key>Headers/CleverTapInstanceConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dAraZ1+nshnlHP2wibKQqRQ+kXg=
+			OGhkeSKKfqhCqOuPzjt3m6/keYk=
 			</data>
 			<key>hash2</key>
 			<data>
-			MFLnY8yeAmJiIiYsgAaVhRs8l6+toMoMqTFXDSM75xw=
+			hdO1/vXsaqDjvI65z9UZxQkphbhzwTAl5LCQCojkF3Y=
 			</data>
 		</dict>
 		<key>Headers/CleverTapJSInterface.h</key>
@@ -1229,26 +1840,37 @@
 			R8XOILLKm3PKocDDcdnCPVGuD0HVshdUUtecGOqghKQ=
 			</data>
 		</dict>
+		<key>Headers/CleverTapPushNotificationDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JjWpQ8tQPBdrzgc5p6rSXH8A134=
+			</data>
+			<key>hash2</key>
+			<data>
+			xHqUpKTbUMfAGcQbuhE1BUpl7AMetGeKuho7mTXeUSo=
+			</data>
+		</dict>
 		<key>Headers/CleverTapSyncDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ulqipgPrSExSgtyg0kJIbSeW2Lw=
+			cn46wue5ptHsy7CnVBGwrsaarnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			kPHy3vrIn/jb8YTIQxXzrI47BN6648ohZVpein5OYg4=
+			APzMnA4DuhfNvkQPZBoOl4XMJmyWJStD+ByoN6CFCiw=
 			</data>
 		</dict>
 		<key>Headers/CleverTapTrackedViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1fOZMZNgSyV2/KVfhvBQFkhW//Q=
+			UOrTBIZqEpV+lE6joVzqU5FHf9U=
 			</data>
 			<key>hash2</key>
 			<data>
-			C3GnyPaPMlWmqSacGpFGk8PRCxpj0B+4tMTX8/C1XQA=
+			Id02Wxlw4iQq1I4kJPIyBIxyy/sB6uvsh1SF4B2HKGU=
 			</data>
 		</dict>
 		<key>Headers/CleverTapUTMDetail.h</key>
@@ -1288,33 +1910,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HZA6ICJg6X2Idpn1DZ10jEutqPI=
+			XYKEd95euBgFBpU56Cw1FBgeAjg=
 			</data>
 			<key>hash2</key>
 			<data>
-			JG2nXtiblk7dGSFULkFjqj+PigrGF/jCfQRSHg5KAdE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CTAVPlayerControlsViewController.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Ac/DYlsIOEoofCyCLH0x0Vd9A7Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			4Cjb0vbQ8iIrMVU3QlCM1Ga5Y0339b6HQcRads6W1TE=
+			oQbjRo2K5i25VGDyGFoDKTAjo/K9iC3C1Xj/O2coiec=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTAVPlayerViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ASL4MgdDpyDwKh6ozcCDxB+KiLw=
+			htRCpGXWS4omSFDqcNQHbWKm3Fg=
 			</data>
 			<key>hash2</key>
 			<data>
-			0kmyMoPGD9inpmAkpqXqMsUfnZSe3v4W7Ifx4fwrY+U=
+			lR/SN0tupr9kcg4TRgVUSzpYZt9K5T/CXN5efV+IsYQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTAlertViewController.h</key>
@@ -1332,22 +1943,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Rum+YfG+GUIiYIfVivxELxzHwoE=
+			fWbkqwfSNTlTgKueM7lv6IpiOGc=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGc3cRrKcm69bG7e4NTcMW73HaD2vkqCPSNG318ut+4=
+			U4TEpKZpfqScZvn1hQziN/Gw8WQRxoceHPWRmDCN1gA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTBaseHeaderFooterViewControllerPrivate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3r8LndMDOa6YVJ3eT5DkQ+otgRw=
+			+iTwV4g11B4YWH72ezJwFNpbaZg=
 			</data>
 			<key>hash2</key>
 			<data>
-			mA2uXOj6L5Vjq0oUpEcZ9UNmDVnQVivbq4GJtItbHLc=
+			w7H+Xa90HAabv2WwM7L4RqVljoea28GEdoueORS9FXk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTCarouselImageMessageCell.h</key>
@@ -1365,11 +1976,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FfOL97TECWN9akgriUbFR1VIHU0=
+			aJ/ysapq2lcAojDs4G9PtCAbWns=
 			</data>
 			<key>hash2</key>
 			<data>
-			8R2wshmXCfbUqkMRGeKCSDY8bHUIjYrLmPryWw0FPw0=
+			0+gXw5S9W+0gkfchxm1NNhqqtr7x6/+KsGZO2ySycBE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTCarouselMessageCell.h</key>
@@ -1398,22 +2009,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Mtgp3NtyaqeTr8Ftg/csT7fa1QQ=
+			kwRtbnf8F+yTuTT1dzMwRtUDqkw=
 			</data>
 			<key>hash2</key>
 			<data>
-			IGliHdCF86eihEjZBzZJ3bA2CQ3bW52N0Gi7+YxPr3U=
+			pY9lMr19LOZiXh8vH8DvCJy3IXn7lrVmeR22/kWY28I=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTCoverImageViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uZc79ivK3fZ0bgt/dsNwgvadIY0=
+			rm4zcT14KxG5mzx153Ewbpn401M=
 			</data>
 			<key>hash2</key>
 			<data>
-			c8fk7/1+6yxvNH/O7PPtF30a/buXGGXymiQKdrcOLmA=
+			gu5ivvosRVCppL8KKik9cvw9JJdTEsdUSDfcpioe4yc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTCoverViewController.h</key>
@@ -1431,33 +2042,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZTTTf260zm/oFBIayKlcNJmhqsM=
+			G35DKfrkDWKzJT7N8k27+zTqC5E=
 			</data>
 			<key>hash2</key>
 			<data>
-			LQogs9i5NOtKzxjXKU3Xno7x+QPd9GNXzOQr863c7vI=
+			8SgxH7EDbZxZK3BUDjrU175ytZnWT7/wQFeu5RaL5+w=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTDismissButton.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EpDKEeNGUBbRrBy5SSD3M3GRbCQ=
+			VmvD5NbER9eyb4qtstYIQENWJOQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			040wnCNHkIaApK9FbcKxMHFsThBcmzLcmJ3TowhvRHY=
+			0H+oQyB/ip3c+3ECDlua+5qk7W4+eEeOzPeL3WGRtzQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTEventBuilder.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kR0eQ2TwcA3sxfAoKZhVoAWctCM=
+			EcJgtqhBO094+7n60F+UaviTKOc=
 			</data>
 			<key>hash2</key>
 			<data>
-			rAjfah5UtEy8KEJhkUmDYtTielfOL1tNXt3b31ImBls=
+			HOabCQySweJT6ftdtJh91gifoi36BluqIth0Kv28MZ0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTFeatureFlagsController.h</key>
@@ -1475,22 +2086,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xE81KzkeDSGVID7HZm0fuqG0ddg=
+			k9nqZgE2bjTrFSrihxvSF9QTH9c=
 			</data>
 			<key>hash2</key>
 			<data>
-			s1FaRi1Sr7ag7IDLtcOwyM+WSSKefNAG1uujCxHPCdU=
+			Ezjx55GRJyta9lCYbkSMwTwL5qyQZYvU7nce+WYZPdY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTHalfInterstitialImageViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VH71TvRo5i8jTb8uSuon7MSgXWE=
+			dblCbmqo7wgOC7UzBNeDUe6loKI=
 			</data>
 			<key>hash2</key>
 			<data>
-			YXZeRUvL1TGLOyzUKb2MrSo4LB6xk7S4CQDtnTdYwFc=
+			JYoxBgbMrPeJBefx/LSJL0X0hSyxtbcWE0xd/Q7Tlks=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTHalfInterstitialViewController.h</key>
@@ -1530,22 +2141,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z3/Z0xqXWbzN34NxpeDpKMAZBl8=
+			Ujl2MOMLWs4Q49K6Pdo8naX4ta0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jv5bC1xPtF07w8xKTLG2rkS16Kiiup1tMK0WRggmXJc=
+			AHmZJfgViJpa0+Bt0Sv37Wy8EvECJf1kpBqp05/DBnw=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInAppFCManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mFJrXEiYd37B/777VgNKAHdgr4s=
+			5kkLCD9xfDZUG6AN2xP8twmghnk=
 			</data>
 			<key>hash2</key>
 			<data>
-			u82xFqmlpdeVWU1x41PAp4wTTDbgxcVgLGH4b/2O2ZA=
+			HcujG26EkzfjNCBK/WUn7SBpiSX62IFHHhZNvUczAMw=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInAppHTMLViewController.h</key>
@@ -1563,33 +2174,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QnbGkXjQNDreVWOPdf98Px22oPE=
+			n4NbYqE9dXm8QpRs+o5s77kGEtY=
 			</data>
 			<key>hash2</key>
 			<data>
-			3NxUrDeixJ2j/4oF43CS3SBkGUCxdiBwrMYt5vqZNww=
+			8y4o27JmPCviuQqxTiYZh6XW4CmDAspx45Q7vgqfguA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInAppResources.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TFL7eKtY4njSwebM7giZ6aC9dRk=
+			oVSXpUFe0UO/G8+xPdjqn2adhDI=
 			</data>
 			<key>hash2</key>
 			<data>
-			3M4/Uwvkwo7pbEEy2/P78u9Pp0AxRGE48snjB8Gd9ew=
+			471fVhgqd42EUJY3esbfFPStSH710u7sdxYb0/hFvW8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInAppUtils.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gIQjRj8sUfiKGs4LLWSduXihpSY=
+			DFPhVyPih/20TXRPmba9zxyX2Oc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fg9r5TQ9+1PjjZTEhpsxuxLQKXunrNA9IJCfqv62NNw=
+			1Mu4jqdAeaIYlVHnLbj9nYWMc8tLz9CGEj/8ivpuN3c=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInboxBaseMessageCell.h</key>
@@ -1607,11 +2218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JzEbOxlDneJir0KbXHmp17bBqCE=
+			5aYkVJtifRy8TV89eaaUzx2ZXNc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QGUzTCwwYX2471DmeoAoDqiKU4trZcncUtmRJv/S5JM=
+			mx0YkC5pQid30P/USp1TEWmHgls1tRWAvqwE8Je9DSQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInboxIconMessageCell.h</key>
@@ -1640,11 +2251,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E5FND/ETY92eGxhac1I2QWzNEbQ=
+			848XiWug6bWpf7RR+mn9rTtcxoo=
 			</data>
 			<key>hash2</key>
 			<data>
-			+tEZ1iAlRVmJDXpbgr3PX+oWpQvd6orcD4pEmwlTgbw=
+			73sBw+W76bqCQbPoBdPDu46F3X4K868xr2JOuGS0PZ4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInboxUtils.h</key>
@@ -1662,22 +2273,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PFxT923QwxCyxsqUyEEZ6AlH9nQ=
+			huBFsCmzLxUHJfBKYTXsJfRbdzI=
 			</data>
 			<key>hash2</key>
 			<data>
-			44tKWXmVMvgUl70eaeV0ZeENBqlmteL74UJMJRGoidg=
+			BLcFQ874Ky+UZmNX5S1D10meBZUOpP8Q83AbVr6eMto=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTInterstitialViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vdzx2XbkTQ/+h0JyhpgwMJxeKxY=
+			4jBqOQsappx7B4Yjmz3AFJsUBN0=
 			</data>
 			<key>hash2</key>
 			<data>
-			vXjwiUlnH9yTin0hTAgDHwj4CXj9Qxr8RB94tvZ2dCo=
+			VgyZ8mrA/t7j0i8uOg1meSbQd7WxTRekQ5FpScL1tMY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTKnownProfileFields.h</key>
@@ -1706,33 +2317,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M5vxZZtAJv+xtQABmqFgdJR4ExU=
+			H+oI/cPLXqC2zNSa22goc4MpshA=
 			</data>
 			<key>hash2</key>
 			<data>
-			aXUwBoy/XcoO47Ux5K30B4V76kglbfQ8tu/HDUsEUTo=
+			V11Y6nQKHDYP1hXniBmY5FH8Mgwb416RF13LXbGJlCI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTLogger.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Bvs+A6+bBC33Qf8diMAtn3KWha4=
+			DoKfcJ+4/QOwqd/Q09eG9nikU0w=
 			</data>
 			<key>hash2</key>
 			<data>
-			u5AuRSTCiVGzhReA3P1+8vCL5Ngwvleq1cohuJYQdLU=
+			2PHj8tbNRsCG1UY5dTrqWCqgPVug6sT4Mt22u9/zDd0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTNotificationButton.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bk9B3GSXk9C8WH+R6HQp/PvFMFs=
+			7FW5mVXTOQGrJUc1v3L/QMKNopg=
 			</data>
 			<key>hash2</key>
 			<data>
-			u2fQHFKmzbkFNk7u43zaxl/NnXWdc0xc3q1LVjOP1IY=
+			4MN8QwW4ZYjxVXt7yVFhA+b7phVHn3pKXxykEFk9DXE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTPinnedNSURLSessionDelegate.h</key>
@@ -1750,11 +2361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ukIVaAQ3LGfOEoKgFy862nti+lk=
+			KIgl4jBBG/QqaUxAmelCPMQc0jU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Ziu4+OxPXtXiN/o+rpPadYCOAxgyiAGnter/0QswHA=
+			+UXdIoIba5R/32Qm+spF3SCIr5GQokMIYB6CO9Dr7xI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTPreferences.h</key>
@@ -1790,17 +2401,6 @@
 			vHdJGsqLCpJZx8UkKUjtI9r49YHDyPQ/Q0bXyCaqmXI=
 			</data>
 		</dict>
-		<key>PrivateHeaders/CTSlider.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LnMM0VYWIUQmij963KwMThnLUZ0=
-			</data>
-			<key>hash2</key>
-			<data>
-			Uoyd8JPEhOXe+2+JiG4MI7LmpYtfUDVSjphNycWndng=
-			</data>
-		</dict>
 		<key>PrivateHeaders/CTSwipeView.h</key>
 		<dict>
 			<key>hash</key>
@@ -1827,33 +2427,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XtMjELp84qKJNIM4GWhxW1xBhgk=
+			3IWmQhqpbFgIrO97xF6U4LWDuwE=
 			</data>
 			<key>hash2</key>
 			<data>
-			1WEMVWfw8Sqtvp3UkUSkaP8KDK+ImRDtsPeMOHMvB0E=
+			OVHtJkpgyaDc9MPv/bONPfyE5IWi6AD/qO5KmzDeXRQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTUserMO+CoreDataProperties.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xKymdUO5xdmzFcZyemHTAflmc/M=
+			51zTFlUMSa7sqIYHCdkBIoxJFHU=
 			</data>
 			<key>hash2</key>
 			<data>
-			FgmagxvwrM5HibhSJC/HczR1D85MiCdBSGeuHrofi8E=
+			IXe0chEHFwzn78YfFpKjSSw6GOZBtpCAfBBhldvdke8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTUserMO.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dSRM4jNyqyMiGCIB902lK97p27c=
+			/wK74z/80IomeqG/o+DC95A5slQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			fVGZ9Yxx4T4UHPy0FE75AHw75SDHgloRCFDQxfca/lY=
+			dAUzyHjkgrBKt21C2tZOGesUa4CxuRtY2neCcJ30qL0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTUtils.h</key>
@@ -1871,33 +2471,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HcHFMHaExyNT4ix31eLkYzEEkGE=
+			0gp6IPpmH2tu45igtzECvH3Cgzo=
 			</data>
 			<key>hash2</key>
 			<data>
-			LnJX4xa6Js4WGmUy/3Pf2als9vND/Cl3INls15vkOwo=
+			PUECgo0msQ4CqUaLGxKif4h14Afpyzv9ngKjSurBgCg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTValidator.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kpzhiu6FjZklEPWv9fROYShNqr4=
+			mhZ4pe/WVnCA/fVYaGAt4r5E2zk=
 			</data>
 			<key>hash2</key>
 			<data>
-			mTr/CMOn79alhryvuOTskXSw9A6Lmq5w1uf0wjIU+Wk=
+			sLiJtfohgU/v2DxQ816wKvZYv7ZhxgZ7sC1C6ZMm9t4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CTVideoThumbnailGenerator.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i6O1fxRdTM18+fHd8YyU/jPwpBU=
+			i4Qjo5Q8DkBP7D/i/aBaUniWd0U=
 			</data>
 			<key>hash2</key>
 			<data>
-			FaigXKNBEaalGfmGs69LE3vnd4Vi7oK4VX1d8/ctZ0w=
+			OJujNdzrUanaWiUBLINsj+x8UhpIJSLxN/yG6iMMDxY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CleverTapFeatureFlagsPrivate.h</key>
@@ -1915,11 +2515,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/kOcLUGi/dTtc53s7hYgTxyENY4=
+			iB8Lt/z6uDxJ79GQt/I0IV9KGN0=
 			</data>
 			<key>hash2</key>
 			<data>
-			qdF76obkD+mx5w3asMLRNkQXCGokzPzHLPLI4gMbsA4=
+			UP8fabu95io0rtejT5UvLpYlH6FCdFUABYAMS9Gz8tA=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CleverTapInstanceConfigPrivate.h</key>
@@ -1948,11 +2548,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			02iK7hkQpCrjKOITF19IMfeu2w0=
+			JL7lqg/vEKQ36Chz+aIiVy1QN2c=
 			</data>
 			<key>hash2</key>
 			<data>
-			ozMBMNnGzjVWTMTkNmS+aSpZ7RSMnrA/NLdQf49vdjo=
+			3z8VNWPmcfmSs7Skc9vxlKXf7GHRVxszQg2Js2zbDxA=
 			</data>
 		</dict>
 		<key>ct_default_landscape_image.png</key>

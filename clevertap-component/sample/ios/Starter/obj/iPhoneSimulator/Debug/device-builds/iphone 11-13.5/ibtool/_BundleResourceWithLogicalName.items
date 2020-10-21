@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.nib">
+      <LogicalName>LaunchScreen.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/Main.storyboardc/UINavigationController-1tm-jN-5um.nib">
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/UINavigationController-1tm-jN-5um.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/Main.storyboardc/TbU-dE-2gY-view-8ab-kg-V9Z.nib">
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/TbU-dE-2gY-view-8ab-kg-V9Z.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/Main.storyboardc/Info.plist">
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+  </ItemGroup>
+</Project>

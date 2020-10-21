@@ -15,6 +15,8 @@ _SystemNative_ChMod
 _SystemNative_CopyFile
 _SystemNative_GetEGid
 _SystemNative_GetEUid
+_SystemNative_LChflags
+_SystemNative_LChflagsCanSetHiddenFlag
 _SystemNative_Link
 _SystemNative_MkDir
 _SystemNative_Rename
@@ -536,6 +538,7 @@ _xamarin_localized_string_format_7
 _xamarin_localized_string_format_8
 _xamarin_localized_string_format_9
 _xamarin_init_nsthread
+_xamarin_os_log
 _NetSecurityNative_ReleaseGssBuffer
 _NetSecurityNative_DisplayMinorStatus
 _NetSecurityNative_DisplayMajorStatus

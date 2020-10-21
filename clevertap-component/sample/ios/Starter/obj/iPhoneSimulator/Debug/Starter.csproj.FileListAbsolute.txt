@@ -36,3 +36,24 @@
 /Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/optimized/Default-Portrait@2x.png
 /Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/optimized/Default-Landscape@2x.png
 /Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone xs-12.4/optimized/
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/Starter.exe
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/Starter.pdb
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/CleverTap.Bindings.iOS.dll
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/CleverTap.Bindings.iOS.pdb
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/_BundleResourceWithLogicalName.items
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/actool/_PartialAppManifest.items
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/actool/_BundleResourceWithLogicalName.items
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/coremlc/_PartialAppManifest.items
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/coremlc/_BundleResourceWithLogicalName.items
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/Default-568h@2x.png
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/Default@2x.png
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/Default.png
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/Default-Portrait.png
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/Default-Portrait@2x.png
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/Default-Landscape@2x.png
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/optimized/
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/Starter.csprojAssemblyReference.cache
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/Starter.csproj.CoreCompileInputs.cache
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/Starter.csproj.CopyComplete
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/Starter.exe
+/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/Starter.pdb
