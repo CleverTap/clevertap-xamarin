@@ -1,24 +1,23 @@
-"--cache=/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/mtouch-cache"
-"--sim=/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/Starter.app"
+"--cache=/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/mtouch-cache"
+"--sim=/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/Starter.app"
 --executable=Starter
- --debug
- --nolink
---sdkroot=/Applications/Xcode.app/Contents/Developer
+--debug
+--nolink
+--sdkroot=/Users/aditi/Applications/Xcode.app/Contents/Developer
 --sdk=13.5
 --targetver=9.0
- --aot-options=-O=-float32
- --http-message-handler=NSUrlSessionHandler
- --abi=x86_64
-"--symbollist=/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/mtouch-symbols.list"
- --dsym=no
--r=/Users/aditiagrawal/Desktop/release/CleverTap.Bindings.iOS.dll
+--aot-options=-O=-float32
+--http-message-handler=NSUrlSessionHandler
+--abi=x86_64
+"--symbollist=/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/mtouch-symbols.list"
+--dsym=no
+-r=/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/lib/ios/CleverTap.Bindings.iOS.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Drawing.Common.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll
--r=/Users/aditiagrawal/Desktop/release/CleverTap.Bindings.iOS.dll
- --target-framework=Xamarin.iOS,v1.0
---root-assembly=/Users/aditiagrawal/repo/GitHub/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/Starter.exe
- 
+-r=/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/lib/ios/CleverTap.Bindings.iOS.dll
+--target-framework=Xamarin.iOS,v1.0
+--root-assembly=/Users/aditi/repo/Github/clevertap-xamarin/clevertap-component/sample/ios/Starter/bin/iPhoneSimulator/Debug/Starter.exe

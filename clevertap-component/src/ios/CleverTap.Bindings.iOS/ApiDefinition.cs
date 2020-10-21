@@ -791,10 +791,6 @@ namespace CleverTapSDK
 		[NullAllowed, Export("registeredUrlSchemes", ArgumentSemantic.Strong)]
 		string[] RegisteredUrlSchemes { get; }
 
-		// @property (readonly, assign, nonatomic) BOOL useIDFA;
-		[Export("useIDFA")]
-		bool UseIDFA { get; }
-
 		// @property (readonly, assign, nonatomic) BOOL disableAppLaunchedEvent;
 		[Export("disableAppLaunchedEvent")]
 		bool DisableAppLaunchedEvent { get; }
@@ -2078,10 +2074,6 @@ namespace CleverTapSDK
 		// @property (assign, nonatomic) BOOL enablePersonalization;
 		[Export("enablePersonalization")]
 		bool EnablePersonalization { get; set; }
-
-		// @property (assign, nonatomic) BOOL useIDFA;
-		[Export("useIDFA")]
-		bool UseIDFA { get; set; }
 
 		// @property (assign, nonatomic) BOOL useCustomCleverTapId;
 		[Export("useCustomCleverTapId")]

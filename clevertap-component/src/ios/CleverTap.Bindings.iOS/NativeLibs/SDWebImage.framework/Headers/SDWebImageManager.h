@@ -13,6 +13,7 @@
 #import "SDImageTransformer.h"
 #import "SDWebImageCacheKeyFilter.h"
 #import "SDWebImageCacheSerializer.h"
+#import "SDWebImageOptionsProcessor.h"
 
 typedef void(^SDExternalCompletionBlock)(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL);
 
@@ -86,7 +87,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
 [manager loadImageWithURL:imageURL
                   options:0
                  progress:nil
-                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                     if (image) {
                         // do something with image
                     }
@@ -97,7 +98,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
 @interface SDWebImageManager : NSObject
 
 /**
- * The delegate for manager. Defatuls to nil.
+ * The delegate for manager. Defaults to nil.
  */
 @property (weak, nonatomic, nullable) id <SDWebImageManagerDelegate> delegate;
 
@@ -135,8 +136,8 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
 
 /**
  * The cache serializer is used to convert the decoded image, the source downloaded data, to the actual data used for storing to the disk cache. If you return nil, means to generate the data from the image instance, see `SDImageCache`.
- * For example, if you are using WebP images and facing the slow decoding time issue when later retriving from disk cache again. You can try to encode the decoded image to JPEG/PNG format to disk cache instead of source downloaded data.
- * @note The `image` arg is nonnull, but when you also provide a image transformer and the image is transformed, the `data` arg may be nil, take attention to this case.
+ * For example, if you are using WebP images and facing the slow decoding time issue when later retrieving from disk cache again. You can try to encode the decoded image to JPEG/PNG format to disk cache instead of source downloaded data.
+ * @note The `image` arg is nonnull, but when you also provide an image transformer and the image is transformed, the `data` arg may be nil, take attention to this case.
  * @note This method is called from a global queue in order to not to block the main thread.
  * @code
  SDWebImageManager.sharedManager.cacheSerializer = [SDWebImageCacheSerializer cacheSerializerWithBlock:^NSData * _Nullable(UIImage * _Nonnull image, NSData * _Nullable data, NSURL * _Nullable imageURL) {
@@ -152,6 +153,32 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
  * The default value is nil. Means we just store the source downloaded data to disk cache.
  */
 @property (nonatomic, strong, nullable) id<SDWebImageCacheSerializer> cacheSerializer;
+
+/**
+ The options processor is used, to have a global control for all the image request options and context option for current manager.
+ @note If you use `transformer`, `cacheKeyFilter` or `cacheSerializer` property of manager, the input context option already apply those properties before passed. This options processor is a better replacement for those property in common usage.
+ For example, you can control the global options, based on the URL or original context option like the below code.
+ 
+ @code
+ SDWebImageManager.sharedManager.optionsProcessor = [SDWebImageOptionsProcessor optionsProcessorWithBlock:^SDWebImageOptionsResult * _Nullable(NSURL * _Nullable url, SDWebImageOptions options, SDWebImageContext * _Nullable context) {
+     // Only do animation on `SDAnimatedImageView`
+     if (!context[SDWebImageContextAnimatedImageClass]) {
+        options |= SDWebImageDecodeFirstFrameOnly;
+     }
+     // Do not force decode for png url
+     if ([url.lastPathComponent isEqualToString:@"png"]) {
+        options |= SDWebImageAvoidDecodeImage;
+     }
+     // Always use screen scale factor
+     SDWebImageMutableContext *mutableContext = [NSDictionary dictionaryWithDictionary:context];
+     mutableContext[SDWebImageContextImageScaleFactor] = @(UIScreen.mainScreen.scale);
+     context = [mutableContext copy];
+ 
+     return [[SDWebImageOptionsResult alloc] initWithOptions:options context:context];
+ }];
+ @endcode
+ */
+@property (nonatomic, strong, nullable) id<SDWebImageOptionsProcessor> optionsProcessor;
 
 /**
  * Check one or more operations running
@@ -198,7 +225,7 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
  *   The forth parameter is an `SDImageCacheType` enum indicating if the image was retrieved from the local cache
  *   or from the memory cache or from the network.
  *
- *   The fith parameter is set to NO when the SDWebImageProgressiveLoad option is used and the image is
+ *   The fifth parameter is set to NO when the SDWebImageProgressiveLoad option is used and the image is
  *   downloading. This block is thus called repeatedly with a partial image. When image is fully downloaded, the
  *   block is called a last time with the full image and the last parameter set to YES.
  *
@@ -235,8 +262,26 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
 - (void)cancelAll;
 
 /**
- * Return the cache key for a given URL
+ * Remove the specify URL from failed black list.
+ * @param url The failed URL.
+ */
+- (void)removeFailedURL:(nonnull NSURL *)url;
+
+/**
+ * Remove all the URL from failed black list.
+ */
+- (void)removeAllFailedURLs;
+
+/**
+ * Return the cache key for a given URL, does not considerate transformer or thumbnail.
+ * @note This method does not have context option, only use the url and manager level cacheKeyFilter to generate the cache key.
  */
 - (nullable NSString *)cacheKeyForURL:(nullable NSURL *)url;
+
+/**
+ * Return the cache key for a given URL and context option.
+ * @note The context option like `.thumbnailPixelSize` and `.imageTransformer` will effect the generated cache key, using this if you have those context associated.
+*/
+- (nullable NSString *)cacheKeyForURL:(nullable NSURL *)url context:(nullable SDWebImageContext *)context;
 
 @end
