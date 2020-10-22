@@ -80,8 +80,7 @@ CleverTapInboxViewController inboxVC = CleverTap.SharedInstance().NewInboxViewCo
 var navController = new UINavigationController(inboxVC);
 if (inboxVC == null) {
     Console.WriteLine("CleverTap Inbox View Controller is null.");
-}
-else {
+} else {
     NavigationController.PresentModalViewController(navController, true);
 }
 ```
