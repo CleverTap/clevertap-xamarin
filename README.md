@@ -4,6 +4,12 @@
 
 # CleverTap Xamarin Bindings SDK
 
+<p>
+	<a href="https://github.com/CleverTap/clevertap-xamarin/releases">
+        <img src="https://img.shields.io/github/release/CleverTap/clevertap-xamarin.svg" />
+    </a>
+</p>
+
 ## 👋 Introduction
 The CleverTap Xamarin Bindings SDK for Mobile Customer Engagement and Analytics solutions.
 
