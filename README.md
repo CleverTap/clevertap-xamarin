@@ -146,5 +146,5 @@ If you have questions or concerns, you can reach out to the CleverTap support te
  
 ## 📄 License #
 
-Check out the CleverTap Xamarin SDK [License](https://github.com/CleverTap/clevertap-xamarin/blob/master/LICENSE) here.
+CleverTap Xamarin SDK is MIT licensed, as found in the [LICENSE file](https://github.com/CleverTap/clevertap-xamarin/blob/master/LICENSE).
 
