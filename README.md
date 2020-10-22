@@ -131,7 +131,7 @@ Please checkout the [Starter Project](https://github.com/CleverTap/clevertap-xam
 
 Refer to the CleverTap Xamarin SDK [Change Log](https://github.com/CleverTap/clevertap-xamarin/blob/master/CHANGELOG.md) here.
 
-## ❓ Questions
+## ❓Questions
 
 If you have questions or concerns, you can reach out to the CleverTap support team from the CleverTap Dashboard.
  
