@@ -63,6 +63,25 @@ CleverTap.SharedInstance()?.OnUserLogin(profileData);
 
 ### App Inbox
 
-#### Initialize the CleverTap App Inbox Method
+##### Initialize the CleverTap App Inbox Method
 
-#### Present App Inbox 
+```c#
+CleverTap.SharedInstance()?.InitializeInboxWithCallback((bool success) => {
+    if (success) {
+        Console.WriteLine("App Inbox Initialised.");
+     }
+});
+```
+
+##### Present App Inbox 
+
+```c#
+CleverTapInboxViewController inboxVC = CleverTap.SharedInstance().NewInboxViewControllerWithConfig(null, null);
+var navController = new UINavigationController(inboxVC);
+if (inboxVC == null) {
+    Console.WriteLine("CleverTap Inbox View Controller is null.");
+}
+else {
+    NavigationController.PresentModalViewController(navController, true);
+}
+```
