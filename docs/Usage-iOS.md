@@ -1,13 +1,13 @@
-# Example JS Usage
+# Example Usage
 
-#### Record an event
+### Record an event
  An example of recording a User Event called Product Viewed.
 
 ```c#
 CleverTap.SharedInstance()?.RecordEvent("Product Viewed");
 ```
 
-#### Record Charged Event
+### Record Charged Event
  An example of recording a Charged Event, more details [here](https://developer.clevertap.com/docs/concepts-events#section-recording-customer-purchases).
 
 ```c#
@@ -31,7 +31,7 @@ var items = new[] { item1, item2 };
 CleverTap.SharedInstance()?.RecordChargedEventWithDetails(chargedDetails, items);
 ```
 
-#### Update a user profile
+### Update a user profile
 
 - Using `pushProfile`
 
@@ -60,3 +60,9 @@ var profileData = new NSDictionary(
 );
 CleverTap.SharedInstance()?.OnUserLogin(profileData);
 ```
+
+### App Inbox
+
+#### Initialize the CleverTap App Inbox Method
+
+#### Present App Inbox 
