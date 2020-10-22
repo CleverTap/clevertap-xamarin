@@ -5,9 +5,12 @@
 # CleverTap Xamarin Bindings SDK
 
 <p>
-	<a href="https://github.com/CleverTap/clevertap-xamarin/releases">
+    <a href="https://github.com/CleverTap/clevertap-xamarin/releases">
         <img src="https://img.shields.io/github/release/CleverTap/clevertap-xamarin.svg" />
     </a>
+   <a href="https://codebeat.co/projects/github-com-clevertap-clevertap-xamarin-master">
+	<img alt="codebeat badge" src="https://codebeat.co/badges/37ab6487-4c0e-42c0-a864-9a4b9a1e9406" />
+   </a>
 </p>
 
 ## 👋 Introduction
