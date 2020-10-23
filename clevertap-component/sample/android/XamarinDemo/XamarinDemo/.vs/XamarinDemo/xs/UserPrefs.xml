@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{AE56BBDD-3435-4559-B651-EBAC87DC0FC7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MainActivity.cs">
-    <Files>
-      <File FileName="Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="Properties/AndroidManifest.xml" />
-      <File FileName="MainActivity.cs" Line="5" Column="37" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="XamarinDemo" expanded="True">
-            <Node name="XamarinDemo" expanded="True">
-              <Node name="References" selected="True" />
+            <Node name="XamarinDemo" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -19,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.XamarinDemo PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.XamarinDemo AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Pixel_3a_API_30_x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

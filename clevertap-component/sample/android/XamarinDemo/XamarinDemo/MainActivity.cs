@@ -2,22 +2,22 @@
 using Android.App;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget; 
 using Com.Clevertap.Android.Sdk;
-using Android.Gms.Common;
 using System.Collections.Generic;
 using Java.Util;
 using Com.Clevertap.Android.Sdk.Displayunits.Model;
 using Android.Util;
 using Firebase.Iid;
+using Google.Android.Material.Snackbar;
+using Google.Android.Material.FloatingActionButton;
+using Android.Gms.Extensions;
 
 namespace XamarinDemo
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity, ICTInboxListener, ICTExperimentsListener, Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener
+    public class MainActivity : AndroidX.AppCompat.App.AppCompatActivity, ICTInboxListener, ICTExperimentsListener, Com.Clevertap.Android.Sdk.Displayunits.IDisplayUnitListener
     {
         private CleverTapAPI cleverTapAPI;
 
@@ -28,18 +28,14 @@ namespace XamarinDemo
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
             //Intialise CT SDK
             cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Application.Context);
-            String token = FirebaseInstanceId.Instance.Token;
-
-
-            cleverTapAPI.PushFcmRegistrationId(token, true);
-            Log.Debug("TOken", "token Sent" + token);
+            
             // Add custom implementation, as needed.
             //Push Event
             cleverTapAPI.PushEvent("Product View Via Xamarin");
@@ -114,6 +110,14 @@ namespace XamarinDemo
 
         }
 
+        private async System.Threading.Tasks.Task PushTokenAsync()
+        {
+            var instanceIdResult = await FirebaseInstanceId.Instance.GetInstanceId().AsAsync<IInstanceIdResult>();
+            String token = instanceIdResult.Token;
+
+            cleverTapAPI.PushFcmRegistrationId(token, true);
+            Log.Debug("TOken", "token Sent" + token);
+        }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);

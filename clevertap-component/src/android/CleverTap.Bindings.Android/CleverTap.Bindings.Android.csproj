@@ -52,15 +52,27 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v4">
-      <Version>28.0.0.3</Version>
+    <PackageReference Include="Xamarin.AndroidX.Core">
+      <Version>1.3.0.3</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.WebKit">
-      <Version>28.0.0.3</Version>
+    <PackageReference Include="Xamarin.AndroidX.ViewPager">
+      <Version>1.0.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Fragment">
+      <Version>1.2.5.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat">
+      <Version>1.2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView">
+      <Version>1.1.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.WebKit">
+      <Version>1.2.0.5</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\clevertap-android-sdk-release.aar" />
+    <LibraryProjectZip Include="Jars\clevertap-android-sdk-4.0.0.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

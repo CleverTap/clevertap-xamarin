@@ -7,7 +7,7 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
-  
+
     <!--- The `IClientHandshakeBuilder` interface only requires a setter.
           Since setter-only properties are discouraged, we will instead
           switch the automatically generated properties on
@@ -34,5 +34,8 @@
     <attr path="/api/package[@name='com.clevertap.android.sdk.java_websocket.handshake']/interface[@name='ServerHandshake']/method[@name='getHttpStatusMessage' and count(parameter)=0]" name="propertyName"></attr>
     
     <attr path="/api/package[@name='com.clevertap.android.sdk']/class['CTInAppWebView']" name="visibility">public</attr>
-
+    
+    <attr path="/api/package[@name='com.clevertap.android.sdk.java_websocket']/interface[@name='WebSocketListener']/method[@name='onWebsocketMessage' and count(parameter)=2 and parameter[1][@type='com.clevertap.android.sdk.java_websocket.WebSocket'] and parameter[2][@type='java.lang.String']]" name="managedName">onWebsocketMessage1</attr>
+    <attr path="/api/package[@name='com.clevertap.android.sdk.java_websocket.client']/class[@name='WebSocketClient']/method[@name='onWebsocketMessage' and count(parameter)=2 and parameter[1][@type='com.clevertap.android.sdk.java_websocket.WebSocket'] and parameter[2][@type='java.lang.String']]" name="managedName">onWebsocketMessage1</attr>
+    
 </metadata>
