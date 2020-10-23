@@ -61,6 +61,8 @@ var profileData = new NSDictionary(
 CleverTap.SharedInstance()?.OnUserLogin(profileData);
 ```
 
+Note: Please go through our documention on handling [user profile](https://developer.clevertap.com/docs/concepts-user-profiles#section-overview).
+
 ### App Inbox
 
 ##### Initialize the CleverTap App Inbox Method
