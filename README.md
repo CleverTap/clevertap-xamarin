@@ -120,7 +120,7 @@ public bool FinishedLaunching(UIApplication application, NSDictionary launchOpti
 
 ### For more
 - See the included [Sample Application](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/sample/ios/Starter)
-- See the [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/SDK-362/documentation/docs/Usage-iOS.md) 
+- See the [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/documentation/docs/Usage-iOS.md) 
 
 ## 🆕 Changelog
 
