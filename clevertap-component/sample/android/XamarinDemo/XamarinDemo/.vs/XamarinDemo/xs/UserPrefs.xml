@@ -1,10 +1,13 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{AE56BBDD-3435-4559-B651-EBAC87DC0FC7}|Default">
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="XamarinDemo" expanded="True">
-            <Node name="XamarinDemo" selected="True" />
+            <Node name="XamarinDemo" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -12,6 +15,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.XamarinDemo PreferredExecutionTarget="Android.Pixel_3a_API_30_x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

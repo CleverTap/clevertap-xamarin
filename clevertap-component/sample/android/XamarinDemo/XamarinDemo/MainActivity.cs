@@ -3,7 +3,7 @@ using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using Android.Widget; 
+using Android.Widget;
 using Com.Clevertap.Android.Sdk;
 using System.Collections.Generic;
 using Java.Util;
@@ -21,7 +21,7 @@ using AndroidX.AppCompat.App;
 namespace XamarinDemo
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity, ICTInboxListener, ICTExperimentsListener, IDisplayUnitListener,ICTFeatureFlagsListener, ICTProductConfigListener, IInAppNotificationButtonListener, IInboxMessageButtonListener
+    public class MainActivity : AppCompatActivity, ICTInboxListener, ICTExperimentsListener, IDisplayUnitListener, ICTFeatureFlagsListener, ICTProductConfigListener, IInAppNotificationButtonListener, IInboxMessageButtonListener
 
     {
         private CleverTapAPI cleverTapAPI;
@@ -178,10 +178,6 @@ namespace XamarinDemo
             //Create Channel Group
             CleverTapAPI.CreateNotificationChannelGroup(Android.App.Application.Context, "YourGroupId", "Your Group Name");
 
-            //Push Impression
-            Bundle SampleExtras = new Bundle();
-            cleverTapAPI.PushNotificationViewedEvent(SampleExtras);
-
             PushTokenAsync();
         }
 
@@ -226,8 +222,8 @@ namespace XamarinDemo
 
             CTInboxStyleConfig styleConfig = new CTInboxStyleConfig();
             styleConfig.Tabs = tabs;//Do not use this if you don't want to use tabs
-            styleConfig.TabBackgroundColor= "#FF0000";//provide Hex code in string ONLY
-            styleConfig.SelectedTabIndicatorColor="#0000FF";
+            styleConfig.TabBackgroundColor = "#FF0000";//provide Hex code in string ONLY
+            styleConfig.SelectedTabIndicatorColor = "#0000FF";
             styleConfig.SelectedTabColor = "#000000";
             styleConfig.UnselectedTabColor = "#FFFFFF";
             styleConfig.BackButtonColor = "#FF0000";
@@ -265,7 +261,8 @@ namespace XamarinDemo
         // Called when Inapp Button having payload is clicked
         public void OnInAppButtonClick(IDictionary<string, string> p0)
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Toast.MakeText(Android.App.Application.Context, "InApp Button Clicked", ToastLength.Short).Show();
                 Log.Debug("CLEVERTAP", "InApp Button Clicked");
             });
@@ -276,7 +273,8 @@ namespace XamarinDemo
         // Called when Inbox is Initialized
         public void InboxDidInitialize()
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Toast.MakeText(Android.App.Application.Context, "Inbox Initialized", ToastLength.Short).Show();
                 Log.Debug("CLEVERTAP", "Inbox Initialized");
             });
@@ -285,16 +283,18 @@ namespace XamarinDemo
         // Called when a new message is updated in Inbox
         public void InboxMessagesDidUpdate()
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Toast.MakeText(Android.App.Application.Context, "Inbox Updated", ToastLength.Short).Show();
-            Log.Debug("CLEVERTAP", "Inbox UPdated");
+                Log.Debug("CLEVERTAP", "Inbox UPdated");
             });
         }
 
         // Called when InBox Button having payload is clicked
         public void OnInboxButtonClick(IDictionary<string, string> p0)
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Toast.MakeText(Android.App.Application.Context, "Inbox Button Clicked", ToastLength.Short).Show();
                 Log.Debug("CLEVERTAP", "Inbox Button Clicked");
             });
@@ -305,11 +305,12 @@ namespace XamarinDemo
         // Called when latest dynamic variables are loaded
         public void CTExperimentsUpdated()
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Integer intval = cleverTapAPI.GetIntegerVariable("testint", new Java.Lang.Integer(1));
                 Java.Lang.Boolean boolVal = cleverTapAPI.GetBooleanVariable("testbool", new Java.Lang.Boolean(false));
-                Toast.MakeText(Android.App.Application.Context, "Experiments Updated[testInt-" + intval + " , Bool-" + boolVal+"]", ToastLength.Long).Show();
-            Log.Debug("CLEVERTAP", "Experiments Updated");
+                Toast.MakeText(Android.App.Application.Context, "Experiments Updated[testInt-" + intval + " , Bool-" + boolVal + "]", ToastLength.Long).Show();
+                Log.Debug("CLEVERTAP", "Experiments Updated");
             });
         }
 
@@ -318,10 +319,11 @@ namespace XamarinDemo
         // Called when display units are loaded
         public void OnDisplayUnitsLoaded(IList<CleverTapDisplayUnit> p0)
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Toast.MakeText(Android.App.Application.Context, "Display Units Loaded", ToastLength.Short).Show();
-            Log.Debug("CLEVERTAP", "Display Units Loaded");
-                
+                Log.Debug("CLEVERTAP", "Display Units Loaded");
+
             });
         }
 
@@ -331,8 +333,9 @@ namespace XamarinDemo
         // Called when feature flags fetch has completed
         public void FeatureFlagsUpdated()
         {
-            RunOnUiThread(() => {
-                Toast.MakeText(Android.App.Application.Context, "FF[Key-AppInbox, Value-" + cleverTapAPI.FeatureFlag().Get("AppInbox", false)+ " ]", ToastLength.Long).Show();
+            RunOnUiThread(() =>
+            {
+                Toast.MakeText(Android.App.Application.Context, "FF[Key-AppInbox, Value-" + cleverTapAPI.FeatureFlag().Get("AppInbox", false) + " ]", ToastLength.Long).Show();
                 Log.Debug("CLEVERTAP", "FeatureFlagsUpdated");
             });
         }
@@ -353,7 +356,8 @@ namespace XamarinDemo
         // Called when Product Config activation has completed
         public void OnActivated()
         {
-            RunOnUiThread(() => {
+            RunOnUiThread(() =>
+            {
                 Toast.MakeText(Android.App.Application.Context, "Product Config[Key-ContactUs, Value-" + cleverTapAPI.ProductConfig().GetString("ContactUs") + " ]", ToastLength.Long).Show();
                 Log.Debug("CLEVERTAP", "FeatureFlagsUpdated");
             });
