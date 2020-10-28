@@ -2,13 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.CleverTap.Bindings.Android PreferredExecutionTarget="Android.Pixel_3a_API_30_x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="obj/Release/generated/src/Com.Clevertap.Android.Sdk.IBaseCTApiListener.cs">
     <Files>
+      <File FileName="Transforms/Metadata.xml" Line="41" Column="151" />
       <File FileName="obj/Release/generated/src/Com.Clevertap.Android.Sdk.IBaseCTApiListener.cs" Line="151" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CleverTap.Bindings.Android" expanded="True">
-            <Node name="CleverTap.Bindings.Android" expanded="True">
+            <Node name="CleverTap.Bindings.Android" expanded="True" selected="True">
               <Node name="References" expanded="True" />
               <Node name="Additions" expanded="True" />
               <Node name="Jars" expanded="True" />

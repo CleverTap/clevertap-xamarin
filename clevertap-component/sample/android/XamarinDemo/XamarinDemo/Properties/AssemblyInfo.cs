@@ -28,5 +28,3 @@ using Android.App;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: MetaData("CLEVERTAP_ACCOUNT_ID", Value = "ZWW-WWW-WWRZ")]
-[assembly: MetaData("CLEVERTAP_TOKEN", Value = "000-001")]
