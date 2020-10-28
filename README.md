@@ -24,7 +24,7 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 
 1. Install the SDK
 
-    Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References.
+- Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References.
 
 2. Add Your CleverTap Credentials in AndroidManifest.xml
 
@@ -32,9 +32,11 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 <meta-data
     android:name="CLEVERTAP_ACCOUNT_ID"
     android:value="Your CleverTap Account ID"/>
+
 <meta-data
     android:name="CLEVERTAP_TOKEN"
     android:value="Your CleverTap Account Token"/>
+
 <!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
 <meta-data
     android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
@@ -43,7 +45,7 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 
 3. Enable Tracking by Adding Permissions
 
-In your AndroidManifest.xml file, add the following snippet within the <application></application> tags.
+- In your AndroidManifest.xml file, add the following snippet within the <application></application> tags.
 
 ```xml
 <application
@@ -52,7 +54,7 @@ In your AndroidManifest.xml file, add the following snippet within the <applicat
     android:name="com.clevertap.android.sdk.Application">
 ```
 
-Next add the snippet below in the same file, so the CleverTap Xamarin SDK can access the internet.
+- Next add the snippet below in the same file, so the CleverTap Xamarin SDK can access the internet.
 
 ```xml
 <!-- Required to allow the app to send events and user profile information -->
@@ -66,6 +68,7 @@ Next add the snippet below in the same file, so the CleverTap Xamarin SDK can ac
 ```c#
 CleverTapAPI cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Application.Context);
 ```
+
 ### For more
 - See the included [Sample Application](https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-component/sample/android/XamarinDemo/XamarinDemo/)
 - See the [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/documentation/docs/Usage-Android.md) 
