@@ -160,7 +160,7 @@ CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).ShowAppInbox();
 
 ##### Dynamic Variable
 
-- `Callback registeration`
+- `Callback Registration`
 
 ```c#
 CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).CTExperimentsListener = this;
@@ -168,7 +168,7 @@ CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).CTExperimentsLi
 
 ##### Feature Flag 
 
-- `Callbacks Registeration`
+- `Callbacks Registration`
 
 ```c#
 CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).SetCTFeatureFlagsListener(this);
@@ -176,7 +176,7 @@ CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).SetCTFeatureFla
 
 ##### Product Config
 
-- `Callback Registeration`
+- `Callback Registration`
 
 ```c#
 CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).SetCTProductConfigListener(this);
