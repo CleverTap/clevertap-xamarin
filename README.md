@@ -59,6 +59,7 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 ```xml
 <!-- Required to allow the app to send events and user profile information -->
 <uses-permission android:name="android.permission.INTERNET"/>
+
 <!-- Recommended so that CleverTap knows when to attempt a network call -->
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
