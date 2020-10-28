@@ -24,7 +24,7 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 
 1. Install the SDK
 
-Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References.
+    Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References.
 
 2. Add Your CleverTap Credentials in AndroidManifest.xml
 
