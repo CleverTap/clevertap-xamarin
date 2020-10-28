@@ -66,30 +66,9 @@ Next add the snippet below in the same file, so the CleverTap Xamarin SDK can ac
 ```c#
 CleverTapAPI cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Application.Context);
 ```
-
-5. Add Information to a User Profile
-
-```c#
-IDictionary<string, Java.Lang.Object> profileData = new Dictionary<string, Java.Lang.Object>();
-
-profileData.Add("Name", "Jack Montana");    // String
-profileData.Add("Identity", 61026032);      // String or number
-profileData.Add("Email", "jack@gmail.com"); // Email address of the user
-profileData.Add("Phone", "+14155551234");   // Phone (with the country code, starting with +)
-profileData.Add("Gender", "M");             // Can be either M or F
-profileData.Add("DOB", new Date());         // Date of Birth. Set the Date object to the appropriate value first - requires java.util
-
-
-cleverTapAPI.PushProfile(profileData);
-```
-
-6. Track Custom Events
-
-```c#
-cleverTapAPI.PushEvent("Product View Via Xamarin");
-```
-
-Follow the [Xamarin Demo Project](https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-component/sample/android/XamarinDemo/XamarinDemo/MainActivity.cs) for examples
+### For more
+- See the included [Sample Application](https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-component/sample/android/XamarinDemo/XamarinDemo/)
+- See the [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/documentation/docs/Usage-Android.md) 
 
 
 ## 👩‍💻 iOS Guide
