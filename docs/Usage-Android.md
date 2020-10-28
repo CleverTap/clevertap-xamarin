@@ -71,6 +71,7 @@ CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).OnUserLogin(pro
 Note: Please go through our documentation on handling [user profile](https://developer.clevertap.com/docs/concepts-user-profiles#section-overview).
 
 ### Notification
+
 - `Channel creation`
 
 ```c#
@@ -81,6 +82,13 @@ CleverTapAPI.CreateNotificationChannelGroup(Android.App.Application.Context, "Yo
 
 - `FCM Integration` [Refer](https://docs.microsoft.com/en-us/xamarin/android/data-cloud/google-messaging/firebase-cloud-messaging)
 
+- `Add Your FCM Sender ID in AndroidManifest.xml`
+
+```xml
+      <meta-data
+            android:name="FCM_SENDER_ID"
+            android:value="id:Your FCM Sender ID" />
+```
 - `Sending FCM Token to Server`
 
 ```c#
