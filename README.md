@@ -72,7 +72,7 @@ CleverTapAPI cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Applicat
 
 ### For more information,
 - See included [Sample Application](https://github.com/CleverTap/clevertap-xamarin/blob/master/clevertap-component/sample/android/XamarinDemo/XamarinDemo/)
-- See [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/documentation/docs/Usage-Android.md) 
+- See [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/docs/Usage-Android.md) 
 
 
 ## 👩‍💻 iOS Guide
@@ -103,7 +103,7 @@ public bool FinishedLaunching(UIApplication application, NSDictionary launchOpti
 
 ### For more information,
 - See included [Sample Application](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/sample/ios/Starter)
-- See [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/documentation/docs/Usage-iOS.md) 
+- See [Usage README](https://github.com/CleverTap/clevertap-xamarin/blob/master/docs/Usage-iOS.md) 
 
 ## 🆕 Changelog
 
