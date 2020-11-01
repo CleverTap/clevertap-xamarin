@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,25 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTLocationManager", WrapperType = typeof (CTLocationManagerWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetLocationWithSuccess", Selector = "getLocationWithSuccess:andError:", ParameterType = new Type [] { typeof (global::System.Action<global::CoreLocation.CLLocationCoordinate2D>), typeof (global::System.Action<NSString>) }, ParameterByRef = new bool [] { false, false }, ParameterBlockProxy = new Type [] { typeof (ObjCRuntime.Trampolines.NIDActionArity1V0), typeof (ObjCRuntime.Trampolines.NIDActionArity1V1) })]
-	public interface ICTLocationManager : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTLocationManagerWrapper : BaseWrapper, ICTLocationManager {
-		[Preserve (Conditional = true)]
-		public CTLocationManagerWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTLocationManager", true)]
-	public unsafe partial class CTLocationManager : NSObject, ICTLocationManager {
+	public unsafe partial class CTLocationManager : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTLocationManager");
@@ -96,30 +80,5 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
-		[Export ("getLocationWithSuccess:andError:")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public unsafe static void GetLocationWithSuccess ([BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity1V0))]global::System.Action<global::CoreLocation.CLLocationCoordinate2D> success, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity1V1))]global::System.Action<NSString> error)
-		{
-			if (success == null)
-				throw new ArgumentNullException ("success");
-			if (error == null)
-				throw new ArgumentNullException ("error");
-			BlockLiteral *block_ptr_success;
-			BlockLiteral block_success;
-			block_success = new BlockLiteral ();
-			block_ptr_success = &block_success;
-			block_success.SetupBlockUnsafe (Trampolines.SDActionArity1V0.Handler, success);
-			BlockLiteral *block_ptr_error;
-			BlockLiteral block_error;
-			block_error = new BlockLiteral ();
-			block_ptr_error = &block_error;
-			block_error.SetupBlockUnsafe (Trampolines.SDActionArity1V1.Handler, error);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("getLocationWithSuccess:andError:"), (IntPtr) block_ptr_success, (IntPtr) block_ptr_error);
-			block_ptr_success->CleanupBlock ();
-			block_ptr_error->CleanupBlock ();
-			
-		}
-		
 	} /* class CTLocationManager */
 }

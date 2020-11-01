@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -47,6 +48,7 @@ namespace CleverTapSDK {
 	[Protocol (Name = "CleverTapInAppNotificationDelegate", WrapperType = typeof (CleverTapInAppNotificationDelegateWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "ShouldShowInAppNotificationWithExtras", Selector = "shouldShowInAppNotificationWithExtras:", ReturnType = typeof (bool), ParameterType = new Type [] { typeof (NSDictionary) }, ParameterByRef = new bool [] { false })]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "InAppNotificationDismissedWithExtras", Selector = "inAppNotificationDismissedWithExtras:andActionExtras:", ParameterType = new Type [] { typeof (NSDictionary), typeof (NSDictionary) }, ParameterByRef = new bool [] { false, false })]
+	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "InAppNotificationButtonTappedWithCustomExtras", Selector = "inAppNotificationButtonTappedWithCustomExtras:", ParameterType = new Type [] { typeof (NSDictionary) }, ParameterByRef = new bool [] { false })]
 	public interface ICleverTapInAppNotificationDelegate : INativeObject, IDisposable
 	{
 	}
@@ -70,6 +72,14 @@ namespace CleverTapSDK {
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr (This.Handle, Selector.GetHandle ("inAppNotificationDismissedWithExtras:andActionExtras:"), extras.Handle, actionExtras.Handle);
 		}
 		
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void InAppNotificationButtonTappedWithCustomExtras (this ICleverTapInAppNotificationDelegate This, NSDictionary customExtras)
+		{
+			if (customExtras == null)
+				throw new ArgumentNullException ("customExtras");
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("inAppNotificationButtonTappedWithCustomExtras:"), customExtras.Handle);
+		}
+		
 	}
 	
 	internal sealed class CleverTapInAppNotificationDelegateWrapper : BaseWrapper, ICleverTapInAppNotificationDelegate {
@@ -83,7 +93,7 @@ namespace CleverTapSDK {
 }
 namespace CleverTapSDK {
 	[Protocol()]
-	[Register("CleverTapInAppNotificationDelegate", false)]
+	[Register("ApiDefinition__CleverTapSDK_CleverTapInAppNotificationDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapInAppNotificationDelegate : NSObject, ICleverTapInAppNotificationDelegate {
 		
@@ -110,6 +120,13 @@ namespace CleverTapSDK {
 			IsDirectBinding = false;
 		}
 
+		[Export ("inAppNotificationButtonTappedWithCustomExtras:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void InAppNotificationButtonTappedWithCustomExtras (NSDictionary customExtras)
+		{
+			throw new You_Should_Not_Call_base_In_This_Method ();
+		}
+		
 		[Export ("inAppNotificationDismissedWithExtras:andActionExtras:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void InAppNotificationDismissedWithExtras (NSDictionary extras, NSDictionary actionExtras)

@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,33 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTPreferences", WrapperType = typeof (CTPreferencesWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetIntForKey", Selector = "getIntForKey:withResetValue:", ReturnType = typeof (nint), ParameterType = new Type [] { typeof (string), typeof (nint) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "PutInt", Selector = "putInt:forKey:", ParameterType = new Type [] { typeof (nint), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetStringForKey", Selector = "getStringForKey:withResetValue:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "PutString", Selector = "putString:forKey:", ParameterType = new Type [] { typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetObjectForKey", Selector = "getObjectForKey:", ReturnType = typeof (NSObject), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "PutObject", Selector = "putObject:forKey:", ParameterType = new Type [] { typeof (NSObject), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "RemoveObjectForKey", Selector = "removeObjectForKey:", ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "UnarchiveFromFile", Selector = "unarchiveFromFile:removeFile:", ReturnType = typeof (NSObject), ParameterType = new Type [] { typeof (string), typeof (bool) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "ArchiveObject", Selector = "archiveObject:forFileName:", ReturnType = typeof (bool), ParameterType = new Type [] { typeof (NSObject), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	public interface ICTPreferences : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTPreferencesWrapper : BaseWrapper, ICTPreferences {
-		[Preserve (Conditional = true)]
-		public CTPreferencesWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTPreferences", true)]
-	public unsafe partial class CTPreferences : NSObject, ICTPreferences {
+	public unsafe partial class CTPreferences : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTPreferences");

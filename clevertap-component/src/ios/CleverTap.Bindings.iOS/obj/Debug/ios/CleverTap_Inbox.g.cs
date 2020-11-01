@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -56,6 +57,19 @@ namespace CleverTapSDK {
 			if (message == null)
 				throw new ArgumentNullException ("message");
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("deleteInboxMessage:"), message.Handle);
+		}
+		
+		[Export ("deleteInboxMessageForID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void DeleteInboxMessageForID (this CleverTap This, string messageId)
+		{
+			if (messageId == null)
+				throw new ArgumentNullException ("messageId");
+			var nsmessageId = NSString.CreateNative (messageId);
+			
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("deleteInboxMessageForID:"), nsmessageId);
+			NSString.ReleaseNative (nsmessageId);
+			
 		}
 		
 		[Export ("getInboxMessageForId:")]
@@ -99,11 +113,50 @@ namespace CleverTapSDK {
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("markReadInboxMessage:"), message.Handle);
 		}
 		
+		[Export ("markReadInboxMessageForID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void MarkReadInboxMessageForID (this CleverTap This, string messageId)
+		{
+			if (messageId == null)
+				throw new ArgumentNullException ("messageId");
+			var nsmessageId = NSString.CreateNative (messageId);
+			
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("markReadInboxMessageForID:"), nsmessageId);
+			NSString.ReleaseNative (nsmessageId);
+			
+		}
+		
 		[Export ("newInboxViewControllerWithConfig:andDelegate:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CleverTapInboxViewController NewInboxViewControllerWithConfig (this CleverTap This, CleverTapInboxStyleConfig config, CleverTapInboxViewControllerDelegate @delegate)
 		{
 			return  Runtime.GetNSObject<CleverTapInboxViewController> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr (This.Handle, Selector.GetHandle ("newInboxViewControllerWithConfig:andDelegate:"), config == null ? IntPtr.Zero : config.Handle, @delegate == null ? IntPtr.Zero : @delegate.Handle));
+		}
+		
+		[Export ("recordInboxNotificationClickedEventForID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void RecordInboxNotificationClickedEventForID (this CleverTap This, string messageId)
+		{
+			if (messageId == null)
+				throw new ArgumentNullException ("messageId");
+			var nsmessageId = NSString.CreateNative (messageId);
+			
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("recordInboxNotificationClickedEventForID:"), nsmessageId);
+			NSString.ReleaseNative (nsmessageId);
+			
+		}
+		
+		[Export ("recordInboxNotificationViewedEventForID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void RecordInboxNotificationViewedEventForID (this CleverTap This, string messageId)
+		{
+			if (messageId == null)
+				throw new ArgumentNullException ("messageId");
+			var nsmessageId = NSString.CreateNative (messageId);
+			
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("recordInboxNotificationViewedEventForID:"), nsmessageId);
+			NSString.ReleaseNative (nsmessageId);
+			
 		}
 		
 		[Export ("registerInboxUpdatedBlock:")]

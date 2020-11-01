@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,33 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTProfileBuilder", WrapperType = typeof (CTProfileBuilderWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "Build", Selector = "build:completionHandler:", ParameterType = new Type [] { typeof (NSDictionary), typeof (global::System.Action<NSDictionary, NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false }, ParameterBlockProxy = new Type [] { null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V0) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildGraphUser", Selector = "buildGraphUser:completionHandler:", ParameterType = new Type [] { typeof (NSObject), typeof (global::System.Action<NSDictionary, NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false }, ParameterBlockProxy = new Type [] { null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V0) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildGooglePlusUser", Selector = "buildGooglePlusUser:completionHandler:", ParameterType = new Type [] { typeof (NSObject), typeof (global::System.Action<NSDictionary, NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false }, ParameterBlockProxy = new Type [] { null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V0) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildRemoveValueForKey", Selector = "buildRemoveValueForKey:completionHandler:", ParameterType = new Type [] { typeof (string), typeof (global::System.Action<NSDictionary, NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false }, ParameterBlockProxy = new Type [] { null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V0) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildSetMultiValues", Selector = "buildSetMultiValues:forKey:localDataStore:completionHandler:", ParameterType = new Type [] { typeof (String[]), typeof (string), typeof (CleverTapSDK.CTLocalDataStore), typeof (global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false, false, false }, ParameterBlockProxy = new Type [] { null, null, null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V1) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildAddMultiValue", Selector = "buildAddMultiValue:forKey:localDataStore:completionHandler:", ParameterType = new Type [] { typeof (string), typeof (string), typeof (CleverTapSDK.CTLocalDataStore), typeof (global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false, false, false }, ParameterBlockProxy = new Type [] { null, null, null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V1) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildAddMultiValues", Selector = "buildAddMultiValues:forKey:localDataStore:completionHandler:", ParameterType = new Type [] { typeof (String[]), typeof (string), typeof (CleverTapSDK.CTLocalDataStore), typeof (global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false, false, false }, ParameterBlockProxy = new Type [] { null, null, null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V1) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildRemoveMultiValue", Selector = "buildRemoveMultiValue:forKey:localDataStore:completionHandler:", ParameterType = new Type [] { typeof (string), typeof (string), typeof (CleverTapSDK.CTLocalDataStore), typeof (global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false, false, false }, ParameterBlockProxy = new Type [] { null, null, null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V1) })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildRemoveMultiValues", Selector = "buildRemoveMultiValues:forKey:localDataStore:completionHandler:", ParameterType = new Type [] { typeof (String[]), typeof (string), typeof (CleverTapSDK.CTLocalDataStore), typeof (global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false, false, false }, ParameterBlockProxy = new Type [] { null, null, null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V1) })]
-	public interface ICTProfileBuilder : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTProfileBuilderWrapper : BaseWrapper, ICTProfileBuilder {
-		[Preserve (Conditional = true)]
-		public CTProfileBuilderWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTProfileBuilder", true)]
-	public unsafe partial class CTProfileBuilder : NSObject, ICTProfileBuilder {
+	public unsafe partial class CTProfileBuilder : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTProfileBuilder");
@@ -129,10 +105,6 @@ namespace CleverTapSDK {
 		{
 			if (value == null)
 				throw new ArgumentNullException ("value");
-			if (key == null)
-				throw new ArgumentNullException ("key");
-			if (dataStore == null)
-				throw new ArgumentNullException ("dataStore");
 			if (completion == null)
 				throw new ArgumentNullException ("completion");
 			var nsvalue = NSString.CreateNative (value);
@@ -143,7 +115,7 @@ namespace CleverTapSDK {
 			block_ptr_completion = &block_completion;
 			block_completion.SetupBlockUnsafe (Trampolines.SDActionArity3V1.Handler, completion);
 			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildAddMultiValue:forKey:localDataStore:completionHandler:"), nsvalue, nskey, dataStore.Handle, (IntPtr) block_ptr_completion);
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildAddMultiValue:forKey:localDataStore:completionHandler:"), nsvalue, nskey, dataStore == null ? IntPtr.Zero : dataStore.Handle, (IntPtr) block_ptr_completion);
 			NSString.ReleaseNative (nsvalue);
 			NSString.ReleaseNative (nskey);
 			block_ptr_completion->CleanupBlock ();
@@ -156,10 +128,6 @@ namespace CleverTapSDK {
 		{
 			if (values == null)
 				throw new ArgumentNullException ("values");
-			if (key == null)
-				throw new ArgumentNullException ("key");
-			if (dataStore == null)
-				throw new ArgumentNullException ("dataStore");
 			if (completion == null)
 				throw new ArgumentNullException ("completion");
 			var nsa_values = NSArray.FromStrings (values);
@@ -170,7 +138,7 @@ namespace CleverTapSDK {
 			block_ptr_completion = &block_completion;
 			block_completion.SetupBlockUnsafe (Trampolines.SDActionArity3V1.Handler, completion);
 			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildAddMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore.Handle, (IntPtr) block_ptr_completion);
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildAddMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore == null ? IntPtr.Zero : dataStore.Handle, (IntPtr) block_ptr_completion);
 			nsa_values.Dispose ();
 			NSString.ReleaseNative (nskey);
 			block_ptr_completion->CleanupBlock ();
@@ -221,10 +189,6 @@ namespace CleverTapSDK {
 		{
 			if (value == null)
 				throw new ArgumentNullException ("value");
-			if (key == null)
-				throw new ArgumentNullException ("key");
-			if (dataStore == null)
-				throw new ArgumentNullException ("dataStore");
 			if (completion == null)
 				throw new ArgumentNullException ("completion");
 			var nsvalue = NSString.CreateNative (value);
@@ -235,7 +199,7 @@ namespace CleverTapSDK {
 			block_ptr_completion = &block_completion;
 			block_completion.SetupBlockUnsafe (Trampolines.SDActionArity3V1.Handler, completion);
 			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildRemoveMultiValue:forKey:localDataStore:completionHandler:"), nsvalue, nskey, dataStore.Handle, (IntPtr) block_ptr_completion);
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildRemoveMultiValue:forKey:localDataStore:completionHandler:"), nsvalue, nskey, dataStore == null ? IntPtr.Zero : dataStore.Handle, (IntPtr) block_ptr_completion);
 			NSString.ReleaseNative (nsvalue);
 			NSString.ReleaseNative (nskey);
 			block_ptr_completion->CleanupBlock ();
@@ -248,10 +212,6 @@ namespace CleverTapSDK {
 		{
 			if (values == null)
 				throw new ArgumentNullException ("values");
-			if (key == null)
-				throw new ArgumentNullException ("key");
-			if (dataStore == null)
-				throw new ArgumentNullException ("dataStore");
 			if (completion == null)
 				throw new ArgumentNullException ("completion");
 			var nsa_values = NSArray.FromStrings (values);
@@ -262,7 +222,7 @@ namespace CleverTapSDK {
 			block_ptr_completion = &block_completion;
 			block_completion.SetupBlockUnsafe (Trampolines.SDActionArity3V1.Handler, completion);
 			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildRemoveMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore.Handle, (IntPtr) block_ptr_completion);
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildRemoveMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore == null ? IntPtr.Zero : dataStore.Handle, (IntPtr) block_ptr_completion);
 			nsa_values.Dispose ();
 			NSString.ReleaseNative (nskey);
 			block_ptr_completion->CleanupBlock ();
@@ -296,10 +256,6 @@ namespace CleverTapSDK {
 		{
 			if (values == null)
 				throw new ArgumentNullException ("values");
-			if (key == null)
-				throw new ArgumentNullException ("key");
-			if (dataStore == null)
-				throw new ArgumentNullException ("dataStore");
 			if (completion == null)
 				throw new ArgumentNullException ("completion");
 			var nsa_values = NSArray.FromStrings (values);
@@ -310,7 +266,7 @@ namespace CleverTapSDK {
 			block_ptr_completion = &block_completion;
 			block_completion.SetupBlockUnsafe (Trampolines.SDActionArity3V1.Handler, completion);
 			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildSetMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore.Handle, (IntPtr) block_ptr_completion);
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("buildSetMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore == null ? IntPtr.Zero : dataStore.Handle, (IntPtr) block_ptr_completion);
 			nsa_values.Dispose ();
 			NSString.ReleaseNative (nskey);
 			block_ptr_completion->CleanupBlock ();

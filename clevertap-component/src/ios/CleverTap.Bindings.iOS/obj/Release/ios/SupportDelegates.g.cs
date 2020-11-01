@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,6 +45,7 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
+	public delegate void CleverTapExperimentsUpdatedBlock ();
 	public delegate void CleverTapInboxSuccessBlock (bool arg0);
 	public delegate void CleverTapInboxUpdatedBlock ();
 }

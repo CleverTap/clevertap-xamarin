@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -51,7 +52,6 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "AnalyticsOnly", Selector = "analyticsOnly", PropertyType = typeof (bool), GetterSelector = "analyticsOnly", SetterSelector = "setAnalyticsOnly:", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "DisableAppLaunchedEvent", Selector = "disableAppLaunchedEvent", PropertyType = typeof (bool), GetterSelector = "disableAppLaunchedEvent", SetterSelector = "setDisableAppLaunchedEvent:", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "EnablePersonalization", Selector = "enablePersonalization", PropertyType = typeof (bool), GetterSelector = "enablePersonalization", SetterSelector = "setEnablePersonalization:", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "UseIDFA", Selector = "useIDFA", PropertyType = typeof (bool), GetterSelector = "useIDFA", SetterSelector = "setUseIDFA:", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "UseCustomCleverTapId", Selector = "useCustomCleverTapId", PropertyType = typeof (bool), GetterSelector = "useCustomCleverTapId", SetterSelector = "setUseCustomCleverTapId:", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "LogLevel", Selector = "logLevel", PropertyType = typeof (CleverTapSDK.CleverTapLogLevel), GetterSelector = "logLevel", SetterSelector = "setLogLevel:", ArgumentSemantic = ArgumentSemantic.UnsafeUnretained)]
 	public interface ICleverTapInstanceConfig : INativeObject, IDisposable
@@ -111,18 +111,6 @@ namespace CleverTapSDK {
 		public static void SetEnablePersonalization (this ICleverTapInstanceConfig This, bool value)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setEnablePersonalization:"), value);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetUseIDFA (this ICleverTapInstanceConfig This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("useIDFA"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetUseIDFA (this ICleverTapInstanceConfig This, bool value)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setUseIDFA:"), value);
 		}
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -374,27 +362,6 @@ namespace CleverTapSDK {
 					global::ApiDefinition.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("setUseCustomCleverTapId:"), value);
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("setUseCustomCleverTapId:"), value);
-				}
-			}
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public virtual bool UseIDFA {
-			[Export ("useIDFA")]
-			get {
-				if (IsDirectBinding) {
-					return global::ApiDefinition.Messaging.bool_objc_msgSend (this.Handle, Selector.GetHandle ("useIDFA"));
-				} else {
-					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("useIDFA"));
-				}
-			}
-			
-			[Export ("setUseIDFA:")]
-			set {
-				if (IsDirectBinding) {
-					global::ApiDefinition.Messaging.void_objc_msgSend_bool (this.Handle, Selector.GetHandle ("setUseIDFA:"), value);
-				} else {
-					global::ApiDefinition.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("setUseIDFA:"), value);
 				}
 			}
 		}

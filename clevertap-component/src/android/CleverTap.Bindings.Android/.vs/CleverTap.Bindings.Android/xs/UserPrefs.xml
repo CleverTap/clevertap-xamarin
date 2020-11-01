@@ -1,18 +1,16 @@
 ﻿<Properties StartupConfiguration="{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}|Default">
-  <MonoDevelop.Ide.ItemProperties.CleverTap.Bindings.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Transforms/Metadata.xml">
+  <MonoDevelop.Ide.ItemProperties.CleverTap.Bindings.Android PreferredExecutionTarget="Android.Pixel_3a_API_30_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Release/generated/src/Com.Clevertap.Android.Sdk.IBaseCTApiListener.cs">
     <Files>
-      <File FileName="Jars/AboutJars.txt" Line="17" Column="58" />
-      <File FileName="Additions/AboutAdditions.txt" />
-      <File FileName="Properties/AssemblyInfo.cs" />
-      <File FileName="Transforms/Metadata.xml" Line="28" Column="54" />
+      <File FileName="Transforms/Metadata.xml" Line="41" Column="151" />
+      <File FileName="obj/Release/generated/src/Com.Clevertap.Android.Sdk.IBaseCTApiListener.cs" Line="151" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CleverTap.Bindings.Android" expanded="True">
-            <Node name="CleverTap.Bindings.Android" expanded="True">
-              <Node name="References" expanded="True" selected="True" />
+            <Node name="CleverTap.Bindings.Android" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
               <Node name="Additions" expanded="True" />
               <Node name="Jars" expanded="True" />
               <Node name="Properties" expanded="True" />

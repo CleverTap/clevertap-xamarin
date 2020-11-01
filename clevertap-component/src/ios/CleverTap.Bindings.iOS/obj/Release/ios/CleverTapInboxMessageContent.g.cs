@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,146 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CleverTapInboxMessageContent", WrapperType = typeof (CleverTapInboxMessageContentWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "UrlForLinkAtIndex", Selector = "urlForLinkAtIndex:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (int) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Title", Selector = "title", PropertyType = typeof (string), GetterSelector = "title", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "TitleColor", Selector = "titleColor", PropertyType = typeof (string), GetterSelector = "titleColor", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Message", Selector = "message", PropertyType = typeof (string), GetterSelector = "message", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MessageColor", Selector = "messageColor", PropertyType = typeof (string), GetterSelector = "messageColor", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "BackgroundColor", Selector = "backgroundColor", PropertyType = typeof (string), GetterSelector = "backgroundColor", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MediaUrl", Selector = "mediaUrl", PropertyType = typeof (string), GetterSelector = "mediaUrl", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "VideoPosterUrl", Selector = "videoPosterUrl", PropertyType = typeof (string), GetterSelector = "videoPosterUrl", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "IconUrl", Selector = "iconUrl", PropertyType = typeof (string), GetterSelector = "iconUrl", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "ActionUrl", Selector = "actionUrl", PropertyType = typeof (string), GetterSelector = "actionUrl", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Links", Selector = "links", PropertyType = typeof (NSObject[]), GetterSelector = "links", ArgumentSemantic = ArgumentSemantic.Copy)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MediaIsAudio", Selector = "mediaIsAudio", PropertyType = typeof (bool), GetterSelector = "mediaIsAudio", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MediaIsVideo", Selector = "mediaIsVideo", PropertyType = typeof (bool), GetterSelector = "mediaIsVideo", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MediaIsImage", Selector = "mediaIsImage", PropertyType = typeof (bool), GetterSelector = "mediaIsImage", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MediaIsGif", Selector = "mediaIsGif", PropertyType = typeof (bool), GetterSelector = "mediaIsGif", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "ActionHasUrl", Selector = "actionHasUrl", PropertyType = typeof (bool), GetterSelector = "actionHasUrl", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "ActionHasLinks", Selector = "actionHasLinks", PropertyType = typeof (bool), GetterSelector = "actionHasLinks", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICleverTapInboxMessageContent : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CleverTapInboxMessageContent_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string UrlForLinkAtIndex (this ICleverTapInboxMessageContent This, int index)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_int (This.Handle, Selector.GetHandle ("urlForLinkAtIndex:"), index));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetTitle (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("title")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetTitleColor (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("titleColor")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetMessage (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("message")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetMessageColor (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("messageColor")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetBackgroundColor (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("backgroundColor")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetMediaUrl (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("mediaUrl")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetVideoPosterUrl (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("videoPosterUrl")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetIconUrl (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("iconUrl")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetActionUrl (this ICleverTapInboxMessageContent This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("actionUrl")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSObject[] GetLinks (this ICleverTapInboxMessageContent This)
-		{
-			return NSArray.ArrayFromHandle<NSObject>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("links")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetMediaIsAudio (this ICleverTapInboxMessageContent This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsAudio"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetMediaIsVideo (this ICleverTapInboxMessageContent This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsVideo"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetMediaIsImage (this ICleverTapInboxMessageContent This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsImage"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetMediaIsGif (this ICleverTapInboxMessageContent This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsGif"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetActionHasUrl (this ICleverTapInboxMessageContent This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("actionHasUrl"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool GetActionHasLinks (this ICleverTapInboxMessageContent This)
-		{
-			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("actionHasLinks"));
-		}
-		
-	}
-	
-	internal sealed class CleverTapInboxMessageContentWrapper : BaseWrapper, ICleverTapInboxMessageContent {
-		[Preserve (Conditional = true)]
-		public CleverTapInboxMessageContentWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CleverTapInboxMessageContent", true)]
-	public unsafe partial class CleverTapInboxMessageContent : NSObject, ICleverTapInboxMessageContent {
+	public unsafe partial class CleverTapInboxMessageContent : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapInboxMessageContent");
@@ -217,6 +80,17 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
+		[Export ("customDataForLinkAtIndex:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual NSDictionary CustomDataForLinkAtIndex (int index)
+		{
+			if (IsDirectBinding) {
+				return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_int (this.Handle, Selector.GetHandle ("customDataForLinkAtIndex:"), index));
+			} else {
+				return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_int (this.SuperHandle, Selector.GetHandle ("customDataForLinkAtIndex:"), index));
+			}
+		}
+		
 		[Export ("urlForLinkAtIndex:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string UrlForLinkAtIndex (int index)

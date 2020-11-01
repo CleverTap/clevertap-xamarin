@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,26 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTUriHelper", WrapperType = typeof (CTUriHelperWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetUrchinFromUri", Selector = "getUrchinFromUri:withSourceApp:", ReturnType = typeof (NSDictionary), ParameterType = new Type [] { typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetQueryParameters", Selector = "getQueryParameters:andDecode:", ReturnType = typeof (NSDictionary), ParameterType = new Type [] { typeof (NSUrl), typeof (bool) }, ParameterByRef = new bool [] { false, false })]
-	public interface ICTUriHelper : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTUriHelperWrapper : BaseWrapper, ICTUriHelper {
-		[Preserve (Conditional = true)]
-		public CTUriHelperWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTUriHelper", true)]
-	public unsafe partial class CTUriHelper : NSObject, ICTUriHelper {
+	public unsafe partial class CTUriHelper : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTUriHelper");

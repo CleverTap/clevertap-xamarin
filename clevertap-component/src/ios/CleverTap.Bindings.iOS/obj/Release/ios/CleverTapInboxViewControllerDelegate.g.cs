@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -45,13 +46,26 @@ using NetworkExtension;
 
 namespace CleverTapSDK {
 	[Protocol (Name = "CleverTapInboxViewControllerDelegate", WrapperType = typeof (CleverTapInboxViewControllerDelegateWrapper))]
-	[ProtocolMember (IsRequired = true, IsProperty = false, IsStatic = false, Name = "AtIndex", Selector = "messageDidSelect:atIndex:withButtonIndex:", ParameterType = new Type [] { typeof (CleverTapSDK.CleverTapInboxMessage), typeof (int), typeof (int) }, ParameterByRef = new bool [] { false, false, false })]
+	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "MessageDidSelect", Selector = "messageDidSelect:atIndex:withButtonIndex:", ParameterType = new Type [] { typeof (CleverTapSDK.CleverTapInboxMessage), typeof (int), typeof (int) }, ParameterByRef = new bool [] { false, false, false })]
+	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "MessageButtonTappedWithCustomExtras", Selector = "messageButtonTappedWithCustomExtras:", ParameterType = new Type [] { typeof (NSDictionary) }, ParameterByRef = new bool [] { false })]
 	public interface ICleverTapInboxViewControllerDelegate : INativeObject, IDisposable
 	{
+	}
+	
+	public static partial class CleverTapInboxViewControllerDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		[Export ("messageDidSelect:atIndex:withButtonIndex:")]
-		[Preserve (Conditional = true)]
-		void AtIndex (CleverTapInboxMessage message, int index, int buttonIndex);
+		public static void MessageDidSelect (this ICleverTapInboxViewControllerDelegate This, CleverTapInboxMessage message, int index, int buttonIndex)
+		{
+			if (message == null)
+				throw new ArgumentNullException ("message");
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_int_int (This.Handle, Selector.GetHandle ("messageDidSelect:atIndex:withButtonIndex:"), message.Handle, index, buttonIndex);
+		}
+		
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void MessageButtonTappedWithCustomExtras (this ICleverTapInboxViewControllerDelegate This, NSDictionary customExtras)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("messageButtonTappedWithCustomExtras:"), customExtras == null ? IntPtr.Zero : customExtras.Handle);
+		}
 		
 	}
 	
@@ -62,27 +76,18 @@ namespace CleverTapSDK {
 		{
 		}
 		
-		[Export ("messageDidSelect:atIndex:withButtonIndex:")]
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public void AtIndex (CleverTapInboxMessage message, int index, int buttonIndex)
-		{
-			if (message == null)
-				throw new ArgumentNullException ("message");
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_int_int (this.Handle, Selector.GetHandle ("messageDidSelect:atIndex:withButtonIndex:"), message.Handle, index, buttonIndex);
-		}
-		
 	}
 }
 namespace CleverTapSDK {
 	[Protocol()]
-	[Register("CleverTapInboxViewControllerDelegate", false)]
+	[Register("ApiDefinition__CleverTapSDK_CleverTapInboxViewControllerDelegate", false)]
 	[Model]
-	public unsafe abstract partial class CleverTapInboxViewControllerDelegate : NSObject, ICleverTapInboxViewControllerDelegate {
+	public unsafe partial class CleverTapInboxViewControllerDelegate : NSObject, ICleverTapInboxViewControllerDelegate {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
-		protected CleverTapInboxViewControllerDelegate () : base (NSObjectFlag.Empty)
+		public CleverTapInboxViewControllerDelegate () : base (NSObjectFlag.Empty)
 		{
 			IsDirectBinding = false;
 			InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
@@ -102,8 +107,19 @@ namespace CleverTapSDK {
 			IsDirectBinding = false;
 		}
 
+		[Export ("messageButtonTappedWithCustomExtras:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void MessageButtonTappedWithCustomExtras (NSDictionary customExtras)
+		{
+			throw new You_Should_Not_Call_base_In_This_Method ();
+		}
+		
 		[Export ("messageDidSelect:atIndex:withButtonIndex:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public abstract void AtIndex (CleverTapInboxMessage message, int index, int buttonIndex);
+		public virtual void MessageDidSelect (CleverTapInboxMessage message, int index, int buttonIndex)
+		{
+			throw new You_Should_Not_Call_base_In_This_Method ();
+		}
+		
 	} /* class CleverTapInboxViewControllerDelegate */
 }

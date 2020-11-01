@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,83 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTNotificationButton", WrapperType = typeof (CTNotificationButtonWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Text", Selector = "text", PropertyType = typeof (string), GetterSelector = "text", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "TextColor", Selector = "textColor", PropertyType = typeof (string), GetterSelector = "textColor", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "BorderRadius", Selector = "borderRadius", PropertyType = typeof (string), GetterSelector = "borderRadius", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "BorderColor", Selector = "borderColor", PropertyType = typeof (string), GetterSelector = "borderColor", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "BackgroundColor", Selector = "backgroundColor", PropertyType = typeof (string), GetterSelector = "backgroundColor", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "ActionURL", Selector = "actionURL", PropertyType = typeof (NSUrl), GetterSelector = "actionURL", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "JsonDescription", Selector = "jsonDescription", PropertyType = typeof (NSDictionary), GetterSelector = "jsonDescription", ArgumentSemantic = ArgumentSemantic.Copy)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Error", Selector = "error", PropertyType = typeof (string), GetterSelector = "error", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICTNotificationButton : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CTNotificationButton_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetText (this ICTNotificationButton This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("text")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetTextColor (this ICTNotificationButton This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("textColor")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetBorderRadius (this ICTNotificationButton This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("borderRadius")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetBorderColor (this ICTNotificationButton This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("borderColor")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetBackgroundColor (this ICTNotificationButton This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("backgroundColor")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSUrl GetActionURL (this ICTNotificationButton This)
-		{
-			return  Runtime.GetNSObject<NSUrl> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("actionURL")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSDictionary GetJsonDescription (this ICTNotificationButton This)
-		{
-			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("jsonDescription")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetError (this ICTNotificationButton This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("error")));
-		}
-		
-	}
-	
-	internal sealed class CTNotificationButtonWrapper : BaseWrapper, ICTNotificationButton {
-		[Preserve (Conditional = true)]
-		public CTNotificationButtonWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTNotificationButton", true)]
-	public unsafe partial class CTNotificationButton : NSObject, ICTNotificationButton {
+	public unsafe partial class CTNotificationButton : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTNotificationButton");
@@ -206,6 +132,21 @@ namespace CleverTapSDK {
 				} else {
 					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("borderRadius")));
 				}
+			}
+			
+		}
+		
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual NSDictionary CustomExtras {
+			[Export ("customExtras", ArgumentSemantic.Copy)]
+			get {
+				NSDictionary ret;
+				if (IsDirectBinding) {
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("customExtras")));
+				} else {
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("customExtras")));
+				}
+				return ret;
 			}
 			
 		}

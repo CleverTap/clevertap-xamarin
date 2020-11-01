@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,85 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CleverTapEventDetail", WrapperType = typeof (CleverTapEventDetailWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "EventName", Selector = "eventName", PropertyType = typeof (string), GetterSelector = "eventName", SetterSelector = "setEventName:", ArgumentSemantic = ArgumentSemantic.Retain)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "FirstTime", Selector = "firstTime", PropertyType = typeof (double), GetterSelector = "firstTime", SetterSelector = "setFirstTime:", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "LastTime", Selector = "lastTime", PropertyType = typeof (double), GetterSelector = "lastTime", SetterSelector = "setLastTime:", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Count", Selector = "count", PropertyType = typeof (nuint), GetterSelector = "count", SetterSelector = "setCount:", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICleverTapEventDetail : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CleverTapEventDetail_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetEventName (this ICleverTapEventDetail This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("eventName")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetEventName (this ICleverTapEventDetail This, string value)
-		{
-			if (value == null)
-				throw new ArgumentNullException ("value");
-			var nsvalue = NSString.CreateNative (value);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setEventName:"), nsvalue);
-			NSString.ReleaseNative (nsvalue);
-			
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static double GetFirstTime (this ICleverTapEventDetail This)
-		{
-			return global::ApiDefinition.Messaging.Double_objc_msgSend (This.Handle, Selector.GetHandle ("firstTime"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetFirstTime (this ICleverTapEventDetail This, double value)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_Double (This.Handle, Selector.GetHandle ("setFirstTime:"), value);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static double GetLastTime (this ICleverTapEventDetail This)
-		{
-			return global::ApiDefinition.Messaging.Double_objc_msgSend (This.Handle, Selector.GetHandle ("lastTime"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetLastTime (this ICleverTapEventDetail This, double value)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_Double (This.Handle, Selector.GetHandle ("setLastTime:"), value);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static nuint GetCount (this ICleverTapEventDetail This)
-		{
-			return global::ApiDefinition.Messaging.nuint_objc_msgSend (This.Handle, Selector.GetHandle ("count"));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetCount (this ICleverTapEventDetail This, nuint value)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_nuint (This.Handle, Selector.GetHandle ("setCount:"), value);
-		}
-		
-	}
-	
-	internal sealed class CleverTapEventDetailWrapper : BaseWrapper, ICleverTapEventDetail {
-		[Preserve (Conditional = true)]
-		public CleverTapEventDetailWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CleverTapEventDetail", true)]
-	public unsafe partial class CleverTapEventDetail : NSObject, ICleverTapEventDetail {
+	public unsafe partial class CleverTapEventDetail : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapEventDetail");

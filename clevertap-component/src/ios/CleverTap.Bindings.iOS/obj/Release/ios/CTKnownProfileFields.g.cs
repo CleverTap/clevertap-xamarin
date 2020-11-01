@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,26 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTKnownProfileFields", WrapperType = typeof (CTKnownProfileFieldsWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetStorageValueForField", Selector = "getStorageValueForField:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (CleverTapSDK.KnownField) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "GetKnownFieldIfPossibleForKey", Selector = "getKnownFieldIfPossibleForKey:", ReturnType = typeof (CleverTapSDK.KnownField), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	public interface ICTKnownProfileFields : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTKnownProfileFieldsWrapper : BaseWrapper, ICTKnownProfileFields {
-		[Preserve (Conditional = true)]
-		public CTKnownProfileFieldsWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTKnownProfileFields", true)]
-	public unsafe partial class CTKnownProfileFields : NSObject, ICTKnownProfileFields {
+	public unsafe partial class CTKnownProfileFields : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTKnownProfileFields");

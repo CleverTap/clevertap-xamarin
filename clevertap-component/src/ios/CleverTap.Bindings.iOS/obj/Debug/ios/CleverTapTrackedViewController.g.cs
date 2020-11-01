@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,46 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CleverTapTrackedViewController", WrapperType = typeof (CleverTapTrackedViewControllerWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "ScreenName", Selector = "screenName", PropertyType = typeof (string), GetterSelector = "screenName", SetterSelector = "setScreenName:", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICleverTapTrackedViewController : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CleverTapTrackedViewController_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static string GetScreenName (this ICleverTapTrackedViewController This)
-		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("screenName")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetScreenName (this ICleverTapTrackedViewController This, string value)
-		{
-			if (value == null)
-				throw new ArgumentNullException ("value");
-			var nsvalue = NSString.CreateNative (value);
-			
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setScreenName:"), nsvalue);
-			NSString.ReleaseNative (nsvalue);
-			
-		}
-		
-	}
-	
-	internal sealed class CleverTapTrackedViewControllerWrapper : BaseWrapper, ICleverTapTrackedViewController {
-		[Preserve (Conditional = true)]
-		public CleverTapTrackedViewControllerWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CleverTapTrackedViewController", true)]
-	public unsafe partial class CleverTapTrackedViewController : global::UIKit.UIViewController, ICleverTapTrackedViewController {
+	public unsafe partial class CleverTapTrackedViewController : global::UIKit.UIViewController {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapTrackedViewController");

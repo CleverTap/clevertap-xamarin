@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,40 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTInAppPassThroughView", WrapperType = typeof (CTInAppPassThroughViewWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "WeakDelegate", Selector = "delegate", PropertyType = typeof (NSObject), GetterSelector = "delegate", SetterSelector = "setDelegate:", ArgumentSemantic = ArgumentSemantic.Weak)]
-	public interface ICTInAppPassThroughView : INativeObject, IDisposable
-	{
-	}
-	
-	public static partial class CTInAppPassThroughView_Extensions {
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSObject GetWeakDelegate (this ICTInAppPassThroughView This)
-		{
-			return Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("delegate")));
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetWeakDelegate (this ICTInAppPassThroughView This, NSObject value)
-		{
-			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setDelegate:"), value == null ? IntPtr.Zero : value.Handle);
-		}
-		
-	}
-	
-	internal sealed class CTInAppPassThroughViewWrapper : BaseWrapper, ICTInAppPassThroughView {
-		[Preserve (Conditional = true)]
-		public CTInAppPassThroughViewWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTInAppPassThroughView", true)]
-	public unsafe partial class CTInAppPassThroughView : global::UIKit.UIView, ICTInAppPassThroughView {
+	public unsafe partial class CTInAppPassThroughView : global::UIKit.UIView {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppPassThroughView");

@@ -1,7 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.clevertap.xamarindemo">
-	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
-	<application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:label="Com.CleverTap.Android.SDK.Application"></application>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.INTERNET" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clevertap.xamarindemo"
+    android:versionCode="110"
+    android:versionName="1.1.0">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.clevertap.android.sdk.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="Your CleverTap Account ID" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="Your CleverTap Account Token" />
+        <!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" />
+        <!-- replace below value with your FCM project number.-->
+        <meta-data
+            android:name="FCM_SENDER_ID"
+            android:value="id:XXXXXXXXXXXXX" />
+    </application>
 </manifest>

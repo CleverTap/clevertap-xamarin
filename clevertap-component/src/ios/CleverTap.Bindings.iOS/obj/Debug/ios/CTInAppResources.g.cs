@@ -18,6 +18,7 @@ using CoreML;
 using MapKit;
 using Photos;
 using ModelIO;
+using Network;
 using SceneKit;
 using Contacts;
 using Security;
@@ -44,28 +45,8 @@ using CoreFoundation;
 using NetworkExtension;
 
 namespace CleverTapSDK {
-	[Protocol (Name = "CTInAppResources", WrapperType = typeof (CTInAppResourcesWrapper))]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "XibNameForControllerName", Selector = "XibNameForControllerName:", ReturnType = typeof (string), ParameterType = new Type [] { typeof (string) }, ParameterByRef = new bool [] { false })]
-	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "ImageForName", Selector = "imageForName:type:", ReturnType = typeof (UIImage), ParameterType = new Type [] { typeof (string), typeof (string) }, ParameterByRef = new bool [] { false, false })]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = true, Name = "Bundle", Selector = "bundle", PropertyType = typeof (NSBundle), GetterSelector = "bundle", ArgumentSemantic = ArgumentSemantic.None)]
-	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = true, Name = "SharedApplication", Selector = "getSharedApplication", PropertyType = typeof (UIApplication), GetterSelector = "getSharedApplication", ArgumentSemantic = ArgumentSemantic.None)]
-	public interface ICTInAppResources : INativeObject, IDisposable
-	{
-	}
-	
-	internal sealed class CTInAppResourcesWrapper : BaseWrapper, ICTInAppResources {
-		[Preserve (Conditional = true)]
-		public CTInAppResourcesWrapper (IntPtr handle, bool owns)
-			: base (handle, owns)
-		{
-		}
-		
-	}
-}
-namespace CleverTapSDK {
-	[Protocol()]
 	[Register("CTInAppResources", true)]
-	public unsafe partial class CTInAppResources : NSObject, ICTInAppResources {
+	public unsafe partial class CTInAppResources : NSObject {
 		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppResources");
