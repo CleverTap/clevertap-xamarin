@@ -1,4 +1,7 @@
-﻿using Foundation;
+﻿
+
+
+using Foundation;
 using System;
 using UIKit;
 using CleverTapSDK;
@@ -9,6 +12,8 @@ namespace Starter
 {
     public partial class ViewController : UIViewController
     {
+        //public string DisplayUnitID { get; set; }
+
         public ViewController(IntPtr handle) : base(handle)
         {
         }
@@ -17,6 +22,12 @@ namespace Starter
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            // Set Native Display Delegate
+            CleverTapDisplayUnitDelegate nativeDisplayDelegate = new CleverTapDisplayUnitDelegate();
+            nativeDisplayDelegate = new ViewControllerNativeDisplayDelegate();
+            CleverTap.SharedInstance().SetDisplayUnitDelegate(nativeDisplayDelegate);
+
         }
 
         public override void DidReceiveMemoryWarning()
@@ -87,6 +98,21 @@ namespace Starter
                     NavigationController.PresentModalViewController(navController, true);
                 }
             });
+        }
+    }
+
+    public class ViewControllerNativeDisplayDelegate : CleverTapDisplayUnitDelegate
+    {
+        public override void DisplayUnitsUpdated(CleverTapDisplayUnit[] displayUnits)
+        {
+            Console.WriteLine("Recieved Native Display Units");
+
+            foreach (CleverTapDisplayUnit displayUnit in displayUnits)
+            {
+                Console.WriteLine("Display Unit Display Unit Json: " + displayUnit.Json);
+                Console.WriteLine("Display Unit Custom Extras: " + displayUnit.CustomExtras);
+                Console.WriteLine("Display Unit Id: " + displayUnit.UnitID);
+            }
         }
     }
 }
