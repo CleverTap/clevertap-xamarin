@@ -86,3 +86,19 @@ if (inboxVC == null) {
     NavigationController.PresentModalViewController(navController, true);
 }
 ```
+
+## iOS (Optional) - only required for iOS Simulator builds
+
+The following is required to prevent crashes when running on iOS simulator.
+
+1. Right-click on your iOS project and select Options.
+2. Select Build > iOS Build, then make sure iPhoneSimulator is selected under “Platform:” at the top.
+3. Under `Additional mtouch arguments:` enter `--registrar:static`.
+
+
+
+<p align="center">
+  <img src="https://github.com/CleverTap/clevertap-xamarin/blob/master/images/Xamarin-iOS.png"/>
+</p>
+
+
