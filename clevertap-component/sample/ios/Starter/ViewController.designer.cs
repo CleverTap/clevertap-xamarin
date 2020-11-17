@@ -1,37 +1,34 @@
 // WARNING
 //
-// This file has been generated automatically by Visual Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Starter
 {
-    [Register ("ViewController")]
-    partial class ViewController
-    {
-        [Action ("UIButton1713_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton1713_TouchUpInside (UIKit.UIButton sender);
+	[Register ("ViewController")]
+	partial class ViewController
+	{
+		[Action ("UIButton1713_TouchUpInside:")]
+		partial void UIButton1713_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("UIButton1714_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton1714_TouchUpInside (UIKit.UIButton sender);
+		[Action ("UIButton1714_TouchUpInside:")]
+		partial void UIButton1714_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("UIButton1715_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton1715_TouchUpInside (UIKit.UIButton sender);
+		[Action ("UIButton1715_TouchUpInside:")]
+		partial void UIButton1715_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("UIButton1716_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton1716_TouchUpInside (UIKit.UIButton sender);
+		[Action ("UIButton1716_TouchUpInside:")]
+		partial void UIButton1716_TouchUpInside (UIKit.UIButton sender);
 
-        void ReleaseDesignerOutlets ()
-        {
-        }
-    }
+		[Action ("UIButton1717_TouchUpInside:")]
+		partial void UIButton1717_TouchUpInside (UIKit.UIButton sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+		}
+	}
 }

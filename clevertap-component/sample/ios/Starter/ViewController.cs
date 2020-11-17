@@ -99,19 +99,34 @@ namespace Starter
                 }
             });
         }
+
+
+        partial void UIButton1717_TouchUpInside(UIButton sender)
+        {
+            Console.WriteLine("Recording Notification Viewed/Clicked for Native Display for ID:" + (string)ViewControllerNativeDisplayDelegate.DisplayUnitList[0]);
+            CleverTap.SharedInstance()?.RecordDisplayUnitClickedEventForID((string)ViewControllerNativeDisplayDelegate.DisplayUnitList[0]);
+            CleverTap.SharedInstance()?.RecordDisplayUnitViewedEventForID((string)ViewControllerNativeDisplayDelegate.DisplayUnitList[0]);
+        }
     }
 
     public class ViewControllerNativeDisplayDelegate : CleverTapDisplayUnitDelegate
     {
+        public static ArrayList DisplayUnitList { get; private set; }
+
         public override void DisplayUnitsUpdated(CleverTapDisplayUnit[] displayUnits)
         {
             Console.WriteLine("Recieved Native Display Units");
 
-            foreach (CleverTapDisplayUnit displayUnit in displayUnits)
+            DisplayUnitList = new ArrayList();
+
+            for (int i = 0; i < displayUnits.Length; i++)
             {
+                CleverTapDisplayUnit displayUnit = displayUnits[i];
                 Console.WriteLine("Display Unit Display Unit Json: " + displayUnit.Json);
                 Console.WriteLine("Display Unit Custom Extras: " + displayUnit.CustomExtras);
                 Console.WriteLine("Display Unit Id: " + displayUnit.UnitID);
+
+                DisplayUnitList.Add(displayUnit.UnitID);
             }
         }
     }

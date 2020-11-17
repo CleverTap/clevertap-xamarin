@@ -1,19 +1,14 @@
 ﻿<Properties StartupConfiguration="{4279435A-D323-44F1-87D8-98E436909EBF}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.cs">
     <Files>
-      <File FileName="ViewController.cs" Line="66" Column="15" />
-      <File FileName="AppDelegate.cs" />
-      <File FileName="Main.cs" />
+      <File FileName="Main.cs" Line="16" Column="1" />
+      <File FileName="ViewController.cs" Line="110" Column="6" />
+      <File FileName="Main.storyboard" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Starter" expanded="True">
-            <Node name="Starter" expanded="True">
-              <Node name="Resources" expanded="True" />
-              <Node name="ViewController.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="Starter" expanded="True" />
         </State>
       </Pad>
     </Pads>
