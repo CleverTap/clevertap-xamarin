@@ -87,6 +87,13 @@ if (inboxVC == null) {
 }
 ```
 
+&nbsp;
+&nbsp;
+&nbsp;
+
+---------------------------------
+
+
 ## iOS (Optional) - only required for iOS Simulator builds
 
 The following is required to prevent crashes when running on iOS simulator.
