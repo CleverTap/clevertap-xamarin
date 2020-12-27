@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/CleverTap/clevertap-xamarin/blob/master/images/clevertap-logo.png" width="300"/>
+  <img src="/images/clevertap-logo.png" width="300"/>
 </p>
 
 # CleverTap Xamarin Bindings SDK
