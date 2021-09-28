@@ -2,19 +2,26 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.cs">
     <Files>
       <File FileName="Main.cs" Line="16" Column="1" />
-      <File FileName="ViewController.cs" Line="110" Column="6" />
+      <File FileName="ViewController.cs" Line="106" Column="10" />
       <File FileName="Main.storyboard" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Starter" expanded="True" />
+          <Node name="Starter" expanded="True">
+            <Node name="Starter" expanded="True">
+              <Node name="ViewController.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Starter automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E1AC3CBF-91A8-4071-97BB-8DCCD1B19843" />
+  <MonoDevelop.Ide.ItemProperties.Starter automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7929D26A-74A7-4532-95DE-A185F075E5AD" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

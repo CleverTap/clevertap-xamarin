@@ -80,18 +80,23 @@ namespace Starter
         partial void UIButton1716_TouchUpInside(UIButton sender)
         {
             var style = new CleverTapInboxStyleConfig();
+            var tags = new[] {
+                new NSString("Tag1"),
+                new NSString("Tag2")
+            };
+            style.MessageTags = tags;
+            style.Title = "App Inbox";
             style.BackgroundColor = UIColor.LightGray;
 
             CleverTap.SharedInstance()?.InitializeInboxWithCallback(_ =>
             {
                 Console.WriteLine("App Inbox Initialised.");
-                CleverTapInboxViewController inboxVC = CleverTap.SharedInstance().NewInboxViewControllerWithConfig(null, null);
+                CleverTapInboxViewController inboxVC = CleverTap.SharedInstance().NewInboxViewControllerWithConfig(style, null);
                 var navController = new UINavigationController(inboxVC);
 
                 if (inboxVC == null)
                 {
                     Console.WriteLine("CleverTap Inbox View Controller is null.");
-
                 }
                 else
                 {
