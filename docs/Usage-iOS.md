@@ -89,10 +89,8 @@ style.BackgroundColor = UIColor.LightGray;
 
 CleverTap.SharedInstance()?.InitializeInboxWithCallback(_ =>
 {
-    Console.WriteLine("App Inbox Initialised.");
     CleverTapInboxViewController inboxVC = CleverTap.SharedInstance().NewInboxViewControllerWithConfig(style, null);
     var navController = new UINavigationController(inboxVC);
-
     if (inboxVC == null)
     {
         Console.WriteLine("CleverTap Inbox View Controller is null.");
