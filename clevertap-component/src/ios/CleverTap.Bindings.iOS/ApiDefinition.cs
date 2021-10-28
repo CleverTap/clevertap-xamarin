@@ -1828,26 +1828,20 @@ namespace CleverTapSDK
 		void InitializeInboxWithCallback(CleverTapInboxSuccessBlock callback);
 
 		// -(NSUInteger)getInboxMessageCount;
-		[Static]
 		[Export("getInboxMessageCount")]
-
-		nuint InboxMessageCount { get; }
+		nuint InboxMessageCount();
 
 		// -(NSUInteger)getInboxMessageUnreadCount;
-		[Static]
 		[Export("getInboxMessageUnreadCount")]
-
-		nuint InboxMessageUnreadCount { get; }
+		nuint InboxMessageUnreadCount();
 
 		// -(NSArray<CleverTapInboxMessage *> * _Nonnull)getAllInboxMessages;
-		[Static]
 		[Export("getAllInboxMessages")]
-		CleverTapInboxMessage[] AllInboxMessages { get; }
+		CleverTapInboxMessage[] AllInboxMessages();
 
 		// -(NSArray<CleverTapInboxMessage *> * _Nonnull)getUnreadInboxMessages;
-		[Static]
 		[Export("getUnreadInboxMessages")]
-		CleverTapInboxMessage[] UnreadInboxMessages { get; }
+		CleverTapInboxMessage[] UnreadInboxMessages();
 
 		// -(CleverTapInboxMessage * _Nullable)getInboxMessageForId:(NSString * _Nonnull)messageId;
 		[Export("getInboxMessageForId:")]

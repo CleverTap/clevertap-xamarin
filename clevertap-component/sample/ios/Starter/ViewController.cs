@@ -101,10 +101,12 @@ namespace Starter
                 else
                 {
                     NavigationController.PresentModalViewController(navController, true);
+                    Console.WriteLine("CleverTap Inbox read count " + CleverTap.SharedInstance().InboxMessageCount());
+                    //Console.WriteLine("CleverTap Inbox read count " + CleverTap_Inbox.InboxMessageUnreadCount);
+
                 }
             });
         }
-
 
         partial void UIButton1717_TouchUpInside(UIButton sender)
         {

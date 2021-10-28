@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using System.Diagnostics.CodeAnalysis;
 using UIKit;
 using GLKit;
 using Metal;
@@ -44,7 +45,10 @@ using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
 
+#nullable enable
+
 namespace CleverTapSDK {
+	#nullable enable
 	public delegate void CleverTapExperimentsUpdatedBlock ();
 	public delegate void CleverTapInboxSuccessBlock (bool arg0);
 	public delegate void CleverTapInboxUpdatedBlock ();

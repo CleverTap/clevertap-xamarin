@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.cs">
     <Files>
       <File FileName="Main.cs" Line="16" Column="1" />
-      <File FileName="ViewController.cs" Line="106" Column="10" />
+      <File FileName="ViewController.cs" Line="106" Column="1" />
       <File FileName="Main.storyboard" />
     </Files>
     <Pads>
@@ -10,13 +10,10 @@
         <State name="__root__">
           <Node name="Starter" expanded="True">
             <Node name="Starter" expanded="True">
-              <Node name="ViewController.cs" selected="True" />
+              <Node name="References" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
