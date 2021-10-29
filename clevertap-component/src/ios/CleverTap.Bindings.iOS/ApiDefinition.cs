@@ -1549,9 +1549,8 @@ namespace CleverTapSDK
 	interface CleverTap_DisplayUnit
 	{
 		// -(NSArray<CleverTapDisplayUnit *> * _Nonnull)getAllDisplayUnits;
-		[Static]
 		[Export("getAllDisplayUnits")]
-		CleverTapDisplayUnit[] AllDisplayUnits { get; }
+		CleverTapDisplayUnit[] AllDisplayUnits();
 
 		// -(CleverTapDisplayUnit * _Nullable)getDisplayUnitForID:(NSString * _Nonnull)unitID;
 		[Export("getDisplayUnitForID:")]

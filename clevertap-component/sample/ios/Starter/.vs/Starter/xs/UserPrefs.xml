@@ -10,7 +10,7 @@
         <State name="__root__">
           <Node name="Starter" expanded="True">
             <Node name="Starter" expanded="True">
-              <Node name="References" expanded="True" />
+              <Node name="References" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
