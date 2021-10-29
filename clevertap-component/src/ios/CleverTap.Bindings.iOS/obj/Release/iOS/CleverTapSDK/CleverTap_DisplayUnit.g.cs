@@ -53,6 +53,13 @@ namespace CleverTapSDK {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTap");
 		
+		[Export ("getAllDisplayUnits")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTapDisplayUnit[] AllDisplayUnits (this CleverTap This)
+		{
+			return NSArray.ArrayFromHandle<CleverTapDisplayUnit>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("getAllDisplayUnits")));
+		}
+		
 		[Export ("getDisplayUnitForID:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CleverTapDisplayUnit? GetDisplayUnitForID (this CleverTap This, string unitID)
@@ -100,17 +107,6 @@ namespace CleverTapSDK {
 		{
 			var @delegate__handle__ = @delegate.GetNonNullHandle (nameof (@delegate));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setDisplayUnitDelegate:"), @delegate__handle__);
-		}
-		
-		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static CleverTapDisplayUnit[] AllDisplayUnits {
-			[Export ("getAllDisplayUnits")]
-			get {
-				CleverTapDisplayUnit[] ret;
-				ret = NSArray.ArrayFromHandle<CleverTapDisplayUnit>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("getAllDisplayUnits")));
-				return ret!;
-			}
-			
 		}
 		
 	} /* class CleverTap_DisplayUnit */

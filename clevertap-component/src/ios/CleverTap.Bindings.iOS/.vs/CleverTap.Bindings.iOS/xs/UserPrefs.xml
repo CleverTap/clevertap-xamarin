@@ -1,15 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="ApiDefinition.cs">
     <Files>
-      <File FileName="ApiDefinition.cs" Line="23" Column="1" />
+      <File FileName="ApiDefinition.cs" Line="1559" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CleverTap.Bindings.iOS" expanded="True">
             <Node name="CleverTap.Bindings.iOS" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="NativeReferenceFolder" expanded="True" />
               <Node name="ApiDefinition.cs" selected="True" />
             </Node>
           </Node>
@@ -18,7 +16,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
