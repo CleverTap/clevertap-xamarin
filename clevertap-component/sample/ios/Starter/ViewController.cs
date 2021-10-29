@@ -102,7 +102,7 @@ namespace Starter
                 {
                     NavigationController.PresentModalViewController(navController, true);
                     Console.WriteLine("CleverTap Inbox read count " + CleverTap.SharedInstance().InboxMessageCount());
-                    //Console.WriteLine("CleverTap Inbox read count " + CleverTap_Inbox.InboxMessageUnreadCount);
+                    Console.WriteLine("CleverTap Inbox unread count " + CleverTap.SharedInstance().InboxMessageUnreadCount());
 
                 }
             });
