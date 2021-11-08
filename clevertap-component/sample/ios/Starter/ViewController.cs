@@ -101,8 +101,8 @@ namespace Starter
                 else
                 {
                     NavigationController.PresentModalViewController(navController, true);
-                    Console.WriteLine("CleverTap Inbox read count " + CleverTap.SharedInstance().InboxMessageCount());
-                    Console.WriteLine("CleverTap Inbox unread count " + CleverTap.SharedInstance().InboxMessageUnreadCount());
+                    Console.WriteLine("CleverTap Inbox read count:" + CleverTap.SharedInstance().InboxMessageCount());
+                    Console.WriteLine("CleverTap Inbox unread count:" + CleverTap.SharedInstance().InboxMessageUnreadCount());
 
                 }
             });
