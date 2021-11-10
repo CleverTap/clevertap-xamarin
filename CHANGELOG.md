@@ -1,5 +1,9 @@
 # CHANGE LOG
 
+### Version 1.1.1 (November 9, 2021)
+
+* Fixes App Inbox Public APIs for CleverTap iOS Bindings
+
 ### Version 1.1.0 (October 31, 2020)
 
 * Supports [CleverTap iOS SDK v3.9.1](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/3.9.1)

@@ -1,9 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../../../Library/Frameworks/Mono.framework/Versions/6.10.0/lib/mono/msbuild/Current/bin/Microsoft.Common.CurrentVersion.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApiDefinition.cs">
     <Files>
-      <File FileName="Structs.cs" Line="42" Column="1" />
-      <File FileName="ApiDefinition.cs" />
-      <File FileName="../../../../../../../../../Library/Frameworks/Mono.framework/Versions/6.10.0/lib/mono/msbuild/Current/bin/Microsoft.Common.CurrentVersion.targets" Line="3276" Column="5" />
+      <File FileName="ApiDefinition.cs" Line="1559" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,9 +12,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
