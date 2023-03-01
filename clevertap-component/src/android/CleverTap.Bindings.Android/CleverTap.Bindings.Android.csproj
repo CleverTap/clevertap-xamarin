@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}</ProjectGuid>
+    <ProjectGuid>{1E96E0FC-1045-4189-8484-D38C1435141E}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{77efb91c-a7e9-4b0e-a7c5-31eeec3c6d46}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -13,7 +13,8 @@
     <RootNamespace>CleverTap.Bindings.Android</RootNamespace>
     <AssemblyName>CleverTap.Bindings.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <Deterministic>True</Deterministic>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
@@ -28,16 +29,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
-    <Optimize>false</Optimize>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <MandroidExtraArgs></MandroidExtraArgs>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -57,27 +54,27 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Core">
-      <Version>1.3.0.3</Version>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat">
+      <Version>1.6.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.ViewPager">
-      <Version>1.0.0.5</Version>
+    <PackageReference Include="Xamarin.AndroidX.Core">
+      <Version>1.9.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Fragment">
-      <Version>1.2.5.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.2.0.4</Version>
+      <Version>1.5.5.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.RecyclerView">
-      <Version>1.1.0.5</Version>
+      <Version>1.2.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.ViewPager">
+      <Version>1.0.0.16</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.WebKit">
-      <Version>1.2.0.5</Version>
+      <Version>1.5.0.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\clevertap-android-sdk-4.0.0.aar" />
+    <LibraryProjectZip Include="Jars\clevertap-android-sdk-4.6.6.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

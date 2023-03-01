@@ -1,7 +1,9 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverTapBindings", "CleverTapBindings\CleverTapBindings.csproj", "{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}"
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverTap.Bindings.Android", "CleverTap.Bindings.Android\CleverTap.Bindings.Android.csproj", "{1E96E0FC-1045-4189-8484-D38C1435141E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07AC083A-B1E2-437F-8ACD-0B959EB3FB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E96E0FC-1045-4189-8484-D38C1435141E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E96E0FC-1045-4189-8484-D38C1435141E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E96E0FC-1045-4189-8484-D38C1435141E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E96E0FC-1045-4189-8484-D38C1435141E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E56CE8F3-4944-46CA-9CE2-6C6A69973E27}
 	EndGlobalSection
 EndGlobal
