@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,13 +42,13 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	#nullable enable
-	public delegate void CleverTapExperimentsUpdatedBlock ();
 	public delegate void CleverTapInboxSuccessBlock (bool arg0);
 	public delegate void CleverTapInboxUpdatedBlock ();
 }
-

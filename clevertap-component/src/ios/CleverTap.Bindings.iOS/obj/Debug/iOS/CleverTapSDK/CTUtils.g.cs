@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CTUtils", true)]
 	public unsafe partial class CTUtils : NSObject {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTUtils");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -87,58 +84,49 @@ namespace CleverTapSDK {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string DeviceTokenStringFromData (NSData tokenData)
 		{
-			var tokenData__handle__ = tokenData.GetNonNullHandle (nameof (tokenData));
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("deviceTokenStringFromData:"), tokenData__handle__));
+			var tokenData__handle__ = tokenData!.GetNonNullHandle (nameof (tokenData));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("deviceTokenStringFromData:"), tokenData__handle__))!;
 		}
-		
 		[Export ("dictionaryToJsonString:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string DictionaryToJsonString (NSDictionary dict)
 		{
-			var dict__handle__ = dict.GetNonNullHandle (nameof (dict));
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("dictionaryToJsonString:"), dict__handle__));
+			var dict__handle__ = dict!.GetNonNullHandle (nameof (dict));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("dictionaryToJsonString:"), dict__handle__))!;
 		}
-		
 		[Export ("doesString:startWith:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool DoesString (string s, string prefix)
 		{
-			if (s == null)
+			if (s is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (s));
-			if (prefix == null)
+			if (prefix is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (prefix));
-			var nss = NSString.CreateNative (s);
-			var nsprefix = NSString.CreateNative (prefix);
-			
+			var nss = CFString.CreateNative (s);
+			var nsprefix = CFString.CreateNative (prefix);
 			bool ret;
 			ret = global::ApiDefinition.Messaging.bool_objc_msgSend_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("doesString:startWith:"), nss, nsprefix);
-			NSString.ReleaseNative (nss);
-			NSString.ReleaseNative (nsprefix);
-			
+			CFString.ReleaseNative (nss);
+			CFString.ReleaseNative (nsprefix);
 			return ret!;
 		}
-		
 		[Export ("toTwoPlaces:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static double ToTwoPlaces (double x)
 		{
 			return global::ApiDefinition.Messaging.Double_objc_msgSend_Double (class_ptr, Selector.GetHandle ("toTwoPlaces:"), x);
 		}
-		
 		[Export ("urlEncodeString:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string UrlEncodeString (string s)
 		{
-			if (s == null)
+			if (s is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (s));
-			var nss = NSString.CreateNative (s);
-			
-			string ret;
-			ret = NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("urlEncodeString:"), nss));
-			NSString.ReleaseNative (nss);
-			
+			var nss = CFString.CreateNative (s);
+			string? ret;
+			ret = CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("urlEncodeString:"), nss))!;
+			CFString.ReleaseNative (nss);
 			return ret!;
 		}
-		
 	} /* class CTUtils */
 }

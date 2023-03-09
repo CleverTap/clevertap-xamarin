@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CleverTapInboxViewControllerDelegate", WrapperType = typeof (CleverTapInboxViewControllerDelegateWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "MessageDidSelect", Selector = "messageDidSelect:atIndex:withButtonIndex:", ParameterType = new Type [] { typeof (CleverTapSDK.CleverTapInboxMessage), typeof (int), typeof (int) }, ParameterByRef = new bool [] { false, false, false })]
@@ -54,31 +54,26 @@ namespace CleverTapSDK {
 	public partial interface ICleverTapInboxViewControllerDelegate : INativeObject, IDisposable
 	{
 	}
-	
 	public static partial class CleverTapInboxViewControllerDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void MessageDidSelect (this ICleverTapInboxViewControllerDelegate This, CleverTapInboxMessage message, int index, int buttonIndex)
 		{
-			var message__handle__ = message.GetNonNullHandle (nameof (message));
+			var message__handle__ = message!.GetNonNullHandle (nameof (message));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_int_int (This.Handle, Selector.GetHandle ("messageDidSelect:atIndex:withButtonIndex:"), message__handle__, index, buttonIndex);
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void MessageButtonTappedWithCustomExtras (this ICleverTapInboxViewControllerDelegate This, NSDictionary? customExtras)
 		{
 			var customExtras__handle__ = customExtras.GetHandle ();
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("messageButtonTappedWithCustomExtras:"), customExtras__handle__);
 		}
-		
 	}
-	
 	internal sealed class CleverTapInboxViewControllerDelegateWrapper : BaseWrapper, ICleverTapInboxViewControllerDelegate {
 		[Preserve (Conditional = true)]
 		public CleverTapInboxViewControllerDelegateWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
@@ -86,7 +81,6 @@ namespace CleverTapSDK {
 	[Register("ApiDefinition__CleverTapSDK_CleverTapInboxViewControllerDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapInboxViewControllerDelegate : NSObject, ICleverTapInboxViewControllerDelegate {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -116,13 +110,11 @@ namespace CleverTapSDK {
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 		[Export ("messageDidSelect:atIndex:withButtonIndex:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void MessageDidSelect (CleverTapInboxMessage message, int index, int buttonIndex)
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 	} /* class CleverTapInboxViewControllerDelegate */
 }

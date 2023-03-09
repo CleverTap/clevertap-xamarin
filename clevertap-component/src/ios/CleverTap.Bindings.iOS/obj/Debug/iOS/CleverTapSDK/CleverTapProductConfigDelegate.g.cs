@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CleverTapProductConfigDelegate", WrapperType = typeof (CleverTapProductConfigDelegateWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "CtProductConfigFetched", Selector = "ctProductConfigFetched")]
@@ -55,35 +55,29 @@ namespace CleverTapSDK {
 	public partial interface ICleverTapProductConfigDelegate : INativeObject, IDisposable
 	{
 	}
-	
 	public static partial class CleverTapProductConfigDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void CtProductConfigFetched (this ICleverTapProductConfigDelegate This)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("ctProductConfigFetched"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void CtProductConfigActivated (this ICleverTapProductConfigDelegate This)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("ctProductConfigActivated"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void CtProductConfigInitialized (this ICleverTapProductConfigDelegate This)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("ctProductConfigInitialized"));
 		}
-		
 	}
-	
 	internal sealed class CleverTapProductConfigDelegateWrapper : BaseWrapper, ICleverTapProductConfigDelegate {
 		[Preserve (Conditional = true)]
 		public CleverTapProductConfigDelegateWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
@@ -91,7 +85,6 @@ namespace CleverTapSDK {
 	[Register("ApiDefinition__CleverTapSDK_CleverTapProductConfigDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapProductConfigDelegate : NSObject, ICleverTapProductConfigDelegate {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -121,20 +114,17 @@ namespace CleverTapSDK {
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 		[Export ("ctProductConfigFetched")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void CtProductConfigFetched ()
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 		[Export ("ctProductConfigInitialized")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void CtProductConfigInitialized ()
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 	} /* class CleverTapProductConfigDelegate */
 }

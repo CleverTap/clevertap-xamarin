@@ -10,8 +10,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CTInboxController : NSObject
 
 @property (nonatomic, assign, readonly) BOOL isInitialized;
-@property (nonatomic, assign, readonly) NSUInteger count;
-@property (nonatomic, assign, readonly) NSUInteger unreadCount;
+@property (nonatomic, assign, readonly) NSInteger count;
+@property (nonatomic, assign, readonly) NSInteger unreadCount;
 @property (nonatomic, assign, readonly, nullable) NSArray<NSDictionary *> *messages;
 @property (nonatomic, assign, readonly, nullable) NSArray<NSDictionary *> *unreadMessages;
 
@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateMessages:(NSArray<NSDictionary*> *)messages;
 - (NSDictionary * _Nullable )messageForId:(NSString *)messageId;
 - (void)deleteMessageWithId:(NSString *)messageId;
+- (void)deleteMessagesWithId:(NSArray *_Nonnull)messageIds;
 - (void)markReadMessageWithId:(NSString *)messageId;
 
 @end

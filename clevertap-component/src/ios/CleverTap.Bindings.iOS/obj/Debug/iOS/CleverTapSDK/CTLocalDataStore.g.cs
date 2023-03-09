@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CTLocalDataStore", true)]
 	public unsafe partial class CTLocalDataStore : NSObject {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTLocalDataStore");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -83,33 +80,32 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
-		[Export ("initWithConfig:andProfileValues:")]
+		[Export ("initWithConfig:profileValues:andDeviceInfo:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public CTLocalDataStore (CleverTapInstanceConfig config, NSDictionary profileValues)
+		public CTLocalDataStore (CleverTapInstanceConfig config, NSDictionary profileValues, CTDeviceInfo deviceInfo)
 			: base (NSObjectFlag.Empty)
 		{
-			var config__handle__ = config.GetNonNullHandle (nameof (config));
-			var profileValues__handle__ = profileValues.GetNonNullHandle (nameof (profileValues));
+			var config__handle__ = config!.GetNonNullHandle (nameof (config));
+			var profileValues__handle__ = profileValues!.GetNonNullHandle (nameof (profileValues));
+			var deviceInfo__handle__ = deviceInfo!.GetNonNullHandle (nameof (deviceInfo));
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 			if (IsDirectBinding) {
-				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithConfig:andProfileValues:"), config__handle__, profileValues__handle__), "initWithConfig:andProfileValues:");
+				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithConfig:profileValues:andDeviceInfo:"), config__handle__, profileValues__handle__, deviceInfo__handle__), "initWithConfig:profileValues:andDeviceInfo:");
 			} else {
-				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithConfig:andProfileValues:"), config__handle__, profileValues__handle__), "initWithConfig:andProfileValues:");
+				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithConfig:profileValues:andDeviceInfo:"), config__handle__, profileValues__handle__, deviceInfo__handle__), "initWithConfig:profileValues:andDeviceInfo:");
 			}
 		}
-		
 		[Export ("addDataSyncFlag:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void AddDataSyncFlag (NSMutableDictionary @event)
 		{
-			var @event__handle__ = @event.GetNonNullHandle (nameof (@event));
+			var @event__handle__ = @event!.GetNonNullHandle (nameof (@event));
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("addDataSyncFlag:"), @event__handle__);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("addDataSyncFlag:"), @event__handle__);
 			}
 		}
-		
 		[Export ("changeUser")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void ChangeUser ()
@@ -120,114 +116,97 @@ namespace CleverTapSDK {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("changeUser"));
 			}
 		}
-		
 		[Export ("getEventDetail:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual CleverTapEventDetail GetEventDetail (string @event)
 		{
-			if (@event == null)
+			if (@event is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
-			var nsevent = NSString.CreateNative (@event);
-			
-			CleverTapEventDetail ret;
+			var nsevent = CFString.CreateNative (@event);
+			CleverTapEventDetail? ret;
 			if (IsDirectBinding) {
-				ret =  Runtime.GetNSObject<CleverTapEventDetail> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getEventDetail:"), nsevent));
+				ret =  Runtime.GetNSObject<CleverTapEventDetail> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getEventDetail:"), nsevent))!;
 			} else {
-				ret =  Runtime.GetNSObject<CleverTapEventDetail> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getEventDetail:"), nsevent));
+				ret =  Runtime.GetNSObject<CleverTapEventDetail> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getEventDetail:"), nsevent))!;
 			}
-			NSString.ReleaseNative (nsevent);
-			
+			CFString.ReleaseNative (nsevent);
 			return ret!;
 		}
-		
 		[Export ("getFirstTimeForEvent:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual double GetFirstTimeForEvent (string @event)
 		{
-			if (@event == null)
+			if (@event is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
-			var nsevent = NSString.CreateNative (@event);
-			
+			var nsevent = CFString.CreateNative (@event);
 			double ret;
 			if (IsDirectBinding) {
 				ret = global::ApiDefinition.Messaging.Double_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getFirstTimeForEvent:"), nsevent);
 			} else {
 				ret = global::ApiDefinition.Messaging.Double_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getFirstTimeForEvent:"), nsevent);
 			}
-			NSString.ReleaseNative (nsevent);
-			
+			CFString.ReleaseNative (nsevent);
 			return ret!;
 		}
-		
 		[Export ("getLastTimeForEvent:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual double GetLastTimeForEvent (string @event)
 		{
-			if (@event == null)
+			if (@event is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
-			var nsevent = NSString.CreateNative (@event);
-			
+			var nsevent = CFString.CreateNative (@event);
 			double ret;
 			if (IsDirectBinding) {
 				ret = global::ApiDefinition.Messaging.Double_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getLastTimeForEvent:"), nsevent);
 			} else {
 				ret = global::ApiDefinition.Messaging.Double_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getLastTimeForEvent:"), nsevent);
 			}
-			NSString.ReleaseNative (nsevent);
-			
+			CFString.ReleaseNative (nsevent);
 			return ret!;
 		}
-		
 		[Export ("getOccurrencesForEvent:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual int GetOccurrencesForEvent (string @event)
 		{
-			if (@event == null)
+			if (@event is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
-			var nsevent = NSString.CreateNative (@event);
-			
+			var nsevent = CFString.CreateNative (@event);
 			int ret;
 			if (IsDirectBinding) {
 				ret = global::ApiDefinition.Messaging.int_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getOccurrencesForEvent:"), nsevent);
 			} else {
 				ret = global::ApiDefinition.Messaging.int_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getOccurrencesForEvent:"), nsevent);
 			}
-			NSString.ReleaseNative (nsevent);
-			
+			CFString.ReleaseNative (nsevent);
 			return ret!;
 		}
-		
 		[Export ("getProfileFieldForKey:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSObject GetProfileFieldForKey (string key)
 		{
-			if (key == null)
+			if (key is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
-			var nskey = NSString.CreateNative (key);
-			
-			NSObject ret;
+			var nskey = CFString.CreateNative (key);
+			NSObject? ret;
 			if (IsDirectBinding) {
-				ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getProfileFieldForKey:"), nskey));
+				ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("getProfileFieldForKey:"), nskey))!;
 			} else {
-				ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getProfileFieldForKey:"), nskey));
+				ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("getProfileFieldForKey:"), nskey))!;
 			}
-			NSString.ReleaseNative (nskey);
-			
+			CFString.ReleaseNative (nskey);
 			return ret!;
 		}
-		
 		[Export ("persistEvent:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void PersistEvent (NSDictionary @event)
 		{
-			var @event__handle__ = @event.GetNonNullHandle (nameof (@event));
+			var @event__handle__ = @event!.GetNonNullHandle (nameof (@event));
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("persistEvent:"), @event__handle__);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("persistEvent:"), @event__handle__);
 			}
 		}
-		
 		[Export ("persistLocalProfileIfRequired")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void PersistLocalProfileIfRequired ()
@@ -238,112 +217,96 @@ namespace CleverTapSDK {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("persistLocalProfileIfRequired"));
 			}
 		}
-		
 		[Export ("removeProfileFieldForKey:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void RemoveProfileFieldForKey (string key)
 		{
-			if (key == null)
+			if (key is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
-			var nskey = NSString.CreateNative (key);
-			
+			var nskey = CFString.CreateNative (key);
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("removeProfileFieldForKey:"), nskey);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("removeProfileFieldForKey:"), nskey);
 			}
-			NSString.ReleaseNative (nskey);
-			
+			CFString.ReleaseNative (nskey);
 		}
-		
 		[Export ("removeProfileFieldsWithKeys:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void RemoveProfileFieldsWithKeys (NSObject[] keys)
 		{
-			if (keys == null)
+			if (keys is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (keys));
 			var nsa_keys = NSArray.FromNSObjects (keys);
-			
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("removeProfileFieldsWithKeys:"), nsa_keys.Handle);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("removeProfileFieldsWithKeys:"), nsa_keys.Handle);
 			}
 			nsa_keys.Dispose ();
-			
 		}
-		
 		[Export ("setProfileFieldWithKey:andValue:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void SetProfileFieldWithKey (string key, NSObject value)
 		{
-			if (key == null)
+			if (key is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
-			var value__handle__ = value.GetNonNullHandle (nameof (value));
-			var nskey = NSString.CreateNative (key);
-			
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
+			var nskey = CFString.CreateNative (key);
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("setProfileFieldWithKey:andValue:"), nskey, value__handle__);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("setProfileFieldWithKey:andValue:"), nskey, value__handle__);
 			}
-			NSString.ReleaseNative (nskey);
-			
+			CFString.ReleaseNative (nskey);
 		}
-		
 		[Export ("setProfileFields:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void SetProfileFields (NSDictionary fields)
 		{
-			var fields__handle__ = fields.GetNonNullHandle (nameof (fields));
+			var fields__handle__ = fields!.GetNonNullHandle (nameof (fields));
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setProfileFields:"), fields__handle__);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setProfileFields:"), fields__handle__);
 			}
 		}
-		
 		[Export ("syncWithRemoteData:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSDictionary SyncWithRemoteData (NSDictionary responseData)
 		{
-			var responseData__handle__ = responseData.GetNonNullHandle (nameof (responseData));
+			var responseData__handle__ = responseData!.GetNonNullHandle (nameof (responseData));
 			if (IsDirectBinding) {
-				return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("syncWithRemoteData:"), responseData__handle__));
+				return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("syncWithRemoteData:"), responseData__handle__))!;
 			} else {
-				return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("syncWithRemoteData:"), responseData__handle__));
+				return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("syncWithRemoteData:"), responseData__handle__))!;
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSDictionary EventHistory {
 			[Export ("getEventHistory")]
 			get {
-				NSDictionary ret;
+				NSDictionary? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("getEventHistory")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("getEventHistory")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("getEventHistory")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("getEventHistory")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSDictionary GenerateBaseProfile {
 			[Export ("generateBaseProfile")]
 			get {
-				NSDictionary ret;
+				NSDictionary? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("generateBaseProfile")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("generateBaseProfile")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("generateBaseProfile")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("generateBaseProfile")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 	} /* class CTLocalDataStore */
 }

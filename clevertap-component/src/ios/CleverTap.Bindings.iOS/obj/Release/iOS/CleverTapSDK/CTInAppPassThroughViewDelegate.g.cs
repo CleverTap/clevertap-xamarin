@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CTInAppPassThroughViewDelegate", WrapperType = typeof (CTInAppPassThroughViewDelegateWrapper))]
 	[ProtocolMember (IsRequired = true, IsProperty = false, IsStatic = false, Name = "ViewWillPassThroughTouch", Selector = "viewWillPassThroughTouch")]
@@ -56,23 +56,19 @@ namespace CleverTapSDK {
 		[Export ("viewWillPassThroughTouch")]
 		[Preserve (Conditional = true)]
 		void ViewWillPassThroughTouch ();
-		
 	}
-	
 	internal sealed class CTInAppPassThroughViewDelegateWrapper : BaseWrapper, ICTInAppPassThroughViewDelegate {
 		[Preserve (Conditional = true)]
 		public CTInAppPassThroughViewDelegateWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 		[Export ("viewWillPassThroughTouch")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public void ViewWillPassThroughTouch ()
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (this.Handle, Selector.GetHandle ("viewWillPassThroughTouch"));
 		}
-		
 	}
 }
 namespace CleverTapSDK {
@@ -80,7 +76,6 @@ namespace CleverTapSDK {
 	[Register("ApiDefinition__CleverTapSDK_CTInAppPassThroughViewDelegate", false)]
 	[Model]
 	public unsafe abstract partial class CTInAppPassThroughViewDelegate : NSObject, ICTInAppPassThroughViewDelegate {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]

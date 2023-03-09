@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CTLogger", WrapperType = typeof (CTLoggerWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "SetDebugLevel", Selector = "setDebugLevel:", ParameterType = new Type [] { typeof (int) }, ParameterByRef = new bool [] { false })]
@@ -54,26 +54,21 @@ namespace CleverTapSDK {
 	public partial interface ICTLogger : INativeObject, IDisposable
 	{
 	}
-	
 	internal sealed class CTLoggerWrapper : BaseWrapper, ICTLogger {
 		[Preserve (Conditional = true)]
 		public CTLoggerWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
 	[Protocol()]
 	[Register("CTLogger", true)]
 	public unsafe partial class CTLogger : NSObject, ICTLogger {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTLogger");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -107,15 +102,12 @@ namespace CleverTapSDK {
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend_int (class_ptr, Selector.GetHandle ("setDebugLevel:"), level);
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static int DebugLevel {
 			[Export ("getDebugLevel")]
 			get {
 				return global::ApiDefinition.Messaging.int_objc_msgSend (class_ptr, Selector.GetHandle ("getDebugLevel"));
 			}
-			
 		}
-		
 	} /* class CTLogger */
 }

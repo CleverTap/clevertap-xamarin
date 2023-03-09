@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,25 +42,23 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	public unsafe static partial class CleverTap_FeatureFlags  {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTap");
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CleverTapFeatureFlags FeatureFlags {
 			[Export ("featureFlags", ArgumentSemantic.Retain)]
 			get {
-				CleverTapFeatureFlags ret;
-				ret =  Runtime.GetNSObject<CleverTapFeatureFlags> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("featureFlags")));
+				CleverTapFeatureFlags? ret;
+				ret =  Runtime.GetNSObject<CleverTapFeatureFlags> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("featureFlags")))!;
 				return ret!;
 			}
-			
 		}
-		
 	} /* class CleverTap_FeatureFlags */
 }

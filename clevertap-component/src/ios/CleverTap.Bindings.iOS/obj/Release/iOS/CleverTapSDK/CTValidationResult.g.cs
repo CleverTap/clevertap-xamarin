@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CTValidationResult", WrapperType = typeof (CTValidationResultWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "ResultWithErrorCode", Selector = "resultWithErrorCode:andMessage:", ReturnType = typeof (CleverTapSDK.CTValidationResult), ParameterType = new Type [] { typeof (int), typeof (string) }, ParameterByRef = new bool [] { false, false })]
@@ -56,72 +56,58 @@ namespace CleverTapSDK {
 	public partial interface ICTValidationResult : INativeObject, IDisposable
 	{
 	}
-	
 	public static partial class CTValidationResult_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetErrorDesc (this ICTValidationResult This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("errorDesc")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("errorDesc")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void SetErrorDesc (this ICTValidationResult This, string value)
 		{
-			if (value == null)
+			if (value is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
-			var nsvalue = NSString.CreateNative (value);
-			
+			var nsvalue = CFString.CreateNative (value);
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setErrorDesc:"), nsvalue);
-			NSString.ReleaseNative (nsvalue);
-			
+			CFString.ReleaseNative (nsvalue);
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSObject GetObject (this ICTValidationResult This)
 		{
-			return Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("object")));
+			return Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("object")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void SetObject (this ICTValidationResult This, NSObject value)
 		{
-			var value__handle__ = value.GetNonNullHandle (nameof (value));
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setObject:"), value__handle__);
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static int GetErrorCode (this ICTValidationResult This)
 		{
 			return global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("errorCode"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void SetErrorCode (this ICTValidationResult This, int value)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend_int (This.Handle, Selector.GetHandle ("setErrorCode:"), value);
 		}
-		
 	}
-	
 	internal sealed class CTValidationResultWrapper : BaseWrapper, ICTValidationResult {
 		[Preserve (Conditional = true)]
 		public CTValidationResultWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
 	[Protocol()]
 	[Register("CTValidationResult", true)]
 	public unsafe partial class CTValidationResult : NSObject, ICTValidationResult {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTValidationResult");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -153,17 +139,14 @@ namespace CleverTapSDK {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CTValidationResult ResultWithErrorCode (int code, string message)
 		{
-			if (message == null)
+			if (message is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (message));
-			var nsmessage = NSString.CreateNative (message);
-			
-			CTValidationResult ret;
-			ret =  Runtime.GetNSObject<CTValidationResult> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_int_IntPtr (class_ptr, Selector.GetHandle ("resultWithErrorCode:andMessage:"), code, nsmessage));
-			NSString.ReleaseNative (nsmessage);
-			
+			var nsmessage = CFString.CreateNative (message);
+			CTValidationResult? ret;
+			ret =  Runtime.GetNSObject<CTValidationResult> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_int_IntPtr (class_ptr, Selector.GetHandle ("resultWithErrorCode:andMessage:"), code, nsmessage))!;
+			CFString.ReleaseNative (nsmessage);
 			return ret!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual int ErrorCode {
 			[Export ("errorCode")]
@@ -174,7 +157,6 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.int_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("errorCode"));
 				}
 			}
-			
 			[Export ("setErrorCode:")]
 			set {
 				if (IsDirectBinding) {
@@ -184,50 +166,44 @@ namespace CleverTapSDK {
 				}
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string ErrorDesc {
 			[Export ("errorDesc")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("errorDesc")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("errorDesc")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("errorDesc")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("errorDesc")))!;
 				}
 			}
-			
 			[Export ("setErrorDesc:")]
 			set {
-				if (value == null)
+				if (value is null)
 					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
-				var nsvalue = NSString.CreateNative (value);
-				
+				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setErrorDesc:"), nsvalue);
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setErrorDesc:"), nsvalue);
 				}
-				NSString.ReleaseNative (nsvalue);
-				
+				CFString.ReleaseNative (nsvalue);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSObject Object {
 			[Export ("object")]
 			get {
-				NSObject ret;
+				NSObject? ret;
 				if (IsDirectBinding) {
-					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("object")));
+					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("object")))!;
 				} else {
-					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("object")));
+					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("object")))!;
 				}
 				return ret!;
 			}
-			
 			[Export ("setObject:")]
 			set {
-				var value__handle__ = value.GetNonNullHandle (nameof (value));
+				var value__handle__ = value!.GetNonNullHandle (nameof (value));
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setObject:"), value__handle__);
 				} else {
@@ -235,6 +211,5 @@ namespace CleverTapSDK {
 				}
 			}
 		}
-		
 	} /* class CTValidationResult */
 }

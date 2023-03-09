@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CTUriHelper", true)]
 	public unsafe partial class CTUriHelper : NSObject {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTUriHelper");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -87,28 +84,24 @@ namespace CleverTapSDK {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSDictionary GetQueryParameters (NSUrl url, bool decode)
 		{
-			var url__handle__ = url.GetNonNullHandle (nameof (url));
-			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_bool (class_ptr, Selector.GetHandle ("getQueryParameters:andDecode:"), url__handle__, decode));
+			var url__handle__ = url!.GetNonNullHandle (nameof (url));
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_bool (class_ptr, Selector.GetHandle ("getQueryParameters:andDecode:"), url__handle__, decode))!;
 		}
-		
 		[Export ("getUrchinFromUri:withSourceApp:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSDictionary GetUrchinFromUri (string uri, string sourceApp)
 		{
-			if (uri == null)
+			if (uri is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (uri));
-			if (sourceApp == null)
+			if (sourceApp is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (sourceApp));
-			var nsuri = NSString.CreateNative (uri);
-			var nssourceApp = NSString.CreateNative (sourceApp);
-			
-			NSDictionary ret;
-			ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("getUrchinFromUri:withSourceApp:"), nsuri, nssourceApp));
-			NSString.ReleaseNative (nsuri);
-			NSString.ReleaseNative (nssourceApp);
-			
+			var nsuri = CFString.CreateNative (uri);
+			var nssourceApp = CFString.CreateNative (sourceApp);
+			NSDictionary? ret;
+			ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr (class_ptr, Selector.GetHandle ("getUrchinFromUri:withSourceApp:"), nsuri, nssourceApp))!;
+			CFString.ReleaseNative (nsuri);
+			CFString.ReleaseNative (nssourceApp);
 			return ret!;
 		}
-		
 	} /* class CTUriHelper */
 }

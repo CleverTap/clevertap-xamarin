@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CTKnownProfileFields", true)]
 	public unsafe partial class CTKnownProfileFields : NSObject {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTKnownProfileFields");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -87,23 +84,19 @@ namespace CleverTapSDK {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static KnownField GetKnownFieldIfPossibleForKey (string key)
 		{
-			if (key == null)
+			if (key is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
-			var nskey = NSString.CreateNative (key);
-			
+			var nskey = CFString.CreateNative (key);
 			KnownField ret;
-			ret = (KnownField) global::ApiDefinition.Messaging.UInt64_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("getKnownFieldIfPossibleForKey:"), nskey);
-			NSString.ReleaseNative (nskey);
-			
+			ret = (KnownField) global::ApiDefinition.Messaging.UInt32_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("getKnownFieldIfPossibleForKey:"), nskey);
+			CFString.ReleaseNative (nskey);
 			return ret!;
 		}
-		
 		[Export ("getStorageValueForField:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetStorageValueForField (KnownField field)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_UInt64 (class_ptr, Selector.GetHandle ("getStorageValueForField:"), (UInt64)field));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_UInt32 (class_ptr, Selector.GetHandle ("getStorageValueForField:"), (UInt32)field))!;
 		}
-		
 	} /* class CTKnownProfileFields */
 }

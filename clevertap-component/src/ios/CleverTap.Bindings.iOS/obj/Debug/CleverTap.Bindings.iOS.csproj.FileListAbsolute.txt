@@ -1,5 +1,8 @@
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Debug/CleverTap.Bindings.iOS.dll
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Debug/CleverTap.Bindings.iOS.pdb
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.csproj.CoreCompileInputs.cache
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.dll
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.pdb
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Debug/CleverTap.Bindings.iOS.dll
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Debug/CleverTap.Bindings.iOS.pdb
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/_ProcessedBundleResourcesPath.items
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/_ProcessedContentPath.items
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.csproj.AssemblyReference.cache
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.csproj.CoreCompileInputs.cache
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.dll
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Debug/CleverTap.Bindings.iOS.pdb
