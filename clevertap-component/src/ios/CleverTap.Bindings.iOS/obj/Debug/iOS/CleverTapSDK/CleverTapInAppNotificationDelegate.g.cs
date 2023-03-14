@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CleverTapInAppNotificationDelegate", WrapperType = typeof (CleverTapInAppNotificationDelegateWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "ShouldShowInAppNotificationWithExtras", Selector = "shouldShowInAppNotificationWithExtras:", ReturnType = typeof (bool), ParameterType = new Type [] { typeof (NSDictionary) }, ParameterByRef = new bool [] { false })]
@@ -55,39 +55,33 @@ namespace CleverTapSDK {
 	public partial interface ICleverTapInAppNotificationDelegate : INativeObject, IDisposable
 	{
 	}
-	
 	public static partial class CleverTapInAppNotificationDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool ShouldShowInAppNotificationWithExtras (this ICleverTapInAppNotificationDelegate This, NSDictionary extras)
 		{
-			var extras__handle__ = extras.GetNonNullHandle (nameof (extras));
+			var extras__handle__ = extras!.GetNonNullHandle (nameof (extras));
 			return global::ApiDefinition.Messaging.bool_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("shouldShowInAppNotificationWithExtras:"), extras__handle__);
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void InAppNotificationDismissedWithExtras (this ICleverTapInAppNotificationDelegate This, NSDictionary extras, NSDictionary actionExtras)
 		{
-			var extras__handle__ = extras.GetNonNullHandle (nameof (extras));
-			var actionExtras__handle__ = actionExtras.GetNonNullHandle (nameof (actionExtras));
+			var extras__handle__ = extras!.GetNonNullHandle (nameof (extras));
+			var actionExtras__handle__ = actionExtras!.GetNonNullHandle (nameof (actionExtras));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr_IntPtr (This.Handle, Selector.GetHandle ("inAppNotificationDismissedWithExtras:andActionExtras:"), extras__handle__, actionExtras__handle__);
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void InAppNotificationButtonTappedWithCustomExtras (this ICleverTapInAppNotificationDelegate This, NSDictionary customExtras)
 		{
-			var customExtras__handle__ = customExtras.GetNonNullHandle (nameof (customExtras));
+			var customExtras__handle__ = customExtras!.GetNonNullHandle (nameof (customExtras));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("inAppNotificationButtonTappedWithCustomExtras:"), customExtras__handle__);
 		}
-		
 	}
-	
 	internal sealed class CleverTapInAppNotificationDelegateWrapper : BaseWrapper, ICleverTapInAppNotificationDelegate {
 		[Preserve (Conditional = true)]
 		public CleverTapInAppNotificationDelegateWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
@@ -95,7 +89,6 @@ namespace CleverTapSDK {
 	[Register("ApiDefinition__CleverTapSDK_CleverTapInAppNotificationDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapInAppNotificationDelegate : NSObject, ICleverTapInAppNotificationDelegate {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -125,20 +118,17 @@ namespace CleverTapSDK {
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 		[Export ("inAppNotificationDismissedWithExtras:andActionExtras:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void InAppNotificationDismissedWithExtras (NSDictionary extras, NSDictionary actionExtras)
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 		[Export ("shouldShowInAppNotificationWithExtras:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool ShouldShowInAppNotificationWithExtras (NSDictionary extras)
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 	} /* class CleverTapInAppNotificationDelegate */
 }

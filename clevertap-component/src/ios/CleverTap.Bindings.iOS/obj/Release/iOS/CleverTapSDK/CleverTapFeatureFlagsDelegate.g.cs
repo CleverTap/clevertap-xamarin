@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,32 +42,30 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CleverTapFeatureFlagsDelegate", WrapperType = typeof (CleverTapFeatureFlagsDelegateWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "CtFeatureFlagsUpdated", Selector = "ctFeatureFlagsUpdated")]
 	public partial interface ICleverTapFeatureFlagsDelegate : INativeObject, IDisposable
 	{
 	}
-	
 	public static partial class CleverTapFeatureFlagsDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void CtFeatureFlagsUpdated (this ICleverTapFeatureFlagsDelegate This)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("ctFeatureFlagsUpdated"));
 		}
-		
 	}
-	
 	internal sealed class CleverTapFeatureFlagsDelegateWrapper : BaseWrapper, ICleverTapFeatureFlagsDelegate {
 		[Preserve (Conditional = true)]
 		public CleverTapFeatureFlagsDelegateWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
@@ -77,7 +73,6 @@ namespace CleverTapSDK {
 	[Register("ApiDefinition__CleverTapSDK_CleverTapFeatureFlagsDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapFeatureFlagsDelegate : NSObject, ICleverTapFeatureFlagsDelegate {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -107,6 +102,5 @@ namespace CleverTapSDK {
 		{
 			throw new You_Should_Not_Call_base_In_This_Method ();
 		}
-		
 	} /* class CleverTapFeatureFlagsDelegate */
 }

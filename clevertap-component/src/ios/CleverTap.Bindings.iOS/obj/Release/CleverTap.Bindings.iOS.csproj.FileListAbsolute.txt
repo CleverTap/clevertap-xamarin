@@ -1,3 +1,5 @@
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Release/CleverTap.Bindings.iOS.dll
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.csproj.CoreCompileInputs.cache
-/Users/aditi/repo/GitHub/clevertap-xamarin/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.dll
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/bin/Release/CleverTap.Bindings.iOS.dll
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/_ProcessedBundleResourcesPath.items
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/_ProcessedContentPath.items
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.csproj.CoreCompileInputs.cache
+/Users/nishant.kumar/clevertap-xamarin-ios/clevertap-component/src/ios/CleverTap.Bindings.iOS/obj/Release/CleverTap.Bindings.iOS.dll

@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,9 +42,11 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Protocol (Name = "CTInAppNotification", WrapperType = typeof (CTInAppNotificationWrapper))]
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "PrepareWithCompletionHandler", Selector = "prepareWithCompletionHandler:", ParameterType = new Type [] { typeof (Action) }, ParameterByRef = new bool [] { false }, ParameterBlockProxy = new Type? [] { typeof (ObjCRuntime.Trampolines.NIDAction) })]
@@ -62,6 +62,7 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "MaxPerSession", Selector = "maxPerSession", PropertyType = typeof (int), GetterSelector = "maxPerSession", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "TotalLifetimeCount", Selector = "totalLifetimeCount", PropertyType = typeof (int), GetterSelector = "totalLifetimeCount", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "TotalDailyCount", Selector = "totalDailyCount", PropertyType = typeof (int), GetterSelector = "totalDailyCount", ArgumentSemantic = ArgumentSemantic.None)]
+	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "TimeToLive", Selector = "timeToLive", PropertyType = typeof (nint), GetterSelector = "timeToLive", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Position", Selector = "position", PropertyType = typeof (sbyte), GetterSelector = "position", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Height", Selector = "height", PropertyType = typeof (float), GetterSelector = "height", ArgumentSemantic = ArgumentSemantic.None)]
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "HeightPercent", Selector = "heightPercent", PropertyType = typeof (float), GetterSelector = "heightPercent", ArgumentSemantic = ArgumentSemantic.None)]
@@ -92,292 +93,244 @@ namespace CleverTapSDK {
 	public partial interface ICTInAppNotification : INativeObject, IDisposable
 	{
 	}
-	
 	public static partial class CTInAppNotification_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public unsafe static void PrepareWithCompletionHandler (this ICTInAppNotification This, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDAction))]global::System.Action completionHandler)
 		{
-			if (completionHandler == null)
+			if (completionHandler is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completionHandler));
 			BlockLiteral *block_ptr_completionHandler;
 			BlockLiteral block_completionHandler;
 			block_completionHandler = new BlockLiteral ();
 			block_ptr_completionHandler = &block_completionHandler;
 			block_completionHandler.SetupBlockUnsafe (Trampolines.SDAction.Handler, completionHandler);
-			
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("prepareWithCompletionHandler:"), (IntPtr) block_ptr_completionHandler);
 			block_ptr_completionHandler->CleanupBlock ();
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetId (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("Id")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("Id")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetCampaignId (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("campaignId")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("campaignId")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetType (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("type")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("type")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CTInAppType GetInAppType (this ICTInAppNotification This)
 		{
 			CTInAppType ret;
-			if (IntPtr.Size == 8) {
-				ret = (CTInAppType) global::ApiDefinition.Messaging.UInt64_objc_msgSend (This.Handle, Selector.GetHandle ("inAppType"));
-			} else {
-				ret = (CTInAppType) global::ApiDefinition.Messaging.UInt32_objc_msgSend (This.Handle, Selector.GetHandle ("inAppType"));
-			}
+			ret = (CleverTapSDK.CTInAppType) (ulong) global::ApiDefinition.Messaging.UIntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("inAppType"));
 			return ret!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetHtml (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("html")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("html")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetUrl (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("url")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("url")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetExcludeFromCaps (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("excludeFromCaps"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetShowClose (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("showClose"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetDarkenScreen (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("darkenScreen"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static int GetMaxPerSession (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("maxPerSession"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static int GetTotalLifetimeCount (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("totalLifetimeCount"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static int GetTotalDailyCount (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("totalDailyCount"));
 		}
-		
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static nint GetTimeToLive (this ICTInAppNotification This)
+		{
+			return (nint) global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("timeToLive"));
+		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static sbyte GetPosition (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.SByte_objc_msgSend (This.Handle, Selector.GetHandle ("position"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static float GetHeight (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.float_objc_msgSend (This.Handle, Selector.GetHandle ("height"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static float GetHeightPercent (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.float_objc_msgSend (This.Handle, Selector.GetHandle ("heightPercent"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static float GetWidth (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.float_objc_msgSend (This.Handle, Selector.GetHandle ("width"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static float GetWidthPercent (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.float_objc_msgSend (This.Handle, Selector.GetHandle ("widthPercent"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSData GetImage (this ICTInAppNotification This)
 		{
-			return  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("image")));
+			return  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("image")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSData GetImageLandscape (this ICTInAppNotification This)
 		{
-			return  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("imageLandscape")));
+			return  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("imageLandscape")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetContentType (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("contentType")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("contentType")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetMediaUrl (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("mediaUrl")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("mediaUrl")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetMediaIsVideo (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsVideo"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetMediaIsAudio (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsAudio"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetMediaIsImage (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsImage"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetMediaIsGif (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("mediaIsGif"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetTitle (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("title")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("title")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetTitleColor (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("titleColor")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("titleColor")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetMessage (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("message")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("message")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetMessageColor (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("messageColor")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("messageColor")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetBackgroundColor (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("backgroundColor")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("backgroundColor")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetShowCloseButton (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("showCloseButton"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetTablet (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("tablet"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetHasLandscape (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("hasLandscape"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool GetHasPortrait (this ICTInAppNotification This)
 		{
 			return global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("hasPortrait"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CTNotificationButton[] GetButtons (this ICTInAppNotification This)
 		{
-			return NSArray.ArrayFromHandle<CTNotificationButton>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("buttons")));
+			return CFArray.ArrayFromHandle<CTNotificationButton>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("buttons")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSDictionary GetJsonDescription (this ICTInAppNotification This)
 		{
-			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("jsonDescription")));
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("jsonDescription")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetError (this ICTInAppNotification This)
 		{
-			return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("error")));
+			return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("error")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSDictionary GetCustomExtras (this ICTInAppNotification This)
 		{
-			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("customExtras")));
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("customExtras")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static NSDictionary GetActionExtras (this ICTInAppNotification This)
 		{
-			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("actionExtras")));
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("actionExtras")))!;
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void SetActionExtras (this ICTInAppNotification This, NSDictionary value)
 		{
-			var value__handle__ = value.GetNonNullHandle (nameof (value));
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("setActionExtras:"), value__handle__);
 		}
-		
 	}
-	
 	internal sealed class CTInAppNotificationWrapper : BaseWrapper, ICTInAppNotification {
 		[Preserve (Conditional = true)]
 		public CTInAppNotificationWrapper (IntPtr handle, bool owns)
 			: base (handle, owns)
 		{
 		}
-		
 	}
 }
 namespace CleverTapSDK {
 	[Protocol()]
 	[Register("CTInAppNotification", true)]
 	public unsafe partial class CTInAppNotification : NSObject, ICTInAppNotification {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppNotification");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CTInAppNotification (NSObjectFlag t) : base (t)
@@ -397,7 +350,7 @@ namespace CleverTapSDK {
 		public CTInAppNotification (NSDictionary json)
 			: base (NSObjectFlag.Empty)
 		{
-			var json__handle__ = json.GetNonNullHandle (nameof (json));
+			var json__handle__ = json!.GetNonNullHandle (nameof (json));
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 			if (IsDirectBinding) {
 				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("initWithJSON:"), json__handle__), "initWithJSON:");
@@ -405,44 +358,39 @@ namespace CleverTapSDK {
 				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithJSON:"), json__handle__), "initWithJSON:");
 			}
 		}
-		
 		[Export ("prepareWithCompletionHandler:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public unsafe virtual void PrepareWithCompletionHandler ([BlockProxy (typeof (ObjCRuntime.Trampolines.NIDAction))]global::System.Action completionHandler)
 		{
-			if (completionHandler == null)
+			if (completionHandler is null)
 				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completionHandler));
 			BlockLiteral *block_ptr_completionHandler;
 			BlockLiteral block_completionHandler;
 			block_completionHandler = new BlockLiteral ();
 			block_ptr_completionHandler = &block_completionHandler;
 			block_completionHandler.SetupBlockUnsafe (Trampolines.SDAction.Handler, completionHandler);
-			
 			if (IsDirectBinding) {
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("prepareWithCompletionHandler:"), (IntPtr) block_ptr_completionHandler);
 			} else {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("prepareWithCompletionHandler:"), (IntPtr) block_ptr_completionHandler);
 			}
 			block_ptr_completionHandler->CleanupBlock ();
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSDictionary ActionExtras {
 			[Export ("actionExtras", ArgumentSemantic.Copy)]
 			get {
-				NSDictionary ret;
+				NSDictionary? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("actionExtras")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("actionExtras")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("actionExtras")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("actionExtras")))!;
 				}
 				return ret!;
 			}
-			
 			[Export ("setActionExtras:", ArgumentSemantic.Copy)]
 			set {
-				var value__handle__ = value.GetNonNullHandle (nameof (value));
+				var value__handle__ = value!.GetNonNullHandle (nameof (value));
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setActionExtras:"), value__handle__);
 				} else {
@@ -450,76 +398,65 @@ namespace CleverTapSDK {
 				}
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string BackgroundColor {
 			[Export ("backgroundColor")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("backgroundColor")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("backgroundColor")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("backgroundColor")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("backgroundColor")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual CTNotificationButton[] Buttons {
 			[Export ("buttons")]
 			get {
-				CTNotificationButton[] ret;
+				CTNotificationButton[]? ret;
 				if (IsDirectBinding) {
-					ret = NSArray.ArrayFromHandle<CTNotificationButton>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("buttons")));
+					ret = CFArray.ArrayFromHandle<CTNotificationButton>(global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("buttons")))!;
 				} else {
-					ret = NSArray.ArrayFromHandle<CTNotificationButton>(global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("buttons")));
+					ret = CFArray.ArrayFromHandle<CTNotificationButton>(global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("buttons")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string CampaignId {
 			[Export ("campaignId")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("campaignId")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("campaignId")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("campaignId")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("campaignId")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string ContentType {
 			[Export ("contentType")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("contentType")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("contentType")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("contentType")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("contentType")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSDictionary CustomExtras {
 			[Export ("customExtras", ArgumentSemantic.Copy)]
 			get {
-				NSDictionary ret;
+				NSDictionary? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("customExtras")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("customExtras")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("customExtras")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("customExtras")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool DarkenScreen {
 			[Export ("darkenScreen")]
@@ -530,22 +467,18 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("darkenScreen"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Error {
 			[Export ("error")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("error")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("error")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("error")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("error")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool ExcludeFromCaps {
 			[Export ("excludeFromCaps")]
@@ -556,9 +489,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("excludeFromCaps"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool HasLandscape {
 			[Export ("hasLandscape")]
@@ -569,9 +500,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("hasLandscape"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool HasPortrait {
 			[Export ("hasPortrait")]
@@ -582,9 +511,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("hasPortrait"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual float Height {
 			[Export ("height")]
@@ -595,9 +522,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.float_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("height"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual float HeightPercent {
 			[Export ("heightPercent")]
@@ -608,103 +533,81 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.float_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("heightPercent"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Html {
 			[Export ("html")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("html")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("html")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("html")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("html")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Id {
 			[Export ("Id")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("Id")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("Id")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("Id")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("Id")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSData Image {
 			[Export ("image")]
 			get {
-				NSData ret;
+				NSData? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("image")));
+					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("image")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("image")));
+					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("image")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSData ImageLandscape {
 			[Export ("imageLandscape")]
 			get {
-				NSData ret;
+				NSData? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("imageLandscape")));
+					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("imageLandscape")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("imageLandscape")));
+					ret =  Runtime.GetNSObject<NSData> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("imageLandscape")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual CTInAppType InAppType {
 			[Export ("inAppType")]
 			get {
 				CTInAppType ret;
 				if (IsDirectBinding) {
-					if (IntPtr.Size == 8) {
-						ret = (CTInAppType) global::ApiDefinition.Messaging.UInt64_objc_msgSend (this.Handle, Selector.GetHandle ("inAppType"));
-					} else {
-						ret = (CTInAppType) global::ApiDefinition.Messaging.UInt32_objc_msgSend (this.Handle, Selector.GetHandle ("inAppType"));
-					}
+					ret = (CleverTapSDK.CTInAppType) (ulong) global::ApiDefinition.Messaging.UIntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("inAppType"));
 				} else {
-					if (IntPtr.Size == 8) {
-						ret = (CTInAppType) global::ApiDefinition.Messaging.UInt64_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("inAppType"));
-					} else {
-						ret = (CTInAppType) global::ApiDefinition.Messaging.UInt32_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("inAppType"));
-					}
+					ret = (CleverTapSDK.CTInAppType) (ulong) global::ApiDefinition.Messaging.UIntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("inAppType"));
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSDictionary JsonDescription {
 			[Export ("jsonDescription", ArgumentSemantic.Copy)]
 			get {
-				NSDictionary ret;
+				NSDictionary? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("jsonDescription")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("jsonDescription")))!;
 				} else {
-					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("jsonDescription")));
+					ret =  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("jsonDescription")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual int MaxPerSession {
 			[Export ("maxPerSession")]
@@ -715,9 +618,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.int_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("maxPerSession"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool MediaIsAudio {
 			[Export ("mediaIsAudio")]
@@ -728,9 +629,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("mediaIsAudio"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool MediaIsGif {
 			[Export ("mediaIsGif")]
@@ -741,9 +640,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("mediaIsGif"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool MediaIsImage {
 			[Export ("mediaIsImage")]
@@ -754,9 +651,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("mediaIsImage"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool MediaIsVideo {
 			[Export ("mediaIsVideo")]
@@ -767,48 +662,40 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("mediaIsVideo"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string MediaUrl {
 			[Export ("mediaUrl")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("mediaUrl")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("mediaUrl")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("mediaUrl")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("mediaUrl")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Message {
 			[Export ("message")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("message")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("message")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("message")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("message")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string MessageColor {
 			[Export ("messageColor")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("messageColor")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("messageColor")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("messageColor")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("messageColor")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual sbyte Position {
 			[Export ("position")]
@@ -819,9 +706,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.SByte_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("position"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool ShowClose {
 			[Export ("showClose")]
@@ -832,9 +717,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("showClose"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool ShowCloseButton {
 			[Export ("showCloseButton")]
@@ -845,9 +728,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("showCloseButton"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool Tablet {
 			[Export ("tablet")]
@@ -858,35 +739,40 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("tablet"));
 				}
 			}
-			
 		}
-		
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual nint TimeToLive {
+			[Export ("timeToLive")]
+			get {
+				if (IsDirectBinding) {
+					return (nint) global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("timeToLive"));
+				} else {
+					return (nint) global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("timeToLive"));
+				}
+			}
+		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Title {
 			[Export ("title")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("title")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("title")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("title")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("title")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string TitleColor {
 			[Export ("titleColor")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("titleColor")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("titleColor")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("titleColor")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("titleColor")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual int TotalDailyCount {
 			[Export ("totalDailyCount")]
@@ -897,9 +783,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.int_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("totalDailyCount"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual int TotalLifetimeCount {
 			[Export ("totalLifetimeCount")]
@@ -910,35 +794,29 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.int_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("totalLifetimeCount"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Type {
 			[Export ("type")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("type")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("type")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("type")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("type")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Url {
 			[Export ("url")]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("url")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("url")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("url")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("url")))!;
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual float Width {
 			[Export ("width")]
@@ -949,9 +827,7 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.float_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("width"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual float WidthPercent {
 			[Export ("widthPercent")]
@@ -962,8 +838,6 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.float_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("widthPercent"));
 				}
 			}
-			
 		}
-		
 	} /* class CTInAppNotification */
 }

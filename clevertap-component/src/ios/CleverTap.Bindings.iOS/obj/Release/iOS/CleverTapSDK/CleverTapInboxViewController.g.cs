@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CleverTapInboxViewController", true)]
 	public unsafe partial class CleverTapInboxViewController : global::UIKit.UITableViewController {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapInboxViewController");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]

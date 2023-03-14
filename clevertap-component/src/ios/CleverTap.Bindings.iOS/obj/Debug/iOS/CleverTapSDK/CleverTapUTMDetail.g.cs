@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CleverTapUTMDetail", true)]
 	public unsafe partial class CleverTapUTMDetail : NSObject {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapUTMDetail");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -88,81 +85,69 @@ namespace CleverTapSDK {
 			[Export ("campaign", ArgumentSemantic.Retain)]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("campaign")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("campaign")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("campaign")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("campaign")))!;
 				}
 			}
-			
 			[Export ("setCampaign:", ArgumentSemantic.Retain)]
 			set {
-				if (value == null)
+				if (value is null)
 					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
-				var nsvalue = NSString.CreateNative (value);
-				
+				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setCampaign:"), nsvalue);
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setCampaign:"), nsvalue);
 				}
-				NSString.ReleaseNative (nsvalue);
-				
+				CFString.ReleaseNative (nsvalue);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Medium {
 			[Export ("medium", ArgumentSemantic.Retain)]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("medium")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("medium")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("medium")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("medium")))!;
 				}
 			}
-			
 			[Export ("setMedium:", ArgumentSemantic.Retain)]
 			set {
-				if (value == null)
+				if (value is null)
 					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
-				var nsvalue = NSString.CreateNative (value);
-				
+				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setMedium:"), nsvalue);
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setMedium:"), nsvalue);
 				}
-				NSString.ReleaseNative (nsvalue);
-				
+				CFString.ReleaseNative (nsvalue);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string Source {
 			[Export ("source", ArgumentSemantic.Retain)]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("source")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("source")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("source")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("source")))!;
 				}
 			}
-			
 			[Export ("setSource:", ArgumentSemantic.Retain)]
 			set {
-				if (value == null)
+				if (value is null)
 					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
-				var nsvalue = NSString.CreateNative (value);
-				
+				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setSource:"), nsvalue);
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setSource:"), nsvalue);
 				}
-				NSString.ReleaseNative (nsvalue);
-				
+				CFString.ReleaseNative (nsvalue);
 			}
 		}
-		
 	} /* class CleverTapUTMDetail */
 }

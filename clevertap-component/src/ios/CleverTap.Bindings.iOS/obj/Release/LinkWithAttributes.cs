@@ -1,2 +1,2 @@
-[assembly: ObjCRuntime.LinkWith ("CleverTapSDK.framework", ForceLoad = true)]
-[assembly: ObjCRuntime.LinkWith ("SDWebImage.framework", ForceLoad = true)]
+[assembly: ObjCRuntime.LinkWith ("CleverTapSDK.framework")]
+[assembly: ObjCRuntime.LinkWith ("SDWebImage.framework")]

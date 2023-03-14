@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,111 +42,98 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	public unsafe static partial class CTInAppDisplayViewController_  {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppDisplayViewController");
-		
 		[Export ("buttonTapped:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void ButtonTapped (this CTInAppDisplayViewController This, global::UIKit.UIButton button)
 		{
-			var button__handle__ = button.GetNonNullHandle (nameof (button));
+			var button__handle__ = button!.GetNonNullHandle (nameof (button));
 			global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (This.Handle, Selector.GetHandle ("buttonTapped:"), button__handle__);
 		}
-		
 		[Export ("handleButtonClickFromIndex:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void HandleButtonClickFromIndex (this CTInAppDisplayViewController This, int index)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend_int (This.Handle, Selector.GetHandle ("handleButtonClickFromIndex:"), index);
 		}
-		
 		[Export ("handleImageTapGesture")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void HandleImageTapGesture (this CTInAppDisplayViewController This)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("handleImageTapGesture"));
 		}
-		
 		[Export ("hideFromWindow:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void HideFromWindow (this CTInAppDisplayViewController This, bool animated)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("hideFromWindow:"), animated);
 		}
-		
 		[Export ("setupViewForButton:withData:withIndex:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static global::UIKit.UIButton SetupViewForButton (this CTInAppDisplayViewController This, global::UIKit.UIButton buttonView, CTNotificationButton button, nint index)
 		{
-			var buttonView__handle__ = buttonView.GetNonNullHandle (nameof (buttonView));
-			var button__handle__ = button.GetNonNullHandle (nameof (button));
-			return  Runtime.GetNSObject<global::UIKit.UIButton> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr_nint (This.Handle, Selector.GetHandle ("setupViewForButton:withData:withIndex:"), buttonView__handle__, button__handle__, index));
+			var buttonView__handle__ = buttonView!.GetNonNullHandle (nameof (buttonView));
+			var button__handle__ = button!.GetNonNullHandle (nameof (button));
+			return  Runtime.GetNSObject<global::UIKit.UIButton> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr_IntPtr (This.Handle, Selector.GetHandle ("setupViewForButton:withData:withIndex:"), buttonView__handle__, button__handle__, (IntPtr) index))!;
 		}
-		
 		[Export ("showFromWindow:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void ShowFromWindow (this CTInAppDisplayViewController This, bool animated)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("showFromWindow:"), animated);
 		}
-		
 		[Export ("tappedDismiss")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void TappedDismiss (this CTInAppDisplayViewController This)
 		{
 			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("tappedDismiss"));
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static CTInAppNotification Notification {
 			[Export ("notification", ArgumentSemantic.Retain)]
 			get {
-				CTInAppNotification ret;
-				ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("notification")));
+				CTInAppNotification? ret;
+				ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("notification")))!;
 				return ret!;
 			}
-			
 			[Export ("setNotification:", ArgumentSemantic.Retain)]
 			set {
-				var value__handle__ = value.GetNonNullHandle (nameof (value));
+				var value__handle__ = value!.GetNonNullHandle (nameof (value));
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("setNotification:"), value__handle__);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool ShouldPassThroughTouches {
 			[Export ("shouldPassThroughTouches")]
 			get {
 				return global::ApiDefinition.Messaging.bool_objc_msgSend (class_ptr, Selector.GetHandle ("shouldPassThroughTouches"));
 			}
-			
 			[Export ("setShouldPassThroughTouches:")]
 			set {
 				global::ApiDefinition.Messaging.void_objc_msgSend_bool (class_ptr, Selector.GetHandle ("setShouldPassThroughTouches:"), value);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static global::UIKit.UIWindow Window {
 			[Export ("window", ArgumentSemantic.Retain)]
 			get {
-				global::UIKit.UIWindow ret;
-				ret =  Runtime.GetNSObject<global::UIKit.UIWindow> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("window")));
+				global::UIKit.UIWindow? ret;
+				ret =  Runtime.GetNSObject<global::UIKit.UIWindow> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (class_ptr, Selector.GetHandle ("window")))!;
 				return ret!;
 			}
-			
 			[Export ("setWindow:", ArgumentSemantic.Retain)]
 			set {
-				var value__handle__ = value.GetNonNullHandle (nameof (value));
+				var value__handle__ = value!.GetNonNullHandle (nameof (value));
 				global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (class_ptr, Selector.GetHandle ("setWindow:"), value__handle__);
 			}
 		}
-		
 	} /* class CTInAppDisplayViewController_ */
 }

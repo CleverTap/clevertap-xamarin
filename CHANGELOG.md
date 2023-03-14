@@ -1,5 +1,11 @@
 # CHANGE LOG
 
+### Version 2.0.0 (March 14, 2023)
+
+* Adds support for Android 12
+* Supports [CleverTap Android SDK v4.6.6](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev4.6.6)
+* Supports [CleverTap iOS SDK v4.1.6](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/4.1.6)
+
 ### Version 1.1.1 (November 9, 2021)
 
 * Fixes App Inbox Public APIs for CleverTap iOS Bindings

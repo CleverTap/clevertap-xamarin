@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CTInAppDisplayViewController", true)]
 	public unsafe partial class CTInAppDisplayViewController : global::UIKit.UIViewController {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CTInAppDisplayViewController");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[DesignatedInitializer]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
@@ -89,7 +86,7 @@ namespace CleverTapSDK {
 		public CTInAppDisplayViewController (CTInAppNotification notification)
 			: base (NSObjectFlag.Empty)
 		{
-			var notification__handle__ = notification.GetNonNullHandle (nameof (notification));
+			var notification__handle__ = notification!.GetNonNullHandle (nameof (notification));
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 			if (IsDirectBinding) {
 				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("initWithNotification:"), notification__handle__), "initWithNotification:");
@@ -97,14 +94,13 @@ namespace CleverTapSDK {
 				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithNotification:"), notification__handle__), "initWithNotification:");
 			}
 		}
-		
 		[Export ("initWithNotification:jsInterface:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public CTInAppDisplayViewController (CTInAppNotification notification, CleverTapJSInterface jsInterface)
 			: base (NSObjectFlag.Empty)
 		{
-			var notification__handle__ = notification.GetNonNullHandle (nameof (notification));
-			var jsInterface__handle__ = jsInterface.GetNonNullHandle (nameof (jsInterface));
+			var notification__handle__ = notification!.GetNonNullHandle (nameof (notification));
+			var jsInterface__handle__ = jsInterface!.GetNonNullHandle (nameof (jsInterface));
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 			if (IsDirectBinding) {
 				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend_IntPtr_IntPtr (this.Handle, Selector.GetHandle ("initWithNotification:jsInterface:"), notification__handle__, jsInterface__handle__), "initWithNotification:jsInterface:");
@@ -112,7 +108,6 @@ namespace CleverTapSDK {
 				InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper_IntPtr_IntPtr (this.SuperHandle, Selector.GetHandle ("initWithNotification:jsInterface:"), notification__handle__, jsInterface__handle__), "initWithNotification:jsInterface:");
 			}
 		}
-		
 		[Export ("hide:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void Hide (bool animated)
@@ -123,7 +118,6 @@ namespace CleverTapSDK {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("hide:"), animated);
 			}
 		}
-		
 		[Export ("show:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual void Show (bool animated)
@@ -134,7 +128,6 @@ namespace CleverTapSDK {
 				global::ApiDefinition.Messaging.void_objc_msgSendSuper_bool (this.SuperHandle, Selector.GetHandle ("show:"), animated);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public CTInAppNotificationDisplayDelegate Delegate {
 			get {
@@ -142,12 +135,11 @@ namespace CleverTapSDK {
 			}
 			set {
 				var rvalue = value as NSObject;
-				if (value != null && rvalue == null)
+				if (!(value is null) && rvalue is null)
 					throw new ArgumentException ("The object passed of type " + value.GetType () + " does not derive from NSObject");
 				WeakDelegate = rvalue;
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual bool DeviceOrientationIsLandscape {
 			[Export ("deviceOrientationIsLandscape")]
@@ -158,41 +150,36 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.bool_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("deviceOrientationIsLandscape"));
 				}
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual CTInAppNotification Notification {
 			[Export ("notification", ArgumentSemantic.Retain)]
 			get {
-				CTInAppNotification ret;
+				CTInAppNotification? ret;
 				if (IsDirectBinding) {
-					ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("notification")));
+					ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("notification")))!;
 				} else {
-					ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("notification")));
+					ret =  Runtime.GetNSObject<CTInAppNotification> (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("notification")))!;
 				}
 				return ret!;
 			}
-			
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		object? __mt_WeakDelegate_var;
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual NSObject? WeakDelegate {
 			[Export ("delegate", ArgumentSemantic.Weak)]
 			get {
-				NSObject ret;
+				NSObject? ret;
 				if (IsDirectBinding) {
-					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("delegate")));
+					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("delegate")))!;
 				} else {
-					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("delegate")));
+					ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("delegate")))!;
 				}
 				MarkDirty ();
 				__mt_WeakDelegate_var = ret;
 				return ret!;
 			}
-			
 			[Export ("setDelegate:", ArgumentSemantic.Weak)]
 			set {
 				var value__handle__ = value.GetHandle ();
@@ -205,7 +192,6 @@ namespace CleverTapSDK {
 				__mt_WeakDelegate_var = value;
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		protected override void Dispose (bool disposing)
 		{

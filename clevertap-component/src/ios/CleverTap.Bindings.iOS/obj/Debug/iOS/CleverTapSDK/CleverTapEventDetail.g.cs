@@ -2,9 +2,7 @@
 // Auto-generated from generator.cs, do not edit
 //
 // We keep references to objects, so warning 414 is expected
-
 #pragma warning disable 414
-
 using System;
 using System.Drawing;
 using System.Diagnostics;
@@ -44,18 +42,17 @@ using FileProvider;
 using CoreAnimation;
 using CoreFoundation;
 using NetworkExtension;
-
+using MetalPerformanceShadersGraph;
 #nullable enable
-
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
 namespace CleverTapSDK {
 	[Register("CleverTapEventDetail", true)]
 	public unsafe partial class CleverTapEventDetail : NSObject {
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly IntPtr class_ptr = Class.GetHandle ("CleverTapEventDetail");
-		
 		public override IntPtr ClassHandle { get { return class_ptr; } }
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -88,49 +85,43 @@ namespace CleverTapSDK {
 			[Export ("count")]
 			get {
 				if (IsDirectBinding) {
-					return global::ApiDefinition.Messaging.nuint_objc_msgSend (this.Handle, Selector.GetHandle ("count"));
+					return (nuint) global::ApiDefinition.Messaging.UIntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("count"));
 				} else {
-					return global::ApiDefinition.Messaging.nuint_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("count"));
+					return (nuint) global::ApiDefinition.Messaging.UIntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("count"));
 				}
 			}
-			
 			[Export ("setCount:")]
 			set {
 				if (IsDirectBinding) {
-					global::ApiDefinition.Messaging.void_objc_msgSend_nuint (this.Handle, Selector.GetHandle ("setCount:"), value);
+					global::ApiDefinition.Messaging.void_objc_msgSend_UIntPtr (this.Handle, Selector.GetHandle ("setCount:"), (UIntPtr) value);
 				} else {
-					global::ApiDefinition.Messaging.void_objc_msgSendSuper_nuint (this.SuperHandle, Selector.GetHandle ("setCount:"), value);
+					global::ApiDefinition.Messaging.void_objc_msgSendSuper_UIntPtr (this.SuperHandle, Selector.GetHandle ("setCount:"), (UIntPtr) value);
 				}
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual string EventName {
 			[Export ("eventName", ArgumentSemantic.Retain)]
 			get {
 				if (IsDirectBinding) {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("eventName")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("eventName")))!;
 				} else {
-					return NSString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("eventName")));
+					return CFString.FromHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("eventName")))!;
 				}
 			}
-			
 			[Export ("setEventName:", ArgumentSemantic.Retain)]
 			set {
-				if (value == null)
+				if (value is null)
 					ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
-				var nsvalue = NSString.CreateNative (value);
-				
+				var nsvalue = CFString.CreateNative (value);
 				if (IsDirectBinding) {
 					global::ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setEventName:"), nsvalue);
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setEventName:"), nsvalue);
 				}
-				NSString.ReleaseNative (nsvalue);
-				
+				CFString.ReleaseNative (nsvalue);
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual double FirstTime {
 			[Export ("firstTime")]
@@ -141,7 +132,6 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.Double_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("firstTime"));
 				}
 			}
-			
 			[Export ("setFirstTime:")]
 			set {
 				if (IsDirectBinding) {
@@ -151,7 +141,6 @@ namespace CleverTapSDK {
 				}
 			}
 		}
-		
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual double LastTime {
 			[Export ("lastTime")]
@@ -162,7 +151,6 @@ namespace CleverTapSDK {
 					return global::ApiDefinition.Messaging.Double_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("lastTime"));
 				}
 			}
-			
 			[Export ("setLastTime:")]
 			set {
 				if (IsDirectBinding) {
@@ -172,6 +160,5 @@ namespace CleverTapSDK {
 				}
 			}
 		}
-		
 	} /* class CleverTapEventDetail */
 }
