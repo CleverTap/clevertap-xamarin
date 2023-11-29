@@ -165,39 +165,3 @@ CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).ShowAppInbox(st
 //OR
 CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).ShowAppInbox();//Opens Activity with default style config
 ```
-
-##### Dynamic Variable
-
-- `Callback Registration`
-
-```c#
-CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).CTExperimentsListener = this;
-```
-
-##### Feature Flag 
-
-- `Callbacks Registration`
-
-```c#
-CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).SetCTFeatureFlagsListener(this);
-```
-
-##### Product Config
-
-- `Callback Registration`
-
-```c#
-CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).SetCTProductConfigListener(this);
-```
-
-- `Fetch`
-
-```c#
-CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).ProductConfig().Fetch();
-```
-
-- `Activate`
-
-```c#
-CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).ProductConfig().Activate();
-```
