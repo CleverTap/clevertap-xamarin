@@ -1,4 +1,8 @@
 # CHANGE LOG
+### Version 3.0.0 (November 29, 2023)
+
+* Adds support for Android 13
+* Supports [CleverTap Android SDK v5.2.1](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev5.2.1_xpsv1.5.4)
 
 ### Version 2.0.0 (March 14, 2023)
 
