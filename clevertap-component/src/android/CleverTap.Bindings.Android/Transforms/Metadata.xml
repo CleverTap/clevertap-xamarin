@@ -7,5 +7,14 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
   <attr path="/api/package[@name='com.clevertap.android.sdk.inapp']/class['CTInAppWebView']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;']]/parameter[1]" name="managedType">System.Collections.ICollection</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;']]" name="managedReturn">System.Collections.IList</attr>
+
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAll' and count(parameter)=3 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;'] and parameter[2][@type='long'] and parameter[3][@type='java.util.concurrent.TimeUnit']]/parameter[1]" name="managedType">System.Collections.ICollection</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAll' and count(parameter)=3 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;'] and parameter[2][@type='long'] and parameter[3][@type='java.util.concurrent.TimeUnit']]" name="managedReturn">System.Collections.IList</attr>
+
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAny' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;']]/parameter[1]" name="managedType">System.Collections.ICollection</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAny' and count(parameter)=3 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;'] and parameter[2][@type='long'] and parameter[3][@type='java.util.concurrent.TimeUnit']]/parameter[1]" name="managedType">System.Collections.ICollection</attr>
 </metadata>
 

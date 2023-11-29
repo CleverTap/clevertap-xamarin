@@ -21,7 +21,7 @@ using AndroidX.AppCompat.App;
 namespace XamarinDemo
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity, ICTInboxListener, ICTExperimentsListener, IDisplayUnitListener, ICTFeatureFlagsListener, ICTProductConfigListener, IInAppNotificationButtonListener, IInboxMessageButtonListener
+    public class MainActivity : AppCompatActivity, ICTInboxListener, IDisplayUnitListener, ICTFeatureFlagsListener, ICTProductConfigListener, IInAppNotificationButtonListener, IInboxMessageButtonListener
 
     {
         private CleverTapAPI cleverTapAPI;
@@ -44,8 +44,6 @@ namespace XamarinDemo
             inapp();
 
             inbox();
-
-            dynamicVariables();
 
             displayUnit();
 
@@ -104,7 +102,7 @@ namespace XamarinDemo
         // Init CleverTap
         private void initClevertap()
         {
-            CleverTapAPI.SetDebugLevel(CleverTapAPI.LogLevel.Debug);
+            CleverTapAPI.SetDebugLevel(CleverTapAPI.LogLevel.Verbose);
             cleverTapAPI = CleverTapAPI.GetDefaultInstance(Android.App.Application.Context);
         }
 
@@ -124,7 +122,7 @@ namespace XamarinDemo
 
 
             cleverTapAPI.PushProfile(profileData);
-
+            
 
             //onUserLogin Profile
 
@@ -164,9 +162,9 @@ namespace XamarinDemo
             List<IDictionary<string, Java.Lang.Object>> items = new List<IDictionary<string, Java.Lang.Object>>();
             items.Add(item1);
             items.Add(item2);
-
             cleverTapAPI.PushChargedEvent(chargedDetails, items);
         }
+       
 
         // Init Notification Configuration
         private void notification()
@@ -204,6 +202,7 @@ namespace XamarinDemo
             cleverTapAPI.CTNotificationInboxListener = this;
             cleverTapAPI.SetInboxMessageButtonListener(this);
             cleverTapAPI.InitializeInbox();
+            cleverTapAPI.FetchVariables();
         }
 
         // Init Display Units
@@ -238,11 +237,6 @@ namespace XamarinDemo
         }
 
         // Dynamic Variables Init
-        private void dynamicVariables()
-        {
-            cleverTapAPI.CTExperimentsListener = this;
-        }
-
         // Init Feature Flag
         private void featureFlag()
         {
@@ -300,19 +294,6 @@ namespace XamarinDemo
             });
         }
 
-        //******************           DYNAMIC VARIABLE CALLBACKS       *******************
-
-        // Called when latest dynamic variables are loaded
-        public void CTExperimentsUpdated()
-        {
-            RunOnUiThread(() =>
-            {
-                Integer intval = cleverTapAPI.GetIntegerVariable("testint", new Java.Lang.Integer(1));
-                Java.Lang.Boolean boolVal = cleverTapAPI.GetBooleanVariable("testbool", new Java.Lang.Boolean(false));
-                Toast.MakeText(Android.App.Application.Context, "Experiments Updated[testInt-" + intval + " , Bool-" + boolVal + "]", ToastLength.Long).Show();
-                Log.Debug("CLEVERTAP", "Experiments Updated");
-            });
-        }
 
         //******************           DISPLAY UNIT CALLBACKS          *******************
 
