@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{425D6539-B136-43E7-A9F0-FADF0E895C4F}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StarterDotNet/AppDelegate.cs">
+    <Files>
+      <File FileName="StarterDotNet/AppDelegate.cs" Line="14" Column="35" />
+      <File FileName="StarterDotNet/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StarterDotNet" expanded="True">
+            <Node name="StarterDotNet">
+              <Node name="Dependencies" expanded="True">
+                <Node name="AssemblyDependencies" expanded="True" />
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="AppDelegate.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.StarterDotNet PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008030-001E18A83C86402E" />
+</Properties>

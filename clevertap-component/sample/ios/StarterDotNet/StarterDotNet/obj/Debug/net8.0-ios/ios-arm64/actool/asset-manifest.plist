@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.actool.compilation-results</key>
+	<dict>
+		<key>output-files</key>
+		<array>
+			<string>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/obj/Debug/net8.0-ios/ios-arm64/actool/bundle/AppIcon60x60@2x.png</string>
+			<string>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/obj/Debug/net8.0-ios/ios-arm64/actool/bundle/AppIcon76x76@2x~ipad.png</string>
+			<string>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/obj/Debug/net8.0-ios/ios-arm64/actool/bundle/Assets.car</string>
+			<string>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/obj/Debug/net8.0-ios/ios-arm64/actool/partial-info.plist</string>
+		</array>
+	</dict>
+	<key>com.apple.actool.document.notices</key>
+	<array>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][76x76][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/obj/Debug/net8.0-ios/ios-arm64/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.</string>
+			<key>type</key>
+			<string>Inapplicable Content</string>
+		</dict>
+	</array>
+</dict>
+</plist>

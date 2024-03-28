@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {}
+  },
+  "projects": {
+    "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {
+      "version": "1.0.2",
+      "restore": {
+        "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+        "projectName": "CleverTap.DotNet.iOS.Binding",
+        "projectPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+        "packagesPath": "/Users/nishant.kumar/.nuget/packages/",
+        "outputPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nishant.kumar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-ios"
+        ],
+        "sources": {
+          "/Users/nishant.kumar/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-ios17.2": {
+            "targetAlias": "net8.0-ios",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-ios17.2": {
+          "targetAlias": "net8.0-ios",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.iOS": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/nishant.kumar/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

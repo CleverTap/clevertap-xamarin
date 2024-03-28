@@ -1,27 +1,31 @@
 ﻿<Properties StartupConfiguration="{4279435A-D323-44F1-87D8-98E436909EBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.designer.cs">
     <Files>
-      <File FileName="Main.cs" Line="16" Column="1" />
-      <File FileName="ViewController.cs" Line="96" Column="1" />
-      <File FileName="Main.storyboard" />
+      <File FileName="Main.cs" />
+      <File FileName="ViewController.cs" Line="42" Column="92" />
+      <File FileName="AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="ViewController.designer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Starter" expanded="True">
-            <Node name="Starter" expanded="True">
-              <Node name="References" expanded="True" selected="True" />
+          <Node name="Starter">
+            <Node name="Starter">
+              <Node name="References" expanded="True" />
+              <Node name="ViewController.cs">
+                <Node name="ViewController.designer.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Starter automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6FC5BB87-903F-4677-AF3B-7C246DC29659" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Starter automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A99CDBE4-4426-4981-B8C3-1198FEB69F3E" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
 </Properties>

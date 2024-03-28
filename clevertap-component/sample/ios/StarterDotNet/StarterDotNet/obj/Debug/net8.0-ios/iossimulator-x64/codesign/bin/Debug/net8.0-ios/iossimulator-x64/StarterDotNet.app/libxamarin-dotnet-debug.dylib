@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/StarterDotNet.app/libxamarin-dotnet-debug.dylib

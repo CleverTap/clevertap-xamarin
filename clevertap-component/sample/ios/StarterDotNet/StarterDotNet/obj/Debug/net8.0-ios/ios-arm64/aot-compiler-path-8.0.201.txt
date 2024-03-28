@@ -1,0 +1,1 @@
+/Users/nishant.kumar/dotnet/packs/Microsoft.NETCore.App.Runtime.AOT.osx-arm64.Cross.ios-arm64/8.0.3/Sdk/../tools/mono-aot-cross
