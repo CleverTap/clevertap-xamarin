@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{1E96E0FC-1045-4189-8484-D38C1435141E}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CleverTap.Bindings.Android PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CleverTap.Bindings.Android/obj/Debug/generated/src/Com.Clevertap.Android.Sdk.Task.IOExecutor.cs">
+    <Files>
+      <File FileName="CleverTap.Bindings.Android/Transforms/Metadata.xml" Line="23" Column="1" />
+      <File FileName="CleverTap.Bindings.Android/CleverTap.Bindings.Android.csproj" />
+      <File FileName="CleverTap.Bindings.Android/Properties/AssemblyInfo.cs" Line="26" Column="34" />
+      <File FileName="CleverTap.Bindings.Android/obj/Debug/generated/src/Com.Clevertap.Android.Sdk.Task.IOExecutor.cs" Line="612" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CleverTap.Bindings.Android" expanded="True">
+            <Node name="CleverTap.Bindings.Android">
+              <Node name="References" expanded="True" />
+              <Node name="Jars" expanded="True" />
+              <Node name="Properties">
+                <Node name="AssemblyInfo.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
