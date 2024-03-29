@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="StarterDotNet.app/StarterDotNet">
+      <BCSymbolMapName>StarterDotNet.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>StarterDotNet.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/obj/Debug/net8.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>StarterDotNet.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

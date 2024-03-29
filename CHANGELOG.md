@@ -1,4 +1,24 @@
 # CHANGE LOG
+### Version 1.0.0 DotNet (March 29, 2024)
+
+* Adds support for .NET binding library for .NET and MAUI applications.
+* Supports [CleverTap Android SDK v6.1.1](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev6.1.1)
+* Supports [CleverTap iOS SDK v4.1.6](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/4.1.6)
+
+### Version 4.0.0 (March 29, 2024)
+
+* Adds support for Android 14
+* Supports [CleverTap Android SDK v6.1.1](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev6.1.1)
+* For developers with [BACKGROUND_SYNC](https://developer.clevertap.com/docs/android-push#pull-notification) enabled in their previous app version and now upgrading to _clevertap-android-sdk v6.1.0+_, please add this to your `AndroidManifest.xml` to avoid `ClassNotFoundException` related crashes
+
+```xml
+<service 
+    android:name="com.clevertap.android.sdk.pushnotification.amp.CTBackgroundJobService"
+    android:exported="false"
+    android:enabled="false"
+    tools:ignore="MissingClass"/>
+```
+
 ### Version 3.0.0 (November 29, 2023)
 
 * Adds support for Android 13

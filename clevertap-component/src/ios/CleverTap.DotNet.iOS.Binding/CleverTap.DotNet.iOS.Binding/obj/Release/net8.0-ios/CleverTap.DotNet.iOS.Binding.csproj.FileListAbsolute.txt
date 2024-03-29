@@ -1,0 +1,13 @@
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.dll
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.pdb
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/_ProcessedBundleResourcesPath.items
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/_ProcessedContentPath.items
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.AssemblyInfoInputs.cache
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.AssemblyInfo.cs
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.csproj.CoreCompileInputs.cache
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.sourcelink.json
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.dll
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/refint/CleverTap.DotNet.iOS.Binding.dll
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.pdb
+/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/Release/net8.0-ios/ref/CleverTap.DotNet.iOS.Binding.dll

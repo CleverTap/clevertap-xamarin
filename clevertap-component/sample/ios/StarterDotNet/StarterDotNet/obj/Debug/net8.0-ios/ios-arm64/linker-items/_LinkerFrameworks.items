@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_LinkerFrameworks Include="CloudKit">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="CoreFoundation">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="CoreGraphics">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="CoreLocation">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="Foundation">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="UIKit">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="WebKit">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="GSS">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+  </ItemGroup>
+</Project>

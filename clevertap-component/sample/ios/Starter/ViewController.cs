@@ -39,7 +39,7 @@ namespace Starter
         partial void UIButton1713_TouchUpInside(UIButton sender)
         {
             CleverTap.SharedInstance()?.RecordEvent("Xamarin Test Event");
-            CleverTap.SharedInstance()?.RegisterArrayOfBoolVariableWithName("Bool name");
+            //CleverTap.SharedInstance()?.RegisterArrayOfBoolVariableWithName("Bool name");
 
         }
 

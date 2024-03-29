@@ -16,7 +16,16 @@ The CleverTap Xamarin Bindings SDK for Mobile Customer Engagement and Analytics 
 
 For more information check out our [website](https://clevertap.com/ "CleverTap")  and  [documentation](https://developer.clevertap.com/docs/ "CleverTap Technical Documentation").
 
-## 🚀 Installation and Quick Start
+## Supports
+### Xamarin Binding Library
+* Android - Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References. This targets Xamarin.Android apps.
+* iOS - Use the [DLL](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/ios) and add it to the Reference. This targets Xamarin.iOS apps.
+
+### .NET Binding Library
+* Android - Add `CleverTap.DotNet.Android.Binding` to NuGet Packages. This targets .NET 8.0+ Android and Multi-platform App UI (MAUI) apps.
+* iOS - Add `CleverTap.DotNet.iOS.Binding` to NuGet Packages. This targets .NET 8.0+ iOS and Multi-platform App UI (MAUI) apps.
+
+## 🚀 Xamarin Installation and Quick Start
 
 ## 👨‍💻 Android Guide
 
