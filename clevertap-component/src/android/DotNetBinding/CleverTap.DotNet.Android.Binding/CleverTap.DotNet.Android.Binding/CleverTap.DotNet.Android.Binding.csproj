@@ -4,15 +4,24 @@
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>1.0.0</Version>
-    <Description>The Clevertap DOTNET Binding library for Mobile Customer Engagement and Analytics solutions</Description>
     <Configurations>Release</Configurations>
+    <PackageId>CleverTap.DotNet.Android.Binding</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Description>The Clevertap DOTNET Android Binding for Mobile Customer Engagement and Analytics solutions</Description>
+    <Authors>CleverTap</Authors>
+    <PackageProjectUrl>https://github.com/CleverTap/clevertap-xamarin</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Jars\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Jars\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../README.md" Pack="true" PackagePath=""/>
+    <None Include="../../../../../../LICENSE" Pack="true" PackagePath=""/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />
