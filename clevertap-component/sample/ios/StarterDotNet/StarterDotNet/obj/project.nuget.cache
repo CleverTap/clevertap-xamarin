@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SxwnxAv6B1bhGM+NjLkn/D7K9O2Ja0TFoXoHGoknyV2vNtVnLfuufH/FFQ77MJi0TQxlUURCDKKlRmAwJExeqA==",
+  "dgSpecHash": "ne8Y6oi0FyV4sH26ecl3cOqUW5lz/wRjbWqU24duXrrg0M+UZ+FM4shoVzqCaqJjH9m/Rz6chcjLZH0aOjpbbw==",
   "success": true,
   "projectFilePath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/StarterDotNet.csproj",
   "expectedPackageFiles": [
+    "/Users/nishant.kumar/.nuget/packages/clevertap.dotnet.ios.binding/1.0.0/clevertap.dotnet.ios.binding.1.0.0.nupkg.sha512",
     "/Users/nishant.kumar/.nuget/packages/microsoft.net.illink.tasks/8.0.2/microsoft.net.illink.tasks.8.0.2.nupkg.sha512"
   ],
   "logs": []

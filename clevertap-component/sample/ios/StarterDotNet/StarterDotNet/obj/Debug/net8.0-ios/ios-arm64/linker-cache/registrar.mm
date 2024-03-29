@@ -1328,11 +1328,11 @@ exception_handling:
 
 	static const MTAssembly __xamarin_registration_assemblies [] = {
 		{ "aot-instances", "42b48a5c-01c3-4445-a2a8-9e9de4943073" }, 
-		{ "StarterDotNet", "db3afb45-0789-4ba3-b0d1-16cc1cbd4b0a" }, 
-		{ "CleverTap.DotNet.iOS.Binding", "2c983827-6842-404b-a8b6-0df76acafef1" }, 
+		{ "StarterDotNet", "ed79d0ab-a224-47af-9dd2-46080756f4d1" }, 
+		{ "CleverTap.DotNet.iOS.Binding", "4d2b04ae-4f2e-47b1-b252-64c2266dbfc8" }, 
 		{ "System.Runtime.InteropServices", "42738490-6d3c-47d7-be95-6a1b34b28dc9" }, 
-		{ "System.Runtime", "e18a9d4e-2515-4044-8d08-7c5bda35a0b5" }, 
-		{ "System.Private.CoreLib", "31be9140-9a48-4b3c-a7de-b2de5931209b" }, 
+		{ "System.Runtime", "01994a86-1188-4f29-a782-2ff6d0241fe6" }, 
+		{ "System.Private.CoreLib", "60761b23-3d9e-4d53-bbce-cb235e30d490" }, 
 		{ "Microsoft.iOS", "26da26c4-3032-4a39-989c-cbc0b86e9372" }
 	};
 

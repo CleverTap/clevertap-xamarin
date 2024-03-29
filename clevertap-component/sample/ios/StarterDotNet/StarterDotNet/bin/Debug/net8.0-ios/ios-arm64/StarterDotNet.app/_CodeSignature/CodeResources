@@ -18,19 +18,11 @@
 		</data>
 		<key>CleverTap.DotNet.iOS.Binding.aotdata.arm64</key>
 		<data>
-		Y27zBKsPDm2AEIifIAw8XYwWWGw=
+		bFv/y91y6TIIQh8N+BL6cCmoh9Y=
 		</data>
 		<key>CleverTap.DotNet.iOS.Binding.dll</key>
 		<data>
-		SyhxdJH9coVV5F5P51GLyL8oNY8=
-		</data>
-		<key>CleverTap.DotNet.iOS.Binding.pdb</key>
-		<data>
-		fjHQzX0HBpTre5iPpdEXlhevcb4=
-		</data>
-		<key>Frameworks/CleverTapSDK.framework/.DS_Store</key>
-		<data>
-		W1OcTwWDuTuyWvb8aO7DBW4nnfM=
+		NHFLlN02628AUBmb8A0bCmNli6g=
 		</data>
 		<key>Frameworks/CleverTapSDK.framework/AmazonRootCA1.cer</key>
 		<data>
@@ -210,7 +202,7 @@
 		</data>
 		<key>Frameworks/CleverTapSDK.framework/CleverTapSDK</key>
 		<data>
-		cWt8my3qqdTIO03v1tGTIFhC1Zg=
+		lsBOa5KsG8eHLzXvi6XYsQ74tvI=
 		</data>
 		<key>Frameworks/CleverTapSDK.framework/Headers/CleverTap+DisplayUnit.h</key>
 		<data>
@@ -534,7 +526,7 @@
 		</data>
 		<key>Frameworks/CleverTapSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Vyq6z81ozodSrrLsM8TZY8OAlzM=
+		ux50+66VPU4iYQw5kDON0E31xHQ=
 		</data>
 		<key>Frameworks/CleverTapSDK.framework/ct_default_audio.png</key>
 		<data>
@@ -583,10 +575,6 @@
 		<key>Frameworks/CleverTapSDK.framework/ic_play@3x.png</key>
 		<data>
 		tpRHZUBMlMGmL/1iVy2ku0a1RyQ=
-		</data>
-		<key>Frameworks/SDWebImage.framework/.DS_Store</key>
-		<data>
-		7VCX1f5+VIf4XmxkF1pWWVfMo54=
 		</data>
 		<key>Frameworks/SDWebImage.framework/Headers/NSButton+WebCache.h</key>
 		<data>
@@ -894,11 +882,11 @@
 		</data>
 		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
 		<data>
-		JJsanotsqVwB53lUVF/FHvNt1bI=
+		pnfaozIZB08F1IKcwTSjAfGodvM=
 		</data>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
 		<data>
-		zpbmuOepXh7zZs29cUOYZ07vrYU=
+		64uMCadvVh8yK8iShqry4s3pxUE=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -922,7 +910,7 @@
 		</data>
 		<key>Microsoft.iOS.aotdata.arm64</key>
 		<data>
-		oHqI3F6C+Xaa6o4DF+WUEJQwoGo=
+		8PQFTen/why9+YJe0Ay/vv7YrvQ=
 		</data>
 		<key>Microsoft.iOS.dll</key>
 		<data>
@@ -946,23 +934,23 @@
 		</data>
 		<key>StarterDotNet.aotdata.arm64</key>
 		<data>
-		dChKWv8qmnq4jBBzCPdtAfcnbKw=
+		+GTPuDhN2MwkT9I/5ru3gzwnXv0=
 		</data>
 		<key>StarterDotNet.dll</key>
 		<data>
-		UhwT8QitKfX/Vl17OiVFnEZ7Or0=
+		QhXv57DX2YaXgT9MTSGCrM3UdBQ=
 		</data>
 		<key>StarterDotNet.pdb</key>
 		<data>
-		BYNC2wgqzo2p4kDeNIymdfatiu8=
+		MYGVCtrFIauDjzmnsybCYSE8IyU=
 		</data>
 		<key>System.Private.CoreLib.aotdata.arm64</key>
 		<data>
-		96mGZ+ADVdKtDiPAh0K+q8DnpxQ=
+		KsSyRILKd8aLSdA3Lkk01ClL4VQ=
 		</data>
 		<key>System.Private.CoreLib.dll</key>
 		<data>
-		nKjSZZEh0Ils+VxDbj82wsNw1VE=
+		ZICHhc2Vz3BFlnaP18NjGaRRy5M=
 		</data>
 		<key>System.Runtime.InteropServices.aotdata.arm64</key>
 		<data>
@@ -974,15 +962,15 @@
 		</data>
 		<key>System.Runtime.aotdata.arm64</key>
 		<data>
-		OcIRJjSSmlqk4H2mZzwK69mVATs=
+		+5b5pp3FY3R2rZ94pSxzk3DZkE4=
 		</data>
 		<key>System.Runtime.dll</key>
 		<data>
-		olpzer5Pd6z6uRMexs7hUGcgNuE=
+		ZdCTb3wIyMm5dj25XFBoflAOKdI=
 		</data>
 		<key>aot-instances.aotdata.arm64</key>
 		<data>
-		5aYTeWpICUMY2tq8W3yE0Ac6Dvo=
+		f93WmoFSv3CMa62xgZQ3RFlnRGk=
 		</data>
 		<key>archived-expanded-entitlements.xcent</key>
 		<data>
@@ -1028,21 +1016,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H0gE9zERuOYFAd3GOpiTR8DuAzKaDeLY2p0b3/DYISs=
+			hVlTPwgXP7FMfDNnjPD7OpB3I6lnnVtc7oTawA8+CnM=
 			</data>
 		</dict>
 		<key>CleverTap.DotNet.iOS.Binding.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Da0BZPRUFMSTIi5Xk5SG/DoRyToSINQ/BygHXomCCoQ=
-			</data>
-		</dict>
-		<key>CleverTap.DotNet.iOS.Binding.pdb</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fpuBIIVdtGuKTWVSM24K3HSJXGsmWMlnZo+18wFo0EI=
+			sINpjxEqKo1Ro82+5l1h+RlUihvljRlPieFkPmXuh4A=
 			</data>
 		</dict>
 		<key>Frameworks/CleverTapSDK.framework/AmazonRootCA1.cer</key>
@@ -1357,7 +1338,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LFuCPfvqi+A8YDOOJWdGpjgFi3DXtGrPtWYc1WFSYQ4=
+			hUan4boOIXuvH7y2ZVPVjoRudeC9u39VtxdVNMdIPZU=
 			</data>
 		</dict>
 		<key>Frameworks/CleverTapSDK.framework/Headers/CleverTap+DisplayUnit.h</key>
@@ -1924,7 +1905,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZfAH/iNQSlRNWVaj3fbLuChjCswduAO22asEAxG836k=
+			uS+XqxTOuf/LepxkjLsODiDLBjfYmBRlTbP0c8jaC/U=
 			</data>
 		</dict>
 		<key>Frameworks/CleverTapSDK.framework/ct_default_audio.png</key>
@@ -2547,14 +2528,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YZaxsDa4uz+qV3WkWhSHrDjGlhLsbAXVUbobdYKaFfg=
+			+SFfbJlcoH7s3kIMvUd7ySPhsq2yMRM+wXE2lqmFdog=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1q9uXTGQ69JnpoWmv1Y+IRjtcvW/23mWCqwa47sHcvg=
+			G7uXQZxCmfl6IcZxlKq9WsuNqLv0+pAkk42FhLzGKRE=
 			</data>
 		</dict>
 		<key>LaunchScreen.nib</key>
@@ -2589,7 +2570,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vlQIWys28JMf96+pTauFW1pAZTWGqe3MBo2ixksVOb0=
+			H73CxaodPxtDr5sPz15yn+k4llK5AdqWAd0hBsuCIvM=
 			</data>
 		</dict>
 		<key>Microsoft.iOS.dll</key>
@@ -2624,35 +2605,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k3++o+iyRTdfQBLPKU51k3S0C7jfP3YZ63eoPUC7nrg=
+			m2DvugOTpaeO1b0mLqZgNxq9xqx4nY5O6rUay3cAdSk=
 			</data>
 		</dict>
 		<key>StarterDotNet.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5NxSTb88/W1A1f+nTZVKlcL82CrE8d0BjCZfGRrOfcA=
+			7degLe7LKgKb+36Ty/wgsizDrkS9i56r7H2rj1fjhzE=
 			</data>
 		</dict>
 		<key>StarterDotNet.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MvC8vdkwkmKoHU5Ck0AoaVKCIPkxT+BWSSIuX5do25U=
+			jXMiiVhuxtDe7YpO34ilJTLv10WR3sczgA1afVW4tIg=
 			</data>
 		</dict>
 		<key>System.Private.CoreLib.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rkDO5Y3qMON3kcAybDQqyJNnIJ9+zjrcTk0i8tPeyYg=
+			G8qkG2i2IyZHPCQ6rTj3FPIqJsi+H5tJxpRrDCu2z78=
 			</data>
 		</dict>
 		<key>System.Private.CoreLib.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c/fIB8TZg1mV8kEa1fBTZc8ATiRl0WDNQvaRH3YeVDQ=
+			cw3c00LvBjytOWsAVJ4RSpumEQkfXSV7c9AJb4QXJ+A=
 			</data>
 		</dict>
 		<key>System.Runtime.InteropServices.aotdata.arm64</key>
@@ -2673,21 +2654,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cZmBrQ0gUIlNEkOURw9VQZZiGcrUakpFIv802kGTHtw=
+			IyCaUZZ00Yc8lGEMv+yXls/66raLzVu7Ob3s/MgjXo4=
 			</data>
 		</dict>
 		<key>System.Runtime.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vp1ZAQKYSZGjcmkGYCpzFkioL5Y8TPxVzD7ldXlQITE=
+			t+ZJsEUr6LqwsY64G5JA1sfoAALbK+pbDL0vjIBk2Hk=
 			</data>
 		</dict>
 		<key>aot-instances.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PjfGAHNixhAIxiXMJri8RwbCcHM7vAjtyJmKJajUp1g=
+			aMmdyThthxgplhK9mfjvfgM6kIkt2Zvn8jSg8bds0FA=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>

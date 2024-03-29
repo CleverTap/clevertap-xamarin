@@ -39,6 +39,10 @@
         "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "CleverTap.DotNet.iOS.Binding": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",

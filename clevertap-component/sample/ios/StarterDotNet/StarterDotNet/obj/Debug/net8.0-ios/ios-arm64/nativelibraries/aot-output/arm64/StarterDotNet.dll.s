@@ -1807,7 +1807,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "DB3AFB45-0789-4BA3-B0D1-16CC1CBD4B0A"
+	.asciz "ED79D0AB-A224-47AF-9DD2-46080756F4D1"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -1904,7 +1904,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0
-	.byte 189,111,146,90,42,87,174,181,207,43,204,156,137,162,69,108
+	.byte 77,44,108,49,103,64,142,123,130,224,79,252,189,94,226,44
 	.globl _mono_aot_module_StarterDotNet_info
 	.align 3
 _mono_aot_module_StarterDotNet_info:

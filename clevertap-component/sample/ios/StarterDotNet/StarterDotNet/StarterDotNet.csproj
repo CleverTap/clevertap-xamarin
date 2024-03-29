@@ -13,8 +13,6 @@
     <CreatePackage>false</CreatePackage>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CleverTap.DotNet.iOS.Binding">
-      <HintPath>..\..\..\..\src\ios\CleverTap.DotNet.iOS.Binding\CleverTap.DotNet.iOS.Binding\bin\Release\net8.0-ios\CleverTap.DotNet.iOS.Binding.dll</HintPath>
-    </Reference>
+    <PackageReference Include="CleverTap.DotNet.iOS.Binding" Version="1.0.0" />
   </ItemGroup>
 </Project>

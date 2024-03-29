@@ -172,7 +172,6 @@
 /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/System.Private.CoreLib.dll
 /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/Microsoft.iOS.dll
 /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/StarterDotNet.pdb
-/Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/CleverTap.DotNet.iOS.Binding.pdb
 /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/Microsoft.iOS.pdb
 /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/libSystem.Globalization.Native.dylib
 /Users/nishant.kumar/clevertap-xamarin/clevertap-component/sample/ios/StarterDotNet/StarterDotNet/bin/Debug/net8.0-ios/iossimulator-x64/publish/../StarterDotNet.app/libSystem.IO.Compression.Native.dylib
