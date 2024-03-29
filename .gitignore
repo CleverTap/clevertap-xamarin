@@ -1,6 +1,9 @@
 clevertap-xamarin.iml
 .idea/
 .DS_Store
+/clevertap-component/src/android/DotNetBinding/CleverTap.DotNet.Android.Binding/obj/
+/clevertap-component/src/android/DotNetBinding/CleverTap.DotNet.Android.Binding/bin/
+/clevertap-component/src/android/DotNetBinding/CleverTap.DotNet.Android.Binding/.vs
 
 /clevertap-component/src/android/XamarinBinding/.vs/
 /clevertap-component/src/android/XamarinBinding/CleverTap.Bindings.Android/obj/
