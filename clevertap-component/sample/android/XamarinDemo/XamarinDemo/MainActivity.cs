@@ -17,6 +17,7 @@ using Java.Lang;
 using Com.Clevertap.Android.Sdk.Displayunits;
 using Com.Clevertap.Android.Sdk.Product_config;
 using AndroidX.AppCompat.App;
+using Firebase.Messaging;
 
 namespace XamarinDemo
 {
@@ -50,6 +51,8 @@ namespace XamarinDemo
             featureFlag();
 
             productConfig();
+
+            clientSideInApps();
 
         }
 
@@ -182,13 +185,18 @@ namespace XamarinDemo
         // Sending FCM token to Clevertap
         private async System.Threading.Tasks.Task PushTokenAsync()
         {
-            var instanceIdResult = await FirebaseInstanceId.Instance.GetInstanceId().AsAsync<IInstanceIdResult>();
-            string token = instanceIdResult.Token;
+
+            string token = (await FirebaseMessaging.Instance.GetToken()).ToString();
 
             cleverTapAPI.PushFcmRegistrationId(token, true);
             Log.Debug("TOken", "token Sent" + token);
         }
 
+        private void clientSideInApps()
+        {
+            cleverTapAPI.FetchInApps(null);
+            cleverTapAPI.ClearInAppResources(true);
+        }
         //init Inapp
         private void inapp()
         {
