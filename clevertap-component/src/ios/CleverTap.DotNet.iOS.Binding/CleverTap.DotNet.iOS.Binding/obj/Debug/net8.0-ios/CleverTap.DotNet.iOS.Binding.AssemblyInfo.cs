@@ -10,13 +10,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CleverTap.DotNet.iOS.Binding")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CleverTap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2+6412aa14fe11740d4f2d79939ff7b03f462c7b1e")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("The CleverTap .NET iOS Binding for Mobile Customer Engagement and Analytics solut" +
+    "ions")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c723f71500737508c69593ff9a20794343cda4a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleverTap.DotNet.iOS.Binding")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleverTap.DotNet.iOS.Binding")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS17.2")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("iOS17.2")]
 

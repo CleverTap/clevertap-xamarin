@@ -3,9 +3,13 @@
   <metadata>
     <id>CleverTap.DotNet.iOS.Binding</id>
     <version>1.0.0</version>
-    <authors>CleverTap.DotNet.iOS.Binding</authors>
-    <description>Package Description</description>
-    <repository type="git" commit="6412aa14fe11740d4f2d79939ff7b03f462c7b1e" />
+    <authors>CleverTap</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/CleverTap/clevertap-xamarin</projectUrl>
+    <description>The CleverTap .NET iOS Binding for Mobile Customer Engagement and Analytics solutions</description>
+    <repository type="git" commit="c723f71500737508c69593ff9a20794343cda4a4" />
     <dependencies>
       <group targetFramework="net8.0-ios17.2" />
     </dependencies>
@@ -229,5 +233,7 @@
     <file src="/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.resources/SDWebImage.framework/PrivateHeaders/SDWeakProxy.h" target="lib/net8.0-ios17.2/CleverTap.DotNet.iOS.Binding.resources/SDWebImage.framework/PrivateHeaders/SDWeakProxy.h" />
     <file src="/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.resources/SDWebImage.framework/PrivateHeaders/SDWebImageTransitionInternal.h" target="lib/net8.0-ios17.2/CleverTap.DotNet.iOS.Binding.resources/SDWebImage.framework/PrivateHeaders/SDWebImageTransitionInternal.h" />
     <file src="/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.resources/SDWebImage.framework/PrivateHeaders/UIColor+SDHexString.h" target="lib/net8.0-ios17.2/CleverTap.DotNet.iOS.Binding.resources/SDWebImage.framework/PrivateHeaders/UIColor+SDHexString.h" />
+    <file src="/Users/nishant.kumar/clevertap-xamarin/README.md" target="README.md" />
+    <file src="/Users/nishant.kumar/clevertap-xamarin/LICENSE" target="LICENSE" />
   </files>
 </package>

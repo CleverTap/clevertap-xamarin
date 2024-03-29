@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iE02BxDgtJm2ox96uYeWt09M0lCq4ZnU78Jrz85HqXo/r0pbjaDtIZGqrvMk/cvM7XYsBjBGArZ4K3CENkVpTQ==",
+  "dgSpecHash": "AyCvbPOnRUeOrDLwXqM13JdB693UBJp+re9ASrk4mg6MrxsCcLvCxXuJ5jLt6wNwfz2rtjDuFuOZT8p1kwhy+A==",
   "success": true,
   "projectFilePath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
   "expectedPackageFiles": [

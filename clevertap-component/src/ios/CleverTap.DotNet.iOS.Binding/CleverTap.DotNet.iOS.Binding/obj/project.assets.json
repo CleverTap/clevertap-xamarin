@@ -72,7 +72,7 @@
     "/Users/nishant.kumar/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.2",
+    "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
       "projectName": "CleverTap.DotNet.iOS.Binding",
