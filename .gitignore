@@ -1,12 +1,15 @@
 clevertap-xamarin.iml
 .idea/
 .DS_Store
+/clevertap-component/src/android/DotNetBinding/CleverTap.DotNet.Android.Binding/obj/
+/clevertap-component/src/android/DotNetBinding/CleverTap.DotNet.Android.Binding/bin/
+/clevertap-component/src/android/DotNetBinding/CleverTap.DotNet.Android.Binding/.vs
 
-/clevertap-component/src/android/CleverTap.Bindings.Android/obj/
-/clevertap-component/src/android/CleverTap.Bindings.Android/bin/
+/clevertap-component/src/android/XamarinBinding/CleverTap.Bindings.Android/obj/
+/clevertap-component/src/android/XamarinBinding/CleverTap.Bindings.Android/bin/
 /clevertap-component/sample/android/XamarinDemo/XamarinDemo/obj/
 /clevertap-component/sample/android/XamarinDemo/XamarinDemo/bin/
-/clevertap-component/src/android/CleverTap.Bindings.Android/mono_crash.175eeb7031.0.json
+/clevertap-component/src/android/XamarinBinding/CleverTap.Bindings.Android/mono_crash.175eeb7031.0.json
 
 /clevertap-component/sample/ios/Starter/bin/
 /clevertap-component/sample/ios/Starter/obj/
