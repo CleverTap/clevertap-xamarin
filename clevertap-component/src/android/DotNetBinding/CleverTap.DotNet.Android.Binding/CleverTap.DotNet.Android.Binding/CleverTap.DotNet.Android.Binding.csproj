@@ -4,6 +4,9 @@
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Version>1.0.0</Version>
+    <Description>The Clevertap DOTNET Binding library for Mobile Customer Engagement and Analytics solutions</Description>
+    <Configurations>Release</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Jars\" />
