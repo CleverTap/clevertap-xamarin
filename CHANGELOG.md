@@ -1,4 +1,10 @@
 # CHANGE LOG
+### Version 4.0.0 (March 29, 2024)
+
+* Adds support for .NET binding library for .NET and MAUI applications.
+* Supports [CleverTap Android SDK v6.1.1](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev6.1.1)
+* Supports [CleverTap iOS SDK v4.1.6](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/4.1.6)
+
 ### Version 3.0.0 (November 29, 2023)
 
 * Adds support for Android 13
