@@ -1,4 +1,9 @@
 # CHANGE LOG
+### Version 1.0.1 DotNet (May 14, 2024)
+
+* Adds privacy manifest file for iOS.
+* Supports [CleverTap iOS SDK v6.2.1](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/6.2.1)
+
 ### Version 1.0.0 DotNet (March 29, 2024)
 
 * Adds support for .NET binding library for .NET and MAUI applications.
