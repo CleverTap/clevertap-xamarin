@@ -1,23 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.Workbench ActiveDocument="CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj">
     <Files>
-      <File FileName="CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj" Line="37" Column="72" />
-      <File FileName="CleverTap.DotNet.iOS.Binding/ApiDefinition.cs" />
+      <File FileName="CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj" Line="10" Column="50" />
+      <File FileName="CleverTap.DotNet.iOS.Binding/ApiDefinition.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CleverTap.DotNet.iOS.Binding">
-            <Node name="CleverTap.DotNet.iOS.Binding" expanded="True" />
+          <Node name="CleverTap.DotNet.iOS.Binding" expanded="True">
+            <Node name="CleverTap.DotNet.iOS.Binding" selected="True" />
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
 </Properties>

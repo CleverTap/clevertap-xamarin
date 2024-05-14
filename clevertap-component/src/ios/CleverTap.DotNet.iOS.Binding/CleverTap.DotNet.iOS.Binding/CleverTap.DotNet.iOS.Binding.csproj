@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageId>CleverTap.DotNet.iOS.Binding</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>CleverTap</Authors>
     <Description>The CleverTap .NET iOS Binding for Mobile Customer Engagement and Analytics solutions</Description>
     <PackageProjectUrl>https://github.com/CleverTap/clevertap-xamarin</PackageProjectUrl>
