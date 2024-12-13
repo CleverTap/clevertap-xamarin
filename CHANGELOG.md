@@ -1,4 +1,8 @@
 # CHANGE LOG
+### Version 2.0.0 DotNet (December 13, 2024)
+
+* Fixes an issue for android where type or namespace `Clevertap` doesn't exist in the namespace `com`
+
 ### Version 1.0.1 DotNet (May 14, 2024)
 
 * Adds privacy manifest file for iOS.
