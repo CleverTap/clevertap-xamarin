@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageId>CleverTap.DotNet.iOS.Binding</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <Authors>CleverTap</Authors>
     <Description>The CleverTap .NET iOS Binding for Mobile Customer Engagement and Analytics solutions</Description>
     <PackageProjectUrl>https://github.com/CleverTap/clevertap-xamarin</PackageProjectUrl>
@@ -21,15 +21,13 @@
     <ObjcBindingCoreSource Include="Structs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="CleverTapSDK.framework">
+    <NativeReference Include="CleverTapSDK.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
-      <Frameworks>Foundation</Frameworks>
     </NativeReference>
-    <NativeReference Include="SDWebImage.framework">
+    <NativeReference Include="SDWebImage.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
-      <Frameworks>Foundation</Frameworks>
     </NativeReference>
   </ItemGroup>
   <ItemGroup>

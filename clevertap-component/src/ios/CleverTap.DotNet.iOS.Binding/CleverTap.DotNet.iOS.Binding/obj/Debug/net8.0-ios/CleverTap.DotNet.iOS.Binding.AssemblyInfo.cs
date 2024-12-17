@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("The CleverTap .NET iOS Binding for Mobile Customer Engagement and Analytics solut" +
     "ions")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45e32bf0b56affcbfef3eef759d8713d59a6b4a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd10d3f01e8c505369a6e54328c9dd2f3a725c41")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleverTap.DotNet.iOS.Binding")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleverTap.DotNet.iOS.Binding")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

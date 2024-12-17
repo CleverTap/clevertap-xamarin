@@ -1,4 +1,9 @@
 # CHANGE LOG
+### Version 1.1.0 iOS DotNet (December 17, 2024)
+
+* Fixes DotNet iOS build issue on different simulators.
+* Supports [CleverTap iOS SDK v7.0.3](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/7.0.3)
+
 ### Version 2.0.0 DotNet (December 13, 2024)
 
 * Fixes an issue for android where type or namespace `Clevertap` doesn't exist in the namespace `com`

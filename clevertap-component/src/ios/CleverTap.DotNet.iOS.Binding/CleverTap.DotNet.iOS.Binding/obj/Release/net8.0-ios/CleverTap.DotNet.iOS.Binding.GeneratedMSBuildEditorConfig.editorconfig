@@ -12,6 +12,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CleverTapSDK
-build_property.ProjectDir = /Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/
+build_property.ProjectDir = /Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
