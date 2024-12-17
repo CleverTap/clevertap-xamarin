@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {}
+    "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {}
   },
   "projects": {
-    "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {
-      "version": "1.0.0",
+    "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {
+      "version": "1.0.3",
       "restore": {
-        "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+        "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
         "projectName": "CleverTap.DotNet.iOS.Binding",
-        "projectPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+        "projectPath": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
         "packagesPath": "/Users/nishant.kumar/.nuget/packages/",
-        "outputPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
+        "outputPath": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nishant.kumar/.nuget/NuGet/NuGet.Config"
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
