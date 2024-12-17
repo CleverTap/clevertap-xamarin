@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Configurations>Release</Configurations>
     <PackageId>CleverTap.DotNet.Android.Binding</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>2.0.0</PackageVersion>
     <Description>The Clevertap DOTNET Android Binding for Mobile Customer Engagement and Analytics solutions</Description>
     <Authors>CleverTap</Authors>
     <PackageProjectUrl>https://github.com/CleverTap/clevertap-xamarin</PackageProjectUrl>
