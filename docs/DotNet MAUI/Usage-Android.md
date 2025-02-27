@@ -194,7 +194,7 @@ CleverTapAPI.GetDefaultInstance(Android.App.Application.Context).ShowAppInbox();
 ```c#
 public class MainActivity : FragmentActivity, ICTInboxListener, IInboxMessageButtonListener, IInboxMessageListener
 {
-    protected override void OnResume() {
+    protected override void OnCreate() {
         cleverTapInstance.CTNotificationInboxListener = this;
         cleverTapInstance.SetInboxMessageButtonListener(this);
         cleverTapInstance.SetCTInboxMessageListener(this);
@@ -293,12 +293,12 @@ To use Header & Footer InApp Notification Templates of CleverTap, the `MainActiv
 public class MainActivity : FragmentActivity {}
 ```
 
-#### CleverTap In-App Callbacks
+#### In-App Callbacks
 1. Registering the Listeners
 ```c#
 public class MainActivity : FragmentActivity, IInAppNotificationButtonListener, IInAppNotificationListener
 {
-    protected override void OnResume() {
+    protected override void OnCreate() {
         cleverTapInstance.InAppNotificationListener = this;
         cleverTapInstance.SetInAppNotificationButtonListener(this);
     }
@@ -340,8 +340,26 @@ public void OnInAppButtonClick(IDictionary<string, string>? payload)
 }
 ```
 
+### Native Display
+
+#### Native Display Callbacks
+Refer to the [Android Native Display](https://developer.clevertap.com/docs/android-native-display#get-the-nativedisplayunits) for detailed guidance and inspiration
+1. Registering the Listeners
+```c#
+public class MainActivity : FragmentActivity, IDisplayUnitListener
+{
+    protected override void OnCreate() {
+        cleverTapInstance.SetDisplayUnitListener(this);
+    }
+}
+```
+
+2. Implementing the Interface Members
+```c#
+public void OnDisplayUnitsLoaded(IList<CleverTapDisplayUnit> displayUnits)
+{
+    Log.Debug("CLEVERTAP", "Display Units Loaded");
+}
+```
 
 For more advanced features, refer to the [Android Advanced Features](https://developer.clevertap.com/docs/android-advanced-features) documentation for detailed guidance and inspiration
-
-
-
