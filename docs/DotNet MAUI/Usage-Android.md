@@ -343,7 +343,7 @@ public void OnInAppButtonClick(IDictionary<string, string>? payload)
 ### Native Display
 
 #### Native Display Callbacks
-Refer to the [Android Native Display](https://developer.clevertap.com/docs/android-native-display#get-the-nativedisplayunits) for detailed guidance and inspiration
+Refer to the [Android Native Display](https://developer.clevertap.com/docs/android-native-display#get-the-nativedisplayunits) for detailed guidance.
 1. Registering the Listeners
 ```c#
 public class MainActivity : FragmentActivity, IDisplayUnitListener
@@ -362,4 +362,4 @@ public void OnDisplayUnitsLoaded(IList<CleverTapDisplayUnit> displayUnits)
 }
 ```
 
-For more advanced features, refer to the [Android Advanced Features](https://developer.clevertap.com/docs/android-advanced-features) documentation for detailed guidance and inspiration
+For more advanced features, refer to the [Android Advanced Features](https://developer.clevertap.com/docs/android-advanced-features) documentation for detailed guidance and inspiration.
