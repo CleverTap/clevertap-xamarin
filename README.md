@@ -25,13 +25,13 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 * Android - Add `CleverTap.DotNet.Android.Binding` to NuGet Packages. This targets .NET 8.0+ Android and Multi-platform App UI (MAUI) apps.
 * iOS - Add `CleverTap.DotNet.iOS.Binding` to NuGet Packages. This targets .NET 8.0+ iOS and Multi-platform App UI (MAUI) apps.
 
-## 🚀 Xamarin Installation and Quick Start
+## 🚀 DotNet MAUI/Xamarin Installation and Quick Start
 
 ## 👨‍💻 Android Guide
 
-1. Install the SDK
-
-   Use the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) and add it to the References.
+1. Install the SDK 
+   - For `Xamarin`, add the [CleverTap.Bindings.Android DLL file](https://github.com/CleverTap/clevertap-xamarin/tree/master/clevertap-component/lib/android) to the References.
+   - For `DotNet MAUI`, add [CleverTap.DotNet.Android.Binding](https://www.nuget.org/packages/CleverTap.DotNet.Android.Binding) to NuGet Packages.
 
 2. Add Your CleverTap Credentials in AndroidManifest.xml
 
@@ -43,6 +43,10 @@ For more information check out our [website](https://clevertap.com/ "CleverTap")
 <meta-data
     android:name="CLEVERTAP_TOKEN"
     android:value="Your CleverTap Account Token"/>
+
+<meta-data
+    android:name="CLEVERTAP_REGION"
+    android:value="Your CleverTap Account Region"/>
 
 <!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
 <meta-data
