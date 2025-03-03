@@ -74,7 +74,7 @@ cleverTapInstance.OnUserLogin(profile);
 #### Setup
 1. Add `Xamarin.Firebase.Messaging` and `Xamarin.GooglePlayServices.Base` to the NuGet Packages.
 2. Add `google-services.json` file to your project. For more details, refer to [Firebase Cloud Messaging setup](https://docs.microsoft.com/en-us/xamarin/android/data-cloud/google-messaging/firebase-cloud-messaging).
-3. Create a class that extends `FirebaseMessagingService`. This class is responsible for creating a notification, recording push impressions and registering FCM token.
+3. Create a class that extends `FirebaseMessagingService`. This class is responsible for creating a notification and registering an FCM token.
 ```c#
 using Android.Util;
 using Firebase.Messaging;
@@ -102,9 +102,6 @@ namespace androiddemo
 
             //Step 2: Creating Notification
             CleverTapAPI.CreateNotification(this, bundle);
-
-            //Step 3: Raising push impression
-            cleverTapInstance.PushNotificationViewedEvent(bundle);
         }
 
         public override void OnNewToken(string token)
