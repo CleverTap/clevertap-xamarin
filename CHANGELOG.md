@@ -1,4 +1,8 @@
 # CHANGE LOG
+### Version 3.0.0 DotNet (September 17, 2025)
+* Supports [CleverTap Android SDK v7.5.2](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev7.5.2)
+* Adds support for Android 15, making it compliant with Android 15 requirements. Details [here](https://developer.android.com/about/versions/15/summary)
+
 ### Version 1.1.0 iOS DotNet (December 17, 2024)
 
 * Fixes DotNet iOS build issue on different simulators.

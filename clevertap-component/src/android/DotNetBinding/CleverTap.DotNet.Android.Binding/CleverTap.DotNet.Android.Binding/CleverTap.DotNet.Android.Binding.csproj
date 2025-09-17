@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Configurations>Release</Configurations>
     <PackageId>CleverTap.DotNet.Android.Binding</PackageId>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>3.0.0</PackageVersion>
     <Description>The Clevertap DOTNET Android Binding for Mobile Customer Engagement and Analytics solutions</Description>
     <Authors>CleverTap</Authors>
     <PackageProjectUrl>https://github.com/CleverTap/clevertap-xamarin</PackageProjectUrl>
@@ -20,8 +20,8 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="../../../../../../README.md" Pack="true" PackagePath=""/>
-    <None Include="../../../../../../LICENSE" Pack="true" PackagePath=""/>
+    <None Include="../../../../../../README.md" Pack="true" PackagePath="" />
+    <None Include="../../../../../../LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />

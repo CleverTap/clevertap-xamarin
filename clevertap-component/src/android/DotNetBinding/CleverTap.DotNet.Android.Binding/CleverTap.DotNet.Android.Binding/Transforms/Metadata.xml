@@ -17,5 +17,15 @@
 
   <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAny' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;']]/parameter[1]" name="managedType">System.Collections.ICollection</attr>
   <attr path="/api/package[@name='com.clevertap.android.sdk.task']/class[@name='IOExecutor']/method[@name='invokeAny' and count(parameter)=3 and parameter[1][@type='java.util.Collection&lt;? extends java.util.concurrent.Callable&lt;T&gt;&gt;'] and parameter[2][@type='long'] and parameter[3][@type='java.util.concurrent.TimeUnit']]/parameter[1]" name="managedType">System.Collections.ICollection</attr>
+
+  <attr path="/api/package[@name='com.clevertap.android.sdk.inapp']/class[@name='CTInAppAction.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- Fix TemplateBuilder to properly implement RawThisRef -->
+  <attr path="/api/package[@name='com.clevertap.android.sdk.inapp.customtemplates']/class[@name='CustomTemplate.FunctionBuilder']/method[@name='getThisRef' and count(parameter)=0]" name="propertyName">RawThisRef</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.inapp.customtemplates']/class[@name='CustomTemplate.FunctionBuilder']/method[@name='getThisRef' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+  
+  <!-- Fix TemplateBuilder to properly implement RawThisRef -->
+  <attr path="/api/package[@name='com.clevertap.android.sdk.inapp.customtemplates']/class[@name='CustomTemplate.TemplateBuilder']/method[@name='getThisRef' and count(parameter)=0]" name="propertyName">RawThisRef</attr>
+  <attr path="/api/package[@name='com.clevertap.android.sdk.inapp.customtemplates']/class[@name='CustomTemplate.TemplateBuilder']/method[@name='getThisRef' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
 </metadata>
 
