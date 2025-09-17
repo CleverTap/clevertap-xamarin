@@ -1,14 +1,18 @@
 # CHANGE LOG
+### Version 3.0.0 Android DotNet (September 17, 2025)
+* Supports [CleverTap Android SDK v7.5.2](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev7.5.2)
+* Adds support for Android 15, making it compliant with Android 15 requirements. Details [here](https://developer.android.com/about/versions/15/summary)
+
 ### Version 1.1.0 iOS DotNet (December 17, 2024)
 
 * Fixes DotNet iOS build issue on different simulators.
 * Supports [CleverTap iOS SDK v7.0.3](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/7.0.3)
 
-### Version 2.0.0 DotNet (December 13, 2024)
+### Version 2.0.0 Android DotNet (December 13, 2024)
 
 * Fixes an issue for android where type or namespace `Clevertap` doesn't exist in the namespace `com`
 
-### Version 1.0.1 DotNet (May 14, 2024)
+### Version 1.0.1 iOS DotNet (May 14, 2024)
 
 * Adds privacy manifest file for iOS.
 * Supports [CleverTap iOS SDK v6.2.1](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/6.2.1)
