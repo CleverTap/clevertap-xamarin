@@ -29,5 +29,13 @@ framework module CleverTapSDK {
     header "CTCustomTemplate.h"
     header "CTTemplateContext.h"
     header "CTCustomTemplatesManager.h"
+    header "CTLocalInApp.h"
+    header "CleverTap+PushPermission.h"
+    header "CTJsonTemplateProducer.h"
     export *
+}
+
+module CleverTapSDK.Swift {
+  header "CleverTapSDK-Swift.h"
+  requires objc
 }
