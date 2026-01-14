@@ -2,9 +2,11 @@
 	<NativeReference Name="CleverTapSDK.xcframework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
+		<IdentityWithoutPathSeparatorSuffix>CleverTapSDK.xcframework</IdentityWithoutPathSeparatorSuffix>
 		<IsCxx></IsCxx>
 		<Kind>Framework</Kind>
 		<LinkerFlags></LinkerFlags>
+		<LinkWithSwiftSystemLibraries></LinkWithSwiftSystemLibraries>
 		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
 		<SmartLink>False</SmartLink>
 		<WeakFrameworks></WeakFrameworks>
@@ -12,9 +14,11 @@
 	<NativeReference Name="SDWebImage.xcframework">
 		<ForceLoad></ForceLoad>
 		<Frameworks></Frameworks>
+		<IdentityWithoutPathSeparatorSuffix>SDWebImage.xcframework</IdentityWithoutPathSeparatorSuffix>
 		<IsCxx></IsCxx>
 		<Kind>Framework</Kind>
 		<LinkerFlags></LinkerFlags>
+		<LinkWithSwiftSystemLibraries></LinkWithSwiftSystemLibraries>
 		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
 		<SmartLink>False</SmartLink>
 		<WeakFrameworks></WeakFrameworks>

@@ -64,7 +64,329 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "IdentityKeys", Selector = "identityKeys", PropertyType = typeof (NSObject[]), GetterSelector = "identityKeys", SetterSelector = "setIdentityKeys:", ArgumentSemantic = ArgumentSemantic.Retain)]
 	public partial interface ICleverTapInstanceConfig : INativeObject, IDisposable
 	{
+		[global::Foundation.OptionalMember]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static T? CreateInstance<T> (string accountId, string accountToken) where T: NSObject, ICleverTapInstanceConfig
+		{
+			if (accountId is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountId));
+			if (accountToken is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountToken));
+			var nsaccountId = CFString.CreateNative (accountId);
+			var nsaccountToken = CFString.CreateNative (accountToken);
+			T? ret;
+			IntPtr __handle__;
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend (Class.GetHandle (typeof (T)), Selector.GetHandle ("alloc"));
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend_NativeHandle_NativeHandle (__handle__, Selector.GetHandle ("initWithAccountId:accountToken:"), nsaccountId, nsaccountToken);
+			ret =  global::ObjCRuntime.Runtime.GetINativeObject<T> (__handle__, true);
+			CFString.ReleaseNative (nsaccountId);
+			CFString.ReleaseNative (nsaccountToken);
+			return ret;
+		}
+		[global::Foundation.OptionalMember]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static T? CreateInstance<T> (string accountId, string accountToken, string accountRegion) where T: NSObject, ICleverTapInstanceConfig
+		{
+			if (accountId is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountId));
+			if (accountToken is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountToken));
+			if (accountRegion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountRegion));
+			var nsaccountId = CFString.CreateNative (accountId);
+			var nsaccountToken = CFString.CreateNative (accountToken);
+			var nsaccountRegion = CFString.CreateNative (accountRegion);
+			T? ret;
+			IntPtr __handle__;
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend (Class.GetHandle (typeof (T)), Selector.GetHandle ("alloc"));
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (__handle__, Selector.GetHandle ("initWithAccountId:accountToken:accountRegion:"), nsaccountId, nsaccountToken, nsaccountRegion);
+			ret =  global::ObjCRuntime.Runtime.GetINativeObject<T> (__handle__, true);
+			CFString.ReleaseNative (nsaccountId);
+			CFString.ReleaseNative (nsaccountToken);
+			CFString.ReleaseNative (nsaccountRegion);
+			return ret;
+		}
+		[global::Foundation.OptionalMember]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static T? CreateInstance<T> (string accountId, string accountToken, string proxyDomain, string spikyProxyDomain) where T: NSObject, ICleverTapInstanceConfig
+		{
+			if (accountId is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountId));
+			if (accountToken is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountToken));
+			if (proxyDomain is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (proxyDomain));
+			if (spikyProxyDomain is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (spikyProxyDomain));
+			var nsaccountId = CFString.CreateNative (accountId);
+			var nsaccountToken = CFString.CreateNative (accountToken);
+			var nsproxyDomain = CFString.CreateNative (proxyDomain);
+			var nsspikyProxyDomain = CFString.CreateNative (spikyProxyDomain);
+			T? ret;
+			IntPtr __handle__;
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend (Class.GetHandle (typeof (T)), Selector.GetHandle ("alloc"));
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (__handle__, Selector.GetHandle ("initWithAccountId:accountToken:proxyDomain:spikyProxyDomain:"), nsaccountId, nsaccountToken, nsproxyDomain, nsspikyProxyDomain);
+			ret =  global::ObjCRuntime.Runtime.GetINativeObject<T> (__handle__, true);
+			CFString.ReleaseNative (nsaccountId);
+			CFString.ReleaseNative (nsaccountToken);
+			CFString.ReleaseNative (nsproxyDomain);
+			CFString.ReleaseNative (nsspikyProxyDomain);
+			return ret;
+		}
+		[DynamicDependencyAttribute ("AccountId")]
+		[DynamicDependencyAttribute ("AccountRegion")]
+		[DynamicDependencyAttribute ("AccountToken")]
+		[DynamicDependencyAttribute ("AnalyticsOnly")]
+		[DynamicDependencyAttribute ("DisableAppLaunchedEvent")]
+		[DynamicDependencyAttribute ("DisableIDFV")]
+		[DynamicDependencyAttribute ("EnablePersonalization")]
+		[DynamicDependencyAttribute ("IdentityKeys")]
+		[DynamicDependencyAttribute ("LogLevel")]
+		[DynamicDependencyAttribute ("ProxyDomain")]
+		[DynamicDependencyAttribute ("SpikyProxyDomain")]
+		[DynamicDependencyAttribute ("UseCustomCleverTapId")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		static ICleverTapInstanceConfig ()
+		{
+			GC.KeepAlive (null);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string AccountId {
+			[Export ("accountId", ArgumentSemantic.Retain)]
+			get {
+				return _GetAccountId (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetAccountId (ICleverTapInstanceConfig This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("accountId")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string AccountToken {
+			[Export ("accountToken", ArgumentSemantic.Retain)]
+			get {
+				return _GetAccountToken (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetAccountToken (ICleverTapInstanceConfig This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("accountToken")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? AccountRegion {
+			[Export ("accountRegion", ArgumentSemantic.Retain)]
+			get {
+				return _GetAccountRegion (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetAccountRegion (ICleverTapInstanceConfig This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("accountRegion")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? ProxyDomain {
+			[Export ("proxyDomain", ArgumentSemantic.Retain)]
+			get {
+				return _GetProxyDomain (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetProxyDomain (ICleverTapInstanceConfig This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("proxyDomain")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? SpikyProxyDomain {
+			[Export ("spikyProxyDomain", ArgumentSemantic.Retain)]
+			get {
+				return _GetSpikyProxyDomain (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetSpikyProxyDomain (ICleverTapInstanceConfig This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("spikyProxyDomain")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool AnalyticsOnly {
+			[Export ("analyticsOnly")]
+			get {
+				return _GetAnalyticsOnly (this);
+			}
+			[Export ("setAnalyticsOnly:")]
+			set {
+				_SetAnalyticsOnly (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetAnalyticsOnly (ICleverTapInstanceConfig This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("analyticsOnly"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetAnalyticsOnly (ICleverTapInstanceConfig This, bool value)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setAnalyticsOnly:"), value ? (byte) 1 : (byte) 0);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool DisableAppLaunchedEvent {
+			[Export ("disableAppLaunchedEvent")]
+			get {
+				return _GetDisableAppLaunchedEvent (this);
+			}
+			[Export ("setDisableAppLaunchedEvent:")]
+			set {
+				_SetDisableAppLaunchedEvent (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetDisableAppLaunchedEvent (ICleverTapInstanceConfig This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("disableAppLaunchedEvent"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetDisableAppLaunchedEvent (ICleverTapInstanceConfig This, bool value)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setDisableAppLaunchedEvent:"), value ? (byte) 1 : (byte) 0);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool EnablePersonalization {
+			[Export ("enablePersonalization")]
+			get {
+				return _GetEnablePersonalization (this);
+			}
+			[Export ("setEnablePersonalization:")]
+			set {
+				_SetEnablePersonalization (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetEnablePersonalization (ICleverTapInstanceConfig This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("enablePersonalization"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetEnablePersonalization (ICleverTapInstanceConfig This, bool value)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setEnablePersonalization:"), value ? (byte) 1 : (byte) 0);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool UseCustomCleverTapId {
+			[Export ("useCustomCleverTapId")]
+			get {
+				return _GetUseCustomCleverTapId (this);
+			}
+			[Export ("setUseCustomCleverTapId:")]
+			set {
+				_SetUseCustomCleverTapId (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetUseCustomCleverTapId (ICleverTapInstanceConfig This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("useCustomCleverTapId"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetUseCustomCleverTapId (ICleverTapInstanceConfig This, bool value)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setUseCustomCleverTapId:"), value ? (byte) 1 : (byte) 0);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool DisableIDFV {
+			[Export ("disableIDFV")]
+			get {
+				return _GetDisableIDFV (this);
+			}
+			[Export ("setDisableIDFV:")]
+			set {
+				_SetDisableIDFV (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetDisableIDFV (ICleverTapInstanceConfig This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("disableIDFV"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetDisableIDFV (ICleverTapInstanceConfig This, bool value)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setDisableIDFV:"), value ? (byte) 1 : (byte) 0);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual CleverTapLogLevel LogLevel {
+			[Export ("logLevel", ArgumentSemantic.Assign)]
+			get {
+				return _GetLogLevel (this);
+			}
+			[Export ("setLogLevel:", ArgumentSemantic.Assign)]
+			set {
+				_SetLogLevel (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static CleverTapLogLevel _GetLogLevel (ICleverTapInstanceConfig This)
+		{
+			return (CleverTapLogLevel) global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("logLevel"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetLogLevel (ICleverTapInstanceConfig This, CleverTapLogLevel value)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_int (This.Handle, Selector.GetHandle ("setLogLevel:"), (int)value);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual NSObject[]? IdentityKeys {
+			[Export ("identityKeys", ArgumentSemantic.Retain)]
+			get {
+				return _GetIdentityKeys (this);
+			}
+			[Export ("setIdentityKeys:", ArgumentSemantic.Retain)]
+			set {
+				_SetIdentityKeys (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSObject[] _GetIdentityKeys (ICleverTapInstanceConfig This)
+		{
+			return CFArray.ArrayFromHandle<NSObject>(global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("identityKeys")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetIdentityKeys (ICleverTapInstanceConfig This, NSObject[]? value)
+		{
+			var nsa_value = value is null ? null : NSArray.FromNSObjects (value);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setIdentityKeys:"), nsa_value.GetHandle ());
+			if (nsa_value is not null)
+				nsa_value.Dispose ();
+		}
 	}
+	/// <summary>Extension methods to the <see cref="ICleverTapInstanceConfig" /> interface to support all the methods from the CleverTapInstanceConfig protocol.</summary>
+	/// <remarks>
+	///   <para>The extension methods for <see cref="ICleverTapInstanceConfig" /> interface allow developers to treat instances of the interface as having all the optional methods of the original CleverTapInstanceConfig protocol. Since the interface only contains the required members, these extension methods allow developers to call the optional members of the protocol.</para>
+	/// </remarks>
 	public unsafe static partial class CleverTapInstanceConfig_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static string GetAccountId (this ICleverTapInstanceConfig This)
@@ -167,7 +489,7 @@ namespace CleverTapSDK {
 			return CFArray.ArrayFromHandle<NSObject>(global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("identityKeys")))!;
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetIdentityKeys (this ICleverTapInstanceConfig This, NSObject[] value)
+		public static void SetIdentityKeys (this ICleverTapInstanceConfig This, NSObject[]? value)
 		{
 			var nsa_value = value is null ? null : NSArray.FromNSObjects (value);
 			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setIdentityKeys:"), nsa_value.GetHandle ());
@@ -189,7 +511,59 @@ namespace CleverTapSDK {
 	public unsafe partial class CleverTapInstanceConfig : NSObject, ICleverTapInstanceConfig {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly NativeHandle class_ptr = Class.GetHandle ("CleverTapInstanceConfig");
+		/// <summary>The Objective-C class handle for this class.</summary>
+		/// <value>The pointer to the Objective-C class.</value>
+		/// <remarks>
+		///     Each managed class mirrors an unmanaged Objective-C class.
+		///     This value contains the pointer to the Objective-C class.
+		///     It is similar to calling the managed <see cref="ObjCRuntime.Class.GetHandle(string)" /> or the native <see href="https://developer.apple.com/documentation/objectivec/1418952-objc_getclass">objc_getClass</see> method with the type name.
+		/// </remarks>
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
+		/// <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+		/// <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor should be called by derived classes when they completely construct the object in managed code and merely want the runtime to allocate and initialize the <see cref="Foundation.NSObject" />.
+		///         This is required to implement the two-step initialization process that Objective-C uses, the first step is to perform the object allocation, the second step is to initialize the object.
+		///         When developers invoke this constructor, they take advantage of a direct path that goes all the way up to <see cref="Foundation.NSObject" /> to merely allocate the object's memory and bind the Objective-C and C# objects together.
+		///         The actual initialization of the object is up to the developer.
+		///     </para>
+		///     <para>
+		///         This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place.
+		///         Once the allocation has taken place, the constructor has to initialize the object.
+		///         With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+		///     </para>
+		///     <para>It is the developer's responsibility to completely initialize the object if they chain up using this constructor chain.</para>
+		///     <para>
+		///         In general, if the developer's constructor invokes the corresponding base implementation, then it should also call an Objective-C init method.
+		///         If this is not the case, developers should instead chain to the proper constructor in their class.
+		///     </para>
+		///     <para>
+		///         The argument value is ignored and merely ensures that the only code that is executed is the construction phase is the basic <see cref="Foundation.NSObject" /> allocation and runtime type registration.
+		///         Typically the chaining would look like this:
+		///     </para>
+		///     <example>
+		///             <code lang="csharp lang-csharp"><![CDATA[
+		/// //
+		/// // The NSObjectFlag constructor merely allocates the object and registers the C# class with the Objective-C runtime if necessary.
+		/// // No actual initXxx method is invoked, that is done later in the constructor
+		/// //
+		/// // This is taken from the iOS SDK's source code for the UIView class:
+		/// //
+		/// [Export ("initWithFrame:")]
+		/// public UIView (System.Drawing.RectangleF frame) : base (NSObjectFlag.Empty)
+		/// {
+		///     // Invoke the init method now.
+		///     var initWithFrame = new Selector ("initWithFrame:").Handle;
+		///     if (IsDirectBinding) {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSend_CGRect (this.Handle, initWithFrame, frame);
+		///     } else {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSendSuper_CGRect (this.SuperHandle, initWithFrame, frame);
+		///     }
+		/// }
+		/// ]]></code>
+		///     </example>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CleverTapInstanceConfig (NSObjectFlag t) : base (t)
@@ -197,6 +571,14 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
+		/// <summary>A constructor used when creating managed representations of unmanaged objects. Called by the runtime.</summary>
+		/// <param name="handle">Pointer (handle) to the unmanaged object.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor is invoked by the runtime infrastructure (<see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" />) to create a new managed representation for a pointer to an unmanaged Objective-C object.
+		///         Developers should not invoke this method directly, instead they should call <see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" /> as it will prevent two instances of a managed object pointing to the same native object.
+		///     </para>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal CleverTapInstanceConfig (NativeHandle handle) : base (handle)

@@ -67,7 +67,227 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "Content", Selector = "content", PropertyType = typeof (CleverTapSDK.CleverTapInboxMessageContent[]), GetterSelector = "content", ArgumentSemantic = ArgumentSemantic.Copy)]
 	public partial interface ICleverTapInboxMessage : INativeObject, IDisposable
 	{
+		[global::Foundation.OptionalMember]
+		[Export ("setRead:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetRead (bool read)
+		{
+			_SetRead (this, read);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetRead (ICleverTapInboxMessage This, bool read)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setRead:"), read ? (byte) 1 : (byte) 0);
+		}
+		[DynamicDependencyAttribute ("BackgroundColor")]
+		[DynamicDependencyAttribute ("CampaignId")]
+		[DynamicDependencyAttribute ("Content")]
+		[DynamicDependencyAttribute ("CustomData")]
+		[DynamicDependencyAttribute ("Date")]
+		[DynamicDependencyAttribute ("Expires")]
+		[DynamicDependencyAttribute ("IsRead")]
+		[DynamicDependencyAttribute ("Json")]
+		[DynamicDependencyAttribute ("MessageId")]
+		[DynamicDependencyAttribute ("Orientation")]
+		[DynamicDependencyAttribute ("RelativeDate")]
+		[DynamicDependencyAttribute ("SetRead(System.Boolean)")]
+		[DynamicDependencyAttribute ("Tags")]
+		[DynamicDependencyAttribute ("TagString")]
+		[DynamicDependencyAttribute ("Type")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		static ICleverTapInboxMessage ()
+		{
+			GC.KeepAlive (null);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual NSDictionary? Json {
+			[Export ("json", ArgumentSemantic.Copy)]
+			get {
+				return _GetJson (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSDictionary _GetJson (ICleverTapInboxMessage This)
+		{
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("json")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual NSDictionary? CustomData {
+			[Export ("customData", ArgumentSemantic.Copy)]
+			get {
+				return _GetCustomData (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSDictionary _GetCustomData (ICleverTapInboxMessage This)
+		{
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("customData")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool IsRead {
+			[Export ("isRead")]
+			get {
+				return _GetIsRead (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetIsRead (ICleverTapInboxMessage This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("isRead"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual nuint Date {
+			[Export ("date")]
+			get {
+				return _GetDate (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static nuint _GetDate (ICleverTapInboxMessage This)
+		{
+			return global::ApiDefinition.Messaging.UIntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("date"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual nuint Expires {
+			[Export ("expires")]
+			get {
+				return _GetExpires (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static nuint _GetExpires (ICleverTapInboxMessage This)
+		{
+			return global::ApiDefinition.Messaging.UIntPtr_objc_msgSend (This.Handle, Selector.GetHandle ("expires"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? RelativeDate {
+			[Export ("relativeDate")]
+			get {
+				return _GetRelativeDate (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetRelativeDate (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("relativeDate")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? Type {
+			[Export ("type")]
+			get {
+				return _GetType (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetType (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("type")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? MessageId {
+			[Export ("messageId")]
+			get {
+				return _GetMessageId (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetMessageId (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("messageId")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? CampaignId {
+			[Export ("campaignId")]
+			get {
+				return _GetCampaignId (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetCampaignId (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("campaignId")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? TagString {
+			[Export ("tagString")]
+			get {
+				return _GetTagString (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetTagString (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("tagString")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual NSObject[]? Tags {
+			[Export ("tags", ArgumentSemantic.Copy)]
+			get {
+				return _GetTags (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSObject[] _GetTags (ICleverTapInboxMessage This)
+		{
+			return CFArray.ArrayFromHandle<NSObject>(global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("tags")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? Orientation {
+			[Export ("orientation")]
+			get {
+				return _GetOrientation (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetOrientation (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("orientation")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? BackgroundColor {
+			[Export ("backgroundColor")]
+			get {
+				return _GetBackgroundColor (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetBackgroundColor (ICleverTapInboxMessage This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("backgroundColor")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual CleverTapInboxMessageContent[]? Content {
+			[Export ("content", ArgumentSemantic.Copy)]
+			get {
+				return _GetContent (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static CleverTapInboxMessageContent[] _GetContent (ICleverTapInboxMessage This)
+		{
+			return CFArray.ArrayFromHandle<CleverTapInboxMessageContent>(global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("content")))!;
+		}
 	}
+	/// <summary>Extension methods to the <see cref="ICleverTapInboxMessage" /> interface to support all the methods from the CleverTapInboxMessage protocol.</summary>
+	/// <remarks>
+	///   <para>The extension methods for <see cref="ICleverTapInboxMessage" /> interface allow developers to treat instances of the interface as having all the optional methods of the original CleverTapInboxMessage protocol. Since the interface only contains the required members, these extension methods allow developers to call the optional members of the protocol.</para>
+	/// </remarks>
 	public unsafe static partial class CleverTapInboxMessage_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void SetRead (this ICleverTapInboxMessage This, bool read)
@@ -161,7 +381,15 @@ namespace CleverTapSDK {
 	public unsafe partial class CleverTapInboxMessage : NSObject, ICleverTapInboxMessage {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly NativeHandle class_ptr = Class.GetHandle ("CleverTapInboxMessage");
+		/// <summary>The Objective-C class handle for this class.</summary>
+		/// <value>The pointer to the Objective-C class.</value>
+		/// <remarks>
+		///     Each managed class mirrors an unmanaged Objective-C class.
+		///     This value contains the pointer to the Objective-C class.
+		///     It is similar to calling the managed <see cref="ObjCRuntime.Class.GetHandle(string)" /> or the native <see href="https://developer.apple.com/documentation/objectivec/1418952-objc_getclass">objc_getClass</see> method with the type name.
+		/// </remarks>
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
+		/// <summary>Creates a new <see cref="CleverTapInboxMessage" /> with default values.</summary>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -175,6 +403,51 @@ namespace CleverTapSDK {
 			}
 		}
 
+		/// <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+		/// <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor should be called by derived classes when they completely construct the object in managed code and merely want the runtime to allocate and initialize the <see cref="Foundation.NSObject" />.
+		///         This is required to implement the two-step initialization process that Objective-C uses, the first step is to perform the object allocation, the second step is to initialize the object.
+		///         When developers invoke this constructor, they take advantage of a direct path that goes all the way up to <see cref="Foundation.NSObject" /> to merely allocate the object's memory and bind the Objective-C and C# objects together.
+		///         The actual initialization of the object is up to the developer.
+		///     </para>
+		///     <para>
+		///         This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place.
+		///         Once the allocation has taken place, the constructor has to initialize the object.
+		///         With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+		///     </para>
+		///     <para>It is the developer's responsibility to completely initialize the object if they chain up using this constructor chain.</para>
+		///     <para>
+		///         In general, if the developer's constructor invokes the corresponding base implementation, then it should also call an Objective-C init method.
+		///         If this is not the case, developers should instead chain to the proper constructor in their class.
+		///     </para>
+		///     <para>
+		///         The argument value is ignored and merely ensures that the only code that is executed is the construction phase is the basic <see cref="Foundation.NSObject" /> allocation and runtime type registration.
+		///         Typically the chaining would look like this:
+		///     </para>
+		///     <example>
+		///             <code lang="csharp lang-csharp"><![CDATA[
+		/// //
+		/// // The NSObjectFlag constructor merely allocates the object and registers the C# class with the Objective-C runtime if necessary.
+		/// // No actual initXxx method is invoked, that is done later in the constructor
+		/// //
+		/// // This is taken from the iOS SDK's source code for the UIView class:
+		/// //
+		/// [Export ("initWithFrame:")]
+		/// public UIView (System.Drawing.RectangleF frame) : base (NSObjectFlag.Empty)
+		/// {
+		///     // Invoke the init method now.
+		///     var initWithFrame = new Selector ("initWithFrame:").Handle;
+		///     if (IsDirectBinding) {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSend_CGRect (this.Handle, initWithFrame, frame);
+		///     } else {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSendSuper_CGRect (this.SuperHandle, initWithFrame, frame);
+		///     }
+		/// }
+		/// ]]></code>
+		///     </example>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CleverTapInboxMessage (NSObjectFlag t) : base (t)
@@ -182,6 +455,14 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
+		/// <summary>A constructor used when creating managed representations of unmanaged objects. Called by the runtime.</summary>
+		/// <param name="handle">Pointer (handle) to the unmanaged object.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor is invoked by the runtime infrastructure (<see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" />) to create a new managed representation for a pointer to an unmanaged Objective-C object.
+		///         Developers should not invoke this method directly, instead they should call <see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" /> as it will prevent two instances of a managed object pointing to the same native object.
+		///     </para>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal CleverTapInboxMessage (NativeHandle handle) : base (handle)

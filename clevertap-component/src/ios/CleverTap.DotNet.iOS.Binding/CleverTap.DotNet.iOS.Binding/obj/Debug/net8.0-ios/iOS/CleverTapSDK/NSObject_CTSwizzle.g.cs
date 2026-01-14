@@ -54,7 +54,7 @@ namespace CleverTapSDK {
 		static readonly NativeHandle class_ptr = Class.GetHandle ("NSObject");
 		[Export ("ct_swizzleClassMethod:withClassMethod:error:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool Ct_swizzleClassMethod (this NSObject This, Selector origSel_, Selector altSel_, out NSError error_)
+		public unsafe static bool Ct_swizzleClassMethod (this NSObject This, Selector origSel_, Selector altSel_, out NSError error_)
 		{
 			var origSel___handle__ = origSel_!.GetNonNullHandle (nameof (origSel_));
 			var altSel___handle__ = altSel_!.GetNonNullHandle (nameof (altSel_));
@@ -66,7 +66,7 @@ namespace CleverTapSDK {
 		}
 		[Export ("ct_swizzleClassMethod:withBlock:error:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSInvocation Ct_swizzleClassMethod (this NSObject This, Selector origSel, NSObject block, out NSError error)
+		public unsafe static NSInvocation Ct_swizzleClassMethod (this NSObject This, Selector origSel, NSObject block, out NSError error)
 		{
 			var origSel__handle__ = origSel!.GetNonNullHandle (nameof (origSel));
 			var block__handle__ = block!.GetNonNullHandle (nameof (block));
@@ -78,7 +78,7 @@ namespace CleverTapSDK {
 		}
 		[Export ("ct_swizzleMethod:withMethod:error:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static bool Ct_swizzleMethod (this NSObject This, Selector origSel_, Selector altSel_, out NSError error_)
+		public unsafe static bool Ct_swizzleMethod (this NSObject This, Selector origSel_, Selector altSel_, out NSError error_)
 		{
 			var origSel___handle__ = origSel_!.GetNonNullHandle (nameof (origSel_));
 			var altSel___handle__ = altSel_!.GetNonNullHandle (nameof (altSel_));
@@ -90,7 +90,7 @@ namespace CleverTapSDK {
 		}
 		[Export ("ct_swizzleMethod:withBlock:error:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static NSInvocation Ct_swizzleMethod (this NSObject This, Selector origSel, NSObject block, out NSError error)
+		public unsafe static NSInvocation Ct_swizzleMethod (this NSObject This, Selector origSel, NSObject block, out NSError error)
 		{
 			var origSel__handle__ = origSel!.GetNonNullHandle (nameof (origSel));
 			var block__handle__ = block!.GetNonNullHandle (nameof (block));

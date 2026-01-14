@@ -61,6 +61,166 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = true, Name = "BuildDecrementValueBy", Selector = "buildDecrementValueBy:forKey:localDataStore:completionHandler:", ParameterType = new Type [] { typeof (NSNumber), typeof (string), typeof (CleverTapSDK.CTLocalDataStore), typeof (global::System.Action<NSDictionary, NSNumber, NSArray<global::CleverTapSDK.CTValidationResult>>) }, ParameterByRef = new bool [] { false, false, false, false }, ParameterBlockProxy = new Type? [] { null, null, null, typeof (ObjCRuntime.Trampolines.NIDActionArity3V2) })]
 	public partial interface ICTProfileBuilder : INativeObject, IDisposable
 	{
+		[global::Foundation.OptionalMember]
+		[Export ("build:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void Build<T> (NSDictionary profile, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V0))]global::System.Action<NSDictionary, NSDictionary, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			var profile__handle__ = profile!.GetNonNullHandle (nameof (profile));
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			using var block_completion = Trampolines.SDActionArity3V0.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("build:completionHandler:"), profile__handle__, (IntPtr) block_ptr_completion);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildRemoveValueForKey:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildRemoveValueForKey<T> (string key, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V0))]global::System.Action<NSDictionary, NSDictionary, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V0.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildRemoveValueForKey:completionHandler:"), nskey, (IntPtr) block_ptr_completion);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildSetMultiValues:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildSetMultiValues<T> (string[] values, string? key, CTLocalDataStore? dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V1))]global::System.Action<NSDictionary, NSArray, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			if (values is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (values));
+			var dataStore__handle__ = dataStore.GetHandle ();
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsa_values = NSArray.FromStrings (values);
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V1.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildSetMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			nsa_values.Dispose ();
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildAddMultiValue:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildAddMultiValue<T> (string value, string? key, CTLocalDataStore? dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V1))]global::System.Action<NSDictionary, NSArray, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			if (value is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+			var dataStore__handle__ = dataStore.GetHandle ();
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsvalue = CFString.CreateNative (value);
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V1.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildAddMultiValue:forKey:localDataStore:completionHandler:"), nsvalue, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			CFString.ReleaseNative (nsvalue);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildAddMultiValues:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildAddMultiValues<T> (string[] values, string? key, CTLocalDataStore? dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V1))]global::System.Action<NSDictionary, NSArray, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			if (values is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (values));
+			var dataStore__handle__ = dataStore.GetHandle ();
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsa_values = NSArray.FromStrings (values);
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V1.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildAddMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			nsa_values.Dispose ();
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildRemoveMultiValue:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildRemoveMultiValue<T> (string value, string? key, CTLocalDataStore? dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V1))]global::System.Action<NSDictionary, NSArray, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			if (value is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+			var dataStore__handle__ = dataStore.GetHandle ();
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsvalue = CFString.CreateNative (value);
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V1.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildRemoveMultiValue:forKey:localDataStore:completionHandler:"), nsvalue, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			CFString.ReleaseNative (nsvalue);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildRemoveMultiValues:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildRemoveMultiValues<T> (string[] values, string? key, CTLocalDataStore? dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V1))]global::System.Action<NSDictionary, NSArray, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			if (values is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (values));
+			var dataStore__handle__ = dataStore.GetHandle ();
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsa_values = NSArray.FromStrings (values);
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V1.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildRemoveMultiValues:forKey:localDataStore:completionHandler:"), nsa_values.Handle, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			nsa_values.Dispose ();
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildIncrementValueBy:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildIncrementValueBy<T> (NSNumber value, string key, CTLocalDataStore dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V2))]global::System.Action<NSDictionary, NSNumber, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var dataStore__handle__ = dataStore!.GetNonNullHandle (nameof (dataStore));
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V2.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildIncrementValueBy:forKey:localDataStore:completionHandler:"), value__handle__, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("buildDecrementValueBy:forKey:localDataStore:completionHandler:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void BuildDecrementValueBy<T> (NSNumber value, string key, CTLocalDataStore dataStore, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity3V2))]global::System.Action<NSDictionary, NSNumber, NSArray<CTValidationResult>> completion) where T: NSObject, ICTProfileBuilder
+		{
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var dataStore__handle__ = dataStore!.GetNonNullHandle (nameof (dataStore));
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nskey = CFString.CreateNative (key);
+			using var block_completion = Trampolines.SDActionArity3V2.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("buildDecrementValueBy:forKey:localDataStore:completionHandler:"), value__handle__, nskey, dataStore__handle__, (IntPtr) block_ptr_completion);
+			CFString.ReleaseNative (nskey);
+		}
 	}
 	internal unsafe sealed class CTProfileBuilderWrapper : BaseWrapper, ICTProfileBuilder {
 		[Preserve (Conditional = true)]
@@ -76,7 +236,15 @@ namespace CleverTapSDK {
 	public unsafe partial class CTProfileBuilder : NSObject, ICTProfileBuilder {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly NativeHandle class_ptr = Class.GetHandle ("CTProfileBuilder");
+		/// <summary>The Objective-C class handle for this class.</summary>
+		/// <value>The pointer to the Objective-C class.</value>
+		/// <remarks>
+		///     Each managed class mirrors an unmanaged Objective-C class.
+		///     This value contains the pointer to the Objective-C class.
+		///     It is similar to calling the managed <see cref="ObjCRuntime.Class.GetHandle(string)" /> or the native <see href="https://developer.apple.com/documentation/objectivec/1418952-objc_getclass">objc_getClass</see> method with the type name.
+		/// </remarks>
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
+		/// <summary>Creates a new <see cref="CTProfileBuilder" /> with default values.</summary>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -90,6 +258,51 @@ namespace CleverTapSDK {
 			}
 		}
 
+		/// <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+		/// <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor should be called by derived classes when they completely construct the object in managed code and merely want the runtime to allocate and initialize the <see cref="Foundation.NSObject" />.
+		///         This is required to implement the two-step initialization process that Objective-C uses, the first step is to perform the object allocation, the second step is to initialize the object.
+		///         When developers invoke this constructor, they take advantage of a direct path that goes all the way up to <see cref="Foundation.NSObject" /> to merely allocate the object's memory and bind the Objective-C and C# objects together.
+		///         The actual initialization of the object is up to the developer.
+		///     </para>
+		///     <para>
+		///         This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place.
+		///         Once the allocation has taken place, the constructor has to initialize the object.
+		///         With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+		///     </para>
+		///     <para>It is the developer's responsibility to completely initialize the object if they chain up using this constructor chain.</para>
+		///     <para>
+		///         In general, if the developer's constructor invokes the corresponding base implementation, then it should also call an Objective-C init method.
+		///         If this is not the case, developers should instead chain to the proper constructor in their class.
+		///     </para>
+		///     <para>
+		///         The argument value is ignored and merely ensures that the only code that is executed is the construction phase is the basic <see cref="Foundation.NSObject" /> allocation and runtime type registration.
+		///         Typically the chaining would look like this:
+		///     </para>
+		///     <example>
+		///             <code lang="csharp lang-csharp"><![CDATA[
+		/// //
+		/// // The NSObjectFlag constructor merely allocates the object and registers the C# class with the Objective-C runtime if necessary.
+		/// // No actual initXxx method is invoked, that is done later in the constructor
+		/// //
+		/// // This is taken from the iOS SDK's source code for the UIView class:
+		/// //
+		/// [Export ("initWithFrame:")]
+		/// public UIView (System.Drawing.RectangleF frame) : base (NSObjectFlag.Empty)
+		/// {
+		///     // Invoke the init method now.
+		///     var initWithFrame = new Selector ("initWithFrame:").Handle;
+		///     if (IsDirectBinding) {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSend_CGRect (this.Handle, initWithFrame, frame);
+		///     } else {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSendSuper_CGRect (this.SuperHandle, initWithFrame, frame);
+		///     }
+		/// }
+		/// ]]></code>
+		///     </example>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CTProfileBuilder (NSObjectFlag t) : base (t)
@@ -97,6 +310,14 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
+		/// <summary>A constructor used when creating managed representations of unmanaged objects. Called by the runtime.</summary>
+		/// <param name="handle">Pointer (handle) to the unmanaged object.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor is invoked by the runtime infrastructure (<see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" />) to create a new managed representation for a pointer to an unmanaged Objective-C object.
+		///         Developers should not invoke this method directly, instead they should call <see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" /> as it will prevent two instances of a managed object pointing to the same native object.
+		///     </para>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal CTProfileBuilder (NativeHandle handle) : base (handle)

@@ -55,7 +55,61 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = false, IsStatic = false, Name = "InAppNotificationButtonTappedWithCustomExtras", Selector = "inAppNotificationButtonTappedWithCustomExtras:", ParameterType = new Type [] { typeof (NSDictionary) }, ParameterByRef = new bool [] { false })]
 	public partial interface ICleverTapInAppNotificationDelegate : INativeObject, IDisposable
 	{
+		[global::Foundation.OptionalMember]
+		[Export ("shouldShowInAppNotificationWithExtras:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual bool ShouldShowInAppNotificationWithExtras (NSDictionary extras)
+		{
+			return _ShouldShowInAppNotificationWithExtras (this, extras);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _ShouldShowInAppNotificationWithExtras (ICleverTapInAppNotificationDelegate This, NSDictionary extras)
+		{
+			var extras__handle__ = extras!.GetNonNullHandle (nameof (extras));
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("shouldShowInAppNotificationWithExtras:"), extras__handle__);
+			return ret != 0;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("inAppNotificationDismissedWithExtras:andActionExtras:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void InAppNotificationDismissedWithExtras (NSDictionary extras, NSDictionary actionExtras)
+		{
+			_InAppNotificationDismissedWithExtras (this, extras, actionExtras);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _InAppNotificationDismissedWithExtras (ICleverTapInAppNotificationDelegate This, NSDictionary extras, NSDictionary actionExtras)
+		{
+			var extras__handle__ = extras!.GetNonNullHandle (nameof (extras));
+			var actionExtras__handle__ = actionExtras!.GetNonNullHandle (nameof (actionExtras));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("inAppNotificationDismissedWithExtras:andActionExtras:"), extras__handle__, actionExtras__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("inAppNotificationButtonTappedWithCustomExtras:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void InAppNotificationButtonTappedWithCustomExtras (NSDictionary customExtras)
+		{
+			_InAppNotificationButtonTappedWithCustomExtras (this, customExtras);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _InAppNotificationButtonTappedWithCustomExtras (ICleverTapInAppNotificationDelegate This, NSDictionary customExtras)
+		{
+			var customExtras__handle__ = customExtras!.GetNonNullHandle (nameof (customExtras));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("inAppNotificationButtonTappedWithCustomExtras:"), customExtras__handle__);
+		}
+		[DynamicDependencyAttribute ("InAppNotificationButtonTappedWithCustomExtras(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("InAppNotificationDismissedWithExtras(Foundation.NSDictionary,Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("ShouldShowInAppNotificationWithExtras(Foundation.NSDictionary)")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		static ICleverTapInAppNotificationDelegate ()
+		{
+			GC.KeepAlive (null);
+		}
 	}
+	/// <summary>Extension methods to the <see cref="ICleverTapInAppNotificationDelegate" /> interface to support all the methods from the CleverTapInAppNotificationDelegate protocol.</summary>
+	/// <remarks>
+	///   <para>The extension methods for <see cref="ICleverTapInAppNotificationDelegate" /> interface allow developers to treat instances of the interface as having all the optional methods of the original CleverTapInAppNotificationDelegate protocol. Since the interface only contains the required members, these extension methods allow developers to call the optional members of the protocol.</para>
+	/// </remarks>
 	public unsafe static partial class CleverTapInAppNotificationDelegate_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static bool ShouldShowInAppNotificationWithExtras (this ICleverTapInAppNotificationDelegate This, NSDictionary extras)
@@ -92,6 +146,7 @@ namespace CleverTapSDK {
 	[Register("ApiDefinition__CleverTapSDK_CleverTapInAppNotificationDelegate", false)]
 	[Model]
 	public unsafe partial class CleverTapInAppNotificationDelegate : NSObject, ICleverTapInAppNotificationDelegate {
+		/// <summary>Creates a new <see cref="CleverTapInAppNotificationDelegate" /> with default values.</summary>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -101,6 +156,51 @@ namespace CleverTapSDK {
 			InitializeHandle (global::ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, global::ObjCRuntime.Selector.GetHandle ("init")), "init");
 		}
 
+		/// <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+		/// <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor should be called by derived classes when they completely construct the object in managed code and merely want the runtime to allocate and initialize the <see cref="Foundation.NSObject" />.
+		///         This is required to implement the two-step initialization process that Objective-C uses, the first step is to perform the object allocation, the second step is to initialize the object.
+		///         When developers invoke this constructor, they take advantage of a direct path that goes all the way up to <see cref="Foundation.NSObject" /> to merely allocate the object's memory and bind the Objective-C and C# objects together.
+		///         The actual initialization of the object is up to the developer.
+		///     </para>
+		///     <para>
+		///         This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place.
+		///         Once the allocation has taken place, the constructor has to initialize the object.
+		///         With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+		///     </para>
+		///     <para>It is the developer's responsibility to completely initialize the object if they chain up using this constructor chain.</para>
+		///     <para>
+		///         In general, if the developer's constructor invokes the corresponding base implementation, then it should also call an Objective-C init method.
+		///         If this is not the case, developers should instead chain to the proper constructor in their class.
+		///     </para>
+		///     <para>
+		///         The argument value is ignored and merely ensures that the only code that is executed is the construction phase is the basic <see cref="Foundation.NSObject" /> allocation and runtime type registration.
+		///         Typically the chaining would look like this:
+		///     </para>
+		///     <example>
+		///             <code lang="csharp lang-csharp"><![CDATA[
+		/// //
+		/// // The NSObjectFlag constructor merely allocates the object and registers the C# class with the Objective-C runtime if necessary.
+		/// // No actual initXxx method is invoked, that is done later in the constructor
+		/// //
+		/// // This is taken from the iOS SDK's source code for the UIView class:
+		/// //
+		/// [Export ("initWithFrame:")]
+		/// public UIView (System.Drawing.RectangleF frame) : base (NSObjectFlag.Empty)
+		/// {
+		///     // Invoke the init method now.
+		///     var initWithFrame = new Selector ("initWithFrame:").Handle;
+		///     if (IsDirectBinding) {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSend_CGRect (this.Handle, initWithFrame, frame);
+		///     } else {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSendSuper_CGRect (this.SuperHandle, initWithFrame, frame);
+		///     }
+		/// }
+		/// ]]></code>
+		///     </example>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CleverTapInAppNotificationDelegate (NSObjectFlag t) : base (t)
@@ -108,6 +208,14 @@ namespace CleverTapSDK {
 			IsDirectBinding = false;
 		}
 
+		/// <summary>A constructor used when creating managed representations of unmanaged objects. Called by the runtime.</summary>
+		/// <param name="handle">Pointer (handle) to the unmanaged object.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor is invoked by the runtime infrastructure (<see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" />) to create a new managed representation for a pointer to an unmanaged Objective-C object.
+		///         Developers should not invoke this method directly, instead they should call <see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" /> as it will prevent two instances of a managed object pointing to the same native object.
+		///     </para>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal CleverTapInAppNotificationDelegate (NativeHandle handle) : base (handle)

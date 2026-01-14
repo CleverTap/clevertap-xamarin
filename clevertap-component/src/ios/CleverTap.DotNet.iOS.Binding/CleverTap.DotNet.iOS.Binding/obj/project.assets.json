@@ -1,8 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-ios17.2": {
-      "Microsoft.NET.ILLink.Tasks/8.0.2": {
+    "net8.0-ios18.0": {
+      "Microsoft.NET.ILLink.Tasks/8.0.11": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -11,10 +11,10 @@
     }
   },
   "libraries": {
-    "Microsoft.NET.ILLink.Tasks/8.0.2": {
-      "sha512": "hKTrehpfVzOhAz0mreaTAZgbz0DrMEbWq4n3hAo8Ks6WdxdqQhNPvzOqn9VygKuWf1bmxPdraqzTaXriO/sn0A==",
+    "Microsoft.NET.ILLink.Tasks/8.0.11": {
+      "sha512": "zk5lnZrYJgtuJG8L4v17Ej8rZ3PUcR2iweNV08BaO5LbYHIi2wNaVNcJoLxvqgQdnjLlKnCCfVGLDr6QHeAarQ==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.2",
+      "path": "microsoft.net.illink.tasks/8.0.11",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -28,7 +28,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.2.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.11.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -64,21 +64,21 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-ios17.2": [
-      "Microsoft.NET.ILLink.Tasks >= 8.0.2"
+    "net8.0-ios18.0": [
+      "Microsoft.NET.ILLink.Tasks >= 8.0.11"
     ]
   },
   "packageFolders": {
     "/Users/nishant.kumar/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.3",
+    "version": "1.2.0",
     "restore": {
-      "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+      "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
       "projectName": "CleverTap.DotNet.iOS.Binding",
-      "projectPath": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+      "projectPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
       "packagesPath": "/Users/nishant.kumar/.nuget/packages/",
-      "outputPath": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
+      "outputPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nishant.kumar/.nuget/NuGet/NuGet.Config"
@@ -87,12 +87,10 @@
         "net8.0-ios"
       ],
       "sources": {
-        "/Users/nishant.kumar/Downloads": {},
-        "/Users/nishant.kumar/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-ios17.2": {
+        "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "projectReferences": {}
         }
@@ -109,13 +107,13 @@
       }
     },
     "frameworks": {
-      "net8.0-ios17.2": {
+      "net8.0-ios18.0": {
         "targetAlias": "net8.0-ios",
         "dependencies": {
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.2, )",
+            "version": "[8.0.11, )",
             "autoReferenced": true
           }
         },
@@ -138,7 +136,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/nishant.kumar/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/nishant.kumar/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
