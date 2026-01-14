@@ -133,7 +133,1219 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "DomainString", Selector = "getDomainString", PropertyType = typeof (string), GetterSelector = "getDomainString", ArgumentSemantic = ArgumentSemantic.None)]
 	public partial interface ICleverTap : INativeObject, IDisposable
 	{
+		[global::Foundation.OptionalMember]
+		[Export ("sharedInstance")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap? SharedInstance<T> () where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			return  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (class_ptr, Selector.GetHandle ("sharedInstance")))!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("sharedInstanceWithCleverTapID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap? SharedInstanceWithCleverTapID<T> (string cleverTapID) where T: NSObject, ICleverTap
+		{
+			if (cleverTapID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (cleverTapID));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nscleverTapID = CFString.CreateNative (cleverTapID);
+			CleverTap? ret;
+			ret =  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("sharedInstanceWithCleverTapID:"), nscleverTapID))!;
+			CFString.ReleaseNative (nscleverTapID);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("autoIntegrate")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap? AutoIntegrate<T> () where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			return  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (class_ptr, Selector.GetHandle ("autoIntegrate")))!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("autoIntegrateWithCleverTapID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap? AutoIntegrateWithCleverTapID<T> (string cleverTapID) where T: NSObject, ICleverTap
+		{
+			if (cleverTapID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (cleverTapID));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nscleverTapID = CFString.CreateNative (cleverTapID);
+			CleverTap? ret;
+			ret =  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("autoIntegrateWithCleverTapID:"), nscleverTapID))!;
+			CFString.ReleaseNative (nscleverTapID);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("instanceWithConfig:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap InstanceWithConfig<T> (CleverTapInstanceConfig config) where T: NSObject, ICleverTap
+		{
+			var config__handle__ = config!.GetNonNullHandle (nameof (config));
+			var class_ptr = Class.GetHandle (typeof (T));
+			return  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("instanceWithConfig:"), config__handle__))!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("instanceWithConfig:andCleverTapID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap InstanceWithConfig<T> (CleverTapInstanceConfig config, string cleverTapID) where T: NSObject, ICleverTap
+		{
+			var config__handle__ = config!.GetNonNullHandle (nameof (config));
+			if (cleverTapID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (cleverTapID));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nscleverTapID = CFString.CreateNative (cleverTapID);
+			CleverTap? ret;
+			ret =  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("instanceWithConfig:andCleverTapID:"), config__handle__, nscleverTapID))!;
+			CFString.ReleaseNative (nscleverTapID);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("getGlobalInstance:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTap? GetGlobalInstance<T> (string accountId) where T: NSObject, ICleverTap
+		{
+			if (accountId is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountId));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsaccountId = CFString.CreateNative (accountId);
+			CleverTap? ret;
+			ret =  Runtime.GetNSObject<CleverTap> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("getGlobalInstance:"), nsaccountId))!;
+			CFString.ReleaseNative (nsaccountId);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("changeCredentialsWithAccountID:andToken:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void ChangeCredentialsWithAccountID<T> (string accountID, string token) where T: NSObject, ICleverTap
+		{
+			if (accountID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountID));
+			if (token is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (token));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsaccountID = CFString.CreateNative (accountID);
+			var nstoken = CFString.CreateNative (token);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("changeCredentialsWithAccountID:andToken:"), nsaccountID, nstoken);
+			CFString.ReleaseNative (nsaccountID);
+			CFString.ReleaseNative (nstoken);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("changeCredentialsWithAccountID:token:region:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void ChangeCredentialsWithAccountID<T> (string accountID, string token, string region) where T: NSObject, ICleverTap
+		{
+			if (accountID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountID));
+			if (token is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (token));
+			if (region is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (region));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsaccountID = CFString.CreateNative (accountID);
+			var nstoken = CFString.CreateNative (token);
+			var nsregion = CFString.CreateNative (region);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("changeCredentialsWithAccountID:token:region:"), nsaccountID, nstoken, nsregion);
+			CFString.ReleaseNative (nsaccountID);
+			CFString.ReleaseNative (nstoken);
+			CFString.ReleaseNative (nsregion);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setCredentialsWithAccountID:andToken:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void SetCredentialsWithAccountID<T> (string accountID, string token) where T: NSObject, ICleverTap
+		{
+			if (accountID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountID));
+			if (token is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (token));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsaccountID = CFString.CreateNative (accountID);
+			var nstoken = CFString.CreateNative (token);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("setCredentialsWithAccountID:andToken:"), nsaccountID, nstoken);
+			CFString.ReleaseNative (nsaccountID);
+			CFString.ReleaseNative (nstoken);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setCredentialsWithAccountID:token:region:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void SetCredentialsWithAccountID<T> (string accountID, string token, string region) where T: NSObject, ICleverTap
+		{
+			if (accountID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountID));
+			if (token is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (token));
+			if (region is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (region));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsaccountID = CFString.CreateNative (accountID);
+			var nstoken = CFString.CreateNative (token);
+			var nsregion = CFString.CreateNative (region);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("setCredentialsWithAccountID:token:region:"), nsaccountID, nstoken, nsregion);
+			CFString.ReleaseNative (nsaccountID);
+			CFString.ReleaseNative (nstoken);
+			CFString.ReleaseNative (nsregion);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setCredentialsWithAccountID:token:proxyDomain:spikyProxyDomain:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void SetCredentialsWithAccountID<T> (string accountID, string token, string proxyDomain, string spikyProxyDomain) where T: NSObject, ICleverTap
+		{
+			if (accountID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (accountID));
+			if (token is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (token));
+			if (proxyDomain is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (proxyDomain));
+			if (spikyProxyDomain is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (spikyProxyDomain));
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nsaccountID = CFString.CreateNative (accountID);
+			var nstoken = CFString.CreateNative (token);
+			var nsproxyDomain = CFString.CreateNative (proxyDomain);
+			var nsspikyProxyDomain = CFString.CreateNative (spikyProxyDomain);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("setCredentialsWithAccountID:token:proxyDomain:spikyProxyDomain:"), nsaccountID, nstoken, nsproxyDomain, nsspikyProxyDomain);
+			CFString.ReleaseNative (nsaccountID);
+			CFString.ReleaseNative (nstoken);
+			CFString.ReleaseNative (nsproxyDomain);
+			CFString.ReleaseNative (nsspikyProxyDomain);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("notifyApplicationLaunchedWithOptions:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void NotifyApplicationLaunchedWithOptions (NSObject launchOptions)
+		{
+			_NotifyApplicationLaunchedWithOptions (this, launchOptions);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _NotifyApplicationLaunchedWithOptions (ICleverTap This, NSObject launchOptions)
+		{
+			var launchOptions__handle__ = launchOptions!.GetNonNullHandle (nameof (launchOptions));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("notifyApplicationLaunchedWithOptions:"), launchOptions__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("enablePersonalization")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void EnablePersonalization<T> () where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			global::ApiDefinition.Messaging.void_objc_msgSend (class_ptr, Selector.GetHandle ("enablePersonalization"));
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("disablePersonalization")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void DisablePersonalization<T> () where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			global::ApiDefinition.Messaging.void_objc_msgSend (class_ptr, Selector.GetHandle ("disablePersonalization"));
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setLocation:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void SetLocation<T> (global::CoreLocation.CLLocationCoordinate2D location) where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			global::ApiDefinition.Messaging.void_objc_msgSend_CLLocationCoordinate2D (class_ptr, Selector.GetHandle ("setLocation:"), location);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("getLocationWithSuccess:andError:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe static void GetLocationWithSuccess<T> ([BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity1V0))]global::System.Action<global::CoreLocation.CLLocationCoordinate2D> success, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity1V1))]global::System.Action<NSString>? error) where T: NSObject, ICleverTap
+		{
+			if (success is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (success));
+			var class_ptr = Class.GetHandle (typeof (T));
+			using var block_success = Trampolines.SDActionArity1V0.CreateBlock (success);
+			BlockLiteral *block_ptr_success = &block_success;
+			using var block_error = Trampolines.SDActionArity1V1.CreateNullableBlock (error);
+			BlockLiteral *block_ptr_error = null;
+			if (error is not null)
+				block_ptr_error = &block_error;
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (class_ptr, Selector.GetHandle ("getLocationWithSuccess:andError:"), (IntPtr) block_ptr_success, (IntPtr) block_ptr_error);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("onUserLogin:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void OnUserLogin (NSDictionary properties)
+		{
+			_OnUserLogin (this, properties);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _OnUserLogin (ICleverTap This, NSDictionary properties)
+		{
+			var properties__handle__ = properties!.GetNonNullHandle (nameof (properties));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("onUserLogin:"), properties__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("onUserLogin:withCleverTapID:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void OnUserLogin (NSDictionary properties, string cleverTapID)
+		{
+			_OnUserLogin (this, properties, cleverTapID);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _OnUserLogin (ICleverTap This, NSDictionary properties, string cleverTapID)
+		{
+			var properties__handle__ = properties!.GetNonNullHandle (nameof (properties));
+			if (cleverTapID is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (cleverTapID));
+			var nscleverTapID = CFString.CreateNative (cleverTapID);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("onUserLogin:withCleverTapID:"), properties__handle__, nscleverTapID);
+			CFString.ReleaseNative (nscleverTapID);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setOptOut:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetOptOut (bool enabled)
+		{
+			_SetOptOut (this, enabled);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetOptOut (ICleverTap This, bool enabled)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setOptOut:"), enabled ? (byte) 1 : (byte) 0);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setOffline:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetOffline (bool offline)
+		{
+			_SetOffline (this, offline);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetOffline (ICleverTap This, bool offline)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("setOffline:"), offline ? (byte) 1 : (byte) 0);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("enableDeviceNetworkInfoReporting:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void EnableDeviceNetworkInfoReporting (bool enabled)
+		{
+			_EnableDeviceNetworkInfoReporting (this, enabled);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _EnableDeviceNetworkInfoReporting (ICleverTap This, bool enabled)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend_bool (This.Handle, Selector.GetHandle ("enableDeviceNetworkInfoReporting:"), enabled ? (byte) 1 : (byte) 0);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profilePush:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfilePush (NSDictionary properties)
+		{
+			_ProfilePush (this, properties);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfilePush (ICleverTap This, NSDictionary properties)
+		{
+			var properties__handle__ = properties!.GetNonNullHandle (nameof (properties));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("profilePush:"), properties__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileRemoveValueForKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileRemoveValueForKey (string key)
+		{
+			_ProfileRemoveValueForKey (this, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileRemoveValueForKey (ICleverTap This, string key)
+		{
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("profileRemoveValueForKey:"), nskey);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileSetMultiValues:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileSetMultiValues (string[] values, string key)
+		{
+			_ProfileSetMultiValues (this, values, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileSetMultiValues (ICleverTap This, string[] values, string key)
+		{
+			if (values is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (values));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nsa_values = NSArray.FromStrings (values);
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileSetMultiValues:forKey:"), nsa_values.Handle, nskey);
+			nsa_values.Dispose ();
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileAddMultiValue:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileAddMultiValue (string value, string key)
+		{
+			_ProfileAddMultiValue (this, value, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileAddMultiValue (ICleverTap This, string value, string key)
+		{
+			if (value is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nsvalue = CFString.CreateNative (value);
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileAddMultiValue:forKey:"), nsvalue, nskey);
+			CFString.ReleaseNative (nsvalue);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileAddMultiValues:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileAddMultiValues (string[] values, string key)
+		{
+			_ProfileAddMultiValues (this, values, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileAddMultiValues (ICleverTap This, string[] values, string key)
+		{
+			if (values is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (values));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nsa_values = NSArray.FromStrings (values);
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileAddMultiValues:forKey:"), nsa_values.Handle, nskey);
+			nsa_values.Dispose ();
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileRemoveMultiValue:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileRemoveMultiValue (string value, string key)
+		{
+			_ProfileRemoveMultiValue (this, value, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileRemoveMultiValue (ICleverTap This, string value, string key)
+		{
+			if (value is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (value));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nsvalue = CFString.CreateNative (value);
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileRemoveMultiValue:forKey:"), nsvalue, nskey);
+			CFString.ReleaseNative (nsvalue);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileRemoveMultiValues:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileRemoveMultiValues (string[] values, string key)
+		{
+			_ProfileRemoveMultiValues (this, values, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileRemoveMultiValues (ICleverTap This, string[] values, string key)
+		{
+			if (values is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (values));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nsa_values = NSArray.FromStrings (values);
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileRemoveMultiValues:forKey:"), nsa_values.Handle, nskey);
+			nsa_values.Dispose ();
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileIncrementValueBy:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileIncrementValueBy (NSNumber value, string key)
+		{
+			_ProfileIncrementValueBy (this, value, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileIncrementValueBy (ICleverTap This, NSNumber value, string key)
+		{
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileIncrementValueBy:forKey:"), value__handle__, nskey);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileDecrementValueBy:forKey:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ProfileDecrementValueBy (NSNumber value, string key)
+		{
+			_ProfileDecrementValueBy (this, value, key);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ProfileDecrementValueBy (ICleverTap This, NSNumber value, string key)
+		{
+			var value__handle__ = value!.GetNonNullHandle (nameof (value));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			var nskey = CFString.CreateNative (key);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("profileDecrementValueBy:forKey:"), value__handle__, nskey);
+			CFString.ReleaseNative (nskey);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("profileGet:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual NSObject? ProfileGet (string propertyName)
+		{
+			return _ProfileGet (this, propertyName);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSObject? _ProfileGet (ICleverTap This, string propertyName)
+		{
+			if (propertyName is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (propertyName));
+			var nspropertyName = CFString.CreateNative (propertyName);
+			NSObject? ret;
+			ret = Runtime.GetNSObject (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("profileGet:"), nspropertyName))!;
+			CFString.ReleaseNative (nspropertyName);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordEvent:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordEvent (string @event)
+		{
+			_RecordEvent (this, @event);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordEvent (ICleverTap This, string @event)
+		{
+			if (@event is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
+			var nsevent = CFString.CreateNative (@event);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("recordEvent:"), nsevent);
+			CFString.ReleaseNative (nsevent);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordEvent:withProps:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordEvent (string @event, NSDictionary properties)
+		{
+			_RecordEvent (this, @event, properties);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordEvent (ICleverTap This, string @event, NSDictionary properties)
+		{
+			if (@event is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
+			var properties__handle__ = properties!.GetNonNullHandle (nameof (properties));
+			var nsevent = CFString.CreateNative (@event);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("recordEvent:withProps:"), nsevent, properties__handle__);
+			CFString.ReleaseNative (nsevent);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordChargedEventWithDetails:andItems:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordChargedEventWithDetails (NSDictionary chargeDetails, NSObject[] items)
+		{
+			_RecordChargedEventWithDetails (this, chargeDetails, items);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordChargedEventWithDetails (ICleverTap This, NSDictionary chargeDetails, NSObject[] items)
+		{
+			var chargeDetails__handle__ = chargeDetails!.GetNonNullHandle (nameof (chargeDetails));
+			if (items is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (items));
+			var nsa_items = NSArray.FromNSObjects (items);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("recordChargedEventWithDetails:andItems:"), chargeDetails__handle__, nsa_items.Handle);
+			nsa_items.Dispose ();
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordErrorWithMessage:andErrorCode:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordErrorWithMessage (string message, int code)
+		{
+			_RecordErrorWithMessage (this, message, code);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordErrorWithMessage (ICleverTap This, string message, int code)
+		{
+			if (message is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (message));
+			var nsmessage = CFString.CreateNative (message);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_int (This.Handle, Selector.GetHandle ("recordErrorWithMessage:andErrorCode:"), nsmessage, code);
+			CFString.ReleaseNative (nsmessage);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordScreenView:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordScreenView (string screenName)
+		{
+			_RecordScreenView (this, screenName);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordScreenView (ICleverTap This, string screenName)
+		{
+			if (screenName is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (screenName));
+			var nsscreenName = CFString.CreateNative (screenName);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("recordScreenView:"), nsscreenName);
+			CFString.ReleaseNative (nsscreenName);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordNotificationViewedEventWithData:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordNotificationViewedEventWithData (NSObject notificationData)
+		{
+			_RecordNotificationViewedEventWithData (this, notificationData);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordNotificationViewedEventWithData (ICleverTap This, NSObject notificationData)
+		{
+			var notificationData__handle__ = notificationData!.GetNonNullHandle (nameof (notificationData));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("recordNotificationViewedEventWithData:"), notificationData__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordNotificationClickedEventWithData:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordNotificationClickedEventWithData (NSObject notificationData)
+		{
+			_RecordNotificationClickedEventWithData (this, notificationData);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordNotificationClickedEventWithData (ICleverTap This, NSObject notificationData)
+		{
+			var notificationData__handle__ = notificationData!.GetNonNullHandle (nameof (notificationData));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("recordNotificationClickedEventWithData:"), notificationData__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("eventGetFirstTime:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual double EventGetFirstTime (string @event)
+		{
+			return _EventGetFirstTime (this, @event);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static double _EventGetFirstTime (ICleverTap This, string @event)
+		{
+			if (@event is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
+			var nsevent = CFString.CreateNative (@event);
+			double ret;
+			ret = global::ApiDefinition.Messaging.Double_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("eventGetFirstTime:"), nsevent);
+			CFString.ReleaseNative (nsevent);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("eventGetLastTime:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual double EventGetLastTime (string @event)
+		{
+			return _EventGetLastTime (this, @event);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static double _EventGetLastTime (ICleverTap This, string @event)
+		{
+			if (@event is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
+			var nsevent = CFString.CreateNative (@event);
+			double ret;
+			ret = global::ApiDefinition.Messaging.Double_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("eventGetLastTime:"), nsevent);
+			CFString.ReleaseNative (nsevent);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("eventGetOccurrences:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual int EventGetOccurrences (string @event)
+		{
+			return _EventGetOccurrences (this, @event);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static int _EventGetOccurrences (ICleverTap This, string @event)
+		{
+			if (@event is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (@event));
+			var nsevent = CFString.CreateNative (@event);
+			int ret;
+			ret = global::ApiDefinition.Messaging.int_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("eventGetOccurrences:"), nsevent);
+			CFString.ReleaseNative (nsevent);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("eventGetDetail:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual CleverTapEventDetail? EventGetDetail (string? @event)
+		{
+			return _EventGetDetail (this, @event);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static CleverTapEventDetail? _EventGetDetail (ICleverTap This, string? @event)
+		{
+			var nsevent = CFString.CreateNative (@event);
+			CleverTapEventDetail? ret;
+			ret =  Runtime.GetNSObject<CleverTapEventDetail> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("eventGetDetail:"), nsevent))!;
+			CFString.ReleaseNative (nsevent);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setSyncDelegate:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetSyncDelegate (CleverTapSyncDelegate? @delegate)
+		{
+			_SetSyncDelegate (this, @delegate);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetSyncDelegate (ICleverTap This, CleverTapSyncDelegate? @delegate)
+		{
+			var @delegate__handle__ = @delegate.GetHandle ();
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setSyncDelegate:"), @delegate__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setPushNotificationDelegate:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetPushNotificationDelegate (CleverTapPushNotificationDelegate? @delegate)
+		{
+			_SetPushNotificationDelegate (this, @delegate);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetPushNotificationDelegate (ICleverTap This, CleverTapPushNotificationDelegate? @delegate)
+		{
+			var @delegate__handle__ = @delegate.GetHandle ();
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setPushNotificationDelegate:"), @delegate__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setInAppNotificationDelegate:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetInAppNotificationDelegate (CleverTapInAppNotificationDelegate? @delegate)
+		{
+			_SetInAppNotificationDelegate (this, @delegate);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetInAppNotificationDelegate (ICleverTap This, CleverTapInAppNotificationDelegate? @delegate)
+		{
+			var @delegate__handle__ = @delegate.GetHandle ();
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setInAppNotificationDelegate:"), @delegate__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setUrlDelegate:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetUrlDelegate (CleverTapURLDelegate? @delegate)
+		{
+			_SetUrlDelegate (this, @delegate);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetUrlDelegate (ICleverTap This, CleverTapURLDelegate? @delegate)
+		{
+			var @delegate__handle__ = @delegate.GetHandle ();
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setUrlDelegate:"), @delegate__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setPushToken:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetPushToken (NSData pushToken)
+		{
+			_SetPushToken (this, pushToken);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetPushToken (ICleverTap This, NSData pushToken)
+		{
+			var pushToken__handle__ = pushToken!.GetNonNullHandle (nameof (pushToken));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setPushToken:"), pushToken__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setPushTokenAsString:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetPushTokenAsString (string pushTokenString)
+		{
+			_SetPushTokenAsString (this, pushTokenString);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetPushTokenAsString (ICleverTap This, string pushTokenString)
+		{
+			if (pushTokenString is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (pushTokenString));
+			var nspushTokenString = CFString.CreateNative (pushTokenString);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setPushTokenAsString:"), nspushTokenString);
+			CFString.ReleaseNative (nspushTokenString);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("handleNotificationWithData:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void HandleNotificationWithData (NSObject data)
+		{
+			_HandleNotificationWithData (this, data);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _HandleNotificationWithData (ICleverTap This, NSObject data)
+		{
+			var data__handle__ = data!.GetNonNullHandle (nameof (data));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("handleNotificationWithData:"), data__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("handleNotificationWithData:openDeepLinksInForeground:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void HandleNotificationWithData (NSObject data, bool openInForeground)
+		{
+			_HandleNotificationWithData (this, data, openInForeground);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _HandleNotificationWithData (ICleverTap This, NSObject data, bool openInForeground)
+		{
+			var data__handle__ = data!.GetNonNullHandle (nameof (data));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_bool (This.Handle, Selector.GetHandle ("handleNotificationWithData:openDeepLinksInForeground:"), data__handle__, openInForeground ? (byte) 1 : (byte) 0);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("handlePushNotification:openDeepLinksInForeground:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void HandlePushNotification<T> (NSDictionary notification, bool openInForeground) where T: NSObject, ICleverTap
+		{
+			var notification__handle__ = notification!.GetNonNullHandle (nameof (notification));
+			var class_ptr = Class.GetHandle (typeof (T));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_bool (class_ptr, Selector.GetHandle ("handlePushNotification:openDeepLinksInForeground:"), notification__handle__, openInForeground ? (byte) 1 : (byte) 0);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("isCleverTapNotification:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual bool IsCleverTapNotification (NSDictionary payload)
+		{
+			return _IsCleverTapNotification (this, payload);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _IsCleverTapNotification (ICleverTap This, NSDictionary payload)
+		{
+			var payload__handle__ = payload!.GetNonNullHandle (nameof (payload));
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("isCleverTapNotification:"), payload__handle__);
+			return ret != 0;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("showInAppNotificationIfAny")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void ShowInAppNotificationIfAny ()
+		{
+			_ShowInAppNotificationIfAny (this);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _ShowInAppNotificationIfAny (ICleverTap This)
+		{
+			global::ApiDefinition.Messaging.void_objc_msgSend (This.Handle, Selector.GetHandle ("showInAppNotificationIfAny"));
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("handleOpenURL:sourceApplication:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void HandleOpenURL (NSUrl url, string? sourceApplication)
+		{
+			_HandleOpenURL (this, url, sourceApplication);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _HandleOpenURL (ICleverTap This, NSUrl url, string? sourceApplication)
+		{
+			var url__handle__ = url!.GetNonNullHandle (nameof (url));
+			var nssourceApplication = CFString.CreateNative (sourceApplication);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("handleOpenURL:sourceApplication:"), url__handle__, nssourceApplication);
+			CFString.ReleaseNative (nssourceApplication);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("handleOpenURL:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void HandleOpenURL<T> (NSUrl url) where T: NSObject, ICleverTap
+		{
+			var url__handle__ = url!.GetNonNullHandle (nameof (url));
+			var class_ptr = Class.GetHandle (typeof (T));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("handleOpenURL:"), url__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("pushInstallReferrerSource:medium:campaign:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void PushInstallReferrerSource (string? source, string? medium, string? campaign)
+		{
+			_PushInstallReferrerSource (this, source, medium, campaign);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _PushInstallReferrerSource (ICleverTap This, string? source, string? medium, string? campaign)
+		{
+			var nssource = CFString.CreateNative (source);
+			var nsmedium = CFString.CreateNative (medium);
+			var nscampaign = CFString.CreateNative (campaign);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("pushInstallReferrerSource:medium:campaign:"), nssource, nsmedium, nscampaign);
+			CFString.ReleaseNative (nssource);
+			CFString.ReleaseNative (nsmedium);
+			CFString.ReleaseNative (nscampaign);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setDebugLevel:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static void SetDebugLevel<T> (int level) where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			global::ApiDefinition.Messaging.void_objc_msgSend_int (class_ptr, Selector.GetHandle ("setDebugLevel:"), level);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setLibrary:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetLibrary (string name)
+		{
+			_SetLibrary (this, name);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetLibrary (ICleverTap This, string name)
+		{
+			if (name is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (name));
+			var nsname = CFString.CreateNative (name);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setLibrary:"), nsname);
+			CFString.ReleaseNative (nsname);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setLocationForGeofences:withPluginVersion:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetLocationForGeofences (global::CoreLocation.CLLocationCoordinate2D location, string? version)
+		{
+			_SetLocationForGeofences (this, location, version);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetLocationForGeofences (ICleverTap This, global::CoreLocation.CLLocationCoordinate2D location, string? version)
+		{
+			var nsversion = CFString.CreateNative (version);
+			global::ApiDefinition.Messaging.void_objc_msgSend_CLLocationCoordinate2D_NativeHandle (This.Handle, Selector.GetHandle ("setLocationForGeofences:withPluginVersion:"), location, nsversion);
+			CFString.ReleaseNative (nsversion);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("didFailToRegisterForGeofencesWithError:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void DidFailToRegisterForGeofencesWithError (NSError? error)
+		{
+			_DidFailToRegisterForGeofencesWithError (this, error);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _DidFailToRegisterForGeofencesWithError (ICleverTap This, NSError? error)
+		{
+			var error__handle__ = error.GetHandle ();
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("didFailToRegisterForGeofencesWithError:"), error__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordGeofenceEnteredEvent:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordGeofenceEnteredEvent (NSDictionary geofenceDetails)
+		{
+			_RecordGeofenceEnteredEvent (this, geofenceDetails);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordGeofenceEnteredEvent (ICleverTap This, NSDictionary geofenceDetails)
+		{
+			var geofenceDetails__handle__ = geofenceDetails!.GetNonNullHandle (nameof (geofenceDetails));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("recordGeofenceEnteredEvent:"), geofenceDetails__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordGeofenceExitedEvent:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordGeofenceExitedEvent (NSDictionary geofenceDetails)
+		{
+			_RecordGeofenceExitedEvent (this, geofenceDetails);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordGeofenceExitedEvent (ICleverTap This, NSDictionary geofenceDetails)
+		{
+			var geofenceDetails__handle__ = geofenceDetails!.GetNonNullHandle (nameof (geofenceDetails));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("recordGeofenceExitedEvent:"), geofenceDetails__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("recordSignedCallEvent:forCallDetails:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RecordSignedCallEvent (int eventRawValue, NSDictionary calldetails)
+		{
+			_RecordSignedCallEvent (this, eventRawValue, calldetails);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RecordSignedCallEvent (ICleverTap This, int eventRawValue, NSDictionary calldetails)
+		{
+			var calldetails__handle__ = calldetails!.GetNonNullHandle (nameof (calldetails));
+			global::ApiDefinition.Messaging.void_objc_msgSend_int_NativeHandle (This.Handle, Selector.GetHandle ("recordSignedCallEvent:forCallDetails:"), eventRawValue, calldetails__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setSignedCallVersion:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetSignedCallVersion (string? version)
+		{
+			_SetSignedCallVersion (this, version);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetSignedCallVersion (ICleverTap This, string? version)
+		{
+			var nsversion = CFString.CreateNative (version);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setSignedCallVersion:"), nsversion);
+			CFString.ReleaseNative (nsversion);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setDomainDelegate:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetDomainDelegate (CleverTapDomainDelegate? @delegate)
+		{
+			_SetDomainDelegate (this, @delegate);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetDomainDelegate (ICleverTap This, CleverTapDomainDelegate? @delegate)
+		{
+			var @delegate__handle__ = @delegate.GetHandle ();
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setDomainDelegate:"), @delegate__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("isValidCleverTapId:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static bool IsValidCleverTapId<T> (string? cleverTapID) where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			var nscleverTapID = CFString.CreateNative (cleverTapID);
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend_NativeHandle (class_ptr, Selector.GetHandle ("isValidCleverTapId:"), nscleverTapID);
+			CFString.ReleaseNative (nscleverTapID);
+			return ret != 0;
+		}
+		[DynamicDependencyAttribute ("AccountID")]
+		[DynamicDependencyAttribute ("Config")]
+		[DynamicDependencyAttribute ("DidFailToRegisterForGeofencesWithError(Foundation.NSError)")]
+		[DynamicDependencyAttribute ("DomainString")]
+		[DynamicDependencyAttribute ("EnableDeviceNetworkInfoReporting(System.Boolean)")]
+		[DynamicDependencyAttribute ("EventGetDetail(System.String)")]
+		[DynamicDependencyAttribute ("EventGetFirstTime(System.String)")]
+		[DynamicDependencyAttribute ("EventGetLastTime(System.String)")]
+		[DynamicDependencyAttribute ("EventGetOccurrences(System.String)")]
+		[DynamicDependencyAttribute ("HandleNotificationWithData(Foundation.NSObject,System.Boolean)")]
+		[DynamicDependencyAttribute ("HandleNotificationWithData(Foundation.NSObject)")]
+		[DynamicDependencyAttribute ("HandleOpenURL(Foundation.NSUrl,System.String)")]
+		[DynamicDependencyAttribute ("IsCleverTapNotification(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("NotifyApplicationLaunchedWithOptions(Foundation.NSObject)")]
+		[DynamicDependencyAttribute ("OnUserLogin(Foundation.NSDictionary,System.String)")]
+		[DynamicDependencyAttribute ("OnUserLogin(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("ProfileAddMultiValue(System.String,System.String)")]
+		[DynamicDependencyAttribute ("ProfileAddMultiValues(System.String[],System.String)")]
+		[DynamicDependencyAttribute ("ProfileDecrementValueBy(Foundation.NSNumber,System.String)")]
+		[DynamicDependencyAttribute ("ProfileGet(System.String)")]
+		[DynamicDependencyAttribute ("ProfileGetCleverTapAttributionIdentifier")]
+		[DynamicDependencyAttribute ("ProfileGetCleverTapID")]
+		[DynamicDependencyAttribute ("ProfileIncrementValueBy(Foundation.NSNumber,System.String)")]
+		[DynamicDependencyAttribute ("ProfilePush(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("ProfileRemoveMultiValue(System.String,System.String)")]
+		[DynamicDependencyAttribute ("ProfileRemoveMultiValues(System.String[],System.String)")]
+		[DynamicDependencyAttribute ("ProfileRemoveValueForKey(System.String)")]
+		[DynamicDependencyAttribute ("ProfileSetMultiValues(System.String[],System.String)")]
+		[DynamicDependencyAttribute ("PushInstallReferrerSource(System.String,System.String,System.String)")]
+		[DynamicDependencyAttribute ("RecordChargedEventWithDetails(Foundation.NSDictionary,Foundation.NSObject[])")]
+		[DynamicDependencyAttribute ("RecordErrorWithMessage(System.String,System.Int32)")]
+		[DynamicDependencyAttribute ("RecordEvent(System.String,Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("RecordEvent(System.String)")]
+		[DynamicDependencyAttribute ("RecordGeofenceEnteredEvent(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("RecordGeofenceExitedEvent(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("RecordNotificationClickedEventWithData(Foundation.NSObject)")]
+		[DynamicDependencyAttribute ("RecordNotificationViewedEventWithData(Foundation.NSObject)")]
+		[DynamicDependencyAttribute ("RecordScreenView(System.String)")]
+		[DynamicDependencyAttribute ("RecordSignedCallEvent(System.Int32,Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("SessionGetTimeElapsed")]
+		[DynamicDependencyAttribute ("SessionGetUTMDetails")]
+		[DynamicDependencyAttribute ("SetDomainDelegate(CleverTapSDK.CleverTapDomainDelegate)")]
+		[DynamicDependencyAttribute ("SetInAppNotificationDelegate(CleverTapSDK.CleverTapInAppNotificationDelegate)")]
+		[DynamicDependencyAttribute ("SetLibrary(System.String)")]
+		[DynamicDependencyAttribute ("SetLocationForGeofences(CoreLocation.CLLocationCoordinate2D,System.String)")]
+		[DynamicDependencyAttribute ("SetOffline(System.Boolean)")]
+		[DynamicDependencyAttribute ("SetOptOut(System.Boolean)")]
+		[DynamicDependencyAttribute ("SetPushNotificationDelegate(CleverTapSDK.CleverTapPushNotificationDelegate)")]
+		[DynamicDependencyAttribute ("SetPushToken(Foundation.NSData)")]
+		[DynamicDependencyAttribute ("SetPushTokenAsString(System.String)")]
+		[DynamicDependencyAttribute ("SetSignedCallVersion(System.String)")]
+		[DynamicDependencyAttribute ("SetSyncDelegate(CleverTapSDK.CleverTapSyncDelegate)")]
+		[DynamicDependencyAttribute ("SetUrlDelegate(CleverTapSDK.CleverTapURLDelegate)")]
+		[DynamicDependencyAttribute ("ShowInAppNotificationIfAny()")]
+		[DynamicDependencyAttribute ("SignedCallDomain")]
+		[DynamicDependencyAttribute ("UserGetEventHistory")]
+		[DynamicDependencyAttribute ("UserGetPreviousVisitTime")]
+		[DynamicDependencyAttribute ("UserGetScreenCount")]
+		[DynamicDependencyAttribute ("UserGetTotalVisits")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		static ICleverTap ()
+		{
+			GC.KeepAlive (null);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual CleverTapInstanceConfig Config {
+			[Export ("config", ArgumentSemantic.Retain)]
+			get {
+				return _GetConfig (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static CleverTapInstanceConfig _GetConfig (ICleverTap This)
+		{
+			return  Runtime.GetNSObject<CleverTapInstanceConfig> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("config")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? SignedCallDomain {
+			[Export ("signedCallDomain", ArgumentSemantic.Retain)]
+			get {
+				return _GetSignedCallDomain (this);
+			}
+			[Export ("setSignedCallDomain:", ArgumentSemantic.Retain)]
+			set {
+				_SetSignedCallDomain (this, value);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetSignedCallDomain (ICleverTap This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("signedCallDomain")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetSignedCallDomain (ICleverTap This, string? value)
+		{
+			var nsvalue = CFString.CreateNative (value);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setSignedCallDomain:"), nsvalue);
+			CFString.ReleaseNative (nsvalue);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? ProfileGetCleverTapID {
+			[Export ("profileGetCleverTapID")]
+			get {
+				return _GetProfileGetCleverTapID (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetProfileGetCleverTapID (ICleverTap This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("profileGetCleverTapID")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? AccountID {
+			[Export ("getAccountID")]
+			get {
+				return _GetAccountID (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetAccountID (ICleverTap This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("getAccountID")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? ProfileGetCleverTapAttributionIdentifier {
+			[Export ("profileGetCleverTapAttributionIdentifier")]
+			get {
+				return _GetProfileGetCleverTapAttributionIdentifier (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetProfileGetCleverTapAttributionIdentifier (ICleverTap This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("profileGetCleverTapAttributionIdentifier")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual NSDictionary? UserGetEventHistory {
+			[Export ("userGetEventHistory")]
+			get {
+				return _GetUserGetEventHistory (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSDictionary _GetUserGetEventHistory (ICleverTap This)
+		{
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("userGetEventHistory")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual double SessionGetTimeElapsed {
+			[Export ("sessionGetTimeElapsed")]
+			get {
+				return _GetSessionGetTimeElapsed (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static double _GetSessionGetTimeElapsed (ICleverTap This)
+		{
+			return global::ApiDefinition.Messaging.Double_objc_msgSend (This.Handle, Selector.GetHandle ("sessionGetTimeElapsed"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual CleverTapUTMDetail? SessionGetUTMDetails {
+			[Export ("sessionGetUTMDetails")]
+			get {
+				return _GetSessionGetUTMDetails (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static CleverTapUTMDetail _GetSessionGetUTMDetails (ICleverTap This)
+		{
+			return  Runtime.GetNSObject<CleverTapUTMDetail> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("sessionGetUTMDetails")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual int UserGetTotalVisits {
+			[Export ("userGetTotalVisits")]
+			get {
+				return _GetUserGetTotalVisits (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static int _GetUserGetTotalVisits (ICleverTap This)
+		{
+			return global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("userGetTotalVisits"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual int UserGetScreenCount {
+			[Export ("userGetScreenCount")]
+			get {
+				return _GetUserGetScreenCount (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static int _GetUserGetScreenCount (ICleverTap This)
+		{
+			return global::ApiDefinition.Messaging.int_objc_msgSend (This.Handle, Selector.GetHandle ("userGetScreenCount"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual double UserGetPreviousVisitTime {
+			[Export ("userGetPreviousVisitTime")]
+			get {
+				return _GetUserGetPreviousVisitTime (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static double _GetUserGetPreviousVisitTime (ICleverTap This)
+		{
+			return global::ApiDefinition.Messaging.Double_objc_msgSend (This.Handle, Selector.GetHandle ("userGetPreviousVisitTime"));
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string? DomainString {
+			[Export ("getDomainString")]
+			get {
+				return _GetDomainString (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetDomainString (ICleverTap This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("getDomainString")))!;
+		}
+		[global::Foundation.OptionalMember]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static CleverTapLogLevel GetDebugLevel<T> () where T: NSObject, ICleverTap
+		{
+			var class_ptr = Class.GetHandle (typeof (T));
+			return (CleverTapLogLevel) global::ApiDefinition.Messaging.int_objc_msgSend (class_ptr, Selector.GetHandle ("getDebugLevel"));
+		}
 	}
+	/// <summary>Extension methods to the <see cref="ICleverTap" /> interface to support all the methods from the CleverTap protocol.</summary>
+	/// <remarks>
+	///   <para>The extension methods for <see cref="ICleverTap" /> interface allow developers to treat instances of the interface as having all the optional methods of the original CleverTap protocol. Since the interface only contains the required members, these extension methods allow developers to call the optional members of the protocol.</para>
+	/// </remarks>
 	[Preserve]
 	public unsafe static partial class CleverTap_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -532,7 +1744,7 @@ namespace CleverTapSDK {
 			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("signedCallDomain")))!;
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-		public static void SetSignedCallDomain (this ICleverTap This, string value)
+		public static void SetSignedCallDomain (this ICleverTap This, string? value)
 		{
 			var nsvalue = CFString.CreateNative (value);
 			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setSignedCallDomain:"), nsvalue);
@@ -605,7 +1817,15 @@ namespace CleverTapSDK {
 	public unsafe partial class CleverTap : NSObject, ICleverTap {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly NativeHandle class_ptr = Class.GetHandle ("CleverTap");
+		/// <summary>The Objective-C class handle for this class.</summary>
+		/// <value>The pointer to the Objective-C class.</value>
+		/// <remarks>
+		///     Each managed class mirrors an unmanaged Objective-C class.
+		///     This value contains the pointer to the Objective-C class.
+		///     It is similar to calling the managed <see cref="ObjCRuntime.Class.GetHandle(string)" /> or the native <see href="https://developer.apple.com/documentation/objectivec/1418952-objc_getclass">objc_getClass</see> method with the type name.
+		/// </remarks>
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
+		/// <summary>Creates a new <see cref="CleverTap" /> with default values.</summary>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -619,6 +1839,51 @@ namespace CleverTapSDK {
 			}
 		}
 
+		/// <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+		/// <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor should be called by derived classes when they completely construct the object in managed code and merely want the runtime to allocate and initialize the <see cref="Foundation.NSObject" />.
+		///         This is required to implement the two-step initialization process that Objective-C uses, the first step is to perform the object allocation, the second step is to initialize the object.
+		///         When developers invoke this constructor, they take advantage of a direct path that goes all the way up to <see cref="Foundation.NSObject" /> to merely allocate the object's memory and bind the Objective-C and C# objects together.
+		///         The actual initialization of the object is up to the developer.
+		///     </para>
+		///     <para>
+		///         This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place.
+		///         Once the allocation has taken place, the constructor has to initialize the object.
+		///         With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+		///     </para>
+		///     <para>It is the developer's responsibility to completely initialize the object if they chain up using this constructor chain.</para>
+		///     <para>
+		///         In general, if the developer's constructor invokes the corresponding base implementation, then it should also call an Objective-C init method.
+		///         If this is not the case, developers should instead chain to the proper constructor in their class.
+		///     </para>
+		///     <para>
+		///         The argument value is ignored and merely ensures that the only code that is executed is the construction phase is the basic <see cref="Foundation.NSObject" /> allocation and runtime type registration.
+		///         Typically the chaining would look like this:
+		///     </para>
+		///     <example>
+		///             <code lang="csharp lang-csharp"><![CDATA[
+		/// //
+		/// // The NSObjectFlag constructor merely allocates the object and registers the C# class with the Objective-C runtime if necessary.
+		/// // No actual initXxx method is invoked, that is done later in the constructor
+		/// //
+		/// // This is taken from the iOS SDK's source code for the UIView class:
+		/// //
+		/// [Export ("initWithFrame:")]
+		/// public UIView (System.Drawing.RectangleF frame) : base (NSObjectFlag.Empty)
+		/// {
+		///     // Invoke the init method now.
+		///     var initWithFrame = new Selector ("initWithFrame:").Handle;
+		///     if (IsDirectBinding) {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSend_CGRect (this.Handle, initWithFrame, frame);
+		///     } else {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSendSuper_CGRect (this.SuperHandle, initWithFrame, frame);
+		///     }
+		/// }
+		/// ]]></code>
+		///     </example>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CleverTap (NSObjectFlag t) : base (t)
@@ -626,6 +1891,14 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
+		/// <summary>A constructor used when creating managed representations of unmanaged objects. Called by the runtime.</summary>
+		/// <param name="handle">Pointer (handle) to the unmanaged object.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor is invoked by the runtime infrastructure (<see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" />) to create a new managed representation for a pointer to an unmanaged Objective-C object.
+		///         Developers should not invoke this method directly, instead they should call <see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" /> as it will prevent two instances of a managed object pointing to the same native object.
+		///     </para>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal CleverTap (NativeHandle handle) : base (handle)

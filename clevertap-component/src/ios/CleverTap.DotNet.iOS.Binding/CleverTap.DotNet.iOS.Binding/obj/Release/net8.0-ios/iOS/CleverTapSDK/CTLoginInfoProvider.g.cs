@@ -62,7 +62,203 @@ namespace CleverTapSDK {
 	[ProtocolMember (IsRequired = false, IsProperty = true, IsStatic = false, Name = "IsLegacyProfileLoggedIn", Selector = "isLegacyProfileLoggedIn", PropertyType = typeof (bool), GetterSelector = "isLegacyProfileLoggedIn", ArgumentSemantic = ArgumentSemantic.None)]
 	public partial interface ICTLoginInfoProvider : INativeObject, IDisposable
 	{
+		[global::Foundation.OptionalMember]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public static T? CreateInstance<T> (CTDeviceInfo deviceInfo, CleverTapInstanceConfig config) where T: NSObject, ICTLoginInfoProvider
+		{
+			var deviceInfo__handle__ = deviceInfo!.GetNonNullHandle (nameof (deviceInfo));
+			var config__handle__ = config!.GetNonNullHandle (nameof (config));
+			IntPtr __handle__;
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend (Class.GetHandle (typeof (T)), Selector.GetHandle ("alloc"));
+			__handle__ = global::ApiDefinition.Messaging.IntPtr_objc_msgSend_NativeHandle_NativeHandle (__handle__, Selector.GetHandle ("initWithDeviceInfo:config:"), deviceInfo__handle__, config__handle__);
+			return  global::ObjCRuntime.Runtime.GetINativeObject<T> (__handle__, true);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("cacheGUID:forKey:andIdentifier:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void CacheGUID (string guid, string key, string identifier)
+		{
+			_CacheGUID (this, guid, key, identifier);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _CacheGUID (ICTLoginInfoProvider This, string guid, string key, string identifier)
+		{
+			if (guid is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (guid));
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			if (identifier is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (identifier));
+			var nsguid = CFString.CreateNative (guid);
+			var nskey = CFString.CreateNative (key);
+			var nsidentifier = CFString.CreateNative (identifier);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("cacheGUID:forKey:andIdentifier:"), nsguid, nskey, nsidentifier);
+			CFString.ReleaseNative (nsguid);
+			CFString.ReleaseNative (nskey);
+			CFString.ReleaseNative (nsidentifier);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setCachedGUIDs:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetCachedGUIDs (NSDictionary cache)
+		{
+			_SetCachedGUIDs (this, cache);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetCachedGUIDs (ICTLoginInfoProvider This, NSDictionary cache)
+		{
+			var cache__handle__ = cache!.GetNonNullHandle (nameof (cache));
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setCachedGUIDs:"), cache__handle__);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("getGUIDforKey:andIdentifier:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual string GetGUIDforKey (string key, string identifier)
+		{
+			return _GetGUIDforKey (this, key, identifier);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetGUIDforKey (ICTLoginInfoProvider This, string key, string identifier)
+		{
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			if (identifier is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (identifier));
+			var nskey = CFString.CreateNative (key);
+			var nsidentifier = CFString.CreateNative (identifier);
+			string? ret;
+			ret = CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("getGUIDforKey:andIdentifier:"), nskey, nsidentifier))!;
+			CFString.ReleaseNative (nskey);
+			CFString.ReleaseNative (nsidentifier);
+			return ret!;
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("setCachedIdentities:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void SetCachedIdentities (string cache)
+		{
+			_SetCachedIdentities (this, cache);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _SetCachedIdentities (ICTLoginInfoProvider This, string cache)
+		{
+			if (cache is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (cache));
+			var nscache = CFString.CreateNative (cache);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (This.Handle, Selector.GetHandle ("setCachedIdentities:"), nscache);
+			CFString.ReleaseNative (nscache);
+		}
+		[global::Foundation.OptionalMember]
+		[Export ("removeValueFromCachedGUIDForKey:andGuid:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual void RemoveValueFromCachedGUIDForKey (string key, string guid)
+		{
+			_RemoveValueFromCachedGUIDForKey (this, key, guid);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static void _RemoveValueFromCachedGUIDForKey (ICTLoginInfoProvider This, string key, string guid)
+		{
+			if (key is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (key));
+			if (guid is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (guid));
+			var nskey = CFString.CreateNative (key);
+			var nsguid = CFString.CreateNative (guid);
+			global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle (This.Handle, Selector.GetHandle ("removeValueFromCachedGUIDForKey:andGuid:"), nskey, nsguid);
+			CFString.ReleaseNative (nskey);
+			CFString.ReleaseNative (nsguid);
+		}
+		[DynamicDependencyAttribute ("CachedGUIDs")]
+		[DynamicDependencyAttribute ("CachedIdentities")]
+		[DynamicDependencyAttribute ("CacheGUID(System.String,System.String,System.String)")]
+		[DynamicDependencyAttribute ("DeviceIsMultiUser")]
+		[DynamicDependencyAttribute ("GetGUIDforKey(System.String,System.String)")]
+		[DynamicDependencyAttribute ("IsAnonymousDevice")]
+		[DynamicDependencyAttribute ("IsLegacyProfileLoggedIn")]
+		[DynamicDependencyAttribute ("RemoveValueFromCachedGUIDForKey(System.String,System.String)")]
+		[DynamicDependencyAttribute ("SetCachedGUIDs(Foundation.NSDictionary)")]
+		[DynamicDependencyAttribute ("SetCachedIdentities(System.String)")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		static ICTLoginInfoProvider ()
+		{
+			GC.KeepAlive (null);
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool DeviceIsMultiUser {
+			[Export ("deviceIsMultiUser")]
+			get {
+				return _GetDeviceIsMultiUser (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetDeviceIsMultiUser (ICTLoginInfoProvider This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("deviceIsMultiUser"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual NSDictionary CachedGUIDs {
+			[Export ("getCachedGUIDs")]
+			get {
+				return _GetCachedGUIDs (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static NSDictionary _GetCachedGUIDs (ICTLoginInfoProvider This)
+		{
+			return  Runtime.GetNSObject<NSDictionary> (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("getCachedGUIDs")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual string CachedIdentities {
+			[Export ("getCachedIdentities")]
+			get {
+				return _GetCachedIdentities (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static string _GetCachedIdentities (ICTLoginInfoProvider This)
+		{
+			return CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (This.Handle, Selector.GetHandle ("getCachedIdentities")))!;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool IsAnonymousDevice {
+			[Export ("isAnonymousDevice")]
+			get {
+				return _GetIsAnonymousDevice (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetIsAnonymousDevice (ICTLoginInfoProvider This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("isAnonymousDevice"));
+			return ret != 0;
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		[global::Foundation.OptionalMember]
+		public virtual bool IsLegacyProfileLoggedIn {
+			[Export ("isLegacyProfileLoggedIn")]
+			get {
+				return _GetIsLegacyProfileLoggedIn (this);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		internal static bool _GetIsLegacyProfileLoggedIn (ICTLoginInfoProvider This)
+		{
+			byte ret;
+			ret = global::ApiDefinition.Messaging.bool_objc_msgSend (This.Handle, Selector.GetHandle ("isLegacyProfileLoggedIn"));
+			return ret != 0;
+		}
 	}
+	/// <summary>Extension methods to the <see cref="ICTLoginInfoProvider" /> interface to support all the methods from the CTLoginInfoProvider protocol.</summary>
+	/// <remarks>
+	///   <para>The extension methods for <see cref="ICTLoginInfoProvider" /> interface allow developers to treat instances of the interface as having all the optional methods of the original CTLoginInfoProvider protocol. Since the interface only contains the required members, these extension methods allow developers to call the optional members of the protocol.</para>
+	/// </remarks>
 	public unsafe static partial class CTLoginInfoProvider_Extensions {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public static void CacheGUID (this ICTLoginInfoProvider This, string guid, string key, string identifier)
@@ -170,7 +366,15 @@ namespace CleverTapSDK {
 	public unsafe partial class CTLoginInfoProvider : NSObject, ICTLoginInfoProvider {
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		static readonly NativeHandle class_ptr = Class.GetHandle ("CTLoginInfoProvider");
+		/// <summary>The Objective-C class handle for this class.</summary>
+		/// <value>The pointer to the Objective-C class.</value>
+		/// <remarks>
+		///     Each managed class mirrors an unmanaged Objective-C class.
+		///     This value contains the pointer to the Objective-C class.
+		///     It is similar to calling the managed <see cref="ObjCRuntime.Class.GetHandle(string)" /> or the native <see href="https://developer.apple.com/documentation/objectivec/1418952-objc_getclass">objc_getClass</see> method with the type name.
+		/// </remarks>
 		public override NativeHandle ClassHandle { get { return class_ptr; } }
+		/// <summary>Creates a new <see cref="CTLoginInfoProvider" /> with default values.</summary>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		[Export ("init")]
@@ -184,6 +388,51 @@ namespace CleverTapSDK {
 			}
 		}
 
+		/// <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+		/// <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor should be called by derived classes when they completely construct the object in managed code and merely want the runtime to allocate and initialize the <see cref="Foundation.NSObject" />.
+		///         This is required to implement the two-step initialization process that Objective-C uses, the first step is to perform the object allocation, the second step is to initialize the object.
+		///         When developers invoke this constructor, they take advantage of a direct path that goes all the way up to <see cref="Foundation.NSObject" /> to merely allocate the object's memory and bind the Objective-C and C# objects together.
+		///         The actual initialization of the object is up to the developer.
+		///     </para>
+		///     <para>
+		///         This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place.
+		///         Once the allocation has taken place, the constructor has to initialize the object.
+		///         With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+		///     </para>
+		///     <para>It is the developer's responsibility to completely initialize the object if they chain up using this constructor chain.</para>
+		///     <para>
+		///         In general, if the developer's constructor invokes the corresponding base implementation, then it should also call an Objective-C init method.
+		///         If this is not the case, developers should instead chain to the proper constructor in their class.
+		///     </para>
+		///     <para>
+		///         The argument value is ignored and merely ensures that the only code that is executed is the construction phase is the basic <see cref="Foundation.NSObject" /> allocation and runtime type registration.
+		///         Typically the chaining would look like this:
+		///     </para>
+		///     <example>
+		///             <code lang="csharp lang-csharp"><![CDATA[
+		/// //
+		/// // The NSObjectFlag constructor merely allocates the object and registers the C# class with the Objective-C runtime if necessary.
+		/// // No actual initXxx method is invoked, that is done later in the constructor
+		/// //
+		/// // This is taken from the iOS SDK's source code for the UIView class:
+		/// //
+		/// [Export ("initWithFrame:")]
+		/// public UIView (System.Drawing.RectangleF frame) : base (NSObjectFlag.Empty)
+		/// {
+		///     // Invoke the init method now.
+		///     var initWithFrame = new Selector ("initWithFrame:").Handle;
+		///     if (IsDirectBinding) {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSend_CGRect (this.Handle, initWithFrame, frame);
+		///     } else {
+		///         Handle = ObjCRuntime.Messaging.IntPtr_objc_msgSendSuper_CGRect (this.SuperHandle, initWithFrame, frame);
+		///     }
+		/// }
+		/// ]]></code>
+		///     </example>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected CTLoginInfoProvider (NSObjectFlag t) : base (t)
@@ -191,6 +440,14 @@ namespace CleverTapSDK {
 			IsDirectBinding = GetType ().Assembly == global::ApiDefinition.Messaging.this_assembly;
 		}
 
+		/// <summary>A constructor used when creating managed representations of unmanaged objects. Called by the runtime.</summary>
+		/// <param name="handle">Pointer (handle) to the unmanaged object.</param>
+		/// <remarks>
+		///     <para>
+		///         This constructor is invoked by the runtime infrastructure (<see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" />) to create a new managed representation for a pointer to an unmanaged Objective-C object.
+		///         Developers should not invoke this method directly, instead they should call <see cref="ObjCRuntime.Runtime.GetNSObject(System.IntPtr)" /> as it will prevent two instances of a managed object pointing to the same native object.
+		///     </para>
+		/// </remarks>
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		[EditorBrowsable (EditorBrowsableState.Advanced)]
 		protected internal CTLoginInfoProvider (NativeHandle handle) : base (handle)

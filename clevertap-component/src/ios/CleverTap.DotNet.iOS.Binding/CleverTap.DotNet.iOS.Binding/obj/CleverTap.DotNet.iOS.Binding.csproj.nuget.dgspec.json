@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {}
+    "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {}
   },
   "projects": {
-    "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {
-      "version": "1.0.3",
+    "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj": {
+      "version": "1.2.0",
       "restore": {
-        "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+        "projectUniqueName": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
         "projectName": "CleverTap.DotNet.iOS.Binding",
-        "projectPath": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
+        "projectPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding.csproj",
         "packagesPath": "/Users/nishant.kumar/.nuget/packages/",
-        "outputPath": "/Users/nishant.kumar/clevertap-xamarin-dotnet/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
+        "outputPath": "/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nishant.kumar/.nuget/NuGet/NuGet.Config"
@@ -20,12 +20,10 @@
           "net8.0-ios"
         ],
         "sources": {
-          "/Users/nishant.kumar/Downloads": {},
-          "/Users/nishant.kumar/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-ios17.2": {
+          "net8.0-ios18.0": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {}
           }
@@ -42,13 +40,13 @@
         }
       },
       "frameworks": {
-        "net8.0-ios17.2": {
+        "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.11, )",
               "autoReferenced": true
             }
           },
@@ -71,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/nishant.kumar/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/nishant.kumar/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

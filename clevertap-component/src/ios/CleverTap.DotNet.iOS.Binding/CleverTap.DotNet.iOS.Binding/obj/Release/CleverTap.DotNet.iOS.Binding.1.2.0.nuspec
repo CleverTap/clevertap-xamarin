@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CleverTap.DotNet.iOS.Binding</id>
+    <version>1.2.0</version>
+    <authors>CleverTap</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/CleverTap/clevertap-xamarin</projectUrl>
+    <description>The CleverTap .NET iOS Binding for Mobile Customer Engagement and Analytics solutions</description>
+    <repository type="git" commit="c551674f0e4cd2dae2725a2af648569587336f1d" />
+    <dependencies>
+      <group targetFramework="net8.0-ios18.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.dll" target="lib/net8.0-ios18.0/CleverTap.DotNet.iOS.Binding.dll" />
+    <file src="/Users/nishant.kumar/clevertap-xamarin/clevertap-component/src/ios/CleverTap.DotNet.iOS.Binding/CleverTap.DotNet.iOS.Binding/bin/Release/net8.0-ios/CleverTap.DotNet.iOS.Binding.resources.zip" target="lib/net8.0-ios18.0/CleverTap.DotNet.iOS.Binding.resources.zip" />
+    <file src="/Users/nishant.kumar/clevertap-xamarin/README.md" target="README.md" />
+    <file src="/Users/nishant.kumar/clevertap-xamarin/LICENSE" target="LICENSE" />
+  </files>
+</package>

@@ -60,6 +60,7 @@ namespace ObjCRuntime {
 		static internal class SDCleverTapInboxSuccessBlock {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::CleverTapSDK.CleverTapInboxSuccessBlock))]
 			internal static unsafe void Invoke (IntPtr block, byte arg0) {
 				var del = BlockLiteral.GetTarget<global::CleverTapSDK.CleverTapInboxSuccessBlock> (block);
 				if (del is not null) {
@@ -110,6 +111,7 @@ namespace ObjCRuntime {
 		static internal class SDCleverTapInboxUpdatedBlock {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::CleverTapSDK.CleverTapInboxUpdatedBlock))]
 			internal static unsafe void Invoke (IntPtr block) {
 				var del = BlockLiteral.GetTarget<global::CleverTapSDK.CleverTapInboxUpdatedBlock> (block);
 				if (del is not null) {
@@ -160,6 +162,7 @@ namespace ObjCRuntime {
 		static internal class SDAction {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action))]
 			internal static unsafe void Invoke (IntPtr block) {
 				var del = BlockLiteral.GetTarget<global::System.Action> (block);
 				if (del is not null) {
@@ -210,6 +213,7 @@ namespace ObjCRuntime {
 		static internal class SDActionArity1V0 {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action<global::CoreLocation.CLLocationCoordinate2D>))]
 			internal static unsafe void Invoke (IntPtr block, global::CoreLocation.CLLocationCoordinate2D obj) {
 				var del = BlockLiteral.GetTarget<global::System.Action<global::CoreLocation.CLLocationCoordinate2D>> (block);
 				if (del is not null) {
@@ -260,6 +264,7 @@ namespace ObjCRuntime {
 		static internal class SDActionArity1V1 {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action<NSString>))]
 			internal static unsafe void Invoke (IntPtr block, NativeHandle obj) {
 				var del = BlockLiteral.GetTarget<global::System.Action<NSString>> (block);
 				if (del is not null) {
@@ -311,6 +316,7 @@ namespace ObjCRuntime {
 		static internal class SDActionArity2V0 {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action<NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>))]
 			internal static unsafe void Invoke (IntPtr block, NativeHandle arg1, NativeHandle arg2) {
 				var del = BlockLiteral.GetTarget<global::System.Action<NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>> (block);
 				if (del is not null) {
@@ -363,6 +369,7 @@ namespace ObjCRuntime {
 		static internal class SDActionArity3V1 {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>))]
 			internal static unsafe void Invoke (IntPtr block, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3) {
 				var del = BlockLiteral.GetTarget<global::System.Action<NSDictionary, NSArray, NSArray<global::CleverTapSDK.CTValidationResult>>> (block);
 				if (del is not null) {
@@ -416,6 +423,7 @@ namespace ObjCRuntime {
 		static internal class SDActionArity3V0 {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action<NSDictionary, NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>))]
 			internal static unsafe void Invoke (IntPtr block, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3) {
 				var del = BlockLiteral.GetTarget<global::System.Action<NSDictionary, NSDictionary, NSArray<global::CleverTapSDK.CTValidationResult>>> (block);
 				if (del is not null) {
@@ -469,6 +477,7 @@ namespace ObjCRuntime {
 		static internal class SDActionArity3V2 {
 			[Preserve (Conditional = true)]
 			[UnmanagedCallersOnly]
+			[UserDelegateType (typeof (global::System.Action<NSDictionary, NSNumber, NSArray<global::CleverTapSDK.CTValidationResult>>))]
 			internal static unsafe void Invoke (IntPtr block, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3) {
 				var del = BlockLiteral.GetTarget<global::System.Action<NSDictionary, NSNumber, NSArray<global::CleverTapSDK.CTValidationResult>>> (block);
 				if (del is not null) {

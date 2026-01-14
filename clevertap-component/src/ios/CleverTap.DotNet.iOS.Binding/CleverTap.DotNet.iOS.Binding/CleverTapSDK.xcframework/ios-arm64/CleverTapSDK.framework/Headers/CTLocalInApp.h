@@ -56,15 +56,16 @@ typedef NS_ENUM(NSUInteger, CTLocalInAppType) {
 - (void)setImageUrl:(NSString *)imageUrl;
 
 /**
+ Sets Image url and accessibility label for image
+ If contentDescription is nil, default value is "InApp Image"
+ */
+- (void)setImageUrl:(NSString *)imageUrl contentDescription:(NSString * _Nullable)contentDescription;
+
+/**
  If fallbackToSettings is YES and permission is denied, then we fallback to app’s notification settings.
  If fallbackToSettings is NO, then we just throw a log saying permission is denied.
  */
 - (void)setFallbackToSettings:(BOOL)fallbackToSettings;
-
-/**
- If skipAlert is YES, then we skip the settings alert dialog shown before opening app notification settings.
- */
-- (void)setSkipSettingsAlert:(BOOL)skipAlert;
 
 @end
 

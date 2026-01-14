@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#if defined(CLEVERTAP_HOST_WATCHOS)
+#if !TARGET_OS_TV
 #import <WatchConnectivity/WatchConnectivity.h>
 #endif
 
@@ -62,10 +62,26 @@ typedef NS_ENUM(int, CTSignedCallEvent) {
     SIGNED_CALL_END_EVENT
 };
 
+/**
+ The encryption level used by CleverTap to secure stored data.
+
+ Each level defines the extent of encryption applied to user and event data.
+
+ - `CleverTapEncryptionNone` (0): No encryption. Data is stored as plain text.
+ - `CleverTapEncryptionMedium` (1): Encrypts Personally Identifiable Information (PII) only (e.g., Email, Name, Identitiy).
+ - `CleverTapEncryptionHigh` (2): Encrypts both PII and non-PII data.
+ */
 typedef NS_ENUM(int, CleverTapEncryptionLevel) {
+    /// No encryption. Data is stored in plain text.
     CleverTapEncryptionNone = 0,
-    CleverTapEncryptionMedium = 1
+
+    /// Encrypts only PII (Personally Identifiable Information) data.
+    CleverTapEncryptionMedium = 1,
+
+    /// Encrypts all data, including non-PII data.
+    CleverTapEncryptionHigh = 2,
 };
+
 
 typedef void (^CleverTapFetchInAppsBlock)(BOOL success);
 
@@ -476,6 +492,23 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  @method
  
  @abstract
+ Enables tracking opt out for the currently active user and optionally block all communication channels.
+ 
+ @discussion
+ Use this method to opt the current user out of all event/profile tracking.
+ You must call this method separately for each active user profile (e.g. when switching user profiles using onUserLogin).
+ Once enabled, no events will be saved remotely or locally for the current user. To re-enable tracking call this method with enabled set to NO.
+ Optionally, all system events can be allowed/blocked.
+ 
+ @param enabled         BOOL Whether tracking opt out should be enabled/disabled.
+ @param allowSystemEvents         BOOL Whether all system events can be allowed/blocked.
+ */
+- (void)setOptOut:(BOOL)enabled allowSystemEvents:(BOOL)allowSystemEvents;
+
+/*!
+ @method
+ 
+ @abstract
  Disables/Enables sending events to the server.
  
  @discussion
@@ -801,7 +834,7 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  
  @param event           event name
  */
-- (NSTimeInterval)eventGetFirstTime:(NSString *_Nonnull)event;
+- (NSTimeInterval)eventGetFirstTime:(NSString *_Nonnull)event __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserEventLog instead")));
 
 /*!
  @method
@@ -813,7 +846,7 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  @param event           event name
  */
 
-- (NSTimeInterval)eventGetLastTime:(NSString *_Nonnull)event;
+- (NSTimeInterval)eventGetLastTime:(NSString *_Nonnull)event __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserEventLog instead")));
 
 /*!
  @method
@@ -824,7 +857,7 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  
  @param event           event name
  */
-- (int)eventGetOccurrences:(NSString *_Nonnull)event;
+- (int)eventGetOccurrences:(NSString *_Nonnull)event __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserEventLogCount instead")));
 
 /*!
  @method
@@ -838,7 +871,7 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
  
  */
-- (NSDictionary *_Nullable)userGetEventHistory;
+- (NSDictionary *_Nullable)userGetEventHistory __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserEventLogHistory instead")));
 
 /*!
  @method
@@ -853,7 +886,48 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  
  @param event           event name
  */
-- (CleverTapEventDetail *_Nullable)eventGetDetail:(NSString *_Nullable)event;
+- (CleverTapEventDetail *_Nullable)eventGetDetail:(NSString *_Nullable)event __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserEventLog instead")));
+
+/*!
+ @method
+ 
+ @abstract
+ Get the the count of logged events for a specific event name associated with the current user.
+ This operation involves a database query and should be called from a background thread.
+ Be sure to call enablePersonalization prior to invoking this method.
+ 
+ @param eventName           event name
+ */
+- (int)getUserEventLogCount:(NSString *_Nonnull)eventName;
+
+/*!
+ @method
+ 
+ @abstract
+ Get the details for the event.
+ 
+ @discussion
+ Returns a CleverTapEventDetail object (eventName, normalizedEventName, firstTime, lastTime, count, deviceID)
+ This operation involves a database query and should be called from a background thread.
+ Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
+ 
+ @param eventName           event name
+ */
+- (CleverTapEventDetail *_Nullable)getUserEventLog:(NSString *_Nullable)eventName;
+
+/*!
+ @method
+ 
+ @abstract
+ Get the user's event history.
+ 
+ @discussion
+ Returns a dictionary of CleverTapEventDetail objects (eventName, normalizedEventName, firstTime, lastTime, count, deviceID), keyed by eventName.
+ This operation involves a database query and should be called from a background thread.
+ Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
+ 
+ */
+- (NSDictionary *_Nullable)getUserEventLogHistory;
 
 
 #pragma mark Session API
@@ -889,7 +963,17 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  
  Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
  */
-- (int)userGetTotalVisits;
+- (int)userGetTotalVisits __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserAppLaunchCount instead")));
+
+/*!
+ @method
+ 
+ @abstract
+ Get the total number of visits by this user.
+ This operation involves a database query and should be called from a background thread.
+ Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
+ */
+- (int)getUserAppLaunchCount;
 
 /*!
  @method
@@ -909,7 +993,17 @@ extern NSString * _Nonnull const CleverTapGeofencesDidUpdateNotification;
  Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
  
  */
-- (NSTimeInterval)userGetPreviousVisitTime;
+- (NSTimeInterval)userGetPreviousVisitTime __attribute__((deprecated("Deprecated as of version 7.1.0, use getUserLastVisitTs instead")));
+
+/*!
+ @method
+ 
+ @abstract
+ Get the last prior visit time for this user.
+ Be sure to call enablePersonalization (typically once at app launch) prior to using this method.
+ 
+ */
+- (NSTimeInterval)getUserLastVisitTs;
 
 /* ------------------------------------------------------------------------------------------------------
  * Synchronization
@@ -1311,7 +1405,7 @@ extern NSString * _Nonnull const CleverTapProfileDidInitializeNotification;
  */
 - (void)recordGeofenceExitedEvent:(NSDictionary *_Nonnull)geofenceDetails;
 
-#if defined(CLEVERTAP_HOST_WATCHOS)
+#if !TARGET_OS_TV
 /** HostWatchOS
  */
 - (BOOL)handleMessage:(NSDictionary<NSString *, id> *_Nonnull)message forWatchSession:(WCSession *_Nonnull)session API_AVAILABLE(ios(9.0));
@@ -1436,6 +1530,19 @@ extern NSString * _Nonnull const CleverTapProfileDidInitializeNotification;
  @param name The name of the variable or the group.
  */
 - (id _Nullable)getVariableValue:(NSString * _Nonnull)name;
+
+/**
+ * Returns experiment variant information for the current user.
+ *
+ * Each dictionary contains details about an assigned A/B test variant.
+ * Common keys include:
+ *   - "name": Variant name
+ *   - "abTestId": Experiment identifier
+ *   - "abTestName": Experiment name
+ *
+ * @return Array of variant dictionaries with string keys. Returns empty array if no variants assigned.
+ */
+- (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)variants;
 
 /*!
  @method
