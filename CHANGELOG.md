@@ -1,6 +1,6 @@
 # CHANGE LOG
 
-### Version 5.0.0 Android DotNet (April 28, 2026)
+### Version 4.0.0 Android DotNet (April 28, 2026)
 * Supports [CleverTap Android SDK v7.8.1](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev8.1.0)
 
 ### Version 1.2.0 iOS DotNet (January 14, 2026)
