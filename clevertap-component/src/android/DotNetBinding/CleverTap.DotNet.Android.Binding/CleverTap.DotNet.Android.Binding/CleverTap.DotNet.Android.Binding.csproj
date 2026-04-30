@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <TargetFrameworks>net8.0-android;net9.0-android</TargetFrameworks>
+    <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <Configurations>Release</Configurations>
     <PackageId>CleverTap.DotNet.Android.Binding</PackageId>
-    <PackageVersion>3.0.0</PackageVersion>
+    <PackageVersion>4.0.0</PackageVersion>
     <Description>The Clevertap DOTNET Android Binding for Mobile Customer Engagement and Analytics solutions</Description>
     <Authors>CleverTap</Authors>
     <PackageProjectUrl>https://github.com/CleverTap/clevertap-xamarin</PackageProjectUrl>

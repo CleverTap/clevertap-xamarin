@@ -1,6 +1,9 @@
 # CHANGE LOG
-### Version 1.2.0 iOS DotNet (January 14, 2026)
 
+### Version 4.0.0 Android DotNet (April 28, 2026)
+* Supports [CleverTap Android SDK v7.8.1](https://github.com/CleverTap/clevertap-android-sdk/releases/tag/corev8.1.0)
+
+### Version 1.2.0 iOS DotNet (January 14, 2026)
 * Fixes a bug where DOB value is passed incorrectly when performing profile events.
 * Supports [CleverTap iOS SDK v7.4.2](https://github.com/CleverTap/clevertap-ios-sdk/releases/tag/7.4.2)
 

@@ -27,5 +27,21 @@
   <!-- Fix TemplateBuilder to properly implement RawThisRef -->
   <attr path="/api/package[@name='com.clevertap.android.sdk.inapp.customtemplates']/class[@name='CustomTemplate.TemplateBuilder']/method[@name='getThisRef' and count(parameter)=0]" name="propertyName">RawThisRef</attr>
   <attr path="/api/package[@name='com.clevertap.android.sdk.inapp.customtemplates']/class[@name='CustomTemplate.TemplateBuilder']/method[@name='getThisRef' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+
+  <!--
+    Remove internal validation pipeline classes whose wildcard-generic parameters (List<?>, Map<?,?>)
+    cause JavaCast<T> failures at the explicit interface implementation sites because IList<object>
+    and IDictionary<object,object> do not implement IJavaObject.  These classes are SDK internals
+    not intended for public consumption.
+  -->
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.chargedevent']/class[@name='ChargedEventItemsNormalizer']" />
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.chargedevent']/class[@name='ChargedEventItemsValidationPipeline']" />
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.eventdata']/class[@name='EventDataNormalizer']" />
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.eventdata']/class[@name='EventDataValidationPipeline']" />
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.eventdata']/class[@name='MultiValueDataValidationPipeline']" />
+    
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.pipeline']/class[@name='ValidationPipelineProvider']/method[@name='getChargedEventItemsValidationPipeline' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.pipeline']/class[@name='ValidationPipelineProvider']/method[@name='getEventDataPipeline' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.clevertap.android.sdk.validation.pipeline']/class[@name='ValidationPipelineProvider']/method[@name='getMultiValueDataPipeline' and count(parameter)=0]" />
 </metadata>
 
